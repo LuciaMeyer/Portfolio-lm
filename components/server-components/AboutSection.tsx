@@ -4,7 +4,7 @@ import { AboutImages } from '../client-components/AboutImages';
 export const AboutSection = () => {
   return (
     <section id='about'>
-      <div className='my-12 pb-12 md:pt-16 md:flex-row md:justify-around md:mx-40 mx-8'>
+      <div className='my-12 pb-12 md:pt-16 md:flex-row md:justify-around md:mx-60 mx-10'>
         <h1 className='text-center text-2xl md:pb-10'>
           Sobre Mi
           <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>

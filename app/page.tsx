@@ -1,7 +1,6 @@
-import { AboutSection } from '@/components/server-components/AboutSection'
-import { HeroSection } from '@/components/client-components/HeroSection'
-import { ProjectsSection } from '@/components/server-components/ProjectsSection'
-
+import { AboutSection } from "@/components/server-components/AboutSection";
+import { HeroSection } from "@/components/server-components/HeroSection";
+import { ProjectsSection } from "@/components/server-components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -10,5 +9,5 @@ export default function Home() {
       <AboutSection />
       <ProjectsSection />
     </main>
-  )
+  );
 }
