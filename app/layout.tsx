@@ -1,7 +1,7 @@
 'use client'
 import '../styles/globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import { Navbar } from '@/components/client-components/Navbar'
+import { Footer } from '@/components/server-components/Footer'
 import { ThemeProvider } from 'next-themes'
 import { Roboto_Condensed } from '@next/font/google'
  

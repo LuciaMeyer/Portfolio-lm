@@ -1,14 +1,14 @@
-"use client"; // this is a client component
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-scroll/modules";
-import { useTheme } from "next-themes";
-import { IoMdMenu, IoMdClose } from "react-icons/io";
-import Image from "next/image";
-import { img } from "../assets/images";
-import { BsSun } from "react-icons/bs";
-import { HiOutlineMoon } from "react-icons/hi";
-import { motion } from "framer-motion";
+'use client'; // this is a client component
+import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-scroll/modules';
+import { useTheme } from 'next-themes';
+import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import Image from 'next/image';
+import { img } from '../../public/images';
+import { BsSun } from 'react-icons/bs';
+import { HiOutlineMoon } from 'react-icons/hi';
+import { motion } from 'framer-motion';
 
 interface NavItem {
   label: string;
@@ -17,26 +17,26 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Home",
-    page: "home",
+    label: 'Home',
+    page: 'home',
   },
   {
-    label: "Sobre mi",
-    page: "about",
+    label: 'Sobre mi',
+    page: 'about',
   },
   {
-    label: "Projectos",
-    page: "projects",
+    label: 'Projectos',
+    page: 'projects',
   },
   {
-    label: "Recursos",
-    page: "resurces",
+    label: 'Recursos',
+    page: 'resurces',
   },
 ];
 
-export default function Navbar() {
+export const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const currentTheme = theme === 'system' ? systemTheme : theme;
   const [navbar, setNavbar] = useState(false);
 
   const handleClick = () => {
@@ -45,24 +45,24 @@ export default function Navbar() {
 
   return (
     <header
-      className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-30 shadow-2xl dark:bg-BGD/80 shadow-gray-200 dark:shadow-stone-700  
-      dark:border-stone-600 backdrop-blur-md"
+      className='w-full mx-auto px-4 sm:px-20 fixed top-0 z-30 shadow-2xl dark:bg-BGD/80 shadow-gray-200 dark:shadow-stone-700  
+      dark:border-stone-600 backdrop-blur-md'
       
     >
       {/* LOGO E ÍCONOS MENÚ */}
-      <div className="flex items-center justify-between">
+      <div className='flex items-center justify-between'>
         {/* LOGO */}
-        <div className="flex md:mx-auto md:pl-16 ml-7 cursor-pointer pb-2">
-          <Link to="home">
+        <div className='flex md:mx-auto md:pl-16 ml-7 cursor-pointer pb-2'>
+          <Link to='home'>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
             >
               <Image
-                className="md:my-4 md:w-full"
+                className='md:my-4 md:w-full'
                 src={img.LM}
-                alt="LM"
+                alt='LM'
                 width={40}
                 height={40}
                 priority
@@ -72,27 +72,27 @@ export default function Navbar() {
         </div>
 
         {/* ÍCONOS MENÚ  */}
-        <div className="relative my-auto md:right-1/4 mr-8 md:-mr-4 cursor-pointer">
-          <div className="flex items-center justify-between py-3 transition-all">
-            <div className="">
+        <div className='relative my-auto md:right-1/4 mr-8 md:-mr-4 cursor-pointer'>
+          <div className='flex items-center justify-between py-3 transition-all'>
+            <div className=''>
               <button
-                className="py-2 px-6 text-LM file:placeholder:rounded-md outline-none"
+                className='py-2 px-6 text-LM file:placeholder:rounded-md outline-none'
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? <IoMdClose size={28} /> : <IoMdMenu size={28} />}
               </button>
             </div>
-            {currentTheme === "dark" ? (
+            {currentTheme === 'dark' ? (
               <button
-                onClick={() => setTheme("light")}
-                className="bg-inherit text-LM "
+                onClick={() => setTheme('light')}
+                className='bg-inherit text-LM '
               >
                 <BsSun size={22} />
               </button>
             ) : (
               <button
-                onClick={() => setTheme("dark")}
-                className="bg-inherit text-LM"
+                onClick={() => setTheme('dark')}
+                className='bg-inherit text-LM'
               >
                 <HiOutlineMoon size={22} />
               </button>
@@ -104,19 +104,19 @@ export default function Navbar() {
       {/* TEXTO MENÚ */}
       <div
         className={`cursor-pointer flex-1 justify-self-center pb-4 mt-4 md:block md:pb-4 md:mt-0 ${
-          navbar ? "md:block block" : "md:hidden hidden"
+          navbar ? 'md:block block' : 'md:hidden hidden'
         }`}
       >
-        <div className="items-center justify-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+        <div className='items-center justify-center space-y-6 md:flex md:space-x-6 md:space-y-0'>
           {NAV_ITEMS.map((item, idx) => {
             return (
               <Link
                 key={idx}
                 to={item.page}
                 className={
-                  "block lg:inline-block hover:text-LM"
+                  'block lg:inline-block hover:text-LM'
                 }
-                activeClass="active"
+                activeClass='active'
                 spy={true}
                 smooth={true}
                 offset={-100}

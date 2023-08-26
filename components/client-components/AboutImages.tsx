@@ -1,8 +1,8 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { img } from "../assets/images";
-import { useState, useEffect } from "react";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import { img } from '../../public/images'
+import { useState, useEffect } from 'react';
 
 export const AboutImages = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,17 +23,17 @@ export const AboutImages = () => {
     setCurrentImage((prevImg) => (prevImg + 1) % images.length);
   };
   return (
-    <div className="md:w-1/3">
-      <div className="flex justify-center align-center">
-        <div className="z-10 pt-2">
+    <div className='md:w-1/3'>
+      <div className='flex justify-center align-center'>
+        <div className='z-10 pt-2'>
           <button
-            className="mt-5 md:mt-0 mr-32 bg-stone-800/10 text-white px-4 py-2 rounded-full"
+            className='mt-5 md:mt-0 mr-32 bg-stone-800/10 text-white px-4 py-2 rounded-full'
             onClick={handlePrevImg}
           >
             &lt;
           </button>
           <button
-            className="mt-5 md:mt-0 ml-32 bg-stone-800/10 text-white px-4 py-2 rounded-full"
+            className='mt-5 md:mt-0 ml-32 bg-stone-800/10 text-white px-4 py-2 rounded-full'
             onClick={handleNextImage}
           >
             &gt;
@@ -42,13 +42,13 @@ export const AboutImages = () => {
         {images.map((image, index) => (
           <Image
             key={index}
-            width="400"
-            height="400"
+            width='400'
+            height='400'
             src={image}
-            alt="img"
+            alt='img'
             priority={index === currentImage}
             className={`absolute p-5 md:p-0 ${
-              index === currentImage ? "opacity-100" : "opacity-0"
+              index === currentImage ? 'opacity-100' : 'opacity-0'
             }`}
           />
         ))}
