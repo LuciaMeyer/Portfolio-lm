@@ -8,9 +8,7 @@ interface IconsProps {
 }
 
 export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
-  console.log(section)
-
-  // window.location.hash
+  // console.log(section)
 
   const switchPage = () => {
     const newSection = getNextSection(section); // Obtener la siguiente sección
@@ -26,7 +24,7 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
 
   return (
     <>
-      <div className="z-10 fixed bottom-0 flex md:top-40 md:justify-between md:w-0 w-full md:pl-8 bg-white dark:bg-BGD backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent justify-center">
+      <div className="z-10 fixed bottom-0 flex md:top-40 md:justify-between md:w-0 w-full md:pl-12 bg-white dark:bg-BGD backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent justify-center">
         <div className="md:h-screen flex flex-col">
           <div className="md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 items-center">
             <a
@@ -90,7 +88,7 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
         <Link to={section} smooth={true} duration={500}>
           <button onClick={switchPage}>
             <Image
-              className="w-10 fixed bottom-12 left-6 transform transition-transform duration-300 hover:scale-75 cursor-pointer animate-pulse filter brightness-90"
+              className="w-6 md:w-10 fixed bottom-12 md:bottom-20  md:left-6 left-2 transform transition-transform duration-300 cursor-pointer animate-bounce"
               width="40"
               height="40"
               src={img.fl_am}

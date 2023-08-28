@@ -13,4 +13,6 @@ export const img = {
     aux1: 'https://res.cloudinary.com/dw272kava/image/upload/v1687476339/auxiliar/Sin_t%C3%ADtulo_b0dll0.png',
     aux2: 'https://res.cloudinary.com/dw272kava/image/upload/v1687474781/auxiliar/lu_3.jpg_sejgjl.png',
     aux3: 'https://res.cloudinary.com/dw272kava/image/upload/v1687474777/auxiliar/lu_2_gi4az5.jpg',
+
+    let: 'https://res.cloudinary.com/pflet/image/upload/v1686013738/pf_video_zmqnp9.png'
 }

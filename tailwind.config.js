@@ -17,7 +17,7 @@ module.exports = {
         TX: "#4D4D4D",
         LMc: "#F9EBD2",
       },
-      screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
+      screens: { md: "1100px" },
       animation: {
         fadeIn: "fadeIn 1.5s",
         bounce:

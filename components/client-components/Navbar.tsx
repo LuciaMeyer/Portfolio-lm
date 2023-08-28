@@ -33,6 +33,10 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Recursos",
     page: "resurces",
   },
+  {
+    label: "Contacto",
+    page: "contact",
+  },
 ];
 
 export const Navbar = () => {
@@ -57,12 +61,13 @@ export const Navbar = () => {
         {/* LOGO E ÍCONOS MENÚ */}
         <div className="flex items-center justify-between">
           {/* LOGO */}
-          <div className="flex md:mx-auto md:pl-16 ml-7 cursor-pointer pb-2">
+          <div className="flex md:mx-auto md:pl-20 ml-7 cursor-pointer pb-2">
             <Link to="home">
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
+                whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
               >
                 <Image
                   className="md:my-4 md:w-full"
@@ -108,7 +113,8 @@ export const Navbar = () => {
 
         {/* TEXTO MENÚ */}
         <div
-          className={`cursor-pointer flex-1 justify-self-center pb-4 mt-4 md:block md:pb-4 md:mt-0 ${
+          className={`cursor-pointer pb-36 pt-8 pl-8
+          md:pb-4 md:mt-0 md:pt-0 ${
             navbar ? "md:block block" : "md:hidden hidden"
           }`}
         >
