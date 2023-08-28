@@ -4,7 +4,7 @@ import { img } from "../../public/images";
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="flex-1 pt-36 md:pt-44 pb-20">
+    <section id="home" className="flex-1 pt-36 md:pt-44">
       
       <div className="flex flex-col h-full md:flex-row md:justify-around md:mx-60 mx-10 md:items-center pb-20">
         <div className="mx-auto">
