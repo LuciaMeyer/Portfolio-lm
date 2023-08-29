@@ -19,7 +19,7 @@ export default function RootLayout({ children}:{ children: React.ReactNode }) {
         <ThemeProvider enableSystem={true} attribute='class'>
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>

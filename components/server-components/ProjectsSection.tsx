@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SlideUp from "../client-components/SlideUp";
@@ -84,7 +83,6 @@ export const ProjectsSection = () => {
           );
         })}
       </div>
-      <div className="py-0 h-96 bg-stone-200 dark:bg-stone-400"></div>
     </section>
   );
 };

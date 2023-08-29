@@ -1,4 +1,4 @@
-'use client' // this is a client component
+'use client' 
 
 import React, { useEffect, useRef, ReactNode } from 'react'
 interface Props {
