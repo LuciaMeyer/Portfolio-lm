@@ -82,7 +82,11 @@ export const Navbar = () => {
           </div>
 
           {/* ÍCONOS MENÚ  */}
-          <div className="relative my-auto md:right-1/4 mr-8 md:-mr-4 cursor-pointer">
+          <motion.div className="relative my-auto md:right-1/4 mr-8 md:-mr-4 cursor-pointer"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
             <div className="flex items-center justify-between py-3 transition-all">
               <div className="">
                 <button
@@ -108,15 +112,14 @@ export const Navbar = () => {
                 </button>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* TEXTO MENÚ */}
         <div
           className={`cursor-pointer pb-12 pt-12 pl-8
-          md:pb-4 md:mt-0 md:pt-0 ${
-            navbar ? "md:block block" : "md:hidden hidden"
-          }`}
+          md:pb-4 md:mt-0 md:pt-0 ${navbar ? "md:block block" : "md:hidden hidden"
+            }`}
         >
           <div className="items-center justify-center space-y-6 md:flex md:space-x-6 md:space-y-0">
             {NAV_ITEMS.map((item, idx) => {
@@ -124,7 +127,7 @@ export const Navbar = () => {
                 <Link
                   key={idx}
                   to={item.page}
-                  className={"block lg:inline-block hover:text-LM"}
+                  className={"block lg:inline-block hover:text-LM hover:font-medium"}
                   activeClass="active"
                   spy={true}
                   smooth={true}

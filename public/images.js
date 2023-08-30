@@ -15,5 +15,10 @@ export const img = {
     aux3: 'https://res.cloudinary.com/dw272kava/image/upload/v1687474777/auxiliar/lu_2_gi4az5.jpg',
 
     let: 'https://res.cloudinary.com/pflet/image/upload/v1686013738/pf_video_zmqnp9.png',
-    fondo: 'https://res.cloudinary.com/dw272kava/image/upload/v1693256908/fondo_y81vs8.jpg'
+    fondo: 'https://res.cloudinary.com/dw272kava/image/upload/v1693256908/fondo_y81vs8.jpg',
+
+    auxfondo1:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/auxiliar/1_rlwcea.jpg',
+    auxfondo2:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/auxiliar/3_ciqfir.jpg',
+    auxfondo3:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/auxiliar/2_yf3tml.jpg',
+
 }
