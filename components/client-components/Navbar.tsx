@@ -55,7 +55,7 @@ export const Navbar = () => {
     <>
       <Icons section={section} setSection={setSection} />
       <header
-        className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-30 shadow-2xl dark:bg-BGD/80 shadow-gray-200 dark:shadow-stone-700  
+        className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-30 shadow-2xl bg-slate-100/60 dark:bg-BGD/80 shadow-gray-200 dark:shadow-stone-700  
       dark:border-stone-600 backdrop-blur-md"
       >
         {/* LOGO E ÍCONOS MENÚ */}
@@ -113,7 +113,7 @@ export const Navbar = () => {
 
         {/* TEXTO MENÚ */}
         <div
-          className={`cursor-pointer pb-36 pt-8 pl-8
+          className={`cursor-pointer pb-12 pt-12 pl-8
           md:pb-4 md:mt-0 md:pt-0 ${
             navbar ? "md:block block" : "md:hidden hidden"
           }`}

@@ -23,81 +23,80 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
   };
 
   return (
-    <>
-      <div className="z-10 fixed bottom-0 flex md:top-40 md:justify-between md:w-0 w-full md:pl-12 bg-white dark:bg-BGD backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent justify-center">
-        <div className="md:h-screen flex flex-col">
-          <div className="md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 items-center">
-            <a
-              href="https://www.linkedin.com/in/lucia-meyer-65633a143/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Image
-                width="40"
-                height="40"
-                className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
-                src={img.lin}
-                alt="img"
-                priority
-              />
-            </a>
-            <a
-              href="https://github.com/LuciaMeyer"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Image
-                width="40"
-                height="40"
-                className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
-                src={img.gh}
-                alt="img"
-                priority
-              />
-            </a>
-            <a
-              href="mailto:luciameyer1603@gmail.com"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Image
-                width="40"
-                height="40"
-                className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
-                src={img.mail}
-                alt="img"
-                priority
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/luciameyer_/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Image
-                width="40"
-                height="40"
-                className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
-                src={img.ig}
-                alt="img"
-                priority
-              />
-            </a>
-          </div>
-        </div>
-        <Link to={section} smooth={true} duration={500}>
-          <button onClick={switchPage}>
+    <div className="z-50 fixed bottom-0 flex w-full md:top-40 md:justify-between md:w-0 md:pl-10 bg-white dark:bg-BGD backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent justify-center">
+      <div className="md:h-screen flex flex-col">
+        <div className="md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 items-center">
+          <a
+            href="https://www.linkedin.com/in/lucia-meyer-65633a143/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <Image
-              className="w-6 md:w-10 fixed bottom-12 md:bottom-20  md:left-6 left-2 transform transition-transform duration-300 cursor-pointer animate-bounce"
               width="40"
               height="40"
-              src={img.fl_am}
+              className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
+              src={img.lin}
               alt="img"
               priority
             />
-          </button>
-        </Link>
+          </a>
+          <a
+            href="https://github.com/LuciaMeyer"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Image
+              width="40"
+              height="40"
+              className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
+              src={img.gh}
+              alt="img"
+              priority
+            />
+          </a>
+          <a
+            href="mailto:luciameyer1603@gmail.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Image
+              width="40"
+              height="40"
+              className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
+              src={img.mail}
+              alt="img"
+              priority
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/luciameyer_/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Image
+              width="40"
+              height="40"
+              className="md:mb-4 md:px-0 px-2 transform transition-transform duration-300 hover:scale-75"
+              src={img.ig}
+              alt="img"
+              priority
+            />
+          </a>
+        </div>
       </div>
-    </>
+
+      <Link to={section} smooth={true} duration={500}>
+      <button onClick={switchPage}>
+      <Image
+        className="w-10 md:w-10 fixed bottom-10 md:bottom-20 md:left-6 right-4 transform transition-transform duration-300 hover:scale-75"
+        width="40"
+        height="40"
+        src={img.flecha}
+        alt="img"
+        priority
+      />
+      </button>
+      </Link>
+    </div>
   );
 };
