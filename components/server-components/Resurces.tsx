@@ -1,7 +1,7 @@
 
 export const Resurces = () => {
   return (
-    <section id="resurces" className="flex-1 pt-6 md:pt-20 pb-20">
+    <section id="resources" className="flex-1 pt-6 md:pt-20 pb-20">
       <h1 className="text-center text-2xl md:pb-10 pb-8">
         Recursos Dev
         <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
