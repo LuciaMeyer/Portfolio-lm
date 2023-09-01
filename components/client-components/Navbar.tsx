@@ -62,7 +62,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* LOGO */}
           <div className="flex md:mx-auto md:pl-20 ml-7 cursor-pointer pb-2">
-            <Link to="home">
+            <Link to="home" onClick={()=>setSection('home')}>
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}

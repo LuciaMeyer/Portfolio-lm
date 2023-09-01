@@ -15,9 +15,7 @@ export const AboutMenu1 = () => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 2000);
 
-        return () => {
-            clearInterval(interval);
-        };
+        return () => clearInterval(interval)
     }, []);
 
     return (
@@ -83,7 +81,7 @@ export const AboutMenu1 = () => {
             <div className='-z-50 h-full w-1/2 md:absolute md:block hidden top-0 right-0 bg-right'>
                 <Image
                     src={images[currentImageIndex]}
-                    alt='Background Image'
+                    alt='Image'
                     layout='fill'
                     objectFit='cover'
                 />

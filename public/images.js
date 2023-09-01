@@ -21,4 +21,6 @@ export const img = {
     auxfondo2:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/auxiliar/3_ciqfir.jpg',
     auxfondo3:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/auxiliar/2_yf3tml.jpg',
 
+    video: 'https://res.cloudinary.com/dw272kava/video/upload/v1693591169/auxiliar/fondo_bt6coj.mp4',
+
 }
