@@ -23,4 +23,10 @@ export const img = {
 
     video: 'https://res.cloudinary.com/dw272kava/video/upload/v1693591169/auxiliar/fondo_bt6coj.mp4',
 
+    // PROJECTS
+    p1: 'https://res.cloudinary.com/dw272kava/image/upload/v1693673800/Projects/P1_jpl2uz.png',
+    p2:'https://res.cloudinary.com/dw272kava/image/upload/v1693673801/Projects/P2_siexwl.png',
+    p3:'https://res.cloudinary.com/dw272kava/image/upload/v1693673800/Projects/P3_rzf876.png',
+    p4: 'https://res.cloudinary.com/dw272kava/image/upload/v1693673800/Projects/P4_ylvgdo.png',
+
 }

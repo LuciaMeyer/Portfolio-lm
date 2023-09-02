@@ -4,31 +4,37 @@ import SlideUp from '../client-components/SlideUp';
 import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
 import { img } from '@/public/images';
 
+
 const projects = [
   {
     name: "let's GO",
-    description:
-      'Aplicación web eCommerce.',
-    features: 'autenticación, pasarela de pagos, notificación, mailing, reviews, perfil de usuario y administrador, filtros y ordenamientos combinados, persistencia de datos, Chatbots.',
-    tecnologías: 'Javascript, React, Redux, NodeJS, Express, PostgreSQL, Sequelize, Scrum, Git-GitHub',
-    image: img.let,
+    description: 'E-Commerce que ofrece el servicio de alquiler de bicicletas, accesorios y packs de aventuras según calendario y stock disponible. Desarrollado con PERN stack',
+    image: img.p1,
     github: 'https://github.com/LetTeam22/lets-GO',
     link: 'https://pf-let.vercel.app/',
   },
   {
-    name: 'PlatoIO',
-    description: 'PlatoIO is a to do list app that built using the PERN stack.',
-    image: '/platoio.png',
-    github: 'https://github.com/hqasmei/platoio',
-    link: 'https://platoio.com/register',
+    name: 'VideoGames',
+    description: 'SPA de videojuegos que consume datos de una api externa e incluye filtros y ordenamientos acumulativos, búsquedas por nombre, creación y edición de videojuegos. Desarrollado con PERN stack',
+    image: img.p2,
+    github: 'https://github.com/LuciaMeyer/Videogames_app',
+    link: 'https://cliente-videogames.onrender.com/',
   },
   {
-    name: 'Kator Family Photos',
+    name: 'API GPT OpenAI',
     description:
-      'Kator Family Photos is a photos and video digitization service in the LA area.',
-    image: '/familyphotos.png',
-    github: 'https://github.com/hqasmei/katorfamilyphotos',
-    link: 'https://katorfamilyphotos.com/',
+      'Inclusión de las funcionalidades de API en un proyecto de e-Commerce para optimizar el dashboard del administrador, a través de ciertos prompt estratégicos.',
+    image: img.p3,
+    github: '',
+    link: '',
+  },
+  {
+    name: 'Portfolio',
+    description:
+      'Aplicación web con el objetivo de incorporar nuevas tecnologías como Next.js 13, TaildwindCC y Framer Motion ',
+    image: img.p4,
+    github: '',
+    link: '',
   },
 ];
 
@@ -55,40 +61,29 @@ export const ProjectsSection = () => {
                         alt=''
                         width={1000}
                         height={1000}
-                        className='rounded-xl shadow-xl hover:opacity-70'
+                        className='rounded-xl shadow-xl hover:opacity-70 transform transition-transform duration-500 hover:scale-x-95'
                       />
                     </Link>
                   </div>
                   <div className='md:w-1/2'>
-                    <h1 className='text-3xl font-bold mb-6'>{project.name}</h1>
-                    <span className='font-semibold text-xl dark:font-normal text-stone-700 dark:text-LM'>
-                      {project.description}
+                    <h1 className='text-2xl font-bold mb-6 md:mt-0 mt-8'>{project.name}</h1>
+                    <span className='leading-7'>
+                      {project.description}...
                     </span>
-                    <br />
-                    <span className='font-semibold text-xl dark:font-normal text-stone-700 dark:text-LM md:pr-2 pr-2'>
-                      Features:
+                    <span className='ml-2 font-bold dark:font-normal dark:text-LM'>
+                        saber más
                     </span>
-                    <span className='text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400'>
-                      {project.features}
-                    </span>
-                    <br />
-                    <span className='font-semibold text-xl dark:font-normal text-stone-700 dark:text-LM md:pr-2 pr-2'>
-                      Tecnologías:
-                    </span>
-                    <span className='text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400'>
-                      {project.tecnologías}
-                    </span>
-                    <div className='flex flex-row align-bottom space-x-4 md:mt-2'>
+                    <div className='flex flex-row align-bottom space-x-4 mt-4'>
                       <Link href={project.github} target='_blank'>
                         <BsGithub
-                          size={30}
-                          className='hover:-translate-y-1 transition-transform cursor-pointer'
+                          size={25}
+                          className='text-TX/60 dark:text-stone-300/60 hover:-translate-y-1 dark:hover:text-LM hover:text-LM transition-transform cursor-pointer'
                         />
                       </Link>
                       <Link href={project.link} target='_blank'>
                         <BsArrowUpRightSquare
-                          size={30}
-                          className='hover:-translate-y-1 transition-transform cursor-pointer'
+                          size={25}
+                          className='text-TX/60 dark:text-stone-300/60 hover:-translate-y-1 dark:hover:text-LM hover:text-LM transition-transform cursor-pointer'
                         />
                       </Link>
                     </div>

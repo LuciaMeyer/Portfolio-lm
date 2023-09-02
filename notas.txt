@@ -1,0 +1,19 @@
+- HeroSecion
+    . frase slogan
+    . pongo botones?
+    . fondo animado
+    . arreglar sombra en la foto - animo foto??
+
+- Sobre mai
+    . texto de cada sección
+    . fotos de cada sección
+
+- Icons
+    . arreglar bug de la flechita
+
+- Projects
+    . grabar el video de GPT
+    . hacer las modificaciones en el repo
+    . funcionalidad en el "saber más"
+
+acomodar imagenes en cloudinary y en js
