@@ -52,7 +52,7 @@ export const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <Image width='350' height='350' src={img.imglu1} alt='img' priority className='transform transition-transform duration-1000 hover:scale-110'/>
+          <Image width='350' height='350' src={img.imglu} alt='img' priority className='transform transition-transform duration-1000 hover:scale-110'/>
         </motion.div>
 
       </div>

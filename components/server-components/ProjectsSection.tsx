@@ -5,6 +5,7 @@ import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
 import { img } from '@/public/images';
 
 
+
 const projects = [
   {
     name: "let's GO",

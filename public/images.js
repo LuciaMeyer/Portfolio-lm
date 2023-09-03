@@ -1,6 +1,8 @@
 export const img = {
-    imglu: 'https://res.cloudinary.com/dw272kava/image/upload/v1687447122/img%20lu/img_lu_home_bln0h4.png',
-    imglu1: 'https://res.cloudinary.com/dw272kava/image/upload/v1693054417/home-05_wly0mh.png',
+    // HeroSection
+    imglu: 'https://res.cloudinary.com/dw272kava/image/upload/v1693688429/HeroSection/lu_wqcoyn.png',
+
+    
     mail: 'https://res.cloudinary.com/dw272kava/image/upload/v1687448931/iconos/mail_dwcy20.png',
     flecha: 'https://res.cloudinary.com/dw272kava/image/upload/v1687448930/iconos/flecha_omeujd.png',
     fl_am: 'https://res.cloudinary.com/dw272kava/image/upload/v1687448930/iconos/flecha_amarilla_dbutfe.png',
