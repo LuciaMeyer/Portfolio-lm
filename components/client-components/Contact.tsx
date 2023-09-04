@@ -1,5 +1,5 @@
 'use client';
-import { useState, ChangeEvent, useRef, FormEvent  } from 'react';
+import { useState, ChangeEvent, useRef, FormEvent } from 'react';
 import SlideUp from './SlideUp';
 import swal from 'sweetalert';
 import emailjs from '@emailjs/browser';
@@ -14,12 +14,12 @@ interface InputData {
 // const PUBLIC_KEY=process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 // const TEMPLATE_ID=process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
-const SERVICE_ID='service_skao4og'
-const PUBLIC_KEY='K6tjKemCnbG7KfkR9'
-const TEMPLATE_ID='template_vypcd2r'
+const SERVICE_ID = 'service_skao4og'
+const PUBLIC_KEY = 'K6tjKemCnbG7KfkR9'
+const TEMPLATE_ID = 'template_0n8wrhx'
 
 export const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
+  const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState<InputData>({
     name: '',
     email: '',
@@ -46,16 +46,17 @@ export const Contact = () => {
     if (form.current) {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
         (result) => {
-          console.log('todo bien', result);
+          console.log('ok', result);
         },
         (error) => {
-          console.log('todo mal', error);
+          console.log('error', error);
         }
       );
-    } else {console.log('no reconoce el form.current')}
+    } else { console.log('no reconoce el form.current', form.current) }
     swal({
       text: 'Gracias por tu mensaje!',
       icon: 'success',
+      
     });
     console.log(input);
     setInput({
@@ -74,10 +75,10 @@ export const Contact = () => {
         <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
       </h1>
       <SlideUp offset='-300px 0px -300px 0px'>
-        <div className='bg-white dark:bg-BGDc mx-10 lg:mx-96 md:mx-32 flex flex-col space-y-10 justify-center md:justify-around align-top md:space-x-0 md:space-y-0 md:text-left pb-20 items-start  pt-10 pr-10  pl-10 shadow-2xl rounded-xl relative z-10'>
-          <div className='md:w-full mt-6 mx-auto md:mx-0 relative space-y-8'>
-            <h4 className='text-center'>Pongamosnos en contacto</h4>
-            <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit}>
+          <div className='bg-white dark:bg-BGDc mx-10 lg:mx-96 md:mx-32 flex flex-col space-y-10 justify-center md:justify-around align-top md:space-x-0 md:space-y-0 md:text-left pb-20 items-start  pt-10 pr-10  pl-10 shadow-2xl rounded-xl relative z-10'>
+            <div className='md:w-full mt-6 mx-auto md:mx-0 relative space-y-8'>
+              <h4 className='text-center'>Pongamosnos en contacto</h4>
               <div className='relative md:pb-4'>
                 <p className='bg-white dark:bg-BGDc pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 text-sm absolute'>
                   Nombre
@@ -120,18 +121,17 @@ export const Contact = () => {
                 <button
                   type='submit'
                   disabled={disabled}
-                  className={`group w-full inline-block pt-4 pr-5 pb-4 pl-5 text-white text-center bg-LM rounded-lg transition duration-200 ease ${
-                    disabled
-                      ? 'hover:text-white hover:bg-LM'
-                      : 'hover:text-TX hover:bg-LMc'
-                  }`}
+                  className={`group w-full inline-block pt-4 pr-5 pb-4 pl-5 text-white text-center bg-LM rounded-lg transition duration-200 ease ${disabled
+                    ? 'hover:text-white hover:bg-LM'
+                    : 'hover:text-TX hover:bg-LMc'
+                    }`}
                 >
                   Enviar
                 </button>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
+        </form>
       </SlideUp>
     </section>
   );
