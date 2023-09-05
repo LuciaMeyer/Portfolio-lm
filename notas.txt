@@ -9,7 +9,7 @@
     . fotos de cada sección
 
 - Icons
-    . arreglar bug de la flechita
+    . cuando llega hasta abajo con scroll la flechita debería girar
 
 - Projects
     . grabar el video de GPT

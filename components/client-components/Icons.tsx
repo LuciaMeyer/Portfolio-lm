@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import { img } from "../../public/images";
 import { Link } from "react-scroll/modules";
+import { useEffect, useState } from "react";
 
 interface IconsProps {
   section: string;
@@ -8,7 +10,25 @@ interface IconsProps {
 }
 
 export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
-  
+  const [endPage, setEndPage] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const pageHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const threshold = 100;
+      if (scrollY + windowHeight >= pageHeight - threshold) {
+        console.log("final de la página");
+        setEndPage(true);
+      } else setEndPage(false)
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleClick = (current: string) => {
     if (current === "home") setSection("about");
     if (current === "about") setSection("projects");
@@ -98,7 +118,10 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
         className="cursor-pointer"
       >
         <Image
-          className={`w-10 md:w-10 fixed bottom-10 md:bottom-20 md:left-6 right-4 transform transition-transform duration-300 hover:scale-75 ${section === "contact" && 'rotate-180'}`}
+          className={`w-10 md:w-10 fixed bottom-10 md:bottom-20 md:left-6 right-4 transform transition-transform duration-300 hover:scale-75
+          ${section === "contact" && "rotate-180"}
+          ${!!endPage ? "rotate-180" : 'rotate-0'}
+          `}
           width="50"
           height="50"
           src={img.flecha}

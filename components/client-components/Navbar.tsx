@@ -9,7 +9,7 @@ import { img } from '../../public/images';
 import { BsSun } from 'react-icons/bs';
 import { HiOutlineMoon } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-import { Icons } from '../server-components/Icons';
+import { Icons } from './Icons';
 
 
 interface NavItem {
@@ -47,9 +47,15 @@ export const Navbar = () => {
   const [section, setSection] = useState('home');
 
 
-  const handleClick = (page: string) => {
+  const handleMenuClick = (page: string) => {
     if (window.innerWidth < 768) setNavbar(!navbar);
     setSection(page);
+  };
+
+  const hanldeLogoClick = () => {
+    window.scrollTo(0, 0)
+    setSection('home')
+
   };
 
   return (
@@ -63,7 +69,7 @@ export const Navbar = () => {
         <div className='flex items-center justify-between'>
           {/* LOGO */}
           <div className='flex md:mx-auto md:pl-20 ml-7 cursor-pointer pb-2'>
-            <Link to='home' onClick={()=>setSection('home')}>
+            <Link to='home' onClick={hanldeLogoClick}>
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -134,7 +140,7 @@ export const Navbar = () => {
                   smooth={true}
                   offset={-100}
                   duration={500}
-                  onClick={() => handleClick(item.page)}
+                  onClick={() => handleMenuClick(item.page)}
                 >
                   {item.label}
                 </Link>
