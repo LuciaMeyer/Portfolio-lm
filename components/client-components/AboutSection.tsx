@@ -53,7 +53,7 @@ export const AboutSection = () => {
             {/* FLECHA */}
             <div onClick={handleArrowClick}>
               <Image
-                className={`hover:scale-90 cursor-pointer -rotate-90 ${currentMenu === 'Valores' && 'rotate-90'} transform transition-transform duration-300 opacity-50 hover:opacity-100`}
+                className={`hover:scale-90 cursor-pointer -rotate-90 ${currentMenu === 'Valores' && 'rotate-90'} transform transition-transform duration-300 opacity-100 hover:opacity-80`}
                 width='30'
                 height='30'
                 src={img.fl_am}
