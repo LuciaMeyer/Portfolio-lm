@@ -3,12 +3,93 @@ import Image from 'next/image';
 import { img } from '../../public/images';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 
 
 export const HeroSection = () => {
+
+  const particlesInit = async (main:any) => {
+    await loadFull(main);
+  };
+
   return (
     <section id='home' className='flex-1 pt-36 md:pt-44'>
-
+      {/* <Particles
+             init={particlesInit}
+             options={{
+              //  background: {
+              //    color: {
+              //      value: 'white',
+              //    },
+              //  },
+               fpsLimit: 150,
+               interactivity: {
+                 events: {
+                   onClick: {
+                     enable: true,
+                     mode: 'push',
+                   },
+                   onHover: {
+                     enable: true,
+                     mode: 'repulse',
+                   },
+                   resize: true,
+                 },
+                 modes: {
+                   push: {
+                     quantity: 4,
+                   },
+                   repulse: {
+                     distance: 200,
+                     duration: 0.4,
+                   },
+                 },
+               },
+               particles: {
+                 color: {
+                   value: '#f9b621',
+                 },
+                 links: {
+                   color: '#f9b621',
+                   distance: 150,
+                   enable: true,
+                   opacity: 0.3,
+                   width: 1,
+                 },
+                 collisions: {
+                   enable: true,
+                 },
+                 move: {
+                   direction: 'none',
+                   enable: true,
+                   outModes: {
+                     default: 'bounce',
+                   },
+                   random: false,
+                   speed: 6,
+                   straight: false,
+                 },
+                 number: {
+                   density: {
+                     enable: true,
+                     area: 700,
+                   },
+                   value: 80,
+                 },
+                 opacity: {
+                   value: 0.3,
+                 },
+                 shape: {
+                   type: 'circle',
+                 },
+                 size: {
+                   value: { min: 0.5, max: 3 },
+                 },
+               },
+               detectRetina: true,
+             }}
+      /> */}
       <div className='flex flex-col h-full md:flex-row md:justify-around md:mx-60 mx-10 md:items-center pb-20 '>
 
         <motion.div
