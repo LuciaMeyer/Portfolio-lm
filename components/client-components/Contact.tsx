@@ -10,13 +10,13 @@ interface InputData {
   message: string;
 }
 
-const SERVICE_ID=process.env.REACT_APP_EMAILJS_SERVICE_ID;
-const PUBLIC_KEY=process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-const TEMPLATE_ID=process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+// const SERVICE_ID=process.env.REACT_APP_EMAILJS_SERVICE_ID;
+// const PUBLIC_KEY=process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+// const TEMPLATE_ID=process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
-// const SERVICE_ID = 'service_skao4og'
-// const PUBLIC_KEY = 'K6tjKemCnbG7KfkR9'
-// const TEMPLATE_ID = 'template_0n8wrhx'
+const SERVICE_ID = 'service_skao4og'
+const PUBLIC_KEY = 'K6tjKemCnbG7KfkR9'
+const TEMPLATE_ID = 'template_0n8wrhx'
 
 export const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -39,7 +39,7 @@ export const Contact = () => {
     e.preventDefault()
     if (!SERVICE_ID || !PUBLIC_KEY || !TEMPLATE_ID) {
       console.error(
-        'Error en las variables de entorno', SERVICE_ID, PUBLIC_KEY, TEMPLATE_ID
+        'Error en las variables de entorno'
       );
       return;
     }

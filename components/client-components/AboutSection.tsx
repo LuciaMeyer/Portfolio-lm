@@ -36,7 +36,7 @@ export const AboutSection = () => {
         <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
       </h1>
 
-      <div className='h-full md:w-1/2 flex flex-col md:flex-row md:justify-around mx-10 md:pr-10 md:items-center align-center pb-20'>
+      <div className='h-full md:w-1/2 flex flex-col md:flex-row md:justify-around mt-2 mb-20 mx-10 md:pr-10 md:items-center align-center pb-20'>
         <div className='md:pl-2 md:mr-10 md:ml-60 bg-white dark:bg-BGD md:pt-2 md:pr-2 md:pb-2'>
 
           <div className='flex justify-between align-center mb-8'>
@@ -53,7 +53,7 @@ export const AboutSection = () => {
             {/* FLECHA */}
             <div onClick={handleArrowClick}>
               <Image
-                className={`hover:scale-90 cursor-pointer -rotate-90 ${currentMenu === 'Valores' && 'rotate-90'} transform transition-transform duration-300 opacity-100 hover:opacity-80`}
+                className={`hover:scale-90 cursor-pointer -rotate-90 ${currentMenu === 'Valores' && 'rotate-90'} transform transition-transform duration-300 opacity-50 hover:opacity-100`}
                 width='30'
                 height='30'
                 src={img.fl_am}

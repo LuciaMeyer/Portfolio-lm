@@ -82,8 +82,9 @@ export const AboutMenu1 = () => {
                 <Image
                     src={images[currentImageIndex]}
                     alt='Image'
-                    layout='fill'
-                    objectFit='cover'
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes='50vw'
                 />
             </div>
         </>
