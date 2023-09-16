@@ -9,15 +9,15 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <Separator1/>
+      {/* <Separator1/> */}
       <AboutSection />
-      <Separator1/>
+      {/* <Separator1/> */}
       <ProjectsSection />
-      <Separator1/>
+      {/* <Separator1/> */}
       <Resurces/>
-      <Separator1/>
+      {/* <Separator1/> */}
       <Contact/>
-      <Separator1/>
+      {/* <Separator1/> */}
     </main>
   );
 }

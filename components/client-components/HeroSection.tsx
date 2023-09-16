@@ -3,12 +3,16 @@ import Image from 'next/image';
 import { img } from '../../public/images';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
-
+import { Link } from 'react-scroll/modules';
+import { ParticlesComponents } from '../server-components/ParticlesComponents';
 
 export const HeroSection = () => {
   return (
-    <section id='home' className='flex-1 pt-36 md:pt-44 pb-60'>
-
+    <>
+      <div className='-z-50 absolute h-96'>    
+       <ParticlesComponents />
+      </div>
+    <section id='home' className='flex-1 pt-36 md:pt-44 pb-60 '>
       <div className='flex flex-col h-full md:flex-row md:justify-around md:mx-40 mx-10 md:items-center content-center'>
 
         <motion.div
@@ -56,9 +60,11 @@ export const HeroSection = () => {
             formación en Diseño y Marketing Digital.
             <br />
           </p>
-          <button className='text-TX/50 dark:text-stone-300/60 text-xs border-solid border border-TX/20 dark:border-stone-300/10 px-2 py-1 shadow-md shadow-neutral-300 dark:shadow-neutral-700 hover:opacity-70 cursor-pointer'>
+          <Link
+            to='about'
+            className='text-TX/50 dark:text-stone-300/60 text-xs border-solid border border-TX/40 dark:border-stone-300/30 px-2 py-1 hover:opacity-70 cursor-pointer'>
             SABER MÁS
-          </button>
+          </Link>
         </motion.div>
 
         <motion.div
@@ -78,5 +84,8 @@ export const HeroSection = () => {
 
       </div>
     </section>
+    </>
+
+    
   );
 };

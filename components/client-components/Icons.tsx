@@ -1,8 +1,8 @@
-"use client";
-import Image from "next/image";
-import { img } from "../../public/images";
-import { Link } from "react-scroll/modules";
-import { useEffect, useState } from "react";
+'use client';
+import Image from 'next/image';
+import { img } from '../../public/images';
+import { Link } from 'react-scroll/modules';
+import { useEffect, useState } from 'react';
 
 interface IconsProps {
   section: string;
@@ -19,83 +19,83 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
       const windowHeight = window.innerHeight;
       const threshold = 100;
       if (scrollY + windowHeight >= pageHeight - threshold) {
-        console.log("final de la página");
+        console.log('final de la página');
         setEndPage(true);
       } else setEndPage(false)
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const handleClick = (current: string) => {
-    if (current === "home") setSection("about");
-    if (current === "about") setSection("projects");
-    if (current === "projects") setSection("resources");
-    if (current === "resources") setSection("contact");
-    if (current === "contact") setSection("home");
+    if (current === 'home') setSection('about');
+    if (current === 'about') setSection('projects');
+    if (current === 'projects') setSection('resources');
+    if (current === 'resources') setSection('contact');
+    if (current === 'contact') setSection('home');
   };
 
   return (
-    <div className="z-50 fixed bottom-0 flex w-full justify-center
-    bg-white dark:bg-BGD backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent ">
+    <div className='z-50 fixed bottom-0 flex w-full justify-center
+    bg-white dark:bg-BGD backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent '>
 
-      <div className="flex flex-col md:fixed md:left-12 md:bottom-16 bottom-12">
-        <div className="md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center">
+      <div className='flex flex-col md:fixed md:left-12 md:bottom-16 bottom-12'>
+        <div className='md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center'>
           <a
-            href="https://www.linkedin.com/in/lucia-meyer-65633a143/"
-            rel="noreferrer"
-            target="_blank"
+            href='https://www.linkedin.com/in/lucia-meyer-65633a143/'
+            rel='noreferrer'
+            target='_blank'
           >
             <Image
-              width="50"
-              height="50"
-              className="md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
+              width='50'
+              height='50'
+              className='md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
               src={img.in}
-              alt="img"
+              alt='img'
               priority
             />
           </a>
           <a
-            href="https://github.com/LuciaMeyer"
-            rel="noreferrer"
-            target="_blank"
+            href='https://github.com/LuciaMeyer'
+            rel='noreferrer'
+            target='_blank'
           >
             <Image
-              width="50"
-              height="50"
-              className="md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
+              width='50'
+              height='50'
+              className='md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
               src={img.gh}
-              alt="img"
+              alt='img'
               priority
             />
           </a>
           <a
-            href="mailto:luciameyer1603@gmail.com"
-            rel="noreferrer"
-            target="_blank"
+            href='mailto:luciameyer1603@gmail.com'
+            rel='noreferrer'
+            target='_blank'
           >
             <Image
-              width="50"
-              height="50"
-              className="md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
+              width='50'
+              height='50'
+              className='md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
               src={img.mail}
-              alt="img"
+              alt='img'
               priority
             />
           </a>
           <a
-            href="https://www.instagram.com/luciameyer_/"
-            rel="noreferrer"
-            target="_blank"
+            href='https://www.instagram.com/luciameyer_/'
+            rel='noreferrer'
+            target='_blank'
           >
             <Image
-              width="50"
-              height="50"
-              className="md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
+              width='50'
+              height='50'
+              className='md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
               src={img.ig}
-              alt="img"
+              alt='img'
               priority
             />
           </a>
@@ -103,32 +103,33 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
       </div>
 
       <div className={`w-10 fixed md:bottom-16 bottom-12 md:right-12 right-4  
-          opacity-40 dark:invert dark:opacity-80 transform transition-transform duration-300 hover:scale-75
+         transform transition-transform duration-300 hover:scale-75
           ${section === 'contact' && 'rotate-180'}
           ${!!endPage ? 'rotate-180' : 'rotate-0'}
           `}>
+            {/*  para flecha gris: opacity-40 dark:invert dark:opacity-80  */}
         <Link
           to={
-            section === "home"
-              ? "about"
-              : section === "about"
-              ? "projects"
-              : section === "projects"
-              ? "resources"
-              : section === "resources"
-              ? "contact"
-              : "home"
+            section === 'home'
+              ? 'about'
+              : section === 'about'
+              ? 'projects'
+              : section === 'projects'
+              ? 'resources'
+              : section === 'resources'
+              ? 'contact'
+              : 'home'
           }
           smooth={true}
           duration={500}
           onClick={() => handleClick(section)}
-          className="cursor-pointer"
+          className='cursor-pointer'
         >
           <Image
-            width="50"
-            height="50"
-            src={img.flecha}
-            alt="img"
+            width='50'
+            height='50'
+            src={img.fl_am}
+            alt='img'
             priority
           />
         </Link>

@@ -10,13 +10,9 @@ interface InputData {
   message: string;
 }
 
-// const SERVICE_ID=process.env.REACT_APP_EMAILJS_SERVICE_ID;
-// const PUBLIC_KEY=process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-// const TEMPLATE_ID=process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-
-const SERVICE_ID = 'service_skao4og'
-const PUBLIC_KEY = 'K6tjKemCnbG7KfkR9'
-const TEMPLATE_ID = 'template_0n8wrhx'
+const SERVICE_ID=process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_SERVICE_ID;
+const PUBLIC_KEY=process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY;
+const TEMPLATE_ID=process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_TEMPLATE_ID;
 
 export const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -121,9 +117,12 @@ export const Contact = () => {
                 <button
                   type='submit'
                   disabled={disabled}
-                  className={`group w-full inline-block pt-4 pr-5 pb-4 pl-5 text-white text-center bg-LM rounded-lg transition duration-200 ease ${disabled
-                    ? 'hover:text-white hover:bg-LM'
-                    : 'hover:text-TX hover:bg-LMc'
+                  className={`group pt-3 pr-5 pb-3 pl-5 text-white text-center 
+                  border-solid border border-TX/40 dark:border-stone-300/30
+                  transition duration-200 ease
+                  ${disabled
+                    ? 'hover:text-white hover:bg-stone-300/30'
+                    : 'hover:text-TX hover:bg-LM'
                     }`}
                 >
                   Enviar
