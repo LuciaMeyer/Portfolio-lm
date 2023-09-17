@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         LM: '#f9b621',
         BGD: '#333333',
-        BGDc: '#393939',
+        BGDc: '#353535',
         TX: '#4D4D4D',
         LMc: '#F9EBD2',
       },

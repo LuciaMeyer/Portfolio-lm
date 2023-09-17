@@ -77,7 +77,7 @@ export const Contact = () => {
           space-y-10 md:pb-20 md:pt-10 md:pr-10 md:pl-10 pb-10
           md:text-left 
           bg-white dark:bg-BGDc rounded-xl shadow-2xl relative z-10'>
-            <div className='mt-6 ml-6 mr-6 relative space-y-8'>
+            <div className='mt-8 ml-6 mr-6 relative space-y-8'>
               <div className='relative'>
                 <input
                   name='name'
