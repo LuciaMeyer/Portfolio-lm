@@ -15,7 +15,7 @@ export default function RootLayout({ children}:{ children: React.ReactNode }) {
   return (
     <html lang='es' className={Roboto.className}>
       <head />
-      <body className='dark:bg-BGD dark:text-stone-300 text-TX font-thin'>
+      <body className='dark:bg-BGD dark:text-stone-300 text-TX font-thin bg-gradient'>
         <ThemeProvider enableSystem={true} attribute='class'>
           <Navbar />
           {children}

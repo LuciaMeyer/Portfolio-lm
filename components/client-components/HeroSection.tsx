@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { img } from '../../public/images';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
+import { Link } from 'react-scroll/modules';
+
 
 export const HeroSection = () => {
   return (
@@ -48,16 +50,23 @@ export const HeroSection = () => {
           <hr className='w-8 h-px my-10 bg-stone-300  dark:bg-stone-400 border-0' />
 
           <p className='relative -z-10 pb-4 md:text-lg text-sm'>
-            Desarrollo aplicacones web y mobile, tengo  
-            <br />
-            formación en Diseño y Marketing Digital.
-            <br />
+            Creo aplicaciones web y mobile. Combino desarrollo 
+            <br className='md:block hidden'/>
+            eficiente, diseño creativo y estrategias de marketing 
+            <br className='md:block hidden'/>
+            digital para lograr los mejores resultados.
           </p>
-          {/* <Link
-            to='about'
-            className='text-TX/50 dark:text-stone-300/60 text-xs border-solid border border-TX/40 dark:border-stone-300/30 px-2 py-1 hover:opacity-70 cursor-pointer'>
-            SABER MÁS
-          </Link> */}
+          <Link
+            to='contact'
+            activeClass='active'
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={1000}
+            className='cursor-poniter text-sm border-solid border rounded-full pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
+          >
+            saber más
+          </Link>
         </motion.div>
 
         <motion.div
@@ -71,7 +80,7 @@ export const HeroSection = () => {
             src={img.imglu}
             alt='img'
             priority
-            className='transform transition-transform duration-1000 hover:scale-110 md:mx-0 mx-auto'
+            className='transform transition-transform duration-1000 hover:scale-110 md:mx-0 mx-auto md:mt-0 mt-1'
             />
         </motion.div>
 

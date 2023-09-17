@@ -8,7 +8,7 @@ export const ParticlesComponents = () => {
         await loadFull(main);
     };
 
-    return (
+    return (    
         <Particles
             init={particlesInit} 
             height='100vh'              

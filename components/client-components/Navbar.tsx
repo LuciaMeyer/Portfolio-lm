@@ -53,16 +53,14 @@ export const Navbar = () => {
   };
 
   const handleMenuResposiveParticles = () => {
-    setShowParticles(!showParticles)
+    setShowParticles(!showParticles);
     setNavbar(!navbar);
-  }
+  };
 
-  const handleMenuResposiveTheme = (currentTheme:string | undefined) => {
-    currentTheme === 'dark'
-    ? setTheme('light')
-    : setTheme('dark')
+  const handleMenuResposiveTheme = (currentTheme: string | undefined) => {
+    currentTheme === 'dark' ? setTheme('light') : setTheme('dark');
     setNavbar(!navbar);
-  }
+  };
 
   const hanldeLogoClick = () => {
     window.scrollTo(0, 0);
@@ -70,13 +68,13 @@ export const Navbar = () => {
   };
 
   const show = {
-    transition: { duration: 1 },
+    transition: { duration: 0.7 },
     y: 0,
     scale: 1,
   };
 
   const hide = {
-    transition: { duration: 1 },
+    transition: { duration: 1.5 },
     y: -1000,
     scale: 1,
   };
@@ -90,9 +88,7 @@ export const Navbar = () => {
         </div>
       )}
       <header
-        className='w-full mx-auto fixed top-0 z-30 md:shadow-2xl bg-slate-100/60 dark:bg-BGD/80 
-        md:shadow-gray-200 
-        md:dark:shadow-stone-700'
+        className='w-full mx-auto fixed top-0 z-30 md:shadow-2xl md:shadow-neutral-200 dark:shadow-BGDo dark:bg-BGD/50'
       >
         {/* TEXTO MENÚ */}
         <motion.div
@@ -107,32 +103,29 @@ export const Navbar = () => {
             <div className='md:hidden flex mt-12 text-xs items-center'>
               <button
                 onClick={handleMenuResposiveParticles}
-                className='mr-2 text-LM'
+                className='mr-2 border-solid border rounded-full py-1 px-2 border-TX/30 dark:border-stone-300/30'
               >
-                {`${!showParticles ? 'VER FONDO' : 'OCULTAR FONDO'}`}
+                {`${!showParticles ? 'MOSTRAR FONDO' : 'OCULTAR FONDO'}`}
               </button>
-              <span>|</span>
-                <button
-                  onClick={() => handleMenuResposiveTheme(currentTheme)}
-                  className='mr-2 p-2 text-LM'
-                >
-                  {`${currentTheme === 'dark'? 'MODO CLARO' : 'MODO OSCURO'}`}
-                </button>
-
+              <span className='text-LM'>|</span>
+              <button
+                onClick={() => handleMenuResposiveTheme(currentTheme)}
+                className='mr-2 ml-2 border-solid border rounded-full py-1 px-2 border-TX/30 dark:border-stone-300/30'
+              >
+                {`${currentTheme === 'dark' ? 'MODO CLARO' : 'MODO OSCURO'}`}
+              </button>
             </div>
             {NAV_ITEMS.map((item, idx) => {
               return (
                 <Link
                   key={idx}
                   to={item.page}
-                  className={
-                    'hover:text-LM font-thin text-lg tracking-wider'
-                  }
+                  className={'hover:text-LM font-thin text-lg tracking-wider'}
                   activeClass='active'
                   spy={true}
                   smooth={true}
                   offset={-100}
-                  duration={500}
+                  duration={1000}
                   onClick={() => handleMenuClick(item.page)}
                 >
                   {item.label}
@@ -153,7 +146,7 @@ export const Navbar = () => {
                 whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
               >
                 <Image
-                  className='md:my-4 my-6 md:w-full w-[30px]'
+                  className='md:my-4 my-4 md:w-full'
                   src={img.LM}
                   alt='LM'
                   width={40}
@@ -166,71 +159,65 @@ export const Navbar = () => {
 
           {/* ÍCONOS MENÚ  */}
           <motion.div
-            className='relative my-auto cursor-pointer md:px-5'
+            className='relative my-auto cursor-pointer md:px-6 px-4 py-3 '
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className='flex items-center justify-between py-3 transition-all'>
-              {/* FONDO */}
-              <div className='md:flex hidden mr-4 relative transition-transform duration-500 hover:scale-90'>
-                <button
-                 onClick={() => setShowParticles(!showParticles)}
-                 className='bg-inherit text-LM text-sm tracking-widest w-[40px] h-[40px]'
-                >
-                  {`${!showParticles ? 'PLAY' : 'PAUSE'}`}
-
-                </button>
-              </div>
+            <div className='flex items-center justify-between transition-all'>
               {/* MENÚ HAMBURGESA   */}
               <button
                 onClick={() => setNavbar(!navbar)}
                 className='relative group'
               >
-                <div className='relative flex items-center justify-center rounded-full w-[60px] h-[50px]  transition-transform duration-500 hover:scale-90 '>
-                  {/* shadow-md dark:shadow-neutral-600 */}
+                <div className='relative mr-4 flex items-center justify-center rounded-full transition-transform duration-500 hover:scale-90 '>
                   <div
-                    className={`flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 
+                    className={`flex flex-col justify-between w-[25px] h-[14px] transform transition-all duration-300 
                   ${navbar && 'group-focus:-rotate-[45deg] origin-center'}`}
                   >
                     <div
-                      className={`bg-LM h-[1.5px] w-1/2 rounded transform transition-all duration-300
-                    ${
-                      navbar &&
-                      'group-focus:-rotate-90 group-focus:h-[1px] group-focus:-translate-y-[1px]'
-                    } origin-right delay-75`}
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300
+                      ${
+                        navbar &&
+                        'group-focus:-rotate-90 group-focus:h-[1px] group-focus:translate-y-[9px] origin-top delay-75'
+                      }`}
                     ></div>
 
-                    <div className=' bg-LM h-[1px] rounded'></div>
+                    <div className='dark:bg-stone-300 bg-TX h-[0.8px] rounded'></div>
 
                     <div
-                      className={`bg-LM h-[1.5px] w-1/2 rounded self-end transform transition-all duration-300
-                    ${
-                      navbar &&
-                      'group-focus:-rotate-90 group-focus:h-[1px] group-focus:translate-y-[1px] origin-left delay-75'
-                    }`}
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300
+                      ${navbar && 'group-focus:h-[0px]'}`}
                     ></div>
                   </div>
                 </div>
               </button>
               {/* SOL Y LUNA   */}
-              <div className='md:flex hidden mr-4 relative items-center justify-center rounded-full w-[40px] h-[40px]  transition-transform duration-500 hover:scale-90 '>
-                {/* shadow-md dark:shadow-neutral-600 */}
+              <div className='md:flex hidden mr-2 relative items-center justify-center rounded-full w-[40px] h-[40px] transition-transform duration-500 hover:scale-90 '>
                 {currentTheme === 'dark' ? (
                   <button
                     onClick={() => setTheme('light')}
-                    className='bg-inherit text-LM  '
+                    className='bg-inherit text-TX dark:text-stone-300'
                   >
                     <CiBrightnessDown size={22} />
                   </button>
                 ) : (
                   <button
                     onClick={() => setTheme('dark')}
-                    className='bg-inherit text-LM '
+                    className='bg-inherit text-TX dark:text-stone-300'
                   >
                     <CiDark size={22} />
                   </button>
                 )}
+              </div>
+              {/* FONDO */}
+              <div className='md:flex hidden mr-8 relative transition-transform duration-500 hover:scale-90'>
+                <button
+                  onClick={() => setShowParticles(!showParticles)}
+                  className='bg-inherit text-TX dark:text-stone-300 text-xs tracking-widest w-[40px] h-[40px]'
+                >
+                  {`${!showParticles ? 'PLAY' : 'PAUSE'}`}
+                </button>
               </div>
             </div>
           </motion.div>

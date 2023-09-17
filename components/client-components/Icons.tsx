@@ -29,12 +29,17 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
     };
   }, []);
 
+  useEffect(()=>{
+    !!endPage && setSection('')
+  },[endPage])
+
   const handleClick = (current: string) => {
     if (current === 'home') setSection('about');
     if (current === 'about') setSection('projects');
     if (current === 'projects') setSection('resources');
     if (current === 'resources') setSection('contact');
     if (current === 'contact') setSection('home');
+    if (current === '') setSection('home')
   };
 
   return (
@@ -109,7 +114,6 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
           ${section === 'contact' && 'rotate-180'}
           ${!!endPage ? 'rotate-180' : 'rotate-0'}
           `}>
-            {/*  para flecha gris: opacity-40 dark:invert dark:opacity-80  */}
         <Link
           to={
             section === 'home'
@@ -122,8 +126,11 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
               ? 'contact'
               : 'home'
           }
+          activeClass='active'
+          spy={true}
           smooth={true}
-          duration={500}
+          offset={-100}
+          duration={1000}
           onClick={() => handleClick(section)}
           className='cursor-pointer'
         >

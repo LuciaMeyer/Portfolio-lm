@@ -3,13 +3,13 @@ import Typewriter from 'typewriter-effect';
 export const Footer = () => {
   return (
     <div className='mx-auto px-4 md:w-1/2 md:py-0 py-8 md:mb-6'>
-      <div className='leading-snug tracking-wide font-bold text-xl text-LM flex justify-center my-72'>
+      <div className='leading-snug tracking-wide text-xl text-LM flex justify-center my-72'>
         <Typewriter
           options={{ cursor: '|', delay: 75, loop: true }}
           onInit={(typewriter) => {
             typewriter
               .pauseFor(1000)
-              .typeString('Gracias por visitarme!')
+              .typeString('Gracias por visitarme!').pauseFor(2000)
               .deleteChars(22)
               .start();
           }}

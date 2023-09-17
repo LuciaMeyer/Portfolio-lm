@@ -85,7 +85,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   placeholder='Nombre completo'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs md:text-base block border-stone-300'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-sm md:text-base block border-stone-300'
                 />
               </div>
               <div className='relative md:pb-4'>
@@ -95,7 +95,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   placeholder='Email'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-6 pr-3 pb-3 mt-2 text-xs md:text-base block border-stone-300'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-6 pr-3 pb-3 mt-2 text-sm md:text-base block border-stone-300'
                 />
               </div>
               <div className='relative md:pb-4'>
@@ -104,7 +104,7 @@ export const Contact = () => {
                   value={input.message}
                   onChange={handleChange}
                   placeholder='Mensaje'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs md:text-base block border-stone-300 '
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-sm md:text-base block border-stone-300 '
                 />
               </div>
               <div className='relative'>
