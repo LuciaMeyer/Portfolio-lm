@@ -50,6 +50,7 @@ export const AboutSection = () => {
                 </button>
               )}
             </div>
+            
             {/* FLECHA */}
             <div onClick={handleArrowClick}>
               <Image

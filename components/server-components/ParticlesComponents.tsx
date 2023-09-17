@@ -2,6 +2,7 @@ import React from 'react'
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
+
 export const ParticlesComponents = () => {
     const particlesInit = async (main: any) => {
         await loadFull(main);
