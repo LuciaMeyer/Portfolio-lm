@@ -3,7 +3,9 @@ import { Contact } from "@/components/client-components/Contact";
 import { HeroSection } from "@/components/client-components/HeroSection";
 import { ProjectsSection } from "@/components/server-components/ProjectsSection";
 import { Resurces } from "@/components/server-components/Resurces";
-import { Separator1 } from "@/components/server-components/Separator1";
+// import { Separator1 } from "@/components/server-components/Separator1";
+
+
 
 export default function Home() {
   return (

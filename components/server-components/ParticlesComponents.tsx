@@ -14,7 +14,7 @@ export const ParticlesComponents = () => {
             height='100vh'              
             options={{
                 fullScreen:true,
-                fpsLimit: 100,
+                fpsLimit: 200,
                 interactivity: {
                     events: {
                         onClick: {
@@ -48,7 +48,7 @@ export const ParticlesComponents = () => {
                         distance: 150,
                         enable: true,
                         opacity: 0.1,
-                        width: 2,
+                        width: 1,
                     },
                     collisions: {
                         enable: true,

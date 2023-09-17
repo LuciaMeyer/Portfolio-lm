@@ -72,57 +72,49 @@ export const Contact = () => {
       </h1>
       <SlideUp offset='-300px 0px -300px 0px'>
         <form ref={form} onSubmit={handleSubmit}>
-          <div className='bg-white dark:bg-BGDc mx-10 lg:mx-96 md:mx-32 flex flex-col space-y-10 justify-center md:justify-around align-top md:space-x-0 md:space-y-0 md:text-left pb-20 items-start  pt-10 pr-10  pl-10 shadow-2xl rounded-xl relative z-10'>
-            <div className='md:w-full mt-6 mx-auto md:mx-0 relative space-y-8'>
-              <h4 className='text-center'>Pongamosnos en contacto</h4>
-              <div className='relative md:pb-4'>
-                <p className='bg-white dark:bg-BGDc pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 text-sm absolute'>
-                  Nombre
-                </p>
+          <div className='md:w-1/2 mx-10 md:mx-auto
+          flex flex-col
+          space-y-10 md:pb-20 md:pt-10 md:pr-10 md:pl-10 pb-10
+          md:text-left 
+          bg-white dark:bg-BGDc rounded-xl shadow-2xl relative z-10'>
+            <div className='mt-6 ml-6 mr-6 relative space-y-8'>
+              <div className='relative'>
                 <input
                   name='name'
                   value={input.name}
                   onChange={handleChange}
-                  placeholder='ingresá tu nombre completo'
+                  placeholder='Nombre completo'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border focus:outline-none focus:border-LM w-full pt-3 pr-3 pl-4 pb-3 md:p-4 mt-2 text-xs md:text-sm block border-stone-300 rounded-md'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs md:text-base block border-stone-300'
                 />
               </div>
               <div className='relative md:pb-4'>
-                <p className='bg-white dark:bg-BGDc pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 text-sm absolute'>
-                  Email
-                </p>
                 <input
                   name='email'
                   value={input.email}
                   onChange={handleChange}
-                  placeholder='mail@mail.com'
+                  placeholder='Email'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border focus:outline-none focus:border-LM w-full pt-3 pr-3 pl-4 pb-3 md:p-4 mt-2 text-xs md:text-sm block border-stone-300 rounded-md'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-6 pr-3 pb-3 mt-2 text-xs md:text-base block border-stone-300'
                 />
               </div>
               <div className='relative md:pb-4'>
-                <p className='bg-white dark:bg-BGDc pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 text-sm absolute'>
-                  Mensaje
-                </p>
                 <textarea
                   name='message'
                   value={input.message}
                   onChange={handleChange}
-                  placeholder='dejame tu mensaje acá...'
-                  className='dark:bg-BGDc tracking-wider border focus:outline-none focus:border-LM w-full pt-3 pr-3 pl-4 pb-3 md:p-4 mt-2 text-xs md:text-sm block border-stone-300 rounded-md'
+                  placeholder='Mensaje'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs md:text-base block border-stone-300 '
                 />
               </div>
               <div className='relative'>
                 <button
                   type='submit'
                   disabled={disabled}
-                  className={`group pt-3 pr-5 pb-3 pl-5 text-white text-center 
-                  border-solid border border-TX/40 dark:border-stone-300/30
-                  transition duration-200 ease
+                  className={`group w-28 h-10 text-center border-solid border transition duration-200 ease rounded-full
                   ${disabled
-                    ? 'hover:text-white hover:bg-stone-300/30'
-                    : 'hover:text-TX hover:bg-LM'
+                    ? 'hover:text-TX/60 hover:bg-stone-300/20 text-TX/40 border-TX/30 dark:border-stone-300/30 dark:text-stone-300/50 '
+                    : 'hover:text-white hover:bg-LM border-LM text-LM'
                     }`}
                 >
                   Enviar

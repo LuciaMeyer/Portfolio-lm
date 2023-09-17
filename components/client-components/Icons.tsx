@@ -39,9 +39,9 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
 
   return (
     <div className='z-50 fixed bottom-0 flex w-full justify-center
-    bg-white dark:bg-BGD backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:md:bg-transparent '>
+    bg-white dark:bg-BGD md:bg-transparent'>
 
-      <div className='flex flex-col md:fixed md:left-12 md:bottom-16 bottom-12'>
+      <div className='flex flex-col md:fixed md:left-12 md:bottom-24 bottom-12'>
         <div className='md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center'>
           <a
             href='https://www.linkedin.com/in/lucia-meyer-65633a143/'
@@ -101,6 +101,8 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
           </a>
         </div>
       </div>
+      
+      <hr className='md:flex hidden fixed bottom-6 left-0.5 h-[1.5px] w-28 rotate-90 bg-stone-200 dark:bg-TX' />
 
       <div className={`w-10 fixed md:bottom-16 bottom-12 md:right-12 right-4  
          transform transition-transform duration-300 hover:scale-75
@@ -133,10 +135,7 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
             priority
           />
         </Link>
-
       </div>
-
-
     </div>
   );
 };
