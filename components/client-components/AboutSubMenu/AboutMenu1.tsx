@@ -79,13 +79,13 @@ export const AboutMenu1 = () => {
                 />
             </div>
             <div className='-z-50 h-full w-1/2 md:absolute md:block hidden top-0 right-0 bg-right'>
-                <Image
+                {/* <Image
                     src={images[currentImageIndex]}
                     alt='Image'
                     fill
                     style={{ objectFit: "cover" }}
                     sizes='50vw'
-                />
+                /> */}
             </div>
         </>
     )

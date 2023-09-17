@@ -16,7 +16,7 @@ export const HeroSection = () => {
           transition={{ duration: 1.5 }}
           className='md:mx-0  mx-auto'
         >
-          <h1 className='leading-snug tracking-wide md:text-3xl text-3xl md:mb-2 '>
+          <h1 className='leading-snug tracking-wide text-3xl md:mb-2 '>
             Lucía Meyer
           </h1>
 
