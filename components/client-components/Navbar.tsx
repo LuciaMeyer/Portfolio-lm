@@ -5,9 +5,9 @@ import { Link } from "react-scroll/modules";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { img } from "../../public/images";
-import { BsSun } from "react-icons/bs";
-import { HiOutlineMoon } from "react-icons/hi";
+import { CiDark } from "react-icons/ci";
 import { ParticlesComponents } from "../server-components/ParticlesComponents";
+import { CiBrightnessDown } from "react-icons/ci";
 
 import { motion } from "framer-motion";
 import { Icons } from "./Icons";
@@ -115,7 +115,7 @@ export const Navbar = () => {
 
         <div className="flex items-center justify-between backdrop-blur-md ">
           {/* LOGO */}
-          <div className="flex md:mx-auto md:pl-28 ml-7 cursor-pointer pb-2">
+          <div className="flex md:mx-auto md:pl-48 ml-7 cursor-pointer pb-2">
             <Link to="home" onClick={hanldeLogoClick}>
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
@@ -124,7 +124,7 @@ export const Navbar = () => {
                 whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
               >
                 <Image
-                  className="md:my-4 md:w-full"
+                  className="md:my-4 md:w-full w-[30px]"
                   src={img.LM}
                   alt="LM"
                   width={40}
@@ -166,48 +166,48 @@ export const Navbar = () => {
                 onClick={() => setNavbar(!navbar)}
                 className="relative group"
               >
-                <div className="relative flex items-center justify-center rounded-full w-[40px] h-[40px]  transition-transform duration-500 hover:scale-90 ">
+                <div className="relative flex items-center justify-center rounded-full w-[60px] h-[50px]  transition-transform duration-500 hover:scale-90 ">
                   {/* shadow-md dark:shadow-neutral-600 */}
                   <div
                     className={`flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 
                   ${navbar && "group-focus:-rotate-[45deg] origin-center"}`}
                   >
                     <div
-                      className={`bg-LM h-[2px] w-1/2 rounded transform transition-all duration-300
+                      className={`bg-LM h-[1.5px] w-1/2 rounded transform transition-all duration-300
                     ${
                       navbar &&
-                      "group-focus:-rotate-90 group-focus:h-[2px] group-focus:-translate-y-[1px]"
+                      "group-focus:-rotate-90 group-focus:h-[1px] group-focus:-translate-y-[1px]"
                     } origin-right delay-75`}
                     ></div>
 
-                    <div className=" bg-LM h-[2px] rounded"></div>
+                    <div className=" bg-LM h-[1px] rounded"></div>
 
                     <div
-                      className={`bg-LM h-[2px] w-1/2 rounded self-end transform transition-all duration-300
+                      className={`bg-LM h-[1.5px] w-1/2 rounded self-end transform transition-all duration-300
                     ${
                       navbar &&
-                      "group-focus:-rotate-90 group-focus:h-[2px] group-focus:translate-y-[1px] origin-left delay-75"
+                      "group-focus:-rotate-90 group-focus:h-[1px] group-focus:translate-y-[1px] origin-left delay-75"
                     }`}
                     ></div>
                   </div>
                 </div>
               </button>
               {/* SOL Y LUNA   */}
-              <div className="mr-4 ml-2 relative flex items-center justify-center rounded-full w-[40px] h-[40px]  transition-transform duration-500 hover:scale-90 ">
+              <div className="mr-4 relative flex items-center justify-center rounded-full w-[40px] h-[40px]  transition-transform duration-500 hover:scale-90 ">
                 {/* shadow-md dark:shadow-neutral-600 */}
                 {currentTheme === "dark" ? (
                   <button
                     onClick={() => setTheme("light")}
                     className="bg-inherit text-LM  "
                   >
-                    <BsSun size={22} />
+                    <CiBrightnessDown size={22} />
                   </button>
                 ) : (
                   <button
                     onClick={() => setTheme("dark")}
                     className="bg-inherit text-LM "
                   >
-                    <HiOutlineMoon size={22} />
+                    <CiDark size={22} />
                   </button>
                 )}
               </div>
