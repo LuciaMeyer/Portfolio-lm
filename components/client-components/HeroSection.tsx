@@ -50,9 +50,9 @@ export const HeroSection = () => {
           <hr className='w-8 h-px my-10 bg-stone-300  dark:bg-stone-400 border-0' />
 
           <p className='relative -z-10 pb-4 md:text-lg text-sm'>
-            Creo aplicaciones web y mobile. Combino desarrollo 
+            Creo aplicaciones web y mobile. Combino desarrollo &nbsp;
             <br className='md:block hidden'/>
-            eficiente, diseño creativo y estrategias de marketing 
+            eficiente, diseño creativo y estrategias de marketing &nbsp;
             <br className='md:block hidden'/>
             digital para lograr los mejores resultados.
           </p>
