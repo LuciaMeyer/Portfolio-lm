@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
@@ -8,7 +8,6 @@ import { img } from '../../public/images';
 import { CiDark } from 'react-icons/ci';
 import { ParticlesComponents } from '../server-components/ParticlesComponents';
 import { CiBrightnessDown } from 'react-icons/ci';
-
 import { motion } from 'framer-motion';
 import { Icons } from './Icons';
 
@@ -46,6 +45,7 @@ export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [section, setSection] = useState('home');
   const [showParticles, setShowParticles] = useState(true);
+
 
   const handleMenuClick = (page: string) => {
     setNavbar(!navbar);
@@ -142,7 +142,7 @@ export const Navbar = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, delay:1.5 }}
                 whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
               >
                 <Image
@@ -162,7 +162,7 @@ export const Navbar = () => {
             className='relative my-auto cursor-pointer md:px-6 px-4 py-3 '
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 1.5  }}
           >
             <div className='flex items-center justify-between transition-all'>
               {/* MENÚ HAMBURGESA   */}

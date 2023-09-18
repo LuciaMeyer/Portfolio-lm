@@ -57,7 +57,7 @@ export const HeroSection = () => {
             digital para lograr los mejores resultados.
           </p>
           <Link
-            to='contact'
+            to='about'
             activeClass='active'
             spy={true}
             smooth={true}

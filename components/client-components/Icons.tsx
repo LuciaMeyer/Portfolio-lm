@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { img } from '../../public/images';
 import { Link } from 'react-scroll/modules';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
 
 interface IconsProps {
   section: string;
@@ -43,8 +45,12 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
   };
 
   return (
-    <div className='z-50 fixed bottom-0 flex w-full justify-center
-    bg-white dark:bg-BGD md:bg-transparent'>
+    <motion.div className='z-50 fixed bottom-0 flex w-full justify-center
+    bg-white dark:bg-BGD md:bg-transparent'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 2.5 }}
+    >
 
       <div className='flex flex-col md:fixed md:left-12 md:bottom-24 bottom-12'>
         <div className='md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center'>
@@ -143,6 +149,6 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
           />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
