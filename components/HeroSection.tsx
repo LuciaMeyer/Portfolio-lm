@@ -56,17 +56,19 @@ export const HeroSection = () => {
             <br className='md:block hidden'/>
             digital para lograr los mejores resultados.
           </p>
-          <Link
-            to='about'
-            activeClass='active'
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={1000}
-            className='cursor-poniter text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
-          >
-            saber más
-          </Link>
+          <>
+            <Link
+              to='about'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={1000}
+              className='cursor-poniter text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
+            >
+              saber más
+            </Link>
+          </>
         </motion.div>
 
         <motion.div

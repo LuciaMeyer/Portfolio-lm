@@ -117,19 +117,21 @@ export const Navbar = () => {
             </div>
             {NAV_ITEMS.map((item, idx) => {
               return (
-                <Link
-                  key={idx}
-                  to={item.page}
-                  className={'hover:text-LM font-thin text-lg tracking-wider'}
-                  activeClass='active'
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={1000}
-                  onClick={() => handleMenuClick(item.page)}
-                >
-                  {item.label}
-                </Link>
+                <>
+                  <Link
+                    key={idx}
+                    to={item.page}
+                    className={'hover:text-LM font-thin text-lg tracking-wider'}
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={1000}
+                    onClick={() => handleMenuClick(item.page)}
+                  >
+                    {item.label}
+                  </Link>               
+                </>
               );
             })}
           </div>
@@ -138,23 +140,25 @@ export const Navbar = () => {
         <div className='flex items-center justify-between backdrop-blur-md '>
           {/* LOGO */}
           <div className='flex md:mx-auto md:pl-48 ml-7 cursor-pointer pb-2'>
-            <Link to='home' onClick={hanldeLogoClick}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 1.5 }}
-                whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
-              >
-                <Image
-                  className='md:my-4 my-4 md:w-full'
-                  src={img.LM}
-                  alt='LM'
-                  width={40}
-                  height={40}
-                  priority
-                />
-              </motion.div>
-            </Link>
+            <>
+              <Link to='home' onClick={hanldeLogoClick}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 1.5 }}
+                  whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
+                >
+                  <Image
+                    className='md:my-4 my-4 md:w-full'
+                    src={img.LM}
+                    alt='LM'
+                    width={40}
+                    height={40}
+                    priority
+                  />
+                </motion.div>
+              </Link>
+            </>
           </div>
 
           {/* ÍCONOS MENÚ  */}

@@ -14,6 +14,7 @@ export const Resurces = () => {
         <p className='leading-8'>
           Para esta sección estoy creando una colección de recursos, herramientas, sitios y
           datos que voy recopilando desde hace un tiempo. Son de gran ayuda para consultar, resolver problemas y aprender cosas nuevas. Si te interesa saber cuándo estará publicado
+         <>
           <Link
             to='contact'
             activeClass='active'
@@ -25,6 +26,7 @@ export const Resurces = () => {
           >
             escribime
           </Link>
+         </>
           y te mantengo al tanto.
         </p>
       </div>
