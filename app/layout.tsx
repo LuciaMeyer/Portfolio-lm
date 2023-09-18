@@ -7,9 +7,7 @@ import { Roboto_Condensed } from '@next/font/google';
 import { useEffect, useState } from 'react';
 import { SplashScreen } from '@/components/SplashScreen';
 import { motion } from 'framer-motion';
-import 'atropos/css'
-
-
+// import 'atropos/css'
 
 const Roboto = Roboto_Condensed({
   subsets: ['latin'],

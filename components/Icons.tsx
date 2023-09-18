@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { img } from '../public/images';
-import { Link } from 'react-scroll';
+import { Link } from 'react-scroll/modules';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -120,36 +120,34 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
           ${section === 'contact' && 'rotate-180'}
           ${!!endPage ? 'rotate-180' : 'rotate-0'}
           `}>
-        <>
-          <Link
-            to={
-              section === 'home'
-                ? 'about'
-                : section === 'about'
-                ? 'projects'
-                : section === 'projects'
-                ? 'resources'
-                : section === 'resources'
-                ? 'contact'
-                : 'home'
-            }
-            activeClass='active'
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={1000}
-            onClick={() => handleClick(section)}
-            className='cursor-pointer'
-          >
-            <Image
-              width='50'
-              height='50'
-              src={img.fl_am}
-              alt='img'
-              priority
-            />
-          </Link>
-        </>
+        <Link
+          to={
+            section === 'home'
+              ? 'about'
+              : section === 'about'
+              ? 'projects'
+              : section === 'projects'
+              ? 'resources'
+              : section === 'resources'
+              ? 'contact'
+              : 'home'
+          }
+          activeClass='active'
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          onClick={() => handleClick(section)}
+          className='cursor-pointer'
+        >
+          <Image
+            width='50'
+            height='50'
+            src={img.fl_am}
+            alt='img'
+            priority
+          />
+        </Link>
       </div>
     </motion.div>
   );
