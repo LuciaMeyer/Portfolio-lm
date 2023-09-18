@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-import { img } from '../../public/images';
+import { img } from '../public/images';
 import { CiDark } from 'react-icons/ci';
-import { ParticlesComponents } from '../server-components/ParticlesComponents';
+import { ParticlesComponents } from './ParticlesComponents';
 import { CiBrightnessDown } from 'react-icons/ci';
 import { motion } from 'framer-motion';
 import { Icons } from './Icons';
@@ -103,14 +103,14 @@ export const Navbar = () => {
             <div className='md:hidden flex mt-12 text-xs items-center'>
               <button
                 onClick={handleMenuResposiveParticles}
-                className='mr-2 border-solid border rounded-full py-1 px-2 border-TX/30 dark:border-stone-300/30'
+                className='mr-2 border-solid border py-1 px-2 w-28 border-TX/30 dark:border-stone-300/30'
               >
                 {`${!showParticles ? 'MOSTRAR FONDO' : 'OCULTAR FONDO'}`}
               </button>
               <span className='text-LM'>|</span>
               <button
                 onClick={() => handleMenuResposiveTheme(currentTheme)}
-                className='mr-2 ml-2 border-solid border rounded-full py-1 px-2 border-TX/30 dark:border-stone-300/30'
+                className='mr-2 ml-2 border-solid border py-1 px-2 w-28 border-TX/30 dark:border-stone-300/30'
               >
                 {`${currentTheme === 'dark' ? 'MODO CLARO' : 'MODO OSCURO'}`}
               </button>
@@ -142,7 +142,7 @@ export const Navbar = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay:1.5 }}
+                transition={{ duration: 1, delay: 1.5 }}
                 whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
               >
                 <Image
@@ -159,40 +159,40 @@ export const Navbar = () => {
 
           {/* ÍCONOS MENÚ  */}
           <motion.div
-            className='relative my-auto cursor-pointer md:px-6 px-4 py-3 '
+            className='relative my-auto cursor-pointer md:px-6 px-4 py-3'
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 1.5  }}
+            transition={{ duration: 1, delay: 1.5 }}
           >
             <div className='flex items-center justify-between transition-all'>
-              {/* MENÚ HAMBURGESA   */}
+              {/* MENÚ HAMBURGESA */}
               <button
                 onClick={() => setNavbar(!navbar)}
                 className='relative group'
               >
                 <div className='relative mr-4 flex items-center justify-center rounded-full transition-transform duration-500 hover:scale-90 '>
                   <div
-                    className={`flex flex-col justify-between w-[25px] h-[14px] transform transition-all duration-300 
-                  ${navbar && 'group-focus:-rotate-[45deg] origin-center'}`}
+                    className={`flex flex-col justify-between w-[25px] h-[14px] transform transition-all duration-300 ${navbar ? 'rotate-[45deg] origin-center' : ''
+                      }`}
                   >
                     <div
-                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300
-                      ${
-                        navbar &&
-                        'group-focus:-rotate-90 group-focus:h-[1px] group-focus:translate-y-[9px] origin-top delay-75'
-                      }`}
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${navbar
+                          ? 'rotate-90 h-[1px] translate-y-[9px] origin-top delay-75'
+                          : ''
+                        }`}
                     ></div>
 
                     <div className='dark:bg-stone-300 bg-TX h-[0.8px] rounded'></div>
 
                     <div
-                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300
-                      ${navbar && 'group-focus:h-[0px]'}`}
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${navbar ? 'h-[0px]' : ''
+                        }`}
                     ></div>
                   </div>
                 </div>
               </button>
-              {/* SOL Y LUNA   */}
+
+              {/* SOL Y LUNA */}
               <div className='md:flex hidden mr-2 relative items-center justify-center rounded-full w-[40px] h-[40px] transition-transform duration-500 hover:scale-90 '>
                 {currentTheme === 'dark' ? (
                   <button

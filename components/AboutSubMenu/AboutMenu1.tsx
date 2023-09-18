@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { img } from '../../../public/images';
+import { img } from '../../public/images';
 
 
 

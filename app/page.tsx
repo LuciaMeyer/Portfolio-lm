@@ -1,8 +1,8 @@
-import { AboutSection } from "@/components/client-components/AboutSection";
-import { Contact } from "@/components/client-components/Contact";
-import { HeroSection } from "@/components/client-components/HeroSection";
-import { ProjectsSection } from "@/components/server-components/ProjectsSection";
-import { Resurces } from "@/components/server-components/Resurces";
+import { AboutSection } from "@/components/AboutSection";
+import { Contact } from "@/components/Contact";
+import { HeroSection } from "@/components/HeroSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
+import { Resurces } from "@/components/Resurces";
 
 
 

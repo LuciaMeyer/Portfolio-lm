@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { img } from "../../public/images";
+import { img } from "../public/images";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -30,17 +30,21 @@ const show = {
   };
 
   return (
-    <main className="">
+    <main 
+      className="bg-cover bg-fixed bg-no-repeat h-screen"
+      style={{
+      backgroundImage: `url(${img.bgDesk})`,
+    }}
+    >
       <div
-        className="flex items-center justify-center h-screen bg-white"
+        className="flex items-center justify-center h-screen "
       >
         <motion.div
+          className="-mt-24 md:my-auto"
           initial={{ opacity: 0, scale: 0, rotate:0 }}
           animate={showSplash ? show : hide}
-          style={{ marginTop: "-10rem" }}
-        >
+        > 
           <Image
-            className=""
             src={img.LM}
             alt="LM"
             width={80}

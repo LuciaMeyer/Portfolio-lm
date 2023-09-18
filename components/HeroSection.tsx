@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import { img } from '../../public/images';
+import { img } from '../public/images';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-scroll/modules';
@@ -63,8 +63,9 @@ export const HeroSection = () => {
             smooth={true}
             offset={-100}
             duration={1000}
-            className='cursor-poniter text-sm border-solid border rounded-full pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
+            className='cursor-poniter text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
           >
+            {/* rounded-full  */}
             saber más
           </Link>
         </motion.div>

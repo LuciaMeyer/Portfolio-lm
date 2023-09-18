@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import SlideUp from '../client-components/SlideUp';
+import SlideUp from './SlideUp';
 import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
 import { img } from '@/public/images';
 
@@ -62,7 +62,7 @@ export const ProjectsSection = () => {
                         alt=''
                         width={1000}
                         height={1000}
-                        className='rounded-xl shadow-xl hover:opacity-70 transform transition-transform duration-500 hover:scale-x-95'
+                        className='shadow-xl hover:opacity-70 transform transition-transform duration-500 hover:scale-x-95'
                       />
                     </Link>
                   </div>

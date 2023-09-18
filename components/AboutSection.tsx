@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { img } from '../../public/images';
+import { img } from '../public/images';
 import { AboutMenu1 } from './AboutSubMenu/AboutMenu1';
 import { AboutMenu2 } from './AboutSubMenu/AboutMenu2';
 import { AboutMenu3 } from './AboutSubMenu/AboutMenu3';
@@ -21,13 +21,13 @@ export const AboutSection = () => {
       : currentMenu === 'Recorrido'
       ? setCurrentMenu('Visión')
       : currentMenu === 'Visión'
-      ? setCurrentMenu('Valores')
-      : currentMenu === 'Valores'
+      ? setCurrentMenu('Herramientas')
+      : currentMenu === 'Herramientas'
       ? setCurrentMenu('Conoceme')
       : null;
   };
 
-  const subMenu = ['Conoceme', 'Recorrido', 'Visión', 'Valores'];
+  const subMenu = ['Conoceme', 'Recorrido', 'Visión', 'Herramientas'];
 
   return (
     <section
@@ -42,6 +42,7 @@ export const AboutSection = () => {
       <div className='h-full md:w-1/2 flex flex-col md:flex-row md:justify-around mt-2 mb-20 mx-10 md:pr-10 md:items-center align-center pb-20'>
         <div className='md:pl-2 md:mr-10 md:ml-60 bg-white dark:bg-BGD md:pt-2 md:pr-2 md:pb-2'>
           <div className='flex justify-between align-center mb-8'>
+
             {/* SUBMENÚ */}
             <div className='flex'>
               {subMenu.map((sm, i) => (
@@ -66,14 +67,17 @@ export const AboutSection = () => {
                 priority
               />
             </div>
+
           </div>
+          
+          {/* SECCIONES */}
           {currentMenu === 'Conoceme' ? (
             <AboutMenu1 />
           ) : currentMenu === 'Recorrido' ? (
             <AboutMenu2 />
           ) : currentMenu === 'Visión' ? (
             <AboutMenu3 />
-          ) : currentMenu === 'Valores' ? (
+          ) : currentMenu === 'Herramientas' ? (
             <AboutMenu4 />
           ) : null}
         </div>

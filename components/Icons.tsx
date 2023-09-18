@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { img } from '../../public/images';
+import { img } from '../public/images';
 import { Link } from 'react-scroll/modules';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -113,7 +113,7 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
         </div>
       </div>
       
-      <hr className='md:flex hidden fixed bottom-6 left-0.5 h-[1.5px] w-28 rotate-90 bg-stone-200 dark:bg-TX' />
+      <hr className='md:flex hidden fixed bottom-6 left-0.5 h-[1.5px] w-28 rotate-90 bg-stone-400 dark:bg-TX' />
 
       <div className={`w-10 fixed md:bottom-16 bottom-12 md:right-12 right-4  
          transform transition-transform duration-300 hover:scale-75

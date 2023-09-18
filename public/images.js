@@ -31,5 +31,8 @@ export const img = {
     mail: 'https://res.cloudinary.com/dw272kava/image/upload/v1694629215/iconos/mail_jisgnm.png',
     ig: 'https://res.cloudinary.com/dw272kava/image/upload/v1694629215/iconos/ig_hyasbp.png',
     flecha:'https://res.cloudinary.com/dw272kava/image/upload/v1694629697/iconos/flecha_vzkoj8.png',
+
+    // SplashScreen
+    bgDesk: 'https://res.cloudinary.com/dw272kava/image/upload/v1695048188/SplashScreen/bgDesk_qdwlwf.png',
   };
   
