@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { img } from '../public/images';
-import { Link } from 'react-scroll/modules';
+import { Link } from 'react-scroll';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 

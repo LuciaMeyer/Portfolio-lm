@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import SlideUp from './SlideUp';
@@ -7,6 +8,8 @@ import videgames from '@/public/videogames.gif'
 import letsgo from '@/public/letsgo.gif'
 import gpt from '@/public/gpt.gif'
 import portfolio from '@/public/portfolio.gif'
+import Atropos from 'atropos/react';
+
 
 
 
@@ -61,23 +64,25 @@ export const ProjectsSection = () => {
           return (
             <div key={idx}>
               <SlideUp offset='-300px 0px -300px 0px'>
-                <div className='flex flex-col animate-slideUpCubiBezier animation-delay-2 md:space-x-12 align-center shadow-2xl'>
-                  <div className='relative'>
-                    <Link href={project.link}>
-                      <Image
-                        src={project.image}
-                        alt=''
-                        width={1000}
-                        height={1000}
-                        className='shadow-xl hover:opacity-70 transform transition-transform duration-500 hover:scale-x-95'
-                      />
-                    </Link>
-                    <h1
-                      style={{ 'letterSpacing': '0.3em' }}
-                      className='text-white text-lg font-extrabold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  '>{project.name}</h1>
-                  </div>
+                <Atropos
+                >
+                  <div className='flex flex-col animate-slideUpCubiBezier animation-delay-2 md:space-x-12 pb-8 align-center '>
+                    <div className='relative'>
+                      <Link href={project.link}>
+                        <Image
+                          src={project.image}
+                          alt=''
+                          width={1000}
+                          height={1000}
+                          data-atropos-offset="-3"
+                        />
+                      </Link>
+                      <h1
+                        style={{ 'letterSpacing': '0.3em' }}
+                        className='text-white md:text-lg text-base font-extrabold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  '>{project.name}</h1>
+                    </div>
 
-                  {/* <div className='md:w-1/2'>
+                    {/* <div className='md:w-1/2'>
               <span className='leading-7'>
                 {project.description}...
               </span>
@@ -99,7 +104,8 @@ export const ProjectsSection = () => {
                 </Link>
               </div>
             </div> */}
-                </div>
+                  </div>
+                </Atropos>
               </SlideUp>
             </div>
           );

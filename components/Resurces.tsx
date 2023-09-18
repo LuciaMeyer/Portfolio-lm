@@ -1,5 +1,5 @@
 'use client'
-import { Link } from 'react-scroll/modules';
+import { Link } from 'react-scroll';
 
 export const Resurces = () => {
   return (
