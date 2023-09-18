@@ -30,7 +30,7 @@ export const HeroSection = () => {
 
           >
             <Typewriter
-              options={{ cursor: '|', delay:75 }}
+              options={{ cursor: '|', delay:75, loop: true }}
               onInit={(typewriter) => {
                 typewriter
                 .pauseFor(1000)

@@ -32,12 +32,12 @@ const show = {
   return (
     <main className="">
       <div
-        className="flex items-center justify-center h-screen
-        bg-gradient-to-b from-neutral-300 to-white"
+        className="flex items-center justify-center h-screen bg-white"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0, rotate:0 }}
           animate={showSplash ? show : hide}
+          style={{ marginTop: "-10rem" }}
         >
           <Image
             className=""
