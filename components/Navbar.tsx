@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
