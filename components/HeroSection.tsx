@@ -65,7 +65,6 @@ export const HeroSection = () => {
             duration={1000}
             className='cursor-poniter text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
           >
-            {/* rounded-full  */}
             saber más
           </Link>
         </motion.div>
