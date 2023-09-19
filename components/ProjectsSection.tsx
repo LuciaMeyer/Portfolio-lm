@@ -1,99 +1,120 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import SlideUp from './SlideUp';
-import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
-import { img } from '@/public/images';
-
-
+"use client";
+import { useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import SlideUp from "./SlideUp";
+import videgames from "@/public/videogames.gif";
+import letsgo from "@/public/letsgo.gif";
+import gpt from "@/public/gpt.gif";
+import portfolio from "@/public/portfolio.gif";
+import Atropos from "atropos/react";
+import { motion } from 'framer-motion';
 
 const projects = [
   {
-    name: "let's GO",
-    description: 'E-Commerce que ofrece el servicio de alquiler de bicicletas, accesorios y packs de aventuras según calendario y stock disponible. Desarrollado con PERN stack',
-    image: img.p1,
-    github: 'https://github.com/LetTeam22/lets-GO',
-    link: 'https://pf-let.vercel.app/',
-  },
-  {
-    name: 'VideoGames',
-    description: 'SPA de videojuegos que consume datos de una api externa e incluye filtros y ordenamientos acumulativos, búsquedas por nombre, creación y edición de videojuegos. Desarrollado con PERN stack',
-    image: img.p2,
-    github: 'https://github.com/LuciaMeyer/Videogames_app',
-    link: 'https://cliente-videogames.onrender.com/',
-  },
-  {
-    name: 'API GPT OpenAI',
+    name: "E-COMMERCE",
     description:
-      'Inclusión de las funcionalidades de API en un proyecto de e-Commerce para optimizar el dashboard del administrador, a través de ciertos prompt estratégicos.',
-    image: img.p3,
-    github: '',
-    link: '',
+      "E-Commerce que ofrece el servicio de alquiler de bicicletas, accesorios y packs de aventuras según calendario y stock disponible. Desarrollado con PERN stack",
+    image: letsgo,
+    github: "https://github.com/LetTeam22/lets-GO",
+    link: "https://pf-let.vercel.app/",
   },
   {
-    name: 'Portfolio',
+    name: "VIDEOGAMES",
     description:
-      'Aplicación web con el objetivo de incorporar nuevas tecnologías como Next.js 13, TaildwindCC y Framer Motion ',
-    image: img.p4,
-    github: '',
-    link: '',
+      "SPA de videojuegos que consume datos de una api externa e incluye filtros y ordenamientos acumulativos, búsquedas por nombre, creación y edición de videojuegos. Desarrollado con PERN stack",
+    image: videgames,
+    github: "https://github.com/LuciaMeyer/Videogames_app",
+    link: "https://cliente-videogames.onrender.com/",
+  },
+  {
+    name: "API GPT OPEN AI",
+    description:
+      "Inclusión de las funcionalidades de API en un proyecto de e-Commerce para optimizar el dashboard del administrador, a través de ciertos prompt estratégicos.",
+    image: gpt,
+    github: "",
+    link: "",
+  },
+  {
+    name: "PORTFOLIO",
+    description:
+      "Aplicación web con el objetivo de incorporar nuevas tecnologías como Next.js 13, TaildwindCC y Framer Motion ",
+    image: portfolio,
+    github: "",
+    link: "",
   },
 ];
 
 export const ProjectsSection = () => {
+
+  const [showDiv, setShowDiv] = useState(false);
+
+  const handleShowDiv = () => {
+    setShowDiv(true)
+    setTimeout(()=>{
+      setShowDiv(false)
+    },10000)
+  };
+
   return (
-    <section id='projects' className='flex-1 pt-6 md:pt-20 pb-20'>
-      <div className='md:pb-10 pb-8'>
-        <h1 className='text-center text-2xl'>
+    <section id="projects" className="flex-1 pt-6 md:pt-10 md:pb-60 pb-28">
+      <div className="md:pb-10 pb-8">
+        <h1 className="text-center text-2xl">
           Proyectos
-          <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
+          <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
         </h1>
       </div>
 
-      <div className='flex flex-col space-y-16 pb-20 mx-10 md:mx-60'>
+      <div className="flex flex-col md:grid md:grid-cols-2 md:gap-4 pb-20 mx-10 md:mx-auto md:w-2/3">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
-              <SlideUp offset='-300px 0px -300px 0px'>
-                <div className='flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 align-center'>
-                  <div className=' md:w-1/2'>
-                    <Link href={project.link}>
-                      <Image
-                        src={project.image}
-                        alt=''
-                        width={1000}
-                        height={1000}
-                        className='shadow-xl hover:opacity-70 transform transition-transform duration-500 hover:scale-x-95'
-                      />
-                    </Link>
-                  </div>
-                  <div className='md:w-1/2'>
-                    <h1 className='text-2xl font-bold mb-6 md:mt-0 mt-8'>{project.name}</h1>
-                    <span className='leading-7'>
-                      {project.description}...
-                    </span>
-                    <span className='ml-2 font-bold dark:font-normal dark:text-LM'>
-                        saber más
-                    </span>
-                    <div className='flex flex-row align-bottom space-x-4 mt-4'>
-                      <Link href={project.github} target='_blank'>
-                        <BsGithub
-                          size={25}
-                          className='text-TX/60 dark:text-stone-300/60 hover:-translate-y-1 dark:hover:text-LM hover:text-LM transition-transform cursor-pointer'
+              <SlideUp offset="-300px 0px -300px 0px">
+                <Atropos>
+                  <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:space-x-12 pb-8 align-center ">
+                    <div className="relative">
+                      <Link href={project.link}>
+                        <Image
+                          src={project.image}
+                          alt=""
+                          width={1000}
+                          height={1000}
+                          data-atropos-offset="-3"
                         />
                       </Link>
-                      <Link href={project.link} target='_blank'>
-                        <BsArrowUpRightSquare
-                          size={25}
-                          className='text-TX/60 dark:text-stone-300/60 hover:-translate-y-1 dark:hover:text-LM hover:text-LM transition-transform cursor-pointer'
-                        />
-                      </Link>
+                      <h1
+                        style={{ letterSpacing: "0.3em" }}
+                        className="text-white md:text-lg text-base font-extrabold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  "
+                      >
+                        {project.name}
+                      </h1>
+                      <button className="absolute bottom-4 text-2xl left-4 w-7 h-7 bg-transparent rounded-full border border-neutral-400  flex items-center justify-center text-neutral-400 hover:bg-neutral-600 hover:text-gray-800 hover:border-transparent transition duration-300 ease-in-out">
+                        +
+                      </button>
                     </div>
                   </div>
-                </div>
+                </Atropos>
               </SlideUp>
             </div>
           );
         })}
+        <div className="relative flex flex-col">
+          <button
+            onClick={handleShowDiv}
+            className="cursor-pointer w-36 h-9 text-sm border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM ">
+            ver más proyectos
+          </button>
+          {showDiv && 
+            <motion.div
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="absolute top-16">
+              <h4>En construcción...</h4>
+              <span>Estoy trabajando en la presentación de varios proyectos, incluyendo los de diseño. Volvé dentro de poco para verlos! &#128522; </span>
+            </motion.div>
+          }
+        </div>
       </div>
     </section>
   );

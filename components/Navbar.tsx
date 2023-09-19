@@ -142,7 +142,7 @@ export const Navbar = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 1.5 }}
+                transition={{ duration: 1 }}
                 whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
               >
                 <Image

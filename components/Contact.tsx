@@ -66,7 +66,7 @@ export const Contact = () => {
   const disabled = !input.name || !input.email || !input.message;
 
   return (
-    <section id='contact' className='flex-1 pt-10 md:pt-20 pb-20'>
+    <section id='contact' className='flex-1 pt-10 md:pt-10 pb-20'>
       <h1 className='text-center text-2xl md:pb-10 pb-8'>
         Contactame
         <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
@@ -112,7 +112,7 @@ export const Contact = () => {
                 <button
                   type='submit'
                   disabled={disabled}
-                  className={`group w-28 h-10 text-center border-solid border transition duration-200 ease
+                  className={`cursor-pointer group w-28 h-10 text-center border-solid border transition duration-200 ease
                   ${disabled
                     ? 'hover:text-TX/60 hover:bg-stone-300/20 text-TX/40 border-TX/30 dark:border-stone-300/30 dark:text-stone-300/50 '
                     : 'hover:text-white hover:bg-LM border-LM text-LM'

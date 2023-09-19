@@ -1,7 +1,7 @@
-'use client';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { img } from '../../public/images';
+"use client";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { img } from "../../public/images";
 
 export const AboutMenu2 = () => {
   const images = [img.auxfondo1, img.auxfondo2, img.auxfondo3];
@@ -10,7 +10,7 @@ export const AboutMenu2 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
+    }, 4000);
 
     return () => {
       clearInterval(interval);
@@ -19,30 +19,14 @@ export const AboutMenu2 = () => {
 
   return (
     <>
-      <div className='mt-auto text-justify md:text-justify'>
-        <p>
-          TEXTO
-        </p>
+      <div className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
+        <div className="md:h-[25rem] overflow-y-auto max-h-[25rem]">
+          TEXTO RECORRIDO
+        </div>
       </div>
-      <div className='md:hidden flex justify-center'>
-        <Image
-          width='350'
-          height='350'
-          src={images[currentImageIndex]}
-          alt='img'
-          priority
-        />
-      </div>
-      <div className='-z-50 h-full w-1/2 md:absolute md:block hidden top-0 right-0 bg-right'>
-        <Image
-          src={images[currentImageIndex]}
-          alt='Background Image'
-          layout='fill'
-          objectFit='cover'
-        />
+      <div className="flex justify-center">
+        imagen
       </div>
     </>
-  )
-}
-
-
+  );
+};

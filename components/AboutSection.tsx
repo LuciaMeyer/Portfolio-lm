@@ -8,7 +8,7 @@ import { AboutMenu3 } from './AboutSubMenu/AboutMenu3';
 import { AboutMenu4 } from './AboutSubMenu/AboutMenu4';
 
 export const AboutSection = () => {
-  const [currentMenu, setCurrentMenu] = useState('Conoceme');
+  const [currentMenu, setCurrentMenu] = useState('CONOCEME');
 
   const handleClick = (sm: string) => {
     setCurrentMenu(sm);
@@ -16,71 +16,64 @@ export const AboutSection = () => {
   };
 
   const handleArrowClick = () => {
-    currentMenu === 'Conoceme'
-      ? setCurrentMenu('Recorrido')
-      : currentMenu === 'Recorrido'
-      ? setCurrentMenu('Visión')
-      : currentMenu === 'Visión'
-      ? setCurrentMenu('Herramientas')
-      : currentMenu === 'Herramientas'
-      ? setCurrentMenu('Conoceme')
+    currentMenu === 'CONOCEME'
+      ? setCurrentMenu('RECORRIDO')
+      : currentMenu === 'RECORRIDO'
+      ? setCurrentMenu('HERRAMIENTAS')
+      : currentMenu === 'HERRAMIENTAS'
+      ? setCurrentMenu('MOTIVACIÓN')
+      : currentMenu === 'MOTIVACIÓN'
+      ? setCurrentMenu('CONOCEME')
       : null;
   };
 
-  const subMenu = ['Conoceme', 'Recorrido', 'Visión', 'Herramientas'];
+  console.log(currentMenu)
+  const subMenu = ['CONOCEME', 'RECORRIDO', 'HERRAMIENTAS', 'MOTIVACIÓN'];
 
   return (
-    <section
-      id='about'
-      className='flex-1 pt-6 md:pt-20 pb-20 relative overflow-hidden'
-    >
+    <section id='about' className='flex-1 pt-6 md:pt-10 md:pb-60 pb-40 relative overflow-hidden md:mx-auto mx-10'>
+
       <h1 className='z-20 text-center text-2xl md:pb-10 pb-8 '>
         Sobre Mi
         <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
       </h1>
 
-      <div className='h-full md:w-1/2 flex flex-col md:flex-row md:justify-around mt-2 mb-20 mx-10 md:pr-10 md:items-center align-center pb-20'>
-        <div className='md:pl-2 md:mr-10 md:ml-60 bg-white dark:bg-BGD md:pt-2 md:pr-2 md:pb-2'>
-          <div className='flex justify-between align-center mb-8'>
-
-            {/* SUBMENÚ */}
-            <div className='flex'>
-              {subMenu.map((sm, i) => (
-                <button key={i} onClick={() => handleClick(sm)}>
-                  <h1 className='text-left text-LM md:text-xl text-m font-medium pr-4 dark:hover:text-stone-300 hover:text-TX'>
-                    {sm}
-                  </h1>
-                </button>
-              ))}
-            </div>
-
-            {/* FLECHA */}
-            <div onClick={handleArrowClick}>
-              <Image
-                className={`hover:scale-90 cursor-pointer -rotate-90 ${
-                  currentMenu === 'Valores' && 'rotate-90'
-                } transform transition-transform duration-300 opacity-50 hover:opacity-100`}
-                width='30'
-                height='30'
-                src={img.fl_am}
-                alt='img'
-                priority
-              />
-            </div>
-
-          </div>
-          
-          {/* SECCIONES */}
-          {currentMenu === 'Conoceme' ? (
-            <AboutMenu1 />
-          ) : currentMenu === 'Recorrido' ? (
-            <AboutMenu2 />
-          ) : currentMenu === 'Visión' ? (
-            <AboutMenu3 />
-          ) : currentMenu === 'Herramientas' ? (
-            <AboutMenu4 />
-          ) : null}
+      {/* SUBMENÚ */}
+      <div className='flex justify-center '>
+        {subMenu.map((sm, i) => (
+          <button key={i} onClick={() => handleClick(sm)}>
+            <h1
+              className={`pr-4 ${
+                sm === currentMenu ? 'text-TX dark:text-stone-300 text-xl' : 'text-LM text-sm tracking-widest'
+              } dark:hover:text-stone-300 hover:text-TX`}
+              
+              >
+              {sm}
+            </h1>
+          </button>
+        ))}
+        {/* FLECHA */}
+        <div onClick={handleArrowClick}>
+          <Image
+            className={`hover:scale-90 cursor-pointer -rotate-90 ${
+              currentMenu === 'MOTIVACIÓN' && 'rotate-90'
+            } transform transition-transform duration-300 opacity-50 hover:opacity-100`}
+            width='30'
+            height='30'
+            src={img.fl_am}
+            alt='img'
+            priority
+          />
         </div>
+      </div>
+
+      <div className='flex flex-col md:flex-row md:w-2/3 justify-center mx-auto mt-10'>
+        {currentMenu === 'CONOCEME' ? <AboutMenu1 />
+         : currentMenu === 'RECORRIDO' ? <AboutMenu2 />
+         : currentMenu === 'HERRAMIENTAS' ? <AboutMenu3 />
+         : currentMenu === 'MOTIVACIÓN' ? <AboutMenu4 />
+         : null
+         }
       </div>
     </section>
   );

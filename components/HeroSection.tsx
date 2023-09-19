@@ -9,7 +9,7 @@ import { Link } from 'react-scroll/modules';
 export const HeroSection = () => {
   return (
     <>
-    <section id='home' className='flex-1 pt-36 md:pt-44 pb-60 '>
+    <section id='home' className='flex-1 pt-36 md:pt-44 md:pb-60 pb-40'>
       <div className='flex flex-col h-full md:flex-row md:justify-around md:mx-40 mx-10 md:items-center content-center'>
 
         <motion.div
@@ -63,9 +63,8 @@ export const HeroSection = () => {
             smooth={true}
             offset={-100}
             duration={1000}
-            className='cursor-poniter text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
+            className='cursor-pointer text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
           >
-            {/* rounded-full  */}
             saber más
           </Link>
         </motion.div>
