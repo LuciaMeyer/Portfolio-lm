@@ -1,13 +1,18 @@
 "use client";
+
+import SlideUp from "./SlideUp";
+
 // import { Link } from 'react-scroll/modules';
 
 export const Resurces = () => {
   return (
     <section id="resources" className="flex-1 pt-6 md:pt-10 md:pb-60 pb-28">
-      <h1 className="text-center text-2xl md:pb-16 pb-8">
-        Recursos Dev
-        <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
-      </h1>
+      <SlideUp offset='-300px 0px -300px 0px'>
+        <h1 className="text-center text-2xl md:pb-16 pb-8">
+          Recursos Dev
+          <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
+        </h1>
+      </SlideUp>
       <div className="ml-10 mr-10 md:mx-auto md:w-1/2 flex flex-col space-y-2 justify-center align-top pb-20">
         <p>EN PROCESO...</p>
         <br />

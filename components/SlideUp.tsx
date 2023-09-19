@@ -15,7 +15,9 @@ const useElementVisibility = (ref: React.RefObject<HTMLDivElement>, offset: stri
         const rect = ref.current.getBoundingClientRect();
 
         if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          setIsVisible(true);
+          setTimeout(() => {
+            setIsVisible(true);
+          }, 500);
         }
       }
     };

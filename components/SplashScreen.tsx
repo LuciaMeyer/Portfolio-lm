@@ -45,7 +45,7 @@ const show = {
           animate={showSplash ? show : hide}
         > 
           <Image
-            src={img.LM}
+            src={img.LMg}
             alt="LM"
             width={80}
             height={80}

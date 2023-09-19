@@ -2,6 +2,8 @@ export const img = {
 
     //Navbar
     LM: 'https://res.cloudinary.com/dw272kava/image/upload/v1687448931/Navbar/LM_ttel6q.png',
+    LMg: 'https://res.cloudinary.com/dw272kava/image/upload/v1695124023/Navbar/logo_LM_gris_phhbku.png',
+
   
     // HeroSection
     imglu:'https://res.cloudinary.com/dw272kava/image/upload/v1693688429/HeroSection/lu_wqcoyn.png',
@@ -34,5 +36,8 @@ export const img = {
 
     // SplashScreen
     bgDesk: 'https://res.cloudinary.com/dw272kava/image/upload/v1695048188/SplashScreen/bgDesk_qdwlwf.png',
+
+    // Footer
+    luz: 'https://res.cloudinary.com/dw272kava/image/upload/v1695133411/aux/luz_rr7smv.png'
   };
   

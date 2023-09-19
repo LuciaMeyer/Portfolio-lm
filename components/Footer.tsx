@@ -1,8 +1,24 @@
 import Typewriter from 'typewriter-effect';
+// import Image from 'next/image';
+// import { img } from '../public/images';
+
+
 
 export const Footer = () => {
   return (
-    <div className='mx-auto px-4 md:w-1/2 md:py-0 py-8 md:mb-6'>
+    <div className='relative mx-auto px-4 md:w-1/2 md:py-0 py-8 md:mb-6'>
+      {/* <Image
+        className='absolute'
+        src={img.luz}
+        alt='Imagen de fondo'
+        fill
+        style={{
+          transform: 'scale(0.7)',
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center bottom',
+        }}
+      /> */}
       <div className='leading-snug tracking-wide text-xl text-LM flex justify-center my-72'>
         <Typewriter
           options={{ cursor: '|', delay: 75, loop: true }}

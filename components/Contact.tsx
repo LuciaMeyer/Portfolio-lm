@@ -66,7 +66,7 @@ export const Contact = () => {
   const disabled = !input.name || !input.email || !input.message;
 
   return (
-    <section id='contact' className='flex-1 pt-10 md:pt-10 pb-20'>
+    <section id='contact' className='flex-1 pt-10 md:pt-10 pb-60'>
       <h1 className='text-center text-2xl md:pb-10 pb-8'>
         Contactame
         <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
