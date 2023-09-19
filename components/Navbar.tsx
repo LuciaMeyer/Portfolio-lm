@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useState } from 'react';
-// import { Link } from 'react-scroll/modules';
+import { Link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { img } from '../public/images';
@@ -138,7 +138,7 @@ export const Navbar = () => {
         <div className='flex items-center justify-between backdrop-blur-md '>
           {/* LOGO */}
           <div className='flex md:mx-auto md:pl-48 ml-7 cursor-pointer pb-2'>
-            {/* <Link to='home' onClick={hanldeLogoClick}> */}
+            <Link to='home' onClick={hanldeLogoClick}>
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -154,7 +154,7 @@ export const Navbar = () => {
                   priority
                 />
               </motion.div>
-            {/* </Link> */}
+            </Link>
           </div>
 
           {/* ÍCONOS MENÚ  */}
