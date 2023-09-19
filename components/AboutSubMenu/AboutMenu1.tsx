@@ -18,15 +18,7 @@ export const AboutMenu1 = () => {
   return (
     <>
       <div className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
-      <div
-    className="md:h-[25rem]"
-    style={{
-      overflowY: 'auto',
-      maxHeight: '25rem',
-      scrollbarWidth: 'thin',
-      scrollbarColor: 'gray-400 gray-100',
-    }}
-  >
+        <div className="md:h-[25rem] md:overflow-y-auto">
           <p>
             Soy{" "}
             <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
@@ -82,7 +74,7 @@ export const AboutMenu1 = () => {
           src={images[currentImageIndex]}
           alt="img"
           priority
-          style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+          style={{ objectFit: "contain", width: "100%", height: "100%" }}
         />
       </div>
     </>
