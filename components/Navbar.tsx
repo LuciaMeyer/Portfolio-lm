@@ -118,19 +118,21 @@ export const Navbar = () => {
             </div>
             {NAV_ITEMS.map((item, idx) => {
               return (
-                <Link
-                  key={idx}
-                  to={item.page}
-                  className={'hover:text-LM font-thin text-lg tracking-wider'}
-                  activeClass='active'
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={1000}
-                  onClick={() => handleMenuClick(item.page)}
-                >
-                  {item.label}
-                </Link>
+                <div>
+                  <Link
+                    key={idx}
+                    to={item.page}
+                    className={'hover:text-LM font-thin text-lg tracking-wider'}
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={1000}
+                    onClick={() => handleMenuClick(item.page)}
+                  >
+                    {item.label}
+                  </Link>
+                </div>
               );
             })}
           </div>

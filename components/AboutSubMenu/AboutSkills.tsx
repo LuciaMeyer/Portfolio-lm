@@ -26,12 +26,11 @@ export const AboutSkills = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileHover={{ opacity: 1, transition: { duration: 1 } }}
-      className='opacity-0 absolute -top-2 left-[-10px] w-20 h-7 bg-white rounded-full shadow-xl shadow-black
+      className='opacity-0 absolute -top-4 left-[-10px] w-20 h-7 dark:bg-white bg-neutral-700 rounded-full shadow-md shadow-black
     
     '>
-      {/* hover:opacity-100 transform transition-transform duration-1000 */}
-      <span className='block w-2 h-2 bg-white transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%]  '></span>
-      <span className='text-BGD text-xs tracking-wide text-center ml-3  '>JavaScript</span>
+      <span className='block w-3 h-3 dark:bg-white bg-neutral-700 transform rotate-45 absolute bottom-[-8px] left-[30%] translate-x-[-50%]  '></span>
+      <span className='dark:text-TX text-stone-300 text-xs tracking-widest text-center ml-2 font-medium '>JavaScript</span>
     </motion.div>
   </div>
 </div>
