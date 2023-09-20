@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { img } from "../../public/images";
+import { motion } from "framer-motion";
 
 export const AboutMenu1 = () => {
   const images = [img.aux1, img.aux2, img.aux3];
@@ -17,7 +18,12 @@ export const AboutMenu1 = () => {
 
   return (
     <>
-      <div className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
+      >
         <div className="md:h-[25rem]">
           <p className="pb-4 md:text-lg text-sm">
             Soy{" "}
@@ -66,7 +72,7 @@ export const AboutMenu1 = () => {
           </p>
           <br />
         </div>
-      </div>
+      </motion.div>
       <div className="flex justify-center">
         <Image
           width="500"

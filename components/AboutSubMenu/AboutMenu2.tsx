@@ -35,7 +35,12 @@ export const AboutMenu2 = () => {
 
   return (
     <>
-      <div className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
+      >
         {!showDiv ? (
           <div className="md:h-[25rem]">
             <p className="pb-4 md:text-lg text-sm">
@@ -75,7 +80,11 @@ export const AboutMenu2 = () => {
             </p>
           </div>
         ) : (
-          <div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+          >
             <p className="pb-4 md:text-lg text-sm">
               ... Más adelante me lanzé como
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -102,7 +111,9 @@ export const AboutMenu2 = () => {
             <p className="pb-4 md:text-lg text-sm">
               Hoy disfruto
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {"  programando, diseñando, buscando soluciones simples y creativas,   "}
+                {
+                  "  programando, diseñando, buscando soluciones simples y creativas,   "
+                }
               </span>
               y aprendiendo todos los días en equipo,
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -117,9 +128,9 @@ export const AboutMenu2 = () => {
                 volver al inicio
               </button>
             </p>
-          </div>
+          </motion.div>
         )}
-      </div>
+      </motion.div>
 
       <div className="flex justify-center">
         <Image
