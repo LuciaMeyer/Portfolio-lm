@@ -114,7 +114,7 @@ export const ProjectsSection = () => {
           <button
             onClick={handleShowDiv}
             className='cursor-pointer w-36 h-9 text-sm border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '>
-            ver más proyectos
+            más proyectos
           </button>
           <motion.div
             initial={{ opacity: 0 }}

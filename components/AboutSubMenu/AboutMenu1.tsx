@@ -18,52 +18,51 @@ export const AboutMenu1 = () => {
   return (
     <>
       <div className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
-        <div className="md:h-[25rem] ">
-        {/* md:overflow-y-auto */}
-          <p>
+        <div className="md:h-[25rem]">
+          <p className="pb-4 md:text-lg text-sm">
             Soy{" "}
-            <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {"Full Stack Developer"}
             </span>
             , con formación en
-            <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Diseño Gráfico"}
             </span>
             , y experiencia en
-            <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Marketing Digital,"}
             </span>{" "}
             con base en Rosario, Argentina.
           </p>
           <br />
-          <p>
-            Mi mayor interés dentro del mundo IT es la posibilidad de crear
-            frente a grandes necesidades, soluciones simples e innovadoras.
+          <p className="pb-4 md:text-lg text-sm">
+            Mi mayor interés dentro del
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" mundo IT "}
+            </span>{" "}
+            es la posibilidad de crear frente a grandes necesidades,
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" soluciones simples e innovadoras. "}
+            </span>{" "}
           </p>
           <br />
-          <p>
-            Me gustan los desafíos y el aprendizaje continuo.​ Encontré en la
-            programación la combinación perfecta entre varias de mis pasiones:
-            <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
+          <p className="pb-4 md:text-lg text-sm">
+            Me gustan los desafíos y el aprendizaje continuo.
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" Encontré en la programación "}
+            </span>
+            la combinación perfecta entre varias de mis pasiones:
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" creatividad"}
             </span>
             ,
-            <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" innovación"}
             </span>{" "}
             y
-            <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" colaboración."}
             </span>
-          </p>
-          <br />
-          <p>
-            Creo en la importancia de no dejar de buscar el{" "}
-            <span className="font-semibold dark:font-normal text-stone-700 dark:text-LM">
-              crecimiento profesional y personal,
-            </span>{" "}
-            es lo que me mantiene en movimiento. Además de la motivación de
-            pensar qué nuevos caminos y oportunidades me traerá esta carrera.
           </p>
           <br />
         </div>

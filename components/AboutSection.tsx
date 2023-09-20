@@ -49,7 +49,7 @@ export const AboutSection = () => {
         {subMenu.map((sm, i) => (
           <button className='md:w-auto' key={i} onClick={() => handleClick(sm)}>
             <h1
-              className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base text-[0.7rem] px-[0.2rem] md:px-0 md:font-light font-semibold tracking-widest hover:scale-x-90 transform transition-transform duration-300
+              className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base text-[0.7rem] px-[0.2rem] md:px-0 md:font-light font-normal tracking-widest hover:scale-x-90 transform transition-transform duration-300
               ${sm === currentMenu
                   ? 'text-LM dark:border-LM/30 border-LM border'
                   : ''
@@ -62,9 +62,9 @@ export const AboutSection = () => {
         {/* FLECHA */}
         <div className='md:block hidden pl-2' onClick={handleArrowClick}>
           <Image
-            className={`hover:scale-90 cursor-pointer -rotate-90 ${
+            className={`md:ml-2 hover:scale-90 cursor-pointer -rotate-90 ${
               currentMenu === 'MOTIVACIÓN' && 'rotate-90'
-            } transform transition-transform duration-300 opacity-50 hover:opacity-100`}
+            } transform transition-transform duration-300 opacity-100 hover:opacity-50 `}
             width='30'
             height='30'
             src={img.fl_am}

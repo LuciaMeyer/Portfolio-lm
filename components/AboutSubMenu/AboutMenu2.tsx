@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { img } from "../../public/images";
+import { motion } from "framer-motion";
 
 export const AboutMenu2 = () => {
-  const images = [img.auxfondo1, img.auxfondo2, img.auxfondo3];
+  const images = [img.aux1, img.aux2, img.aux3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showDiv, setShowDiv] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,13 +19,117 @@ export const AboutMenu2 = () => {
     };
   }, []);
 
+  const handleShowDiv = () => {
+    setShowDiv(!showDiv);
+  };
+
+  const show = {
+    transition: { duration: 1 },
+    opacity: 1,
+  };
+
+  const hide = {
+    transition: { duration: 1 },
+    opacity: 0,
+  };
+
   return (
     <>
       <div className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
-        <div className="md:h-[25rem] overflow-y-auto max-h-[25rem]">
-        </div>
+        {!showDiv ? (
+          <div className="md:h-[25rem]">
+            <p className="pb-4 md:text-lg text-sm">
+              Estudié Arquitectura
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {"Arquitectura"}
+              </span>
+              y después de 5 años descubrí que lo que más me gustaba de la
+              carrera era
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" proyectar y crear a través de herramientas digitales."}
+              </span>
+            </p>
+            <br />
+            <p className="pb-4 md:text-lg text-sm">
+              Me capacité en
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" diseño, cm, mkt digital y edición audiovisual. "}
+              </span>
+            </p>
+            <br />
+
+            <p className="pb-4 md:text-lg text-sm">
+              Desarrollé estás habilidades en varias empresas donde además
+              aprendí a
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {
+                  " optimizar procesos, liderar proyectos, coordinar equipos y trabajar con metodologías ágiles...  "
+                }
+              </span>
+              <button
+                onClick={handleShowDiv}
+                className="cursor-pointer text-sm font-medium px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
+              >
+                seguir leyendo
+              </button>
+            </p>
+          </div>
+        ) : (
+          <div>
+            <p className="pb-4 md:text-lg text-sm">
+              ... Más adelante me lanzé como
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" freelance  "}
+              </span>
+              para acompañar a Pymes y emprendedores en el proceso de
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" creación y difusión de su identidad visual y corporativa. "}
+              </span>
+            </p>
+            <br />
+            <p className="pb-4 md:text-lg text-sm">
+              En 2018, gracias a mí constante necesidad de desafíos y
+              aprendizaje continuo,
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" me apasioné con el mundo IT  "}
+              </span>
+              En este espacio encontré un
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {"  punto de encuentro de todo mí recorrido. "}
+              </span>
+            </p>
+            <br />
+            <p className="pb-4 md:text-lg text-sm">
+              Hoy disfruto
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {"  programando, diseñando, buscando soluciones simples y creativas,   "}
+              </span>
+              y aprendiendo todos los días en equipo,
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {
+                  "  ya que creo que el aprendizaje más gratificante es el compartido. "
+                }
+              </span>
+              <button
+                onClick={handleShowDiv}
+                className="cursor-pointer text-sm font-medium px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
+              >
+                volver al inicio
+              </button>
+            </p>
+          </div>
+        )}
       </div>
+
       <div className="flex justify-center">
+        <Image
+          width="500"
+          height="500"
+          src={images[currentImageIndex]}
+          alt="img"
+          priority
+          style={{ objectFit: "contain", width: "100%", height: "100%" }}
+        />
       </div>
     </>
   );
