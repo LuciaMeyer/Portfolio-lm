@@ -38,6 +38,9 @@ export const img = {
     bgDesk: 'https://res.cloudinary.com/dw272kava/image/upload/v1695048188/SplashScreen/bgDesk_qdwlwf.png',
 
     // Footer
-    luz: 'https://res.cloudinary.com/dw272kava/image/upload/v1695133411/aux/luz_rr7smv.png'
+    luz: 'https://res.cloudinary.com/dw272kava/image/upload/v1695133411/aux/luz_rr7smv.png',
+
+    // AboySkikilss
+    js: 'https://res.cloudinary.com/dw272kava/image/upload/v1695231519/AboutSkills/js_pzcmnu.png',
   };
   

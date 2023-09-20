@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { img } from '../public/images';
-// import { Link } from 'react-scroll/modules';
+import { Link } from 'react-scroll/modules';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -120,7 +120,7 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
           ${section === 'contact' && 'rotate-180'}
           ${!!endPage ? 'rotate-180' : 'rotate-0'}
           `}>
-        {/* <Link
+        <Link
           to={
             section === 'home'
               ? 'about'
@@ -147,7 +147,7 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
             alt='img'
             priority
           />
-        </Link> */}
+        </Link>
       </div>
     </motion.div>
   );

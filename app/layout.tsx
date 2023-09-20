@@ -39,20 +39,20 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       <head />
       <body className='dark:bg-BGD dark:text-stone-300 text-TX font-thin'>
         <ThemeProvider enableSystem={true} attribute='class'>
-        {showSplash ? (
+        {/* {showSplash ? (
           <motion.div
             initial={{ opacity: 1 }}
             animate={!opacity && hide}
           >
             <SplashScreen />
           </motion.div>
-        ) : (
+        ) : ( */}
           <>
               <Navbar />
               {children}
               <Footer />
           </>
-        )}
+        {/* )} */}
         </ThemeProvider>
       </body>
     </html>
