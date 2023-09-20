@@ -118,9 +118,8 @@ export const Navbar = () => {
             </div>
             {NAV_ITEMS.map((item, idx) => {
               return (
-                <div>
+                <div key={idx}>
                   <Link
-                    key={idx}
                     to={item.page}
                     className={'hover:text-LM font-thin text-lg tracking-wider'}
                     activeClass='active'
