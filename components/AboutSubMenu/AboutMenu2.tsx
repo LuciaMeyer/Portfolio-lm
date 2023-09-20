@@ -46,7 +46,7 @@ export const AboutMenu2 = () => {
             <p className="pb-4 md:text-lg space-y-2">
               Estudié
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {" Arquitectura"}
+                {" Arquitectura "}
               </span>
               y después de 5 años descubrí que lo que más me gustaba de la
               carrera era
@@ -72,7 +72,7 @@ export const AboutMenu2 = () => {
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {
                   " optimizar procesos, liderar proyectos, coordinar equipos y trabajar con metodologías ágiles...  "
-                }
+                }{" "}
               </span>
               <button
                 onClick={handleShowDiv}
@@ -89,7 +89,7 @@ export const AboutMenu2 = () => {
             transition={{ duration: 1.5 }}
           >
             <p className="pb-4 md:text-lg space-y-2">
-              ... Más adelante me lanzé como
+              ...Más adelante me lanzé como
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" freelance  "}
               </span>
@@ -101,15 +101,15 @@ export const AboutMenu2 = () => {
             <br className="md:block hidden"/>
             <p className="pb-4 md:text-lg space-y-2">
               En 2018, gracias a mí constante necesidad de desafíos y
-              aprendizaje continuo,
+              aprendizaje,
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" me apasioné con el mundo IT.  "}
               </span>
               En este espacio encontré el
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {"  punto de encuentro "}
+                {"  punto de convergencia "}
               </span>
-              de todo lo aprendido todo mí recorrido.
+              de todo lo aprendido en mí recorrido.
             </p>
             <br className="md:block hidden"/>
             <p className="pb-4 md:text-lg space-y-2">
@@ -117,7 +117,7 @@ export const AboutMenu2 = () => {
               creativas, y aprendiendo todos los días en equipo;
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {
-                  " ya que estoy convencida que el conocimiento se construye en forma colectiva. "
+                  " ya que estoy convencida de que el conocimiento se construye en forma colectiva. "
                 }
               </span>
               <button
