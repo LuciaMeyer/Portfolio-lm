@@ -4,23 +4,28 @@ import Image from "next/image";
 import { img } from "../../public/images";
 import { motion } from "framer-motion";
 
-export const AboutMenu2 = () => {
+export const AboutJourney = () => {
   const images = [img.aux1, img.aux2, img.aux3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showDiv, setShowDiv] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
-
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 4000)
     return () => {
-      clearInterval(interval);
+      clearInterval(interval)
     };
   }, []);
 
+  useEffect(()=>{
+    setTimeout(() => {
+      if(showDiv) setShowDiv(false)
+    },20000)
+  },[showDiv]);
+
   const handleShowDiv = () => {
-    setShowDiv(!showDiv);
+    setShowDiv(!showDiv)
   };
 
   const show = {
@@ -62,12 +67,12 @@ export const AboutMenu2 = () => {
             <p className="pb-4 md:text-lg space-y-2">
               Me capacité en
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {" diseño, cm, mkt digital y edición audiovisual. "}
+                {" diseño, comunicación, marketing y edición audiovisual. "}
               </span>
             </p>
             <br className="md:block hidden" />
             <p className="pb-4 md:text-lg space-y-2">
-              Desarrollé estás habilidades en varias empresas donde además
+              Desarrollé éstas habilidades en varias empresas donde además
               aprendí a
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {
@@ -76,7 +81,7 @@ export const AboutMenu2 = () => {
               </span>
               <button
                 onClick={handleShowDiv}
-                className="md:mt-auto mt-2 cursor-pointer text-sm font-medium px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
+                className="md:mt-auto mt-2 cursor-pointer md:text-sm text-xs px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
               >
                 seguir leyendo
               </button>
@@ -89,19 +94,18 @@ export const AboutMenu2 = () => {
             transition={{ duration: 1.5 }}
           >
             <p className="pb-4 md:text-lg space-y-2">
-              ...Más adelante me lanzé como
+              ...Siguiendo por este camino, me lancé como
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" freelance  "}
               </span>
-              para acompañar a Pymes y emprendedores en el proceso de
+              para acompañar a PyMEs y emprendedores en el proceso de
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" creación y difusión de su identidad visual y corporativa. "}
               </span>
             </p>
             <br className="md:block hidden"/>
             <p className="pb-4 md:text-lg space-y-2">
-              En 2018, gracias a mí constante necesidad de desafíos y
-              aprendizaje,
+              En 2018, en mi búsqueda constante de desafíos y aprendizaje,
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" me apasioné con el mundo IT.  "}
               </span>
@@ -109,7 +113,7 @@ export const AboutMenu2 = () => {
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {"  punto de convergencia "}
               </span>
-              de todo lo aprendido en mí recorrido.
+              de todo lo aprendido en mi recorrido.
             </p>
             <br className="md:block hidden"/>
             <p className="pb-4 md:text-lg space-y-2">
@@ -117,12 +121,12 @@ export const AboutMenu2 = () => {
               creativas, y aprendiendo todos los días en equipo;
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {
-                  " ya que estoy convencida de que el conocimiento se construye en forma colectiva. "
+                  " ya que estoy convencida de que el conocimiento se construye colectivamente. "
                 }
               </span>
               <button
                 onClick={handleShowDiv}
-                className="cursor-pointer text-sm font-medium px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
+                className="cursor-pointer md:text-sm text-xs px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
               >
                 volver al inicio
               </button>

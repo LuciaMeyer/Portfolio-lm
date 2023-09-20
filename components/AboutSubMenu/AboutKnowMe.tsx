@@ -4,7 +4,7 @@ import Image from "next/image";
 import { img } from "../../public/images";
 import { motion } from "framer-motion";
 
-export const AboutMenu1 = () => {
+export const AboutKnowMe = () => {
   const images = [img.aux1, img.aux2, img.aux3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -32,7 +32,7 @@ export const AboutMenu1 = () => {
             </span>
             , con formación en
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" Diseño Gráfico"}
+              {" Diseño Gráfico "}
             </span>
              y experiencia en
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -53,9 +53,8 @@ export const AboutMenu1 = () => {
           </p>
           <br className="md:block hidden"/>
           <p className="pb-4 md:text-lg space-y-2">
-            Me gustan los desafíos y el aprendizaje continuo.
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" Encontré en la programación "}
+              {" Encuentro en la programación "}
             </span>
             la combinación perfecta entre varias de mis pasiones:
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">

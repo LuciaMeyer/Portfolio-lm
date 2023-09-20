@@ -13,8 +13,8 @@ module.exports = {
     extend: {
       colors: {
         LM: '#f9b621',
-        BGD: '#282828',
-        BGDc: '#292929',
+        BGD: '#202020',
+        BGDc: '#222222',
         BGDo: '#202020',
         TX: '#4D4D4D',
         LMc: '#F9EBD2',

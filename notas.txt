@@ -1,21 +1,22 @@
-- HeroSecion
-    . frase slogan
-    . pongo botones?
-    . fondo animado
-    . arreglar sombra en la foto - animo foto??
+- General
+. mouse con circulo, ver portfolio Ailin
+. Link bendito
 
 - Sobre mai
     . texto de cada sección
-    . fotos de cada sección
+    . fotos de cada sección!!
+    . logo en habilidades y gregar hab blandas
+    . texto en motivación!
+
+- Recursos
+    . armar tabla
+    . ver si la puedo manejar desde el back para que también puedan agregar otras personas
+
 
 - Icons
-    . cuando llega hasta abajo con scroll la flechita debería girar
+    . cuando scrolleo la flechita no toma las secciones
 
 - Projects
     . grabar el video de GPT
-    . hacer las modificaciones en el repo
-    . funcionalidad en el "saber más"
-
-acomodar imagenes en cloudinary y en js
-
-id service email.js: service_skao4og
+    . hacer las modificaciones en el repo Let
+    . Componente en "saber más" que englobe a todos, que se abra en otra pestaña

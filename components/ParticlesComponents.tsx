@@ -38,11 +38,11 @@ export const ParticlesComponents = () => {
                 },
                 particles: {
                     color: {
-                        value: ['#8d8c8c']
+                        value: ['#7f7f7f']
                     },
                     links: {
                         color: {
-                            value: ['#8d8c8c']
+                            value: ['#7f7f7f']
                         },
                         distance: 150,
                         enable: true,

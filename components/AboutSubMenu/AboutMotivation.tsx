@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-export const AboutMenu4 = () => {
+export const AboutMotivation = () => {
   return (
     <>
       <div className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
