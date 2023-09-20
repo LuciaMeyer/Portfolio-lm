@@ -51,7 +51,7 @@ export const AboutSection = () => {
               onClick={() => handleClick(sm)}
             >
               <h1
-                className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base text-[0.7rem] px-[0.2rem] md:px-0 md:font-light font-normal tracking-widest hover:scale-x-90 transform transition-transform duration-300
+                className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base text-[0.7rem] px-[0.4rem] md:px-0 md:font-light font-normal tracking-widest hover:scale-x-90 transform transition-transform duration-300
                 ${
                   sm === currentMenu
                     ? "text-LM dark:border-LM/30 border-LM border"

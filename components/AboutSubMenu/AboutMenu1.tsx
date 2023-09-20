@@ -22,7 +22,7 @@ export const AboutMenu1 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
+        className="bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
       >
         <div className="md:h-[25rem]">
           <p className="pb-4 md:text-lg text-sm">
@@ -34,11 +34,11 @@ export const AboutMenu1 = () => {
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Diseño Gráfico"}
             </span>
-            , y experiencia en
+             y experiencia en
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" Marketing Digital,"}
+              {" Marketing Digital."}
             </span>{" "}
-            con base en Rosario, Argentina.
+            Con base en Rosario, Argentina.
           </p>
           <br />
           <p className="pb-4 md:text-lg text-sm">

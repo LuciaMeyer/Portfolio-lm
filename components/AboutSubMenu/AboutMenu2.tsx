@@ -39,19 +39,23 @@ export const AboutMenu2 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="bg-red-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
+        className="bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
       >
         {!showDiv ? (
           <div className="md:h-[25rem]">
             <p className="pb-4 md:text-lg text-sm">
-              Estudié Arquitectura
+              Estudié
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {"Arquitectura"}
+                {" Arquitectura"}
               </span>
               y después de 5 años descubrí que lo que más me gustaba de la
               carrera era
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {" proyectar y crear a través de herramientas digitales."}
+                {" proyectar y crear "}
+              </span>
+              a través de
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" herramientas digitales."}
               </span>
             </p>
             <br />
@@ -73,7 +77,7 @@ export const AboutMenu2 = () => {
               </span>
               <button
                 onClick={handleShowDiv}
-                className="cursor-pointer text-sm font-medium px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
+                className="md:mt-auto mt-2 cursor-pointer text-sm font-medium px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM"
               >
                 seguir leyendo
               </button>
@@ -100,25 +104,20 @@ export const AboutMenu2 = () => {
               En 2018, gracias a mí constante necesidad de desafíos y
               aprendizaje continuo,
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {" me apasioné con el mundo IT  "}
+                {" me apasioné con el mundo IT.  "}
               </span>
-              En este espacio encontré un
+              En este espacio encontré el
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {"  punto de encuentro de todo mí recorrido. "}
+                {"  punto de encuentro "}
               </span>
+              de todo lo aprendido todo mí recorrido.
             </p>
             <br />
             <p className="pb-4 md:text-lg text-sm">
-              Hoy disfruto
+              Hoy disfruto programando, diseñando, buscando soluciones simples y creativas, y aprendiendo todos los días en equipo;
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {
-                  "  programando, diseñando, buscando soluciones simples y creativas,   "
-                }
-              </span>
-              y aprendiendo todos los días en equipo,
-              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-                {
-                  "  ya que creo que el aprendizaje más gratificante es el compartido. "
+                  " ya que estoy convencida que el conocimiento se construye en forma colectiva. "
                 }
               </span>
               <button
