@@ -116,24 +116,29 @@ export const Navbar = () => {
                 {`${currentTheme === 'dark' ? 'MODO CLARO' : 'MODO OSCURO'}`}
               </button>
             </div>
-            {NAV_ITEMS.map((item, idx) => {
-              return (
-                <div key={idx}>
-                  <Link
-                    to={item.page}
-                    className={'hover:text-LM font-thin text-lg tracking-wider'}
-                    activeClass='active'
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={1000}
-                    onClick={() => handleMenuClick(item.page)}
-                  >
-                    {item.label}
-                  </Link>
-                </div>
-              );
-            })}
+            <div>
+              {NAV_ITEMS.map((item, idx) => {
+                return (
+                  <div key={idx}>
+                    <Link
+                      key={idx}
+                      to={item.page}
+                      className={'hover:text-LM font-thin text-lg tracking-wider'}
+                      activeClass='active'
+                      spy={true}
+                      smooth={true}
+                      offset={-100}
+                      duration={1000}
+                      onClick={() => handleMenuClick(item.page)}
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                );
+              })}
+
+            </div>
+
           </div>
         </motion.div>
 
