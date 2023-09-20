@@ -43,7 +43,7 @@ export const AboutMenu2 = () => {
       >
         {!showDiv ? (
           <div className="md:h-[25rem]">
-            <p className="pb-4 md:text-lg text-sm">
+            <p className="pb-4 md:text-lg space-y-2">
               Estudié
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" Arquitectura"}
@@ -58,16 +58,15 @@ export const AboutMenu2 = () => {
                 {" herramientas digitales."}
               </span>
             </p>
-            <br />
-            <p className="pb-4 md:text-lg text-sm">
+            <br className="md:block hidden" />
+            <p className="pb-4 md:text-lg space-y-2">
               Me capacité en
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" diseño, cm, mkt digital y edición audiovisual. "}
               </span>
             </p>
-            <br />
-
-            <p className="pb-4 md:text-lg text-sm">
+            <br className="md:block hidden" />
+            <p className="pb-4 md:text-lg space-y-2">
               Desarrollé estás habilidades en varias empresas donde además
               aprendí a
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -89,7 +88,7 @@ export const AboutMenu2 = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            <p className="pb-4 md:text-lg text-sm">
+            <p className="pb-4 md:text-lg space-y-2">
               ... Más adelante me lanzé como
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" freelance  "}
@@ -99,8 +98,8 @@ export const AboutMenu2 = () => {
                 {" creación y difusión de su identidad visual y corporativa. "}
               </span>
             </p>
-            <br />
-            <p className="pb-4 md:text-lg text-sm">
+            <br className="md:block hidden"/>
+            <p className="pb-4 md:text-lg space-y-2">
               En 2018, gracias a mí constante necesidad de desafíos y
               aprendizaje continuo,
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -112,9 +111,10 @@ export const AboutMenu2 = () => {
               </span>
               de todo lo aprendido todo mí recorrido.
             </p>
-            <br />
-            <p className="pb-4 md:text-lg text-sm">
-              Hoy disfruto programando, diseñando, buscando soluciones simples y creativas, y aprendiendo todos los días en equipo;
+            <br className="md:block hidden"/>
+            <p className="pb-4 md:text-lg space-y-2">
+              Hoy disfruto programando, diseñando, buscando soluciones simples y
+              creativas, y aprendiendo todos los días en equipo;
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {
                   " ya que estoy convencida que el conocimiento se construye en forma colectiva. "

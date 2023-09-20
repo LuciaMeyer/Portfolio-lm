@@ -25,7 +25,7 @@ export const AboutMenu1 = () => {
         className="bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
       >
         <div className="md:h-[25rem]">
-          <p className="pb-4 md:text-lg text-sm">
+          <p className="pb-4 md:text-lg space-y-2">
             Soy{" "}
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {"Full Stack Developer"}
@@ -40,8 +40,8 @@ export const AboutMenu1 = () => {
             </span>{" "}
             Con base en Rosario, Argentina.
           </p>
-          <br />
-          <p className="pb-4 md:text-lg text-sm">
+          <br className="md:block hidden"/>
+          <p className="pb-4 md:text-lg space-y-2">
             Mi mayor interés dentro del
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" mundo IT "}
@@ -51,8 +51,8 @@ export const AboutMenu1 = () => {
               {" soluciones simples e innovadoras. "}
             </span>{" "}
           </p>
-          <br />
-          <p className="pb-4 md:text-lg text-sm">
+          <br className="md:block hidden"/>
+          <p className="pb-4 md:text-lg space-y-2">
             Me gustan los desafíos y el aprendizaje continuo.
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Encontré en la programación "}

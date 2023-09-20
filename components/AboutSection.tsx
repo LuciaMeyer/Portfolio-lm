@@ -51,7 +51,7 @@ export const AboutSection = () => {
               onClick={() => handleClick(sm)}
             >
               <h1
-                className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base text-[0.7rem] px-[0.4rem] md:px-0 md:font-light font-normal tracking-widest hover:scale-x-90 transform transition-transform duration-300
+                className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base text-[0.7rem] px-[0.5rem] md:px-0 md:font-light font-normal tracking-widest hover:scale-x-90 transform transition-transform duration-300
                 ${
                   sm === currentMenu
                     ? "text-LM dark:border-LM/30 border-LM border"
@@ -63,7 +63,7 @@ export const AboutSection = () => {
             </button>
           ))}
           {/* FLECHA */}
-          <div className="md:block hidden pl-2" onClick={handleArrowClick}>
+          <div className="md:block pl-2" onClick={handleArrowClick}>
             <Image
               className={`md:ml-2 hover:scale-90 cursor-pointer -rotate-90 ${
                 currentMenu === "MOTIVACIÓN" && "rotate-90"
