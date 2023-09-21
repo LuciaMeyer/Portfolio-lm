@@ -12,7 +12,7 @@
     "@emailjs/browser": "^3.11.0",
     "@next/font": "13.1.6",
     "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
+    "@types/react": "18.0.21",
     "@types/react-dom": "18.0.10",
     "atropos": "^2.0.2",
     "emailjs": "^4.0.2",
@@ -32,7 +32,6 @@
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
-    "@types/react-scroll": "^1.8.6",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4"
