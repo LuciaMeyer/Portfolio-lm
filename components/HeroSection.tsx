@@ -67,7 +67,7 @@ export const HeroSection = () => {
           >
             saber más
           </Link> */}
-          <button className='cursor-pointer text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '>
+          <button className='cursor-pointer text-sm border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:hover:bg-neutral-700 hover:bg-neutral-200 '>
             saber más
           </button>
         </motion.div>
