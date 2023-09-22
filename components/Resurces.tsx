@@ -1,8 +1,7 @@
 "use client";
 
 import SlideUp from "./SlideUp";
-
-// import { Link } from 'react-scroll/modules';
+import { Link } from 'react-scroll/modules';
 
 export const Resurces = () => {
   return (
@@ -22,7 +21,7 @@ export const Resurces = () => {
             herramientas, sitios y datos que voy recopilando desde hace un
             tiempo. Son de gran ayuda para consultar, resolver problemas y
             aprender cosas nuevas. Si te interesa saber cuándo estará publicado
-            {/* <Link
+            <Link
             to='contact'
             activeClass='active'
             spy={true}
@@ -32,7 +31,7 @@ export const Resurces = () => {
             className='cursor-pointer mx-2 border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
           >
             escribime
-          </Link> */}
+          </Link>
             <button className="cursor-pointer mx-2 border-solid border px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM ">
               escribime
             </button>

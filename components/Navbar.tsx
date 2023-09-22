@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-scroll';
-// import Link from 'next/link';
+import { Link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { img } from '../public/images';
