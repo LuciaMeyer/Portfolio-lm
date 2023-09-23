@@ -113,14 +113,14 @@ export const ProjectsSection = () => {
         <div className='relative flex flex-col'>
           <button
             onClick={handleShowDiv}
-            className='cursor-pointer w-36 h-9 text-sm border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '>
+            className='cursor-pointer w-28 h-10 text-sm border-solid border border-TX/30 dark:border-stone-300/30  dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '>
             más proyectos
           </button>
           <motion.div
             initial={{ opacity: 0 }}
             animate={showDiv ? show : hide}
             className='absolute top-16'>
-            <h4>En construcción...</h4>
+            <h4 className='mb-4'>En construcción...</h4>
             <span>Estoy trabajando en la presentación de varios proyectos, incluyendo los de diseño. Volvé dentro de poco para verlos! &#128522; </span>
           </motion.div>
         </div>

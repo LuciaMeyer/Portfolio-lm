@@ -16,7 +16,7 @@ module.exports = {
         BGD: '#202020',
         BGDc: '#222222',
         BGDo: '#202020',
-        TX: '#4D4D4D',
+        TX: '#333333',
         LMc: '#F9EBD2',
       },
       screens: { sm: '480px', md: '768px', lg: '976px', xl: '1440pd' },

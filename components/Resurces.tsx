@@ -28,13 +28,10 @@ export const Resurces = () => {
             smooth={true}
             offset={-100}
             duration={1000}
-            className='cursor-pointer mx-2 border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM '
+            className='cursor-pointer mx-2 border-solid border pb-2 pt-1.5 px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '
           >
             escribime
           </Link>
-            <button className="cursor-pointer mx-2 border-solid border px-4 border-TX/30 dark:border-stone-300/30 transition duration-200 ease hover:text-LM ">
-              escribime
-            </button>
             y te mantengo al tanto.
           </p>
         </div>

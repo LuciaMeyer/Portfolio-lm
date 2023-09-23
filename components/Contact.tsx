@@ -86,9 +86,9 @@ export const Contact = () => {
                   name='name'
                   value={input.name}
                   onChange={handleChange}
-                  placeholder='Nombre completo'
+                  placeholder='NOMBRE COMPLETO'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-sm md:text-base block border-stone-300'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs block border-stone-300'
                 />
               </div>
               <div className='relative md:pb-4'>
@@ -96,9 +96,9 @@ export const Contact = () => {
                   name='email'
                   value={input.email}
                   onChange={handleChange}
-                  placeholder='Email'
+                  placeholder='EMAIL'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-6 pr-3 pb-3 mt-2 text-sm md:text-base block border-stone-300'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-6 pr-3 pb-3 mt-2 text-xs block border-stone-300'
                 />
               </div>
               <div className='relative md:pb-4'>
@@ -106,8 +106,8 @@ export const Contact = () => {
                   name='message'
                   value={input.message}
                   onChange={handleChange}
-                  placeholder='Mensaje'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-sm md:text-base block border-stone-300 '
+                  placeholder='MENSAJE'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs block border-stone-300 '
                 />
               </div>
               <div className='relative'>
@@ -116,7 +116,7 @@ export const Contact = () => {
                   disabled={disabled}
                   className={`cursor-pointer group w-28 h-10 text-center border-solid border transition duration-200 ease
                   ${disabled
-                    ? 'hover:text-TX/60 hover:bg-stone-300/20 text-TX/40 border-TX/30 dark:border-stone-300/30 dark:text-stone-300/50 '
+                    ? 'hover:text-TX/60 dark:hover:bg-neutral-800 hover:bg-stone-300/20 text-TX/40 border-TX/30 dark:border-stone-300/30 dark:text-stone-300/50 '
                     : 'hover:text-white hover:bg-LM border-LM text-LM'
                     }`}
                 >

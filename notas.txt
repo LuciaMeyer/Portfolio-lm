@@ -20,3 +20,6 @@
     . grabar el video de GPT
     . hacer las modificaciones en el repo Let
     . Componente en "saber más" que englobe a todos, que se abra en otra pestaña
+
+-Navbar
+    . el logo cuando este en herosection que no aparezca y al deslizar y llegar a about se empiece a MOSTRAR

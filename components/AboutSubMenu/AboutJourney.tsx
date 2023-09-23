@@ -47,8 +47,8 @@ export const AboutJourney = () => {
         className='bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20'
       >
         {!showDiv ? (
-          <div className='md:h-[25rem]'>
-            <p className='pb-6 space-y-2'>
+          <div className='md:h-[25rem] space-y-6'>
+            <p className=''>
               Estudié
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' Arquitectura '}
@@ -64,14 +64,14 @@ export const AboutJourney = () => {
               </span>
             </p>
             
-            <p className='pb-6 space-y-2'>
+            <p className=''>
               Me capacité en
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' diseño, comunicación, marketing y edición audiovisual. '}
               </span>
             </p>
             
-            <p className='pb-6 pace-y-2'>
+            <p className='pace-y-2'>
               Desarrollé éstas habilidades en varias empresas donde además
               aprendí a
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
@@ -79,9 +79,10 @@ export const AboutJourney = () => {
                   ' optimizar procesos, liderar proyectos, coordinar equipos y trabajar con metodologías ágiles...  '
                 }{' '}
               </span>
+              <br/>
               <button
                 onClick={handleShowDiv}
-                className='cursor-pointer tracking-wider text-xs px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='cursor-pointer tracking-wider md:mt-2 text-xs px-2 py-[5px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '
               >
                 seguir leyendo
               </button>
@@ -93,7 +94,7 @@ export const AboutJourney = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            <p className='pb-6 space-y-2'>
+            <p className=''>
               ...Siguiendo por este camino, me lancé como
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' freelance  '}
@@ -104,7 +105,7 @@ export const AboutJourney = () => {
               </span>
             </p>
             <br className='md:block hidden'/>
-            <p className='pb-6 space-y-2'>
+            <p className=''>
               En 2018, en mi búsqueda constante de desafíos y aprendizaje,
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' me apasioné con el mundo IT.  '}
@@ -116,7 +117,7 @@ export const AboutJourney = () => {
               de todo lo aprendido en mi recorrido.
             </p>
             <br className='md:block hidden'/>
-            <p className='pb-6 space-y-2'>
+            <p className=''>
               Hoy disfruto programando, diseñando, buscando soluciones simples y
               creativas, y aprendiendo todos los días en equipo;
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
@@ -124,9 +125,10 @@ export const AboutJourney = () => {
                   ' ya que estoy convencida de que el conocimiento se construye colectivamente. '
                 }
               </span>
+              <br/>
               <button
                 onClick={handleShowDiv}
-                className='cursor-pointer text-xs tracking-wider px-2 py-[2px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='cursor-pointer md:mt-2 text-xs tracking-wider px-2 py-[5px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '
               >
                 volver al inicio
               </button>

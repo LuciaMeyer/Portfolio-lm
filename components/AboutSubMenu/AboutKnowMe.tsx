@@ -24,10 +24,10 @@ export const AboutKnowMe = () => {
         transition={{ duration: 1.5 }}
         className="bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20"
       >
-        <div className="md:h-[25rem]">
-          <p className="pb-6 space-y-2">
+        <div className="md:h-[25rem] space-y-6">
+          <p className="">
             Soy{" "}
-            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            <span className=" font-semibold dark:font-light text-stone-700 dark:text-LM">
               {"Full Stack Developer"}
             </span>
             , con formación en
@@ -40,7 +40,7 @@ export const AboutKnowMe = () => {
             </span>{" "}
             Con base en Rosario, Argentina.
           </p>
-          <p className="pb-6 space-y-2">
+          <p className="">
             Mi mayor interés dentro del
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" mundo IT "}
@@ -50,7 +50,7 @@ export const AboutKnowMe = () => {
               {" soluciones simples e innovadoras. "}
             </span>{" "}
           </p>
-          <p className="pb-6 space-y-2">
+          <p className="">
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Encuentro en la programación "}
             </span>
