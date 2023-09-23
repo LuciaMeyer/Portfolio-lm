@@ -56,11 +56,11 @@ export const AboutSection = () => {
               onClick={() => handleClick(sm)}
             >
               <h1
-                className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base text-[0.7rem] px-[0.5rem] md:px-0 md:font-light font-normal tracking-widest hover:scale-90 transform transition-transform duration-300
+                className={`md:pr-2 md:pl-2 text-left ml-auto md:text-base px-[0.5rem] md:px-0 md:font-light font-normal tracking-widest hover:scale-90 transform transition-transform duration-300
                 ${
                   sm === currentMenu
-                    ? 'text-LM dark:border-LM/30 border-LM border'
-                    : ''
+                    ? 'text-LM dark:border-LM/30 border-LM border md:text-base text-base'
+                    : 'text-[0.5rem] '
                 } `}
               >
                 {sm}
@@ -70,7 +70,7 @@ export const AboutSection = () => {
           {/* FLECHA */}
           <div className='md:block pl-2' onClick={handleArrowClick}>
             <Image
-              className={`md:ml-2 hover:scale-90 cursor-pointer -rotate-90 ${
+              className={`md:ml-2 ml-1 md:w-auto md:h-auto w-6 hover:scale-90 cursor-pointer -rotate-90 ${
                 currentMenu === 'CV' && 'rotate-90'
               } transform transition-transform duration-300 opacity-100 hover:opacity-50 `}
               width='30'
