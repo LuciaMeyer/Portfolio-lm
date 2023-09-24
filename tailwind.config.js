@@ -13,15 +13,19 @@ module.exports = {
     extend: {
       colors: {
         LM: '#f9b621',
-        LM80: '#fac54d',
-        LM60: '#fbd37a',
-        LM40: '#fde2a6',
-        LM20: '#fef0d3', 
+        LM50:'#fbda8f',
+        LM40:'#fde2a6',
+        LM30:'#feeabd',
+        LM20:'#fef0d3',
+        LM10:'#fff8e9',  
         BGD: '#202020',
-        BGDc: '#222222',
-        BGDo: '#202020',
-        TX: '#333333',
-        LMc: '#F9EBD2',
+        BGDc:'#222222',
+        BGDo:'#202020',
+        TX:'#333333',
+        LMc:'#F9EBD2',
+        GRIS1:'#666666',
+        GRIS2:'#7a7a7a',
+        GRIS3:'#8c8c8c'
       },
       screens: { sm: '480px', md: '768px', lg: '976px', xl: '1440pd' },
       animation: {

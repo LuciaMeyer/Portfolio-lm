@@ -12,11 +12,14 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import SlideUp from './SlideUp';
 
 export const AboutSection = () => {
-  const [currentMenu, setCurrentMenu] = useState('CONOCEME');
+  const [currentMenu, setCurrentMenu] = useState('');
   const [showSection, setShowSection] = useState(false);
 
   const handleClick = (section: string) => {
     setCurrentMenu(section);
+    section === currentMenu
+      ? setShowSection(!showSection)
+      : setShowSection(true);
   };
 
   const handleArrowClick = () => {
@@ -33,17 +36,12 @@ export const AboutSection = () => {
       : null;
   };
 
-  const handleShowSection = (section: string) => {
-    setShowSection(!showSection);
-    setCurrentMenu(section);
-  };
-
   const subMenu = ['CONOCEME', 'RECORRIDO', 'HABILIDADES', 'MOTIVACIÓN', 'CV'];
 
   return (
     <section
       id='about'
-      className='flex-1 pt-6 md:pt-10 md:pb-60 pb-40 relative overflow-hidden md:mx-auto'
+      className='flex-1 pt-6 md:pt-10 md:pb-60 pb-40 relative overflow-hidden md:mx-auto mx-10'
     >
       <SlideUp offset='-300px 0px -300px 0px'>
         <h1 className='z-20 text-center text-2xl md:pb-10 pb-8 '>
@@ -90,7 +88,7 @@ export const AboutSection = () => {
 
         {/* SECTION WEB */}
         <div className='md:flex hidden flex-col md:flex-row md:w-2/3 justify-center mx-auto mt-10'>
-          {currentMenu === 'CONOCEME' ? (
+          {currentMenu === 'CONOCEME' || currentMenu === '' ? (
             <AboutKnowMe />
           ) : currentMenu === 'RECORRIDO' ? (
             <AboutJourney />
@@ -104,66 +102,116 @@ export const AboutSection = () => {
         </div>
 
         {/* SUB MENU & SECTION MOBILE */}
-        <div className='relative'>  
+        <div className='relative'>
           <button
-            onClick={() => handleShowSection('CONOCEME')}
-            className='pl-10 py-3 flex flex-col md:hidden bg-LM w-full cursor-pointer tracking-widest font-medium text-sm'
+            onClick={() => handleClick('CONOCEME')}
+            className='pl-10 mb-2 py-6 flex flex-col md:hidden bg-LM50 w-full cursor-pointer tracking-widest font-medium text-sm shadow-md
+            dark:bg-neutral-700'
           >
             CONOCEME
           </button>
-          <div className='absolute top-4 right-6'>
-            <IoIosArrowDown />
+          <div className='absolute top-5 right-6'>
+            {showSection && currentMenu === 'CONOCEME' ? (
+              <IoIosArrowUp size={22} />
+            ) : (
+              <IoIosArrowDown size={22} />
+            )}
           </div>
         </div>
         {showSection && currentMenu === 'CONOCEME' && (
-          <div className='block md:hidden my-4 mx-10'>
+          <div className='block md:hidden my-4'>
             <AboutKnowMe />
           </div>
         )}
-        <button
-          onClick={() => handleShowSection('RECORRIDO')}
-          className='pl-10 py-3 flex flex-col md:hidden bg-LM80 w-full cursor-pointer tracking-widest font-medium text-sm'
-        >
-          RECORRIDO
-        </button>
-        {showSection && currentMenu === 'RECORRIDO' && (
-          <div className='block md:hidden my-4 mx-10'>
-            <AboutJourney />
+
+        <div className='relative'>
+          <button
+            onClick={() => handleClick('RECORRIDO')}
+            className='pl-10 mb-2 py-6 flex flex-col md:hidden bg-LM40 w-full cursor-pointer tracking-widest font-medium text-sm shadow-md
+          dark:bg-neutral-600'
+          >
+            RECORRIDO
+          </button>
+          <div className='absolute top-5 right-6'>
+            {showSection && currentMenu === 'RECORRIDO' ? (
+              <IoIosArrowUp size={22} />
+            ) : (
+              <IoIosArrowDown size={22} />
+            )}
           </div>
-        )}
-        <button
-          onClick={() => handleShowSection('HABILIDADES')}
-          className='pl-10 py-3 flex flex-col md:hidden bg-LM60 w-full cursor-pointer tracking-widest font-medium text-sm'
-        >
-          HABILIDADES
-        </button>
-        {showSection && currentMenu === 'HABILIDADES' && (
-          <div className='block md:hidden my-4 mx-10'>
-            <AboutSkills />
+          {showSection && currentMenu === 'RECORRIDO' && (
+            <div className='block md:hidden my-4'>
+              <AboutJourney />
+            </div>
+          )}
+        </div>
+
+        <div className='relative'>
+          <button
+            onClick={() => handleClick('HABILIDADES')}
+            className='pl-10 mb-2 py-6 flex flex-col md:hidden bg-LM30 w-full cursor-pointer tracking-widest font-medium text-sm shadow-md
+          dark:bg-GRIS3'
+          >
+            HABILIDADES
+          </button>
+          <div className='absolute top-5 right-6'>
+            {showSection && currentMenu === 'HABILIDADES' ? (
+              <IoIosArrowUp size={22} />
+            ) : (
+              <IoIosArrowDown size={22} />
+            )}
           </div>
-        )}
-        <button
-          onClick={() => handleShowSection('MOTIVACIÓN')}
-          className='pl-10 py-3 flex flex-col md:hidden bg-LM/40 w-full cursor-pointer tracking-widest font-medium text-sm'
-        >
-          MOTIVACIÓN
-        </button>
-        {showSection && currentMenu === 'MOTIVACIÓN' && (
-          <div className='block md:hidden my-4 mx-10'>
-            <AboutMotivation />
+          {showSection && currentMenu === 'HABILIDADES' && (
+            <div className='block md:hidden my-4'>
+              <AboutSkills />
+            </div>
+          )}
+        </div>
+
+        <div className='relative'>
+          <button
+            onClick={() => handleClick('MOTIVACIÓN')}
+            className='pl-10 mb-2 py-6 flex flex-col md:hidden bg-LM20 w-full cursor-pointer tracking-widest font-medium text-sm shadow-md
+          dark:bg-GRIS2'
+          >
+            MOTIVACIÓN
+          </button>
+          <div className='absolute top-5 right-6'>
+            {showSection && currentMenu === 'MOTIVACIÓN' ? (
+              <IoIosArrowUp size={22} />
+            ) : (
+              <IoIosArrowDown size={22} />
+            )}
           </div>
-        )}
-        <button
-          onClick={() => handleShowSection('CV')}
-          className='pl-10 py-3 flex flex-col md:hidden bg-LM20 w-full cursor-pointer tracking-widest font-medium text-sm'
-        >
-          CV
-        </button>
-        {showSection && currentMenu === 'CV' && (
-          <div className='block md:hidden my-4 mx-10'>
-            <AboutCV />
+          {showSection && currentMenu === 'MOTIVACIÓN' && (
+            <div className='block md:hidden my-4'>
+              <AboutMotivation />
+            </div>
+          )}
+        </div>
+
+        <div className='relative'>
+          <button
+            onClick={() => handleClick('CV')}
+            className='pl-10 mb-2 py-6 flex flex-col md:hidden bg-LM10 w-full cursor-pointer tracking-widest font-medium text-sm shadow-md
+          dark:bg-GRIS3'
+          >
+            CV
+          </button>
+
+          <div className='absolute top-5 right-6'>
+            {showSection && currentMenu === 'CV' ? (
+              <IoIosArrowUp size={22} />
+            ) : (
+              <IoIosArrowDown size={22} />
+            )}
           </div>
-        )}
+          {showSection && currentMenu === 'CV' && (
+            <div className='block md:hidden my-4'>
+              <AboutCV />
+            </div>
+          )}
+        </div>
       </SlideUp>
     </section>
   );
