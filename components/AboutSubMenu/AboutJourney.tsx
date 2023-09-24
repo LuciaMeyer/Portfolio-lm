@@ -21,7 +21,7 @@ export const AboutJourney = () => {
   useEffect(()=>{
     setTimeout(() => {
       if(showDiv) setShowDiv(false)
-    },20000)
+    },30000)
   },[showDiv]);
 
   const handleShowDiv = () => {
@@ -44,7 +44,7 @@ export const AboutJourney = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className='bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20'
+        className='bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20 md:text-base text-sm'
       >
         {!showDiv ? (
           <div className='md:h-[25rem] space-y-6'>
@@ -82,7 +82,7 @@ export const AboutJourney = () => {
               <br/>
               <button
                 onClick={handleShowDiv}
-                className='cursor-pointer tracking-wider md:mt-2 text-xs px-2 py-[5px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '
+                className='cursor-pointer tracking-wider md:mt-2 my-2 text-xs px-2 py-[5px] border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '
               >
                 seguir leyendo
               </button>
@@ -93,6 +93,7 @@ export const AboutJourney = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
+            className='space-y-6'
           >
             <p className=''>
               ...Siguiendo por este camino, me lancé como
@@ -128,7 +129,7 @@ export const AboutJourney = () => {
               <br/>
               <button
                 onClick={handleShowDiv}
-                className='cursor-pointer md:mt-2 text-xs tracking-wider px-2 py-[5px] rounded-full border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '
+                className='cursor-pointer md:mt-2 my-2 text-xs tracking-wider px-2 py-[5px] border-solid border border-TX/30 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '
               >
                 volver al inicio
               </button>
