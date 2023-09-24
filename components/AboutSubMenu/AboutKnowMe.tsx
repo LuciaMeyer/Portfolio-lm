@@ -74,10 +74,12 @@ export const AboutKnowMe = () => {
         <Image
           width='500'
           height='500'
-          src={images[currentImageIndex]}
+          // src={images[currentImageIndex]}
+          src={img.auxlu}
           alt='img'
           priority
-          style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+          // style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+          className='border-2 border-solid'
         />
       </div>
     </>

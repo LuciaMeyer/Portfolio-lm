@@ -44,7 +44,7 @@ export const AboutJourney = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className='bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20 md:text-base text-sm'
+        className='bg-white dark:bg-BGD mt-0 text-justify md:text-justify md:w-2/3 md:mr-20'
       >
         {!showDiv ? (
           <div className='md:h-[25rem] space-y-6'>
@@ -142,10 +142,12 @@ export const AboutJourney = () => {
         <Image
           width='500'
           height='500'
-          src={images[currentImageIndex]}
+          // src={images[currentImageIndex]}
+          src={img.auxlu}
           alt='img'
           priority
-          style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+          // style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+          className='border-2 border-solid'
         />
       </div>
     </>

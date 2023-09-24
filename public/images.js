@@ -12,6 +12,7 @@ export const img = {
     fl_am:'https://res.cloudinary.com/dw272kava/image/upload/v1694629741/AboutSection/flecha_am_tq59gf.png',
   
     // AboutSection1
+    auxlu: 'https://res.cloudinary.com/dw272kava/image/upload/v1695526540/aux/auxlu_c3v229.png',
     aux1: 'https://res.cloudinary.com/dw272kava/image/upload/v1687476339/AboutSection/Sin_t%C3%ADtulo_b0dll0.png',
     aux2: 'https://res.cloudinary.com/dw272kava/image/upload/v1687474781/AboutSection/lu_3.jpg_sejgjl.png',
     aux3: 'https://res.cloudinary.com/dw272kava/image/upload/v1687474777/AboutSection/lu_2_gi4az5.jpg',
