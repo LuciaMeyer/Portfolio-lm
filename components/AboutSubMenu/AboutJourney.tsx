@@ -96,7 +96,7 @@ export const AboutJourney = () => {
             className='space-y-6'
           >
             <p className=''>
-              ...Siguiendo por este camino, me lancé como
+              ...más adelante, me lancé como
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' freelance  '}
               </span>
@@ -107,7 +107,7 @@ export const AboutJourney = () => {
             </p>
             <br className='md:block hidden'/>
             <p className=''>
-              En 2018, en mi búsqueda constante de desafíos y aprendizaje,
+              Soy una person inquieta que busca desafíos y nuevos conocimientos, por eso en 2022
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' me apasioné con el mundo IT.  '}
               </span>

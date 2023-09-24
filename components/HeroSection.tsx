@@ -54,7 +54,7 @@ export const HeroSection = () => {
             <br className='md:block hidden'/>
             eficiente, diseño creativo y estrategias de marketing &nbsp;
             <br className='md:block hidden'/>
-            digital para lograr los mejores resultados.
+            para lograr los mejores resultados.
           </p>
           <Link
             to='about'

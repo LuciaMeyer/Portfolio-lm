@@ -34,7 +34,7 @@ export const AboutKnowMe = () => {
             <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
               {' Diseño Gráfico '}
             </span>
-             y experiencia en
+             y
             <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
               {' Marketing Digital.'}
             </span>{' '}
