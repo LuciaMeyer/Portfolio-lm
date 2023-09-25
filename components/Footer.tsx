@@ -19,7 +19,7 @@ export const Footer = () => {
           backgroundPosition: 'center bottom',
         }}
       /> */}
-      <div className='leading-snug tracking-wide text-xl text-LM flex justify-center my-72'>
+      <div className='leading-snug tracking-wide text-xl text-LM flex justify-center my-72 dark:font-normal font-semibold'>
         <Typewriter
           options={{ cursor: '|', delay: 75, loop: true }}
           onInit={(typewriter) => {
