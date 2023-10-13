@@ -23,9 +23,11 @@ module.exports = {
         BGDo:'#202020',
         TX:'#333333',
         LMc:'#F9EBD2',
-        GRIS1:'#666666',
-        GRIS2:'#7a7a7a',
-        GRIS3:'#8c8c8c'
+        GRIS0:'#666666',
+        GRIS1:'#595959',
+        GRIS2:'#666666',
+        GRIS3:'#7a7a7a',
+        GRIS4:'#8c8c8c'
       },
       screens: { sm: '480px', md: '768px', lg: '976px', xl: '1440pd' },
       animation: {
