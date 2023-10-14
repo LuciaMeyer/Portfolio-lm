@@ -45,7 +45,10 @@ const projects = [
   },
 ];
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ refProjects, project }:any) => {
+  
+  console.log(project)
+
 
   const [showDiv, setShowDiv] = useState(false);
 
@@ -67,7 +70,7 @@ export const ProjectsSection = () => {
   };
 
   return (
-    <section id='projects' className='flex-1 pt-6 md:pt-10 md:pb-60 pb-28'>
+    <section ref={refProjects} id='projects' className='flex-1 pt-6 md:pt-10 md:pb-60 pb-28'>
       <div className='md:pb-10 pb-8'>
         <SlideUp offset='-300px 0px -300px 0px'>
           <h1 className='text-center text-2xl'>
@@ -113,8 +116,8 @@ export const ProjectsSection = () => {
         <div className='relative flex flex-col'>
           <button
             onClick={handleShowDiv}
-            className='cursor-pointer w-28 h-10 text-sm border-solid border border-TX/30 dark:border-stone-300/30  dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '>
-            más proyectos
+            className='cursor-pointer text-black w-28 h-10 text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30  dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 '>
+            MÁS PROYECTOS
           </button>
           <motion.div
             initial={{ opacity: 0 }}

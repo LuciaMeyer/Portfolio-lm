@@ -1,10 +1,10 @@
 'use client';
-import React, { useContext, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { img } from '../public/images';
 import { Link } from 'react-scroll/modules';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { screenContext } from '../context/screenContext';
+
 
 interface IconsProps {
   section: string;
@@ -12,44 +12,31 @@ interface IconsProps {
 }
 
 export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
+  
   const [endPage, setEndPage] = useState(false);
-  const screenSize = useContext(screenContext);
-  const { scrollY } = screenSize;
-
+  const scrollY = window.scrollY 
+  
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    const handleScroll = () => {
+      const pageHeight = document.documentElement.scrollHeight;
       const windowHeight = window.innerHeight;
       const threshold = 100;
-      const handleScroll = () => {
-        if (scrollY + windowHeight >= document.documentElement.scrollHeight - threshold) {
-          setEndPage(true);
-        } else {
-          setEndPage(false);
-        }
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
+      if (scrollY + windowHeight >= pageHeight - threshold) {
+        console.log('final de la página');
+        setEndPage(true);
+      } else setEndPage(false)
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
-
 
   useEffect(()=>{
     !!endPage && setSection('')
   },[endPage])
 
-  useEffect(() => {
-    setSection(
-      scrollY > 0 && scrollY < 763 ? 'home' :
-      scrollY > 762 && scrollY < 1426 ? 'about' :
-      scrollY > 1426 && scrollY < 3061 ? 'projects' :
-      scrollY > 3061 && scrollY < 3561 ? 'resources' :
-      scrollY > 3561 && scrollY < 4250 ? 'contact' :
-      ''
-    );
-  }, [scrollY]);
 
   const handleClick = (current: string) => {
     const sections = ['home', 'about', 'projects', 'resources', 'contact', 'home'];

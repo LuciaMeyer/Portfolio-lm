@@ -15,7 +15,10 @@ interface InputData {
 }
 
 
-export const Contact = () => {
+export const Contact = ({ refContact, contact }:any) => {
+
+  console.log(contact)
+
   const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState<InputData>({
     name: '',
@@ -66,7 +69,7 @@ export const Contact = () => {
   const disabled = !input.name || !input.email || !input.message;
 
   return (
-    <section id='contact' className='flex-1 pt-10 md:pt-10 pb-60'>
+    <section ref={refContact} id='contact' className='flex-1 pt-10 md:pt-10 pb-60'>
       <SlideUp offset='-300px 0px -300px 0px'>
         <h1 className='text-center text-2xl md:pb-10 pb-8'>
           Contactame
@@ -114,13 +117,13 @@ export const Contact = () => {
                 <button
                   type='submit'
                   disabled={disabled}
-                  className={`cursor-pointer group w-28 h-10 text-center border-solid border transition duration-200 ease
+                  className={`cursor-pointer w-20 h-9 tracking-[0.08rem] text-[.7rem] text-center border-solid border transition duration-200 ease
                   ${disabled
-                    ? 'hover:text-TX/60 dark:hover:bg-neutral-800 hover:bg-stone-300/20 text-TX/40 border-TX/30 dark:border-stone-300/30 dark:text-stone-300/50 '
+                    ? 'hover:text-TX/60 dark:hover:bg-neutral-800 hover:bg-stone-300/20 text-black border-TX/50 dark:border-stone-300/30 dark:text-stone-300/50 '
                     : 'hover:text-white hover:bg-LM border-LM text-LM'
                     }`}
                 >
-                  Enviar
+                  ENVIAR
                 </button>
               </div>
             </div>

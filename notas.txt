@@ -1,11 +1,11 @@
 - General
 . mouse con circulo, ver portfolio Ailin
-. Link bendito
+
 
 - Sobre mai
     . texto de cada sección
     . fotos de cada sección!!
-    . logo en habilidades y gregar hab blandas
+    . logo en habilidades y agregar blandas
     . texto en motivación!
 
 - Recursos
@@ -14,12 +14,13 @@
 
 
 - Icons
-    . cuando scrolleo la flechita no toma las secciones
+    . ajustar altura final de scrolle por secciones
 
 - Projects
     . grabar el video de GPT
     . hacer las modificaciones en el repo Let
     . Componente en "saber más" que englobe a todos, que se abra en otra pestaña
 
--Navbar
-    . el logo cuando este en herosection que no aparezca y al deslizar y llegar a about se empiece a MOSTRAR
+
+- Bugs:
+    . ParticlesComponents se traba por la escucha del scroll

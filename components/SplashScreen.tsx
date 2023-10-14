@@ -19,15 +19,12 @@ const show = {
     transition: { duration: 1 },
     opacity: 1,
     scale: 1,
-    // rotate: 360,
-    
   };
 
   const hide = {
     transition: { duration: 0.5 },
     opacity: 0,
     scale: 1,
-    // rotate: 360,
   };
 
   return (
@@ -42,14 +39,14 @@ const show = {
       >
         <motion.div
           className="-mt-24 md:my-auto dark:invert"
-          initial={{ opacity: 0, scale: 0, rotate:0 }}
+          initial={{ opacity: 0, scale: 0 }}
           animate={showSplash ? show : hide}
         > 
           <Image
             src={img.LMg}
             alt="LM"
-            width={80}
-            height={80}
+            width={70}
+            height={70}
             priority
           />
         </motion.div>

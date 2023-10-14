@@ -9,6 +9,7 @@ import { SplashScreen } from "@/components/SplashScreen";
 import { motion } from "framer-motion";
 import { ScreenProvider } from "../context/screenContext";
 import "atropos/css";
+import { SectionProvider } from "@/context/sectionContext";
 
 const Roboto = Roboto_Condensed({
   subsets: ["latin"],
@@ -41,22 +42,26 @@ export default function RootLayout({
   return (
     <html lang="es" className={Roboto.className}>
       <head />
-      <body className="dark:bg-BGD
-      dark:text-stone-300 text-TX font-thin">
+      <body
+        className="dark:bg-BGD
+      dark:text-stone-300 text-TX font-thin"
+      >
         <ScreenProvider>
-          <ThemeProvider enableSystem={true} attribute="class">
-            {showSplash ? (
-              <motion.div initial={{ opacity: 1 }} animate={!opacity && hide}>
-                <SplashScreen />
-              </motion.div>
-            ) : (
-              <>
-                <Navbar />
-                {children}
-                <Footer />
-              </>
-            )}
-          </ThemeProvider>
+          <SectionProvider>
+            <ThemeProvider enableSystem={true} attribute="class">
+              {showSplash ? (
+                <motion.div initial={{ opacity: 1 }} animate={!opacity && hide}>
+                  <SplashScreen />
+                </motion.div>
+              ) : (
+                <>
+                  <Navbar />
+                  {children}
+                  <Footer />
+                </>
+              )}
+            </ThemeProvider>
+          </SectionProvider>
         </ScreenProvider>
       </body>
     </html>

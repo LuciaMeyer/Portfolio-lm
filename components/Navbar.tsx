@@ -47,7 +47,7 @@ export const Navbar = () => {
   const [showParticles, setShowParticles] = useState(true);
   const screenSize = useContext(screenContext);
   const { screenWidth, scrollY } = screenSize;
-
+  
   const handleMenuClick = (page: string) => {
     setNavbar(!navbar);
     setSection(page);
