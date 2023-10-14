@@ -118,7 +118,7 @@ export const AboutSection = () => {
           <div className='relative' key={index}>
             <button
               onClick={() => handleClick(section, 'mobile')}
-              className={`pl-10 mb-6 py-4 flex flex-col md:hidden bg-LM30 ${
+              className={`pl-10 mb-6 py-6 flex flex-col md:hidden bg-LM30 ${
                 50 - index * 10
               } w-full cursor-pointer tracking-widest font-medium text-sm shadow-md shadow-neutral-400 dark:shadow-black ${
                 currentMenuMobile === section ? 'dark:bg-neutral-700' : 'dark:bg-neutral-600'

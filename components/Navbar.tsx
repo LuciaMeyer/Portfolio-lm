@@ -99,17 +99,17 @@ export const Navbar = () => {
             className='flex flex-col items-center space-y-12 cursor-pointer md:pt-32 pt-20 m-0 h-screen
             backdrop-blur-md f bg-slate-100/60 dark:bg-BGD/80'
           >
-            <div className='md:hidden flex mt-12 text-xs items-center'>
+            <div className='md:hidden flex mt-12 text-sm items-center'>
               <button
                 onClick={handleMenuResposiveParticles}
-                className='mr-2 border-solid border py-1 px-2 w-28 border-TX/30 dark:border-stone-300/30'
+                className='mr-2 border-solid border py-1 px-2 w-32 border-TX/30 dark:border-stone-300/30'
               >
                 {`${!showParticles ? 'MOSTRAR FONDO' : 'OCULTAR FONDO'}`}
               </button>
               <span className='text-LM'>|</span>
               <button
                 onClick={() => handleMenuResposiveTheme(theme)}
-                className='mr-2 ml-2 border-solid border py-1 px-2 w-28 border-TX/30 dark:border-stone-300/30'
+                className='mr-2 ml-2 border-solid border py-1 px-2 w-32 border-TX/30 dark:border-stone-300/30'
               >
                 {`${theme === 'dark' ? 'MODO CLARO' : 'MODO OSCURO'}`}
               </button>
@@ -148,7 +148,7 @@ export const Navbar = () => {
                   whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
                 >
                   <Image
-                    className='md:my-4 my-4 md:w-full'
+                    className='md:my-4 mt-6 mb-4 md:w-full'
                     src={img.LM}
                     alt='LM'
                     width={40}
