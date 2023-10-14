@@ -19,20 +19,28 @@ export const ScreenProvider = ({ children }: { children: React.ReactNode }) => {
     scrollY: window.scrollY,
   });
 
-  const updateScreenSize = () => {
-    setScreenSize({
-      screenWidth: window.innerWidth,
-      scrollY: window.scrollY,
-    });
-  };
-
   useEffect(() => {
-    window.addEventListener('resize', updateScreenSize);
-    window.addEventListener('scroll', updateScreenSize);
+    const updateScreenSize = () => {
+      if (typeof window !== 'undefined') {
+        setScreenSize({
+          screenWidth: window.innerWidth,
+          scrollY: window.scrollY,
+        });
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', updateScreenSize);
+      window.addEventListener('scroll', updateScreenSize);
+
+      updateScreenSize(); 
+    }
 
     return () => {
-      window.removeEventListener('resize', updateScreenSize);
-      window.removeEventListener('scroll', updateScreenSize);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', updateScreenSize);
+        window.removeEventListener('scroll', updateScreenSize);
+      }
     };
   }, []);
 
