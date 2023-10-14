@@ -18,19 +18,21 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
 
 
   useEffect(() => {
-    const windowHeight = window.innerHeight;
-    const threshold = 100;
-    const handleScroll = () => {
-      if (window.scrollY + windowHeight >= document.documentElement.scrollHeight - threshold) {
-        setEndPage(true);
-      } else {
-        setEndPage(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    if (typeof window !== "undefined") {
+      const windowHeight = window.innerHeight;
+      const threshold = 100;
+      const handleScroll = () => {
+        if (scrollY + windowHeight >= document.documentElement.scrollHeight - threshold) {
+          setEndPage(true);
+        } else {
+          setEndPage(false);
+        }
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
 
 

@@ -70,13 +70,13 @@ export const AboutSection = () => {
             >
               <h4
                 className={`py-2 w-36 mx-4 tracking-widest 
-                shadow-md shadow-neutral-400 dark:shadow-black
+                shadow-lg shadow-neutral-400 dark:shadow-black
                 hover:scale-90 hover:bg-LM30 dark:hover:bg-LM dark:hover:text-TX 
                 transform transition-transform duration-300
                 ${
                   sm === currentMenuWeb
-                    ? 'bg-LM30 dark:bg-LM scale-90 dark:text-TX border border-neutral-400 dark:border-black shadow-none'
-                    : 'dark:bg-stone-700 bg-neutral-100'
+                    ? 'bg-LM30 dark:bg-LM scale-90 dark:text-TX dark:border-black shadow-none'
+                    : ''
                 } `}
               >
                 {sm}
