@@ -75,7 +75,7 @@ export const Contact = () => {
       </SlideUp>
       <SlideUp offset='-300px 0px -300px 0px'>
         <form ref={form} onSubmit={handleSubmit}>
-          <div className='md:w-1/2 mx-10 md:mx-auto
+          <div className='md:w-1/3 mx-10 md:mx-auto
           flex flex-col
           space-y-10 md:pb-20 md:pt-10 md:pr-10 md:pl-10 pb-16 pt-10
           md:text-left 

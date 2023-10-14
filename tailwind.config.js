@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient': 'red',
+      },
       colors: {
         LM: '#f9b621',
         LM50:'#fbda8f',
@@ -20,14 +23,13 @@ module.exports = {
         LM10:'#fff8e9',  
         BGD: '#202020',
         BGDc:'#222222',
-        BGDo:'#202020',
         TX:'#333333',
         LMc:'#F9EBD2',
         GRIS0:'#666666',
         GRIS1:'#595959',
         GRIS2:'#666666',
         GRIS3:'#7a7a7a',
-        GRIS4:'#8c8c8c'
+        GRIS4:'#8c8c8c',
       },
       screens: { sm: '480px', md: '768px', lg: '976px', xl: '1440pd' },
       animation: {

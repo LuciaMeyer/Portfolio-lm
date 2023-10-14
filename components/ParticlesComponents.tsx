@@ -44,7 +44,7 @@ export const ParticlesComponents = () => {
                         color: {
                             value: ['#7f7f7f']
                         },
-                        distance: 150,
+                        distance: 200,
                         enable: true,
                         opacity: 0.1,
                         width: 1,
@@ -59,13 +59,13 @@ export const ParticlesComponents = () => {
                             default: 'bounce',
                         },
                         random: false,
-                        speed: 0.5,
+                        speed: 0.3,
                         straight: false,
                     },
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 1300,
                         },
                         value: 130,
                     },

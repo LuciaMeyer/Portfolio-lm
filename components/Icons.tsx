@@ -1,10 +1,10 @@
 'use client';
+import React, { useContext, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { img } from '../public/images';
 import { Link } from 'react-scroll/modules';
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { screenContext } from '../context/screenContext';
 
 interface IconsProps {
   section: string;
@@ -13,17 +13,19 @@ interface IconsProps {
 
 export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
   const [endPage, setEndPage] = useState(false);
+  const screenSize = useContext(screenContext);
+  const { scrollY } = screenSize;
+
 
   useEffect(() => {
+    const windowHeight = window.innerHeight;
+    const threshold = 100;
     const handleScroll = () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const pageHeight = document.documentElement.scrollHeight;
-      const windowHeight = window.innerHeight;
-      const threshold = 100;
-      if (scrollY + windowHeight >= pageHeight - threshold) {
-        console.log('final de la página');
+      if (window.scrollY + windowHeight >= document.documentElement.scrollHeight - threshold) {
         setEndPage(true);
-      } else setEndPage(false)
+      } else {
+        setEndPage(false);
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -31,17 +33,26 @@ export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
     };
   }, []);
 
+
   useEffect(()=>{
     !!endPage && setSection('')
   },[endPage])
 
+  useEffect(() => {
+    setSection(
+      scrollY > 0 && scrollY < 763 ? 'home' :
+      scrollY > 762 && scrollY < 1426 ? 'about' :
+      scrollY > 1426 && scrollY < 3061 ? 'projects' :
+      scrollY > 3061 && scrollY < 3561 ? 'resources' :
+      scrollY > 3561 && scrollY < 4250 ? 'contact' :
+      ''
+    );
+  }, [scrollY]);
+
   const handleClick = (current: string) => {
-    if (current === 'home') setSection('about');
-    if (current === 'about') setSection('projects');
-    if (current === 'projects') setSection('resources');
-    if (current === 'resources') setSection('contact');
-    if (current === 'contact') setSection('home');
-    if (current === '') setSection('home')
+    const sections = ['home', 'about', 'projects', 'resources', 'contact', 'home'];
+    const index = sections.indexOf(current);
+    setSection(sections[index + 1] || 'home');
   };
 
   return (

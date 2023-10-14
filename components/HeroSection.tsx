@@ -6,17 +6,19 @@ import Typewriter from 'typewriter-effect';
 import { Link } from 'react-scroll/modules';
 
 
+
 export const HeroSection = () => {
+
   return (
     <>
-    <section id='home' className='flex-1 pt-36 md:pt-44 md:pb-60 pb-40'>
-      <div className='flex flex-col h-full md:flex-row md:justify-around md:mx-40 mx-10 md:items-center content-center'>
+    <section id='home' className='flex-1 pt-24 md:pt-64 md:pb-60 pb-40'>
+      <div className='flex flex-col h-full md:flex-row md:justify-center md:mx-40 mx-10 md:items-center content-center'>
 
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
-          className='md:mx-0  mx-auto'
+          className='md:mr-14 md:w-1/4'
         >
           <h1 className='leading-snug tracking-wide text-3xl md:mb-2 '>
             Lucía Meyer
@@ -47,13 +49,9 @@ export const HeroSection = () => {
             />
           </motion.h1>
 
-          <hr className='w-8 h-px my-10 bg-stone-300  dark:bg-stone-400 border-0' />
-
-          <p className='relative -z-10 pb-4 md:text-lg text-sm'>
-            Creo aplicaciones web y mobile. Combino desarrollo &nbsp;
-            <br className='md:block hidden'/>
-            eficiente, diseño creativo y estrategias de marketing &nbsp;
-            <br className='md:block hidden'/>
+          <hr className='w-8 h-px md:my-10 my-6 bg-stone-300  dark:bg-stone-400 border-0' />
+          <p className='relative -z-10 md:pb-10 pb-5 md:text-lg text-xl'>
+            Creo aplicaciones web y mobile. Combino desarrollo eficiente, diseño creativo y estrategias de marketing
             para lograr los mejores resultados.
           </p>
           <Link
@@ -73,6 +71,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
+          className='md:ml-14 md:mt-0 mt-4'
         >
           <Image
             width='300'
@@ -80,8 +79,8 @@ export const HeroSection = () => {
             src={img.imglu}
             alt='img'
             priority
-            className='transform transition-transform duration-1000 hover:scale-110 md:mx-0 mx-auto md:mt-0 mt-1'
-            />
+            className='md:h-auto md:w-auto h-5/6 w-5/6 transform transition-transform duration-1000 hover:scale-110 md:mx-0 mx-auto md:mt-0 mt-1'
+          />
         </motion.div>
 
       </div>
