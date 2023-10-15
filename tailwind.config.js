@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient': 'red',
+        'gradient': 'conic-gradient(at center top, rgb(120, 113, 108), rgb(245, 245, 244), rgb(113, 113, 122))',
       },
       colors: {
         LM: '#f9b621',

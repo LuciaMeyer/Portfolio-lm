@@ -63,7 +63,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     <section
       ref={refAbout}
       id="about"
-      className="flex-1 pt-6 md:pt-10 md:pb-60 pb-60 relative overflow-hidden md:mx-auto mx-10 h-screen "
+      className="flex-1 pt-6 md:pt-10 md:pb-60 pb-60 relative overflow-hidden md:mx-auto mx-10 h-full "
     >
       <SlideUp offset="-300px 0px -300px 0px">
         <h1 className="z-20 text-center text-2xl md:pb-10 pb-8 ">
@@ -72,7 +72,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
         </h1>
       </SlideUp>
 
-      <SlideUp offset="-300px 0px -300px 0px">
+      <SlideUp offset="-300px 0px -300px 0px ">
         {/* SUBMENÚ WEB & SECTION WEB*/}
           <div className="md:flex hidden justify-center">
             {menuOrder.map((sm, i) => (
@@ -110,7 +110,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             </div>
           </div>
           
-          <div className="md:flex hidden justify-center mx-auto">
+          <div className="md:flex flex-col hidden justify-center mx-auto h-screen">
             {currentMenuWeb === "CONOCEME" || currentMenuWeb === ""
               ? sections.CONOCEME
               : currentMenuWeb === "RECORRIDO"

@@ -61,7 +61,7 @@ export const Icons: React.FC<IconsProps> = () => {
     >
 
       <div className='flex flex-col md:fixed md:left-12 md:bottom-24 bottom-12'>
-        <div className='md:w-5 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center'>
+        <div className='md:w-6 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center'>
           <a
             href='https://www.linkedin.com/in/lucia-meyer-65633a143/'
             rel='noreferrer'
