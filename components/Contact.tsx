@@ -14,10 +14,11 @@ interface InputData {
   message: string;
 }
 
+interface ContactSectionProps {
+  refContact: React.RefObject<HTMLElement>;
+}
 
-export const Contact = ({ refContact, contact }:any) => {
-
-  console.log(contact)
+export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
 
   const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState<InputData>({

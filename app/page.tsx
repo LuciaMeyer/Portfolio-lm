@@ -8,8 +8,11 @@ import React, { useContext } from 'react';
 import { sectionContext } from '../context/sectionContext';
 
 export default function Home() {
-  const sections = useContext(sectionContext);
-  const { refHero, refAbout, refProjects, refResurces, refContact, useIsInViewport  } = sections;
+
+  const objetcContext = useContext(sectionContext);
+
+  const { refHero, refAbout, refProjects, refResurces, refContact, useIsInViewport  } = objetcContext.sectionsRef;
+  const setSection = objetcContext.setSection;
 
   const hero = useIsInViewport(refHero);
   const about = useIsInViewport(refAbout);
@@ -17,13 +20,19 @@ export default function Home() {
   const resurces = useIsInViewport(refResurces);
   const contact = useIsInViewport(refContact);
 
+  !!hero && setSection('home')
+  !!about && setSection('about')
+  !!project && setSection('projects')
+  !!resurces && setSection('resources')
+  !!contact && setSection('contact')
+
   return (
     <main>
-      <HeroSection refHero={refHero} hero={hero ? 'home' : ''} />
-      <AboutSection refAbout={refAbout} about={about ? 'about' : ''} />
-      <ProjectsSection refProjects={refProjects} project={project ? 'project' : ''} />
-      <Resurces refResurces={refResurces} resurces={resurces ? 'resurces' : ''} />
-      <Contact refContact={refContact} contact={contact ? 'contact' : ''} />
+      <HeroSection refHero={refHero} />
+      <AboutSection refAbout={refAbout} />
+      <ProjectsSection refProjects={refProjects} />
+      <Resurces refResurces={refResurces} />
+      <Contact refContact={refContact} />
     </main>
   );
 }

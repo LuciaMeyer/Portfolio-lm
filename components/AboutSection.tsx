@@ -14,10 +14,13 @@ interface SectionContent {
   [key: string]: JSX.Element;
 }
 
-export const AboutSection = ({ refAbout, about } : any) => {
-  
-  console.log(about)
+interface AboutSectionProps {
+  refAbout: React.RefObject<HTMLElement>;
+}
 
+
+export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
+  
   const [currentMenuWeb, setCurrentMenuWeb] = useState("CONOCEME");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
   const [showSection, setShowSection] = useState(false);
@@ -60,7 +63,7 @@ export const AboutSection = ({ refAbout, about } : any) => {
     <section
       ref={refAbout}
       id="about"
-      className="flex-1 pt-6 md:pt-10 md:pb-60 pb-40 relative overflow-hidden md:mx-auto mx-10"
+      className="flex-1 pt-6 md:pt-10 md:pb-60 pb-60 relative overflow-hidden md:mx-auto mx-10 h-screen "
     >
       <SlideUp offset="-300px 0px -300px 0px">
         <h1 className="z-20 text-center text-2xl md:pb-10 pb-8 ">
@@ -95,12 +98,12 @@ export const AboutSection = ({ refAbout, about } : any) => {
             ))}
             <div className="my-auto pl-2" onClick={handleArrowClick}>
               <Image
-                className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 ${
+                className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 dark:invert ${
                   currentMenuWeb === "CV" && "rotate-90"
-                } transform transition-transform duration-300 opacity-100 hover:opacity-50 `}
+                } transform transition-transform duration-300 opacity-40 hover:opacity-20 `}
                 width="30"
                 height="30"
-                src={img.fl_am}
+                src={img.flecha}
                 alt="img"
                 priority
               />

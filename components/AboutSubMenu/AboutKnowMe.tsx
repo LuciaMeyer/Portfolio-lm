@@ -24,7 +24,7 @@ export const AboutKnowMe = () => {
         transition={{ duration: 1.5 }}
         className="bg-white dark:bg-BGD mt-0 text-justify md:text-justify text-lg md:pt-20"
       >
-        <div className="md:h-[25rem] space-y-6 ">
+        <div className="space-y-6 ">
           <p className="">
             Soy{" "}
             <span className=" font-semibold dark:font-light text-stone-700 dark:text-LM">

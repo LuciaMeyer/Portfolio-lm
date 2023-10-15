@@ -4,6 +4,9 @@ import { img } from '../public/images';
 import { Link } from 'react-scroll/modules';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import React, { useContext } from 'react';
+import { sectionContext } from '../context/sectionContext';
+
 
 
 interface IconsProps {
@@ -11,8 +14,13 @@ interface IconsProps {
   setSection: Function;
 }
 
-export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
-  
+// export const Icons: React.FC<IconsProps> = ({ section, setSection }) => {
+
+export const Icons: React.FC<IconsProps> = () => {
+
+  const objetcContext = useContext(sectionContext);
+  const section = objetcContext.section
+  const setSection =  objetcContext.setSection
   const [endPage, setEndPage] = useState(false);
   const scrollY = window.scrollY 
   

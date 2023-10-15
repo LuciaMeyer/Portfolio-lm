@@ -5,15 +5,19 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll/modules";
 
-export const HeroSection = ({ refHero, hero } : any) => {
+interface HeroSectionProps {
+  refHero: React.RefObject<HTMLElement>;
+};
 
-
-  console.log(hero)
+export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
 
   return (
     <>
-    
-      <section ref={refHero} id="home" className="flex-1 pt-24 md:pt-64 md:pb-60 pb-40">
+      <section
+        ref={refHero}
+        id="home"
+        className="flex-1 pt-24 md:pt-64 md:mb-60 pb-60"
+      >
         <div className="flex flex-col h-full md:flex-row md:justify-center md:mx-40 mx-10 md:items-center content-center">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}

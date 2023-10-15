@@ -10,6 +10,11 @@ import portfolio from '@/public/portfolio.gif';
 import Atropos from 'atropos/react';
 import { motion } from 'framer-motion';
 
+interface ProjectsSectionProps {
+  refProjects: React.RefObject<HTMLElement>;
+};
+
+
 const projects = [
   {
     name: 'E-COMMERCE',
@@ -45,13 +50,9 @@ const projects = [
   },
 ];
 
-export const ProjectsSection = ({ refProjects, project }:any) => {
+export const ProjectsSection:React.FC<ProjectsSectionProps> = ({ refProjects }) => {
   
-  console.log(project)
-
-
   const [showDiv, setShowDiv] = useState(false);
-
   const handleShowDiv = () => {
     setShowDiv(true)
     setTimeout(() => {
@@ -70,7 +71,7 @@ export const ProjectsSection = ({ refProjects, project }:any) => {
   };
 
   return (
-    <section ref={refProjects} id='projects' className='flex-1 pt-6 md:pt-10 md:pb-60 pb-28'>
+    <section ref={refProjects} id='projects' className='flex-1 pt-6 md:pt-10 md:pb-60 pb-60'>
       <div className='md:pb-10 pb-8'>
         <SlideUp offset='-300px 0px -300px 0px'>
           <h1 className='text-center text-2xl'>

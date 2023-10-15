@@ -11,6 +11,7 @@ import { CiBrightnessDown } from 'react-icons/ci';
 import { motion } from 'framer-motion';
 import { Icons } from './Icons';
 import { screenContext } from '../context/screenContext';
+import { sectionContext } from '@/context/sectionContext';
 
 interface NavItem {
   label: string;
@@ -43,14 +44,19 @@ const NAV_ITEMS: Array<NavItem> = [
 export const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
-  const [section, setSection] = useState('home');
+  // const [section, setSection] = useState('home');
   const [showParticles, setShowParticles] = useState(true);
   const screenSize = useContext(screenContext);
-  const { screenWidth, scrollY } = screenSize;
+  const { screenWidth } = screenSize;
+
+  const objetcContext = useContext(sectionContext);
+  const section = objetcContext.section
+  const setSection =  objetcContext.setSection
   
   const handleMenuClick = (page: string) => {
     setNavbar(!navbar);
     setSection(page);
+    console.log(page)
   };
 
   const handleMenuResposiveParticles = () => {

@@ -3,12 +3,14 @@
 import SlideUp from "./SlideUp";
 import { Link } from 'react-scroll/modules';
 
-export const Resurces = ({ refResurces, resurces }:any) => {
-  
-  console.log(resurces)
+interface ResurcesSectionProps {
+  refResurces: React.RefObject<HTMLElement>;
+};
 
+export const Resurces:React.FC<ResurcesSectionProps> = ({ refResurces }) => {
+  
   return (
-    <section ref={refResurces} id="resources" className="flex-1 pt-6 md:pt-10 md:pb-60 pb-28">
+    <section ref={refResurces} id="resources" className="flex-1 pt-6 md:pt-10 h-screen md:pb-60 pb-60">
       <SlideUp offset="-300px 0px -300px 0px">
         <h1 className="text-center text-2xl md:pb-16 pb-8">
           Recursos Dev
