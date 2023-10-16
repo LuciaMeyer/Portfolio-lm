@@ -49,7 +49,12 @@ export const img = {
     css:'https://res.cloudinary.com/dw272kava/image/upload/v1697431244/AboutSkills/css_uoylzk.png',
     react:'https://res.cloudinary.com/dw272kava/image/upload/v1697432422/AboutSkills/react_noatxd.png',
     redux:'https://res.cloudinary.com/dw272kava/image/upload/v1697432422/AboutSkills/redux_k0065n.png',
-    next:'https://res.cloudinary.com/dw272kava/image/upload/v1697433253/AboutSkills/next_ltgtq7.png',
+    next:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/NEXT_hzhbzt.png',
+    tail:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/TAIL_b1sii7.png',
+    mu:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/MU_b8ubcy.png',
+    less:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/LESS_j6odhk.png',
+    sass:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/SASS_ym6cww.png',
+    boo:'https://res.cloudinary.com/dw272kava/image/upload/v1697438014/AboutSkills/Bootstrap_wykizy.png',
 
 
   };
