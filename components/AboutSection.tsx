@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { img } from "../public/images";
 import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe";
@@ -39,7 +39,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     CV: <AboutCV />,
   };
 
-  const divRef = useRef<HTMLDivElement | null>(null);
+  // const handleClick = (section: string, platform: string) => {
+  //   if (platform === "web") {
+  //     setCurrentMenuWeb(section);
+  //   } else {
+  //     setCurrentMenuMobile((prevSection) =>
+  //       prevSection === section ? "" : section
+  //     );
+  //   }
+  // };
 
   const handleClick = (section: string, platform: string) => {
     if (platform === "web") {
@@ -48,21 +56,17 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
         setCurrentMenuWeb(section);
       }, 500);
     } else {
-      // setCurrentMenuMobile((prevSection) =>
-      //   prevSection === section ? "" : section
-      // );
-      // if (divRef.current) {
-      //   const rect: DOMRect = divRef.current.getBoundingClientRect();
-      //   const yPosition = rect.top + window.scrollY
-      //   console.log(yPosition)
-      //   window.scrollTo(0, yPosition);
-      // }
-      setCurrentMenuMobile("");
-      setTimeout(() => {
-        setCurrentMenuMobile(section);
-      }, 500);
+      if(currentMenuMobile !== section){
+        setCurrentMenuMobile("");
+        setTimeout(() => {
+          setCurrentMenuMobile(section);
+        }, 500);
+      } else {
+        setCurrentMenuMobile("");
+      }
     }
   };
+
 
   const handleArrowClick = () => {
     const currentIndex = menuOrder.indexOf(currentMenuWeb);
@@ -78,11 +82,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   };
 
   const hide = {
-    transition: { duration: 1 },
+    transition: { duration: 0.5 },
     x: -500,
     scale: 1,
     height: 0,
-    overflow: "hidden",
+    overflow: 'hidden'
   };
 
   const showW = {
@@ -91,10 +95,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   };
 
   const hideW = {
-    transition: { duration: 1 },
+    transition: { duration: 0.5 },
     height: 0,
-    overflow: "hidden",
   };
+
 
   return (
     <section
@@ -151,17 +155,17 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
           {menuOrder.map((section, index) => (
             <motion.div
               key={index}
-              initial={{ scale: 1, height: 0, overflow: "hidden" }}
+              initial={{ scale: 1, height: 0, overflow: 'hidden' }}
               animate={currentMenuWeb === section ? showW : hideW}
             >
-              {sections[section]}
+                {sections[section]}
             </motion.div>
           ))}
         </div>
 
         {/* SUB MENU & SECTION MOBILE */}
         {menuOrder.map((section, index) => (
-          <div ref={divRef} className="relative" key={index}>
+          <div className="relative" key={index}>
             <button
               onClick={() => handleClick(section, "mobile")}
               className={`pl-10 mb-6 py-6 flex flex-col md:hidden bg-LM30 ${
@@ -188,6 +192,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             >
               {sections[section]}
             </motion.div>
+            {/* )} */}
           </div>
         ))}
       </SlideUp>
