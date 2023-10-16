@@ -1,46 +1,37 @@
-import Image from 'next/image';
-import { img } from '../../public/images';
-import { motion } from 'framer-motion';
-
+import { motion } from "framer-motion";
+import { Languages } from "./Skills/Languages";
+import { FrontEnd } from "./Skills/FrontEnd";
+import { DesingLibraries } from "./Skills/DesingLibraries";
 
 export const AboutSkills = () => {
-
-
   return (
     <>
-      <div className="mt-0 text-justify md:text-justify md:w-2/3 md:mr-20">
-        <div className=" md:h-[25rem] overflow-y-auto max-h-[25rem]">
-        <div className='relative'>
-  <div>
-    <h4>Lenguajes</h4>
-  </div>
-  <div className='relative w-12 ml-6 mt-6'>
-    <Image
-      width='200'
-      height='200'
-      className=''
-      src={img.js}
-      alt='img'
-      priority
-    />
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileHover={{ opacity: 1, transition: { duration: 1 } }}
-      className='opacity-0 absolute -top-4 left-[-10px] w-20 h-7 dark:bg-white bg-neutral-700 rounded-full shadow-md shadow-black
-    
-    '>
-      <span className='block w-3 h-3 dark:bg-white bg-neutral-700 transform rotate-45 absolute bottom-[-8px] left-[30%] translate-x-[-50%]  '></span>
-      <span className='dark:text-TX text-stone-300 text-xs tracking-widest text-center ml-2 font-medium '>JavaScript</span>
-    </motion.div>
-  </div>
-</div>
-
-
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="
+        bg-white dark:bg-BGD
+        text-justify md:text-justify text-lg
+        md:w-1/2 mt-2 md:mt-14
+        flex flex-col mx-auto space-y-6"
+      >
+        <div className="w-full py-4 px-4">
+        {/* bg-neutral-200/60 dark:bg-neutral-700/60  */}
+          <span className="flex justify-center text-sm">LENGUAJES</span>
+          <Languages />
         </div>
-      </div>
-      <div className="flex justify-center">
-        ESPACIO PARA IMAGEN
-      </div>
+
+        <div className="w-full py-4 px-4">
+          <span className="flex justify-center text-sm">FRONTEND</span>
+          <FrontEnd />
+        </div>
+
+        <div className="w-full py-4 px-4">
+          <span className="flex justify-center text-sm">DESING LIBRARIES</span>
+          <DesingLibraries />
+        </div>
+      </motion.div>
     </>
   );
-}
+};

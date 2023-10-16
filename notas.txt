@@ -2,6 +2,9 @@
 . mouse con circulo, ver portfolio Ailin
 
 
+- Splash
+    . pongo un gradient?? lo mismo en el fondo de toda la app
+
 - Sobre mai
     . texto de cada sección
     . fotos de cada sección!!
@@ -24,3 +27,18 @@
 
 - Bugs:
     . ParticlesComponents se traba por la escucha del scroll
+
+
+
+<div className='flex justify-center'>
+    <Image
+        width='500'
+        height='500'
+        // src={images[currentImageIndex]}
+        src={img.auxlu}
+        alt='img'
+        priority
+        // style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+        className='border-2 border-solid'
+    />
+</div>

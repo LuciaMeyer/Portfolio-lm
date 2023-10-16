@@ -72,7 +72,6 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
               duration={1000}
               className="cursor-pointer text-black text-[.7rem] tracking-wider border-solid border pb-2.5 pt-2 px-4 border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
             >
-              {/* text-[.7rem] leading-8 */}
               SABER MÁS
             </Link>
           </motion.div>

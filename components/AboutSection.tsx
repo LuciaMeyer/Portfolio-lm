@@ -84,11 +84,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
                 <h4
                   className={`py-2 w-36 tracking-widest mx-2
                 shadow-lg shadow-neutral-400 dark:shadow-black
-                hover:scale-90 hover:bg-LM30 dark:hover:bg-neutral-400 dark:hover:text-black 
+                hover:scale-90 hover:bg-neutral-300 hover:font-medium dark:hover:bg-neutral-400 dark:hover:text-black 
                 transform transition-transform duration-300
                 ${
                   sm === currentMenuWeb
-                    ? "bg-LM30 dark:bg-neutral-400 scale-75 dark:text-black"
+                    ? "bg-neutral-300 font-medium dark:bg-neutral-400 scale-75 dark:text-black"
                     : "bg-white dark:bg-neutral-600"
                 } `}
                 >
@@ -110,7 +110,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             </div>
           </div>
           
-          <div className="md:flex flex-col hidden justify-center mx-auto h-screen">
+          <div className="md:flex flex-col hidden justify-center mx-auto h-full">
             {currentMenuWeb === "CONOCEME" || currentMenuWeb === ""
               ? sections.CONOCEME
               : currentMenuWeb === "RECORRIDO"

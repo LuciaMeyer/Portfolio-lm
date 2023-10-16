@@ -21,6 +21,7 @@ export const img = {
     auxfondo1:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/AboutSection/1_rlwcea.jpg',
     auxfondo2:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/AboutSection/3_ciqfir.jpg',
     auxfondo3:'https://res.cloudinary.com/dw272kava/image/upload/v1693422378/AboutSection/2_yf3tml.jpg',
+    auxfondo4: 'https://res.cloudinary.com/dw272kava/image/upload/v1697426612/aux/A_vzecmk.png',
   
     // Projects
     p1: 'https://res.cloudinary.com/dw272kava/image/upload/v1693673800/Projects/P1_jpl2uz.png',
@@ -43,5 +44,13 @@ export const img = {
 
     // AboySkikilss
     js: 'https://res.cloudinary.com/dw272kava/image/upload/v1695231519/AboutSkills/js_pzcmnu.png',
+    ts:'https://res.cloudinary.com/dw272kava/image/upload/v1695232555/AboutSkills/ts_rqsy2c.png',
+    html:'https://res.cloudinary.com/dw272kava/image/upload/v1697431244/AboutSkills/html_u6zjkt.png',
+    css:'https://res.cloudinary.com/dw272kava/image/upload/v1697431244/AboutSkills/css_uoylzk.png',
+    react:'https://res.cloudinary.com/dw272kava/image/upload/v1697432422/AboutSkills/react_noatxd.png',
+    redux:'https://res.cloudinary.com/dw272kava/image/upload/v1697432422/AboutSkills/redux_k0065n.png',
+    next:'https://res.cloudinary.com/dw272kava/image/upload/v1697433253/AboutSkills/next_ltgtq7.png',
+
+
   };
   
