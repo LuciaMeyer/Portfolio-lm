@@ -9,6 +9,7 @@ import { AboutMotivation } from "./AboutSubMenu/AboutMotivation";
 import { AboutCV } from "./AboutSubMenu/AboutCV";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import SlideUp from "./SlideUp";
+import { motion } from "framer-motion";
 
 interface SectionContent {
   [key: string]: JSX.Element;
@@ -18,12 +19,9 @@ interface AboutSectionProps {
   refAbout: React.RefObject<HTMLElement>;
 }
 
-
 export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
-  
   const [currentMenuWeb, setCurrentMenuWeb] = useState("CONOCEME");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
-  const [showSection, setShowSection] = useState(false);
 
   const menuOrder = [
     "CONOCEME",
@@ -48,7 +46,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
       setCurrentMenuMobile((prevSection) =>
         prevSection === section ? "" : section
       );
-      setShowSection(true);
     }
   };
 
@@ -58,7 +55,32 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     setCurrentMenuWeb(menuOrder[nextIndex]);
   };
 
-  
+  const show = {
+    transition: { duration: 1 },
+    x: 0,
+    scale: 1,
+    height: "auto",
+  };
+
+  const hide = {
+    transition: { duration: 1 },
+    x: -500,
+    scale: 1,
+    height: 0,
+    overflow: 'hidden'
+  };
+
+  const showW = {
+    transition: { duration: 1 },
+    height: "auto",
+  };
+
+  const hideW = {
+    transition: { duration: 1 },
+    height: 0,
+  };
+
+
   return (
     <section
       ref={refAbout}
@@ -74,15 +96,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
 
       <SlideUp offset="-300px 0px -300px 0px ">
         {/* SUBMENÚ WEB & SECTION WEB*/}
-          <div className="md:flex hidden justify-center">
-            {menuOrder.map((sm, i) => (
-              <button
-                className="w-auto "
-                key={i}
-                onClick={() => handleClick(sm, "web")}
-              >
-                <h4
-                  className={`py-2 w-36 tracking-widest mx-2
+        <div className="md:flex hidden justify-center">
+          {menuOrder.map((sm, i) => (
+            <button
+              className="w-auto "
+              key={i}
+              onClick={() => handleClick(sm, "web")}
+            >
+              <h4
+                className={`py-2 w-36 tracking-widest mx-2
                 shadow-lg shadow-neutral-400 dark:shadow-black
                 hover:scale-90 hover:bg-neutral-300 hover:font-medium dark:hover:bg-neutral-400 dark:hover:text-black 
                 transform transition-transform duration-300
@@ -91,38 +113,36 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
                     ? "bg-neutral-300 font-medium dark:bg-neutral-400 scale-75 dark:text-black"
                     : "bg-white dark:bg-neutral-600"
                 } `}
-                >
-                  {sm}
-                </h4>
-              </button>
-            ))}
-            <div className="my-auto pl-2" onClick={handleArrowClick}>
-              <Image
-                className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 dark:invert ${
-                  currentMenuWeb === "CV" && "rotate-90"
-                } transform transition-transform duration-300 opacity-40 hover:opacity-20 `}
-                width="30"
-                height="30"
-                src={img.flecha}
-                alt="img"
-                priority
-              />
-            </div>
+              >
+                {sm}
+              </h4>
+            </button>
+          ))}
+          <div className="my-auto pl-2" onClick={handleArrowClick}>
+            <Image
+              className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 dark:invert ${
+                currentMenuWeb === "CV" && "rotate-90"
+              } transform transition-transform duration-300 opacity-40 hover:opacity-20 `}
+              width="30"
+              height="30"
+              src={img.flecha}
+              alt="img"
+              priority
+            />
           </div>
-          
-          <div className="md:flex flex-col hidden justify-center mx-auto h-full">
-            {currentMenuWeb === "CONOCEME" || currentMenuWeb === ""
-              ? sections.CONOCEME
-              : currentMenuWeb === "RECORRIDO"
-              ? sections.RECORRIDO
-              : currentMenuWeb === "HABILIDADES"
-              ? sections.HABILIDADES
-              : currentMenuWeb === "MOTIVACIÓN"
-              ? sections.MOTIVACIÓN
-              : currentMenuWeb === "CV"
-              ? sections.CV
-              : null}
-          </div>
+        </div>
+
+        <div className="md:block hidden justify-center mx-auto h-full">
+          {menuOrder.map((section, index) => (
+            <motion.div
+              key={index}
+              initial={{ scale: 1, height: 0, overflow: 'hidden' }}
+              animate={currentMenuWeb === section ? showW : hideW}
+            >
+                {sections[section]}
+            </motion.div>
+          ))}
+        </div>
 
         {/* SUB MENU & SECTION MOBILE */}
         {menuOrder.map((section, index) => (
@@ -139,16 +159,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             >
               {section}
               <div className="absolute top-5 right-6">
-                {showSection && currentMenuMobile === section ? (
+                {currentMenuMobile === section ? (
                   <IoIosArrowUp size={22} />
                 ) : (
                   <IoIosArrowDown size={22} />
                 )}
               </div>
             </button>
-            {showSection && currentMenuMobile === section && (
-              <div className="block md:hidden my-4">{sections[section]}</div>
-            )}
+            <motion.div
+              initial={{ scale: 0, height: 0 }}
+              animate={currentMenuMobile === section ? show : hide}
+              className="block md:hidden my-4"
+            >
+              {sections[section]}
+            </motion.div>
+            {/* )} */}
           </div>
         ))}
       </SlideUp>
