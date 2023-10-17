@@ -1,10 +1,8 @@
 "use client";
-// import { useEffect, useState } from 'react';
 import Image from "next/image";
 import { img } from "../../public/images";
-import { useEffect } from "react";
 
-export const AboutKnowMe = ( { topSection } : any ) => {
+export const AboutKnowMe = () => {
 
   // const images = [img.aux1, img.aux2, img.aux3];
 
@@ -17,14 +15,6 @@ export const AboutKnowMe = ( { topSection } : any ) => {
 
   //   return () => clearInterval(interval);
   // }, []);
-
-  useEffect(()=>{
-    const adjustedTop = window.scrollY + topSection.top - 8 * 16;
-    window.scrollTo({
-      top: adjustedTop,
-      behavior: 'smooth'
-    });
-  },[topSection.click])
 
 
   return (

@@ -10,6 +10,7 @@ import { AboutCV } from "./AboutSubMenu/AboutCV";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import SlideUp from "./SlideUp";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 interface SectionContent {
   [key: string]: JSX.Element;
@@ -22,7 +23,6 @@ interface AboutSectionProps {
 export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   const [currentMenuWeb, setCurrentMenuWeb] = useState("CONOCEME");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
-  const [topSection, setTopSection] = useState({ top: 0, click: false });
 
   const menuOrder = [
     "CONOCEME",
@@ -33,28 +33,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   ];
 
   const sections: SectionContent = {
-    CONOCEME: <AboutKnowMe topSection={topSection} />,
+    CONOCEME: <AboutKnowMe />,
     RECORRIDO: <AboutJourney />,
     HABILIDADES: <AboutSkills />,
     MOTIVACIÓN: <AboutMotivation />,
     CV: <AboutCV />,
   };
 
-  const divRef = useRef<HTMLDivElement | null>(null);
-
-  const handleClick = (
-    section: string,
-    platform: string,
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    const { top } = event.currentTarget.getBoundingClientRect();
-    setTopSection({ top, click: !topSection.click });
+  const handleClick = (section: string,platform: string) => {
     if (platform === "web") {
       setCurrentMenuWeb("");
       setTimeout(() => {
         setCurrentMenuWeb(section);
       }, 500);
     } else {
+
       if (section === currentMenuMobile) {
         setCurrentMenuMobile("");
       } else {
@@ -65,6 +58,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
       }
     }
   };
+
+
+
+
 
   const handleArrowClick = () => {
     const currentIndex = menuOrder.indexOf(currentMenuWeb);
@@ -116,26 +113,34 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
         {/* SUBMENÚ WEB & SECTION WEB*/}
         <div className="md:flex hidden justify-center">
           {menuOrder.map((sm, i) => (
-            <button
-              className="w-auto "
-              key={i}
-              onClick={(event) => handleClick(sm, "web", event)}
-              // onClick={(event) => handleClick(sm, "web", event)}
+            <Link
+              to="about"
+              smooth={true}
+              offset={10}
+              duration={1000}
+              spy={true}
             >
-              <h4
-                className={`py-2 w-36 tracking-widest mx-2
-                shadow-lg shadow-neutral-400 dark:shadow-black
-                hover:scale-90 hover:bg-neutral-300 hover:font-medium dark:hover:bg-neutral-400 dark:hover:text-black 
-                transform transition-transform duration-300
-                ${
-                  sm === currentMenuWeb
-                    ? "bg-neutral-300 font-medium dark:bg-neutral-400 scale-75 dark:text-black"
-                    : "bg-white dark:bg-neutral-600"
-                } `}
+              <button
+                className="w-auto "
+                key={i}
+                onClick={() => handleClick(sm, "web")}
+                // onClick={(event) => handleClick(sm, "web", event)}
               >
-                {sm}
-              </h4>
-            </button>
+                <h4
+                  className={`py-2 w-36 tracking-widest mx-2
+                  shadow-lg shadow-neutral-400 dark:shadow-black
+                  hover:scale-90 hover:bg-neutral-300 hover:font-medium dark:hover:bg-neutral-400 dark:hover:text-black 
+                  transform transition-transform duration-300
+                  ${
+                    sm === currentMenuWeb
+                      ? "bg-neutral-300 font-medium dark:bg-neutral-400 scale-75 dark:text-black"
+                      : "bg-white dark:bg-neutral-600"
+                  } `}
+                >
+                  {sm}
+                </h4>
+              </button>
+            </Link>
           ))}
           <div className="my-auto pl-2" onClick={handleArrowClick}>
             <Image
@@ -165,26 +170,34 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
 
         {/* SUB MENU & SECTION MOBILE */}
         {menuOrder.map((section, index) => (
-          <div ref={divRef} className="relative" key={index}>
-            <button
-              onClick={(event) => handleClick(section, "mobile", event)}
-              className={`pl-10 mb-6 py-6 flex flex-col md:hidden bg-LM30 ${
-                50 - index * 10
-              } w-full cursor-pointer tracking-widest font-medium text-sm shadow-md shadow-neutral-400 dark:shadow-black ${
-                currentMenuMobile === section
-                  ? "dark:bg-neutral-400 dark:text-black"
-                  : "dark:bg-neutral-600"
-              }`}
+          <div className="relative" key={index}>
+            <Link
+              to="about"
+              smooth={true}
+              offset={index * 110}
+              duration={1000}
+              spy={true}
             >
-              {section}
-              <div className="absolute top-5 right-6">
-                {currentMenuMobile === section ? (
-                  <IoIosArrowUp size={22} />
-                ) : (
-                  <IoIosArrowDown size={22} />
-                )}
-              </div>
-            </button>
+              <button
+                onClick={() => handleClick(section, "mobile")}
+                className={`pl-10 mb-6 py-6 flex flex-col md:hidden bg-LM30 ${
+                  50 - index * 10
+                } w-full cursor-pointer tracking-widest font-medium text-sm shadow-md shadow-neutral-400 dark:shadow-black ${
+                  currentMenuMobile === section
+                    ? "dark:bg-neutral-400 dark:text-black"
+                    : "dark:bg-neutral-600"
+                }`}
+              >
+                {section}
+                <div className="absolute top-5 right-6">
+                  {currentMenuMobile === section ? (
+                    <IoIosArrowUp size={22} />
+                  ) : (
+                    <IoIosArrowDown size={22} />
+                  )}
+                </div>
+              </button>
+            </Link>
             <motion.div
               initial={{ scale: 0, height: 0 }}
               animate={currentMenuMobile === section ? show : hide}
