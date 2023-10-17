@@ -7,7 +7,7 @@ export const DesingLibraries = () => {
     <>
       <div className="flex flex-row justify-around md:justify-center md:space-x-16 items-end">
         {/* Tailwind */}
-        <div className="flex flex-col relative w-12 mt-6 justify-center">
+        <div className="flex flex-col relative w-12  justify-center">
           <Image width={200} height={200} src={img.tail} alt="img" priority />
           <motion.div
             initial={{ opacity: 0 }}
@@ -24,7 +24,7 @@ export const DesingLibraries = () => {
         </div>
 
         {/* Material-UI */}
-        <div className="flex flex-col relative w-12  mt-6">
+        <div className="flex flex-col relative w-12  ">
           <Image width={200} height={200} src={img.mu} alt="img" priority />
           <motion.div
             initial={{ opacity: 0 }}
@@ -41,7 +41,7 @@ export const DesingLibraries = () => {
         </div>
 
         {/* Bootstrap */}
-        <div className="flex flex-col relative w-12  mt-6 items-end">
+        <div className="flex flex-col relative w-12   items-end">
           <Image width={200} height={200} src={img.boo} alt="img" priority />
           <motion.div
             initial={{ opacity: 0 }}
@@ -72,7 +72,7 @@ export const DesingLibraries = () => {
 
       <div className="flex flex-row justify-around md:justify-center md:space-x-16 items-end">
         {/* Less */}
-        <div className="flex flex-col relative w-12  mt-6 items-end">
+        <div className="flex flex-col relative w-12   items-end">
           <Image width={200} height={200} src={img.less} alt="img" priority />
           <motion.div
             initial={{ opacity: 0 }}
@@ -89,7 +89,7 @@ export const DesingLibraries = () => {
         </div>
 
         {/* Sass */}
-        <div className="flex flex-col relative w-12  mt-6 items-end">
+        <div className="flex flex-col relative w-12   items-end">
           <Image width={200} height={200} src={img.sass} alt="img" priority />
           <motion.div
             initial={{ opacity: 0 }}

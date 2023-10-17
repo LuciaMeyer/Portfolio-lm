@@ -1,12 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { img } from "../public/images";
 import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe";
 import { AboutJourney } from "./AboutSubMenu/AboutJourney";
 import { AboutSkills } from "./AboutSubMenu/AboutSkills";
 import { AboutMotivation } from "./AboutSubMenu/AboutMotivation";
-import { AboutCV } from "./AboutSubMenu/AboutCV";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import SlideUp from "./SlideUp";
 import { motion } from "framer-motion";
@@ -29,7 +28,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     "RECORRIDO",
     "HABILIDADES",
     "MOTIVACIÓN",
-    // "CV",
   ];
 
   const sections: SectionContent = {
@@ -37,7 +35,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     RECORRIDO: <AboutJourney />,
     HABILIDADES: <AboutSkills />,
     MOTIVACIÓN: <AboutMotivation />,
-    // CV: <AboutCV />,
   };
 
   const handleClick = (section: string, platform: string) => {

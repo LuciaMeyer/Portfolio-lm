@@ -55,7 +55,7 @@ export const AboutKnowMe = () => {
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {"Lu, "}
               </span>
-              creativa e inquieta desde siempre. Mi camino me llevó a explorar diferentes áreas como
+              creativa e inquieta desde siempre. En mi camino exploré diferentes áreas como
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" arquitectura, diseño, comunicación y marketing."}
               </span>{" "}
@@ -98,7 +98,7 @@ export const AboutKnowMe = () => {
             className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
             {/* parrafo 3 */}
             <p className="">
-              Entrar en este sector me impulsa a mantenerme en un
+              Entrar en este sector me impulsó a estar en
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" constante proceso de aprendizaje. "}
               </span>
@@ -106,14 +106,14 @@ export const AboutKnowMe = () => {
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" UX/UI"}
               </span>{" "}
-              y explorando los nuevos avances y paradigmas que trae la
+              y explorando los nuevos paradigmas y evolución que trae la
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" Inteligencia Artificial."}
               </span>
             </p>
             {/* parrafo 4 */}
             <p className="">
-              Podés conocer alguno de
+              Conocé alguno de
               <button
                 className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
@@ -147,7 +147,7 @@ export const AboutKnowMe = () => {
                 className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                 <Link
-                  to={'projects'}
+                  to={'contact'}
                   activeClass="active"
                   spy={true}
                   smooth={true}

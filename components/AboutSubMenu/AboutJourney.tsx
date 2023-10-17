@@ -3,14 +3,12 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { img } from '../../public/images';
 import { motion } from 'framer-motion';
-import { useContext } from 'react';
-import { screenContext } from '@/context/screenContext';
+
 
 export const AboutJourney = () => {
   // const images = [img.aux1, img.aux2, img.aux3];
   // const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showDiv, setShowDiv] = useState(false);
-  const isMobile = useContext(screenContext)
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -86,7 +84,7 @@ export const AboutJourney = () => {
               aprendí a
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {
-                  ' optimizar procesos, liderar proyectos, coordinar equipos y trabajar con metodologías ágiles...  '
+                  ' optimizar procesos, liderar proyectos, coordinar equipos y trabajar con metodologías ágiles.'
                 }{' '}
               </span>
               <br />
@@ -95,7 +93,6 @@ export const AboutJourney = () => {
                 onClick={handleShowDiv}
                 className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
-                {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
                 SEGUIR LEYENDO
               </button>
               <span className='text-sm dark:text-stone-400'>1 / 2</span>
@@ -120,8 +117,7 @@ export const AboutJourney = () => {
               </span>
             </p>
             <p>
-              Por una persona inquieta, en búsqueda de desafíos y nuevos
-              conocimientos, en 2022
+              A fines del 2021
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' me apasioné con el mundo IT.  '}
               </span>
@@ -139,6 +135,11 @@ export const AboutJourney = () => {
                   ' ya que estoy convencida de que el conocimiento se construye colectivamente. '
                 }
               </span>
+              <button
+                className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+              >
+                  DESCARGAR CV
+              </button>
               <br />
               <div className='md:mt-6 mt-4 flex items-center justify-between'>
               <button
