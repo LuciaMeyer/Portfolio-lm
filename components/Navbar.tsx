@@ -56,7 +56,6 @@ export const Navbar = () => {
   const handleMenuClick = (page: string) => {
     setNavbar(!navbar);
     setSection(page);
-    console.log(page);
   };
 
   const handleMenuResposiveParticles = () => {

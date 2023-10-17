@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { img } from "../public/images";
 import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe";
@@ -22,6 +22,7 @@ interface AboutSectionProps {
 export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   const [currentMenuWeb, setCurrentMenuWeb] = useState("CONOCEME");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
+  const [topSection, setTopSection] = useState({ top: 0, click: false });
 
   const menuOrder = [
     "CONOCEME",
@@ -32,41 +33,38 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   ];
 
   const sections: SectionContent = {
-    CONOCEME: <AboutKnowMe />,
+    CONOCEME: <AboutKnowMe topSection={topSection} />,
     RECORRIDO: <AboutJourney />,
     HABILIDADES: <AboutSkills />,
     MOTIVACIÓN: <AboutMotivation />,
     CV: <AboutCV />,
   };
 
-  // const handleClick = (section: string, platform: string) => {
-  //   if (platform === "web") {
-  //     setCurrentMenuWeb(section);
-  //   } else {
-  //     setCurrentMenuMobile((prevSection) =>
-  //       prevSection === section ? "" : section
-  //     );
-  //   }
-  // };
+  const divRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClick = (section: string, platform: string) => {
+  const handleClick = (
+    section: string,
+    platform: string,
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    const { top } = event.currentTarget.getBoundingClientRect();
+    setTopSection({ top, click: !topSection.click });
     if (platform === "web") {
       setCurrentMenuWeb("");
       setTimeout(() => {
         setCurrentMenuWeb(section);
       }, 500);
     } else {
-      if(currentMenuMobile !== section){
+      if (section === currentMenuMobile) {
+        setCurrentMenuMobile("");
+      } else {
         setCurrentMenuMobile("");
         setTimeout(() => {
           setCurrentMenuMobile(section);
         }, 500);
-      } else {
-        setCurrentMenuMobile("");
       }
     }
   };
-
 
   const handleArrowClick = () => {
     const currentIndex = menuOrder.indexOf(currentMenuWeb);
@@ -86,7 +84,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     x: -500,
     scale: 1,
     height: 0,
-    overflow: 'hidden'
+    overflow: "hidden",
   };
 
   const showW = {
@@ -97,8 +95,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   const hideW = {
     transition: { duration: 0.5 },
     height: 0,
+    overflow: "hidden",
+    opacity: 0,
   };
-
 
   return (
     <section
@@ -120,7 +119,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             <button
               className="w-auto "
               key={i}
-              onClick={() => handleClick(sm, "web")}
+              onClick={(event) => handleClick(sm, "web", event)}
+              // onClick={(event) => handleClick(sm, "web", event)}
             >
               <h4
                 className={`py-2 w-36 tracking-widest mx-2
@@ -151,23 +151,23 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
           </div>
         </div>
 
-        <div className="md:block hidden justify-center mx-auto h-full">
+        <div className="md:block hidden justify-center mx-auto h-96">
           {menuOrder.map((section, index) => (
             <motion.div
               key={index}
-              initial={{ scale: 1, height: 0, overflow: 'hidden' }}
+              initial={{ scale: 1, height: 0, overflow: "hidden" }}
               animate={currentMenuWeb === section ? showW : hideW}
             >
-                {sections[section]}
+              {sections[section]}
             </motion.div>
           ))}
         </div>
 
         {/* SUB MENU & SECTION MOBILE */}
         {menuOrder.map((section, index) => (
-          <div className="relative" key={index}>
+          <div ref={divRef} className="relative" key={index}>
             <button
-              onClick={() => handleClick(section, "mobile")}
+              onClick={(event) => handleClick(section, "mobile", event)}
               className={`pl-10 mb-6 py-6 flex flex-col md:hidden bg-LM30 ${
                 50 - index * 10
               } w-full cursor-pointer tracking-widest font-medium text-sm shadow-md shadow-neutral-400 dark:shadow-black ${
@@ -192,7 +192,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             >
               {sections[section]}
             </motion.div>
-            {/* )} */}
           </div>
         ))}
       </SlideUp>

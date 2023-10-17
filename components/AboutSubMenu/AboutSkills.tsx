@@ -4,12 +4,11 @@ import { FrontEnd } from "./Skills/FrontEnd";
 import { DesingLibraries } from "./Skills/DesingLibraries";
 
 export const AboutSkills = () => {
+
+  
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+      <div
         className="
         bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
@@ -31,7 +30,7 @@ export const AboutSkills = () => {
           <span className="flex justify-center text-sm">DESING LIBRARIES</span>
           <DesingLibraries />
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

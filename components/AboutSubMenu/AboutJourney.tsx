@@ -38,20 +38,16 @@ export const AboutJourney = () => {
     opacity: 0,
   };
 
+
   return (
     <>
-      <motion.div
+      <div
         className='flex md:hidden justify-center'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+
       >
         <Image width={400} height={400} src={img.auxfondo4} alt='img' priority />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+      </div>
+      <div
         className='bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
          md:w-1/2 mt-2 md:mt-auto
@@ -162,7 +158,7 @@ export const AboutJourney = () => {
             className='object-cover'
           />
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

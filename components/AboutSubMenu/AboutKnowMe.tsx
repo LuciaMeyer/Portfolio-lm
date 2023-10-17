@@ -2,9 +2,10 @@
 // import { useEffect, useState } from 'react';
 import Image from "next/image";
 import { img } from "../../public/images";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
 
-export const AboutKnowMe = () => {
+export const AboutKnowMe = ( { topSection } : any ) => {
+
   // const images = [img.aux1, img.aux2, img.aux3];
 
   // const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -17,20 +18,23 @@ export const AboutKnowMe = () => {
   //   return () => clearInterval(interval);
   // }, []);
 
+  useEffect(()=>{
+    const adjustedTop = window.scrollY + topSection.top - 8 * 16;
+    window.scrollTo({
+      top: adjustedTop,
+      behavior: 'smooth'
+    });
+  },[topSection.click])
+
+
   return (
     <>
-      <motion.div
+      <div
         className="flex md:hidden justify-center"
-        // initial={{ opacity: 0 }}
-        // animate={{ opacity: 1 }}
-        // transition={{ duration: 1.5 }}
       >
         <Image width={400} height={400} src={img.auxlu} alt="img" priority />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+      </div>
+      <div
         className="bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
          md:w-1/2 mt-2 md:mt-auto
@@ -110,7 +114,7 @@ export const AboutKnowMe = () => {
             className="object-cover"
           />
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };
