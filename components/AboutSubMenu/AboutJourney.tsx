@@ -11,7 +11,6 @@ export const AboutJourney = () => {
   // const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showDiv, setShowDiv] = useState(false);
   const isMobile = useContext(screenContext)
-  console.log(isMobile)
 
   // useEffect(() => {
   //   const interval = setInterval(() => {

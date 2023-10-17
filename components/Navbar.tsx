@@ -45,8 +45,7 @@ export const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
   const [showParticles, setShowParticles] = useState(true);
-  const screenSize = useContext(screenContext);
-  const { screenWidth } = screenSize;
+  const isMobile = useContext(screenContext);
 
   const objetcContext = useContext(sectionContext);
   const section = objetcContext.section;
@@ -141,7 +140,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between backdrop-blur-md ">
           {/* LOGO */}
           <div className="flex md:mx-auto md:pl-48 ml-7 cursor-pointer pb-2">
-            {screenWidth < 768 && (section === "home" || section === "") ? (
+            {isMobile && (section === "home" || section === "") ? (
               <div className="h-16"></div>
             ) : (
               <Link
