@@ -29,7 +29,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     "RECORRIDO",
     "HABILIDADES",
     "MOTIVACIÓN",
-    "CV",
+    // "CV",
   ];
 
   const sections: SectionContent = {
@@ -37,7 +37,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     RECORRIDO: <AboutJourney />,
     HABILIDADES: <AboutSkills />,
     MOTIVACIÓN: <AboutMotivation />,
-    CV: <AboutCV />,
+    // CV: <AboutCV />,
   };
 
   const handleClick = (section: string, platform: string) => {
@@ -120,16 +120,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
                 className="w-auto "
                 key={i}
                 onClick={() => handleClick(sm, "web")}
-                // onClick={(event) => handleClick(sm, "web", event)}
               >
                 <h4
                   className={`py-2 w-36 tracking-widest mx-2
                   shadow-lg shadow-neutral-400 dark:shadow-black
-                  hover:scale-90 hover:bg-neutral-300 hover:font-medium dark:hover:bg-neutral-400 dark:hover:text-black 
+                  hover:scale-90 hover:bg-neutral-200 hover:font-medium dark:hover:bg-neutral-500 dark:hover:text-black 
                   transform transition-transform duration-300
                   ${
                     sm === currentMenuWeb
-                      ? "bg-neutral-300 font-medium dark:bg-neutral-400 scale-75 dark:text-black"
+                      ? "bg-neutral-200 font-medium dark:bg-neutral-500 scale-75 dark:text-black"
                       : "bg-white dark:bg-neutral-600"
                   } `}
                 >

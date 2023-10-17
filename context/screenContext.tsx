@@ -1,28 +1,18 @@
 "use client";
 import React, { createContext, useState, useEffect } from "react";
 
-type ContextValueType = {
-  screenWidth: number;
-};
-
-const initialContextValue: ContextValueType = {
-  screenWidth: 0,
-};
-
-export const screenContext =
-  createContext<ContextValueType>(initialContextValue);
+export const screenContext = createContext<boolean>(false);
 
 export const ScreenProvider = ({ children }: { children: React.ReactNode }) => {
-  const [screenSize, setScreenSize] = useState({
-    screenWidth: typeof window !== "undefined" ? window.innerWidth : 0,
-  });
+
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const updateScreenSize = () => {
-        setScreenSize({
-          screenWidth: window.innerWidth,
-        });
+        window.innerWidth < 768
+        ? setIsMobile(true)
+        : setIsMobile(false)
       };
       window.addEventListener("resize", updateScreenSize);
       updateScreenSize();
@@ -33,7 +23,7 @@ export const ScreenProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <screenContext.Provider value={screenSize}>
+    <screenContext.Provider value={isMobile}>
       {children}
     </screenContext.Provider>
   );

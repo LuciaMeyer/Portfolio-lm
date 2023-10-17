@@ -42,3 +42,9 @@
         className='border-2 border-solid'
     />
 </div>
+
+
+
+            <span className=" font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {"Full Stack Developer"}
+            </span>

@@ -18,12 +18,12 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
         id="home"
         className="flex-1 pt-24 md:pt-64 md:mb-60 pb-60"
       >
-        <div className="flex flex-col h-full md:flex-row md:justify-center md:mx-40 mx-10 md:items-center content-center">
+        <div className="flex flex-col md:w-1/2 h-full md:flex-row items-center md:justify-between md:mx-auto mx-10 md:items-center content-center">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5 }}
-            className="md:mr-14 md:w-1/4"
+            // className="md:mr-14 md:w-1/4"
           >
             <h1 className="leading-snug tracking-wide text-3xl md:mb-2 ">
               Lucía Meyer
@@ -58,7 +58,7 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
             </motion.h1>
 
             <hr className="w-8 h-px md:my-10 my-6 bg-stone-300  dark:bg-stone-400 border-0" />
-            <p className="relative -z-10 md:pb-10 pb-5 md:text-lg text-xl">
+            <p className="relative md:mr-20 -z-10 md:pb-10 pb-5 md:text-lg text-xl">
               Creo aplicaciones web y mobile. Combino desarrollo eficiente,
               diseño creativo y estrategias de marketing para lograr los mejores
               resultados.
@@ -76,15 +76,16 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
             </Link>
           </motion.div>
 
+          {/* imagen */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5 }}
-            className="md:ml-14 md:mt-0 mt-4"
+            className="md:mt-0 mt-4"
           >
             <Image
-              width="300"
-              height="300"
+              width={500}
+              height={500}
               src={img.imglu}
               alt="img"
               priority

@@ -22,7 +22,7 @@ module.exports = {
         LM20:'#fef0d3',
         LM10:'#fff8e9',  
         BGD: '#202020',
-        BGDc:'#222222',
+        BGDc:'#242424',
         TX:'#262626',
         LMc:'#F9EBD2',
         GRIS0:'#666666',

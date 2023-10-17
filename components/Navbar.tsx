@@ -44,7 +44,6 @@ const NAV_ITEMS: Array<NavItem> = [
 export const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
-  // const [section, setSection] = useState('home');
   const [showParticles, setShowParticles] = useState(true);
   const screenSize = useContext(screenContext);
   const { screenWidth } = screenSize;
@@ -123,8 +122,8 @@ export const Navbar = () => {
               return (
                 <Link
                   key={idx}
-                  to={item.page}
                   className={"hover:text-LM font-thin text-lg tracking-wider"}
+                  to={item.page}
                   activeClass="active"
                   spy={true}
                   smooth={true}

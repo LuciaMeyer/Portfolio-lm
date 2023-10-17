@@ -3,11 +3,15 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { img } from '../../public/images';
 import { motion } from 'framer-motion';
+import { useContext } from 'react';
+import { screenContext } from '@/context/screenContext';
 
 export const AboutJourney = () => {
   // const images = [img.aux1, img.aux2, img.aux3];
   // const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showDiv, setShowDiv] = useState(false);
+  const isMobile = useContext(screenContext)
+  console.log(isMobile)
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -21,7 +25,7 @@ export const AboutJourney = () => {
   useEffect(() => {
     setTimeout(() => {
       if (showDiv) setShowDiv(false);
-    }, 30000);
+    }, 50000);
   }, [showDiv]);
 
   const handleShowDiv = () => {
@@ -88,14 +92,15 @@ export const AboutJourney = () => {
               </span>
               <br />
               <div className='md:mt-6 mt-4 flex items-center justify-between'>
-                <button
-                  onClick={handleShowDiv}
-                  className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
-                >
-                  LEER MÁS
-                </button>
-                <span className='text-sm dark:text-stone-400'>1 / 2</span>
-              </div>
+              <button
+                onClick={handleShowDiv}
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+              >
+                {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
+                SEGUIR LEYENDO
+              </button>
+              <span className='text-sm dark:text-stone-400'>1 / 2</span>
+            </div>
             </p>
           </div>
         ) : (
@@ -137,18 +142,19 @@ export const AboutJourney = () => {
               </span>
               <br />
               <div className='md:mt-6 mt-4 flex items-center justify-between'>
-                <button
-                  onClick={handleShowDiv}
-                  className='md:mt-6 my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
-                >
-                  VOLVER
-                </button>
-                <span className='text-sm dark:text-stone-400'>2 / 2</span>
-              </div>
+              <button
+                onClick={handleShowDiv}
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+              >
+                {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
+                VOLVER
+              </button>
+              <span className='text-sm dark:text-stone-400'>2 / 2</span>
+            </div>
             </p>
           </motion.div>
         )}
-        <div className='md:flex hidden mt-14 ml-7 md:w-1/2'>
+        <div className='md:flex hidden mt-14 ml-7 md:w-1/2 h-96'>
           <Image
             width={600}
             height={600}
