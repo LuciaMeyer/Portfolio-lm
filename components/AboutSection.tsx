@@ -40,14 +40,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     CV: <AboutCV />,
   };
 
-  const handleClick = (section: string,platform: string) => {
+  const handleClick = (section: string, platform: string) => {
     if (platform === "web") {
       setCurrentMenuWeb("");
       setTimeout(() => {
         setCurrentMenuWeb(section);
       }, 500);
     } else {
-
       if (section === currentMenuMobile) {
         setCurrentMenuMobile("");
       } else {
@@ -58,10 +57,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
       }
     }
   };
-
-
-
-
 
   const handleArrowClick = () => {
     const currentIndex = menuOrder.indexOf(currentMenuWeb);
@@ -114,6 +109,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
         <div className="md:flex hidden justify-center">
           {menuOrder.map((sm, i) => (
             <Link
+              key={i}
               to="about"
               smooth={true}
               offset={10}
