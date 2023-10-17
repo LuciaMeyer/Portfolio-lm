@@ -171,7 +171,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
               to="about"
               smooth={true}
               offset={index * 110}
-              duration={1000}
+              duration={2000}
               spy={true}
             >
               <button
