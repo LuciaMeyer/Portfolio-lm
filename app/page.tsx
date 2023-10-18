@@ -4,7 +4,7 @@ import { Contact } from '@/components/Contact';
 import { HeroSection } from '@/components/HeroSection';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { Resurces } from '@/components/Resurces';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { sectionContext } from '../context/sectionContext';
 
 export default function Home() {
@@ -13,6 +13,7 @@ export default function Home() {
 
   const { refHero, refAbout, refProjects, refResurces, refContact, useIsInViewport  } = objetcContext.sectionsRef;
   const setSection = objetcContext.setSection;
+
 
   const hero = useIsInViewport(refHero);
   const about = useIsInViewport(refAbout);

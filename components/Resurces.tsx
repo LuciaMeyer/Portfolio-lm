@@ -18,7 +18,7 @@ export const Resurces:React.FC<ResurcesSectionProps> = ({ refResurces }) => {
         </h1>
       </SlideUp>
       <SlideUp offset="-300px 0px -300px 0px">
-        <div className="ml-10 mr-10 md:mx-auto md:w-1/2 flex flex-col space-y-2 justify-center align-top pb-20">
+        <div className="mx-6 md:mx-auto md:w-1/2 flex flex-col space-y-2 justify-center align-top pb-20">
           <p>EN PROCESO...</p>
           <br />
           <p className="leading-8 text-justify">

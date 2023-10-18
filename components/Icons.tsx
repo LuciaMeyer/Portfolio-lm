@@ -130,7 +130,7 @@ export const Icons: React.FC<IconsProps> = () => {
 
       <div
         className={`w-10 fixed md:bottom-16 bottom-12 md:right-12 right-4  
-         transform transition-transform duration-300 hover:scale-75
+         transform transition-transform duration-300 md:hover:scale-75
           ${section === "contact" && "rotate-180"}
           ${!!endPage ? "rotate-180" : "rotate-0"}
           `}

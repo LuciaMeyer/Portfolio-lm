@@ -44,7 +44,7 @@ const NAV_ITEMS: Array<NavItem> = [
 export const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
-  const [showParticles, setShowParticles] = useState(true);
+  const [showParticles, setShowParticles] = useState(false);
   const isMobile = useContext(screenContext);
 
   const objetcContext = useContext(sectionContext);
@@ -82,6 +82,8 @@ export const Navbar = () => {
     y: -1000,
     scale: 1,
   };
+
+  console.log(isMobile)
 
   return (
     <>
@@ -139,7 +141,7 @@ export const Navbar = () => {
 
         <div className="flex items-center justify-between backdrop-blur-md ">
           {/* LOGO */}
-          <div className="flex md:mx-auto md:pl-48 ml-7 cursor-pointer pb-2">
+          <div className="flex md:mx-auto md:pl-48 ml-4 cursor-pointer ">
             {isMobile && (section === "home" || section === "") ? (
               <div className="h-16"></div>
             ) : (
@@ -150,6 +152,7 @@ export const Navbar = () => {
                 smooth={true}
                 duration={1000}
                 onClick={hanldeLogoClick}
+                className='md:h-auto h-16'
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -158,7 +161,7 @@ export const Navbar = () => {
                   whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
                 >
                   <Image
-                    className="md:my-4 mt-6 mb-4 md:w-full"
+                    className="md:my-4 md:mt-4 mt-2 md:w-full"
                     src={img.LM}
                     alt="LM"
                     width={40}
@@ -172,7 +175,7 @@ export const Navbar = () => {
 
           {/* ÍCONOS MENÚ  */}
           <motion.div
-            className="relative my-auto cursor-pointer md:px-6 px-4 py-3"
+            className="relative cursor-pointer md:px-6 pr-2 "
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -185,24 +188,21 @@ export const Navbar = () => {
               >
                 <div className="relative mr-4 flex items-center justify-center rounded-full transition-transform duration-500 hover:scale-90 ">
                   <div
-                    className={`flex flex-col justify-between w-[25px] h-[14px] transform transition-all duration-300 ${
-                      navbar ? "rotate-[45deg] origin-center" : ""
-                    }`}
+                    className={`flex flex-col justify-between w-[25px] h-[14px] transform transition-all duration-300 ${navbar ? "rotate-[45deg] origin-center" : ""
+                      }`}
                   >
                     <div
-                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${
-                        navbar
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${navbar
                           ? "rotate-90 h-[1px] translate-y-[9px] origin-top delay-75"
                           : ""
-                      }`}
+                        }`}
                     ></div>
 
                     <div className="dark:bg-stone-300 bg-TX h-[0.8px] rounded"></div>
 
                     <div
-                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${
-                        navbar ? "h-[0px]" : ""
-                      }`}
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${navbar ? "h-[0px]" : ""
+                        }`}
                     ></div>
                   </div>
                 </div>
