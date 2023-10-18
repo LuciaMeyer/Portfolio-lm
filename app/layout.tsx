@@ -49,17 +49,17 @@ export default function RootLayout({
         <ScreenProvider>
           <SectionProvider>
             <ThemeProvider enableSystem={true} attribute="class">
-              {/* {showSplash ? (
+              {showSplash ? (
                 <motion.div initial={{ opacity: 1 }} animate={!opacity && hide}>
                   <SplashScreen />
                 </motion.div>
-              ) : ( */}
+              ) : (
                 <>
                   <Navbar />
                   {children}
                   <Footer />
                 </>
-              {/* )} */}
+              )} 
             </ThemeProvider>
           </SectionProvider>
         </ScreenProvider>

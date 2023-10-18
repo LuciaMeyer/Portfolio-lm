@@ -19,11 +19,6 @@ export const AboutJourney = () => {
   //   };
   // }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (showDiv) setShowDiv(false);
-    }, 50000);
-  }, [showDiv]);
 
   const handleShowDiv = () => {
     setShowDiv(!showDiv);
@@ -91,11 +86,13 @@ export const AboutJourney = () => {
               <div className='md:mt-6 mt-4 flex items-center justify-between'>
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                 SEGUIR LEYENDO
               </button>
-              <span className='text-sm dark:text-stone-400'>1 / 2</span>
+              <button onClick={handleShowDiv}>
+                <span className='text-sm dark:text-stone-400'>1 / 2</span>
+              </button>
             </div>
             </p>
           </div>
@@ -107,11 +104,11 @@ export const AboutJourney = () => {
             className='space-y-6 md:mt-14 md:mr-7 md:w-1/2'
           >
             <p>
-              más adelante, me lancé como
+              más adelante, como
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
-                {' freelance  '}
+                {' freelance,  '}
               </span>
-              para acompañar a PyMEs y emprendedores en el proceso de
+              comencé a acompañar a PyMEs y emprendedores en el proceso de
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {' creación y difusión de su identidad visual y corporativa. '}
               </span>
@@ -119,9 +116,9 @@ export const AboutJourney = () => {
             <p>
               A fines del 2021
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
-                {' me apasioné con el mundo IT.  '}
+                {' me apasioné con el mundo IT,  '}
               </span>
-              En este espacio encontré el
+              donde encontré el
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
                 {'  punto de convergencia '}
               </span>
@@ -144,12 +141,13 @@ export const AboutJourney = () => {
               <div className='md:mt-6 mt-4 flex items-center justify-between'>
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
-                {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
                 VOLVER
               </button>
-              <span className='text-sm dark:text-stone-400'>2 / 2</span>
+              <button onClick={handleShowDiv}>
+                <span className='text-sm dark:text-stone-400'>2 / 2</span>
+              </button>
             </div>
             </p>
           </motion.div>

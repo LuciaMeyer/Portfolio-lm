@@ -23,12 +23,6 @@ export const AboutKnowMe = () => {
   //   return () => clearInterval(interval);
   // }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (showDiv) setShowDiv(false);
-    }, 50000);
-  }, [showDiv]);
-
   const handleShowDiv = () => {
     setShowDiv(!showDiv);
   };
@@ -49,7 +43,6 @@ export const AboutKnowMe = () => {
 
         {!showDiv ?
           <div className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
-            {/* parrafo 1 */}
             <p className="">
               Hola! Soy{" "}
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -59,16 +52,19 @@ export const AboutKnowMe = () => {
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" arquitectura, diseño, comunicación y marketing."}
               </span>{" "}
-              En el último tiempo, descubrí mi pasión por la
             </p>
-            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {"Tecnología de la Información "}
-            </span>
-            y me gradué de como
-            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" Full Stack Developer."}
-            </span>
-            {/* parrafo 2 */}
+
+            <p>
+              En el último tiempo, descubrí mi pasión por la
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" Tecnología de la Información "}
+              </span>
+              y me gradué de como
+              <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+                {" Full Stack Developer."}
+              </span>
+            </p>
+
             <p className="">
               Mi mayor interés dentro del
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -82,12 +78,13 @@ export const AboutKnowMe = () => {
             <div className='md:mt-6 mt-4 flex items-center justify-between'>
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
-                {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
                 SEGUIR LEYENDO
               </button>
-              <span className='text-sm dark:text-stone-400'>1 / 2</span>
+              <button onClick={handleShowDiv}>
+                <span className='text-sm dark:text-stone-400'>1 / 2</span>
+              </button>
             </div>
           </div>
           :
@@ -96,7 +93,7 @@ export const AboutKnowMe = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
-            {/* parrafo 3 */}
+
             <p className="">
               Entrar en este sector me impulsó a estar en
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -111,9 +108,9 @@ export const AboutKnowMe = () => {
                 {" Inteligencia Artificial."}
               </span>
             </p>
-            {/* parrafo 4 */}
+
             <p className="">
-              Conocé alguno de
+              Podés conocer alguno de
               <button
                 className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
@@ -128,6 +125,7 @@ export const AboutKnowMe = () => {
                   MIS PROYECTOS
                 </Link>
               </button>
+              <br/>
               Para saber cuáles son las
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" herramientas "}
@@ -140,10 +138,10 @@ export const AboutKnowMe = () => {
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" me motiva, "}
               </span>
-              podés seguir explorando esta sección.
-              <br/>
+              seguí explorando esta sección.
+              <br />
               Tenés dudas o te gustariía que trabajemos en equipo?
-            <button
+              <button
                 className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                 <Link
@@ -161,12 +159,14 @@ export const AboutKnowMe = () => {
             <div className='md:mt-6 mt-4 flex items-center justify-between'>
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold placeholder:tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                 {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
                 VOLVER
               </button>
-              <span className='text-sm dark:text-stone-400'>2 / 2</span>
+              <button onClick={handleShowDiv}>
+                <span className='text-sm dark:text-stone-400'>2 / 2</span>
+              </button>
             </div>
           </motion.div>
         }
