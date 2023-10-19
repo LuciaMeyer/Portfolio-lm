@@ -83,8 +83,6 @@ export const Navbar = () => {
     scale: 1,
   };
 
-  console.log(isMobile)
-
   return (
     <>
       <Icons section={section} setSection={setSection} />

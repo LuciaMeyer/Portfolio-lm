@@ -49,20 +49,20 @@ export const AboutSkills = () => {
         className="
         bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
-        md:w-1/2 mt-2 md:my-5
+        md:w-1/2 mt-2 md:mt-auto
         flex flex-col md:flex-row mx-auto "
       >
         {menuOrder.map(
           (menuItem, index) =>
             index === currentTab && (
-              <div key={menuItem} className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
+              <div key={menuItem} className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 ">
 
                 <div className="flex justify-center items-center">
                   <Image
                     className={`rotate-90 ${
                       currentTab === 0
-                        ? "opacity-30 scale-75 dark:invert"
-                        : "mx-1 w-auto h-7 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
+                        ? "opacity-30 scale-90 dark:invert"
+                        : "mr-2 w-auto md:h-6 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -74,8 +74,8 @@ export const AboutSkills = () => {
                   <Image
                     className={`-rotate-90 ${
                       currentTab === menuOrder.length - 1
-                        ? "opacity-30 scale-75 dark:invert"
-                        : "mx-1 w-auto h-7 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
+                        ? "opacity-30 scale-90 dark:invert"
+                        : "ml-2 w-auto md:h-6 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -92,7 +92,7 @@ export const AboutSkills = () => {
               </div>
             )
         )}
-        <div className="md:flex hidden mt-14 ml-7 md:w-1/2 h-96">
+        <div className="md:flex hidden mt-8 ml-7 md:w-1/2 h-96">
           <Image
             width={600}
             height={600}

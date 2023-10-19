@@ -37,7 +37,7 @@ export const AboutKnowMe = () => {
         flex flex-col md:flex-row mx-auto "
       >
         {!showDiv ? (
-          <div className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
+          <div className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 ">
             <p className="">
               Hola! Soy{" "}
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -88,7 +88,7 @@ export const AboutKnowMe = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 "
+            className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 "
           >
             <p className="">
               Entrar en este sector me impulsó a estar en
@@ -107,7 +107,7 @@ export const AboutKnowMe = () => {
 
             <p className="">
               Podés conocer alguno de
-              <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200">
+              <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300 dark:hover:bg-neutral-700 hover:bg-neutral-200">
                 <Link
                   to={"projects"}
                   activeClass="active"
@@ -135,7 +135,7 @@ export const AboutKnowMe = () => {
               seguí explorando esta sección.
               <br />
               Tenés dudas o te gustariía que trabajemos en equipo?
-              <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200">
+              <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300 dark:hover:bg-neutral-700 hover:bg-neutral-200">
                 <Link
                   to={"contact"}
                   activeClass="active"
@@ -162,7 +162,7 @@ export const AboutKnowMe = () => {
             </div>
           </motion.div>
         )}
-        <div className="md:flex hidden mt-14 ml-7 md:w-1/2 h-96">
+        <div className="md:flex hidden mt-8 ml-7 md:w-1/2 h-96">
           <Image
             width={600}
             height={600}

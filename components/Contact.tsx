@@ -96,7 +96,7 @@ export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
                   onChange={handleChange}
                   placeholder='NOMBRE COMPLETO'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs block border-stone-300'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs block border-stone-300 placeholder-stone-400'
                 />
               </div>
               <div className='relative md:pb-4'>
@@ -106,7 +106,7 @@ export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
                   onChange={handleChange}
                   placeholder='EMAIL'
                   type='text'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-6 pr-3 pb-3 mt-2 text-xs block border-stone-300'
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-6 pr-3 pb-3 mt-2 text-xs block border-stone-300 placeholder-stone-400'
                 />
               </div>
               <div className='relative md:pb-4'>
@@ -115,7 +115,7 @@ export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
                   value={input.message}
                   onChange={handleChange}
                   placeholder='MENSAJE'
-                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs block border-stone-300 '
+                  className='dark:bg-BGDc tracking-wider border-b-[1px] focus:outline-none focus:border-LM w-full pt-3 pr-3 pb-3 mt-2 text-xs block border-stone-300 placeholder-stone-400'
                 />
               </div>
               <div className='relative'>

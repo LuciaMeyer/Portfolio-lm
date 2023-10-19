@@ -48,7 +48,7 @@ export const AboutMotivation = () => {
       >
 
         {!showDiv ?
-          <div className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
+          <div className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 ">
             {/* parrafo 1 */}
             <p className="">
               Hola! Soy{" "}
@@ -82,7 +82,7 @@ export const AboutMotivation = () => {
             <div className='md:mt-6 mt-4 flex items-center justify-between'>
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                 {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
                 SEGUIR LEYENDO
@@ -95,7 +95,7 @@ export const AboutMotivation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
+            className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 ">
             {/* parrafo 3 */}
             <p className="">
               Entrar en este sector me impulsó a estar en
@@ -132,7 +132,7 @@ export const AboutMotivation = () => {
             <div className='md:mt-6 mt-4 flex items-center justify-between'>
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                 {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
                 VOLVER
@@ -141,7 +141,7 @@ export const AboutMotivation = () => {
             </div>
           </motion.div>
         }
-        <div className="md:flex hidden mt-14 ml-7 md:w-1/2 h-96">
+        <div className="md:flex hidden mt-8 ml-7 md:w-1/2 h-96">
           <Image
             width={600}
             height={600}

@@ -20,7 +20,7 @@ interface AboutSectionProps {
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
-  const [currentMenuWeb, setCurrentMenuWeb] = useState("CONOCEME");
+  const [currentMenuWeb, setCurrentMenuWeb] = useState("Conoceme");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
 
   const menuOrder = ["Conoceme", "Recorrido", "Habilidades", "Motivación"];
@@ -117,7 +117,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
               <button key={i} onClick={() => handleClick(sm, "web")}>
                 <h4
                   className={`                 
-                    hover:text-LM tracking-wide text-lg dark:hover:text-black transform transition-transform duration-300"
+                    hover:text-LM tracking-wide text-lg dark:hover:text-LM transform transition-transform duration-300"
                    ${sm === currentMenuWeb ? " font-medium text-LM" : ""}`}
                 >
                   {sm}
@@ -166,12 +166,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
                 className={`
                 flex flex-col md:hidden w-full cursor-pointer 
                 pl-10 mb-6 py-6               
-                leading-snug tracking-widest text-lg text-neutral-400
+                tracking-widest text-lg text-neutral-400
                 shadow-md shadow-neutral-400 dark:shadow-black
                 ${
                   currentMenuMobile === section
-                    ? "text-white font-semibold dark:text-LM bg-LM dark:bg-white/5"
-                    : "bg-neutral-100 dark:bg-white/20"
+                    ? "text-white dark:font-normal dark:text-BGD bg-LM dark:BGDi "
+                    : "bg-neutral-100 dark:bg-BGDc"
                 }`}
               >
                 {section}

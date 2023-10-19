@@ -50,7 +50,7 @@ export const AboutJourney = () => {
         flex flex-col md:flex-row mx-auto'
       >
         {!showDiv ? (
-          <div className='space-y-6 md:mt-14 md:mr-7 md:w-1/2'>
+          <div className='space-y-6 md:mt-8 md:mr-7 md:w-1/2'>
             <p>
               Estudié
               <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
@@ -101,7 +101,7 @@ export const AboutJourney = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className='space-y-6 md:mt-14 md:mr-7 md:w-1/2'
+            className='space-y-6 md:mt-8 md:mr-7 md:w-1/2'
           >
             <p>
               más adelante, como
@@ -134,7 +134,7 @@ export const AboutJourney = () => {
               </span>
               <br/>
               <button
-                className='mt-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='mt-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                   DESCARGAR CV
               </button>
@@ -153,7 +153,7 @@ export const AboutJourney = () => {
             </p>
           </motion.div>
         )}
-        <div className='md:flex hidden mt-14 ml-7 md:w-1/2 h-96'>
+        <div className='md:flex hidden mt-8 ml-7 md:w-1/2 h-96'>
           <Image
             width={600}
             height={600}
