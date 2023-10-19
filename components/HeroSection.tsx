@@ -70,7 +70,6 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
             <hr className="w-8 h-px md:my-10 my-6 bg-stone-300  dark:bg-stone-400 border-0" />
             <p className="relative md:mr-20 -z-10 md:pb-10 pb-5 md:text-lg text-xl">
               Creo aplicaciones web y mobile. Combino desarrollo eficiente,
-              <br className="md:hidden"/>
               diseño creativo y estrategias de marketing para lograr los mejores resultados.
             </p>
             <Link

@@ -44,18 +44,21 @@ export const img = {
     luz: 'https://res.cloudinary.com/dw272kava/image/upload/v1695133411/aux/luz_rr7smv.png',
 
     // AboySkikilss
-    js: 'https://res.cloudinary.com/dw272kava/image/upload/v1695231519/AboutSkills/js_pzcmnu.png',
-    ts:'https://res.cloudinary.com/dw272kava/image/upload/v1695232555/AboutSkills/ts_rqsy2c.png',
-    html:'https://res.cloudinary.com/dw272kava/image/upload/v1697431244/AboutSkills/html_u6zjkt.png',
-    css:'https://res.cloudinary.com/dw272kava/image/upload/v1697431244/AboutSkills/css_uoylzk.png',
-    react:'https://res.cloudinary.com/dw272kava/image/upload/v1697432422/AboutSkills/react_noatxd.png',
-    redux:'https://res.cloudinary.com/dw272kava/image/upload/v1697432422/AboutSkills/redux_k0065n.png',
-    next:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/NEXT_hzhbzt.png',
-    tail:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/TAIL_b1sii7.png',
-    mu:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/MU_b8ubcy.png',
-    less:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/LESS_j6odhk.png',
-    sass:'https://res.cloudinary.com/dw272kava/image/upload/v1697437849/AboutSkills/SASS_ym6cww.png',
-    boo:'https://res.cloudinary.com/dw272kava/image/upload/v1697438014/AboutSkills/Bootstrap_wykizy.png',
+    js: 'https://res.cloudinary.com/dw272kava/image/upload/v1697737288/AboutSkills/JS_nj6rdr.png',
+    ts:'https://res.cloudinary.com/dw272kava/image/upload/v1697737503/AboutSkills/TS_ouv5im.png',
+    html:'https://res.cloudinary.com/dw272kava/image/upload/v1697737714/AboutSkills/html_liu7ph.png',
+    css:'https://res.cloudinary.com/dw272kava/image/upload/v1697738059/AboutSkills/css_ivlhe8.png',
+    react:'https://res.cloudinary.com/dw272kava/image/upload/v1697738453/AboutSkills/react_nbjqte.png',
+    redux:'https://res.cloudinary.com/dw272kava/image/upload/v1697738742/AboutSkills/redux_ewcgr0.png',
+    next:'https://res.cloudinary.com/dw272kava/image/upload/v1697739001/AboutSkills/next1_msahbm.png',
+    tail:'https://res.cloudinary.com/dw272kava/image/upload/v1697739632/AboutSkills/tw_oopsxv.png',
+    mu:'https://res.cloudinary.com/dw272kava/image/upload/v1697740051/AboutSkills/mu_u1dngx.png',
+    boo:'https://res.cloudinary.com/dw272kava/image/upload/v1697740162/AboutSkills/bu_cdicrn.png',
+    less:'https://res.cloudinary.com/dw272kava/image/upload/v1697740387/AboutSkills/less_e13zzh.png',
+    sass:'https://res.cloudinary.com/dw272kava/image/upload/v1697740322/AboutSkills/sass_ynhm5y.png',
+    node: 'https://res.cloudinary.com/dw272kava/image/upload/v1697740950/AboutSkills/node_w286v8.png',
+    ex:'https://res.cloudinary.com/dw272kava/image/upload/v1697741298/AboutSkills/ex_ubp3nq.png',
+    dk:'https://res.cloudinary.com/dw272kava/image/upload/v1697741902/AboutSkills/dk_lilqqj.png',
 
 
   };

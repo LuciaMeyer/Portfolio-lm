@@ -171,7 +171,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
                 ${
                   currentMenuMobile === section
                     ? "text-white dark:font-normal dark:text-BGD bg-LM dark:BGDi "
-                    : "bg-neutral-100 dark:bg-BGDc"
+                    : "bg-neutral-100 dark:bg-BDGi"
                 }`}
               >
                 {section}

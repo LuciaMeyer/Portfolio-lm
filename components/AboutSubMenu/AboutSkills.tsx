@@ -5,6 +5,7 @@ import { DesingLibraries } from "./Skills/DesingLibraries";
 import { useState } from "react";
 import Image from "next/image";
 import { img } from "../../public/images";
+import { BackEnd } from "./Skills/BackEnd";
 
 interface SectionContent {
   [key: string]: JSX.Element;
@@ -20,12 +21,13 @@ export const AboutSkills = () => {
   // 'OTRAS HERRAMIENTAS',
   // 'METODOLOGÍAS'
 
-  const menuOrder = ["LENGUAJES", "FRONTEND", "DESING_LIBRARIES"];
+  const menuOrder = ["LENGUAJES", "FRONTEND", "DESING_LIBRARIES", 'BACKEND'];
 
   const sections: SectionContent = {
     LENGUAJES: <Languages />,
     FRONTEND: <FrontEnd />,
     DESING_LIBRARIES: <DesingLibraries />,
+    BACKEND: <BackEnd/>,
   };
 
   const handleArrowNext = () => {

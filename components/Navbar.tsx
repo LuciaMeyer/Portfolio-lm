@@ -135,10 +135,9 @@ export const Navbar = () => {
               );
             })}
           </div>
-        </motion.div>       
+        </motion.div>
         <div className="flex items-center justify-between backdrop-blur-md ">
           {/* LOGO */}
-          {/* md:mx-auto md:pl-48  */}
           <div className="flex md:ml-8 ml-4 cursor-pointer ">
             {isMobile && (section === "home" || section === "") ? (
               <div className="h-16"></div>
@@ -152,35 +151,30 @@ export const Navbar = () => {
                 onClick={hanldeLogoClick}
                 className='md:h-auto h-16'
               >
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1 }}
-                  whileHover={{ rotate: 360, transition: { duration: 0.25 } }}
-                >
+                <div>
                   <Image
-                    className="md:my-4 md:mt-4 mt-2 md:w-full"
+                    className="md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300"
                     src={img.LM}
                     alt="LM"
-                    width={40}
-                    height={40}
+                    width={38}
+                    height={38}
                     priority
                   />
-                </motion.div>
+                </div>
               </Link>
             )}
           </div>
           {/* SECCIONES */}
           <div className="md:block hidden ml-32 leading-snug tracking-wide md:text-3xl text-4xl text-neutral-300 dark:text-neutral-600">
             {section === 'about'
-            ? <span>Sobre Mi</span>
-            : section === 'projects' 
-            ? <span>Proyectos</span>
-            : section === 'resources'
-            ? <span>Recursos</span>
-            : section === 'contact'
-            ? <span>Contacto</span>
-            : <></>
+              ? <span>Sobre Mi</span>
+              : section === 'projects'
+                ? <span>Proyectos</span>
+                : section === 'resources'
+                  ? <span>Recursos</span>
+                  : section === 'contact'
+                    ? <span>Contacto</span>
+                    : <></>
             }
           </div>
           {/* ÍCONOS MENÚ  */}
@@ -203,8 +197,8 @@ export const Navbar = () => {
                   >
                     <div
                       className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${navbar
-                          ? "rotate-90 h-[1px] translate-y-[9px] origin-top delay-75"
-                          : ""
+                        ? "rotate-90 h-[1px] translate-y-[9px] origin-top delay-75"
+                        : ""
                         }`}
                     ></div>
 

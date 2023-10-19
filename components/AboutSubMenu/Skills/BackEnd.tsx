@@ -3,15 +3,15 @@ import { img } from '../../../public/images';
 import { motion } from 'framer-motion';
 
 
-export const Languages = () => {
+export const BackEnd = () => {
 
   return (
     <>
-      <span className='mx-auto my-6 md:mt-6 md:mb-10 font-thin'>Lenguajes de Programación</span>
+      <span className='mx-auto my-6 md:mt-6 md:mb-10 font-thin'>Back-End</span>
       <div className='flex flex-row justify-around md:justify-around items-center'>
         {/* JAVASCRIPT */}
         <div className='flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.js} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+          <Image width={200} height={200} src={img.node} alt='img' priority className='opacity-50 dark:invert-0 invert' />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -20,18 +20,18 @@ export const Languages = () => {
             <span className='md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black'>
               <span className='block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] '></span>
               <span className='flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium '>
-                JavaScript
+                NodeJS
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            JavaScipt
+            NodeJS
           </span>
         </div>
 
         {/* TYPESCRIPT */}
         <div className='flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.ts} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+          <Image width={200} height={200} src={img.ex} alt='img' priority className='opacity-50 dark:invert-0 invert' />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -40,18 +40,18 @@ export const Languages = () => {
             <span className='md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black'>
               <span className='block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] '></span>
               <span className='flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium '>
-                TypeScript
+                Express
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            TypeScript
+            Express
           </span>
         </div>
 
         {/* HTML */}
-        <div className='flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.html} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+        <div className='flex flex-col relative w-16 hover:scale-110 transform transition-transform duration-300'>
+          <Image width={200} height={200} src={img.next} alt='img' priority className='opacity-50 dark:invert-0 invert' />
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -61,18 +61,18 @@ export const Languages = () => {
             <span className='md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black'>
               <span className='block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] '></span>
               <span className='flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium '>
-                HTML
+                NextJS
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            HTML
+            NextJS
           </span>
         </div>
 
         {/* CSS */}
         <div className='flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.css} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+          <Image width={200} height={200} src={img.dk} alt='img' priority className='opacity-50 dark:invert-0 invert' />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -80,13 +80,13 @@ export const Languages = () => {
           >
             <span className='md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black'>
               <span className='block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] '></span>
-              <span className='flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium '>
-                CSS
+              <span className='flex justify-center mt-[0.3rem] dark:text-TX text-black text-xs tracking-widest text-center font-medium '>
+                Docker
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            CSS
+            Docker
           </span>
         </div>
       </div>
