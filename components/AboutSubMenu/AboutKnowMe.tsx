@@ -1,14 +1,11 @@
 "use client";
 import Image from "next/image";
 import { img } from "../../public/images";
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-scroll/modules";
 
-
-
 export const AboutKnowMe = () => {
-
   const [showDiv, setShowDiv] = useState(false);
 
   // const images = [img.aux1, img.aux2, img.aux3];
@@ -29,26 +26,25 @@ export const AboutKnowMe = () => {
 
   return (
     <>
-      <div
-        className="flex md:hidden justify-center"
-      >
+      <div className="flex md:hidden justify-center">
         <Image width={400} height={400} src={img.auxlu} alt="img" priority />
       </div>
       <div
-        className="bg-white dark:bg-BGD
+        className="
+        bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
-         md:w-1/2 mt-2 md:mt-auto
+        md:w-1/2 mt-2 md:mt-auto
         flex flex-col md:flex-row mx-auto "
       >
-
-        {!showDiv ?
+        {!showDiv ? (
           <div className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
             <p className="">
               Hola! Soy{" "}
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {"Lu, "}
               </span>
-              creativa e inquieta desde siempre. En mi camino exploré diferentes áreas como
+              creativa e inquieta desde siempre. En mi camino exploré diferentes
+              áreas como
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" arquitectura, diseño, comunicación y marketing."}
               </span>{" "}
@@ -75,25 +71,25 @@ export const AboutKnowMe = () => {
                 {" soluciones simples e innovadoras. "}
               </span>{" "}
             </p>
-            <div className='md:mt-6 mt-4 flex items-center justify-between'>
+            <div className="md:mt-6 mt-4 flex items-center justify-between">
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className="my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
               >
                 SEGUIR LEYENDO
               </button>
               <button onClick={handleShowDiv}>
-                <span className='text-sm dark:text-stone-400'>1 / 2</span>
+                <span className="text-sm dark:text-stone-400">1 / 2</span>
               </button>
             </div>
           </div>
-          :
+        ) : (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 ">
-
+            className="space-y-6 md:mt-14 md:mr-7 md:w-1/2 "
+          >
             <p className="">
               Entrar en este sector me impulsó a estar en
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -111,11 +107,9 @@ export const AboutKnowMe = () => {
 
             <p className="">
               Podés conocer alguno de
-              <button
-                className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
-              >
+              <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200">
                 <Link
-                  to={'projects'}
+                  to={"projects"}
                   activeClass="active"
                   spy={true}
                   smooth={true}
@@ -125,7 +119,7 @@ export const AboutKnowMe = () => {
                   MIS PROYECTOS
                 </Link>
               </button>
-              <br/>
+              <br />
               Para saber cuáles son las
               <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
                 {" herramientas "}
@@ -141,11 +135,9 @@ export const AboutKnowMe = () => {
               seguí explorando esta sección.
               <br />
               Tenés dudas o te gustariía que trabajemos en equipo?
-              <button
-                className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
-              >
+              <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200">
                 <Link
-                  to={'contact'}
+                  to={"contact"}
                   activeClass="active"
                   spy={true}
                   smooth={true}
@@ -156,20 +148,20 @@ export const AboutKnowMe = () => {
                 </Link>
               </button>
             </p>
-            <div className='md:mt-6 mt-4 flex items-center justify-between'>
+            <div className="md:mt-6 mt-4 flex items-center justify-between">
               <button
                 onClick={handleShowDiv}
-                className='my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold placeholder:tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className="my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold placeholder:tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
               >
                 {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
                 VOLVER
               </button>
               <button onClick={handleShowDiv}>
-                <span className='text-sm dark:text-stone-400'>2 / 2</span>
+                <span className="text-sm dark:text-stone-400">2 / 2</span>
               </button>
             </div>
           </motion.div>
-        }
+        )}
         <div className="md:flex hidden mt-14 ml-7 md:w-1/2 h-96">
           <Image
             width={600}

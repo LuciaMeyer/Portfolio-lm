@@ -10,13 +10,17 @@ interface ResurcesSectionProps {
 export const Resurces:React.FC<ResurcesSectionProps> = ({ refResurces }) => {
   
   return (
-    <section ref={refResurces} id="resources" className="flex-1 pt-6 md:pt-10 h-screen md:pb-60 pb-60">
-      <SlideUp offset="-300px 0px -300px 0px">
-        <h1 className="text-center text-2xl md:pb-16 pb-8">
-          Recursos Dev
-          <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
-        </h1>
-      </SlideUp>
+    <section ref={refResurces} id="resources" className="flex-1 pt-6 md:pt-10 h-screen md:mb-[30rem] pb-60">
+      
+      <div className="block md:hidden">
+        <SlideUp offset="-300px 0px -300px 0px">
+          <h1 className="text-center text-2xl md:pb-16 pb-8">
+            Recursos Dev
+            <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
+          </h1>
+        </SlideUp>
+      </div>
+
       <SlideUp offset="-300px 0px -300px 0px">
         <div className="mx-6 md:mx-auto md:w-1/2 flex flex-col space-y-2 justify-center align-top pb-20">
           <p>EN PROCESO...</p>

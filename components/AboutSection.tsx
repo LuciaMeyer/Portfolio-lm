@@ -23,12 +23,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   const [currentMenuWeb, setCurrentMenuWeb] = useState("CONOCEME");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
 
-  const menuOrder = [
-    "CONOCEME",
-    "RECORRIDO",
-    "HABILIDADES",
-    "MOTIVACIÓN",
-  ];
+  const menuOrder = ["CONOCEME", "RECORRIDO", "HABILIDADES", "MOTIVACIÓN"];
 
   const sections: SectionContent = {
     CONOCEME: <AboutKnowMe />,
@@ -69,7 +64,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   };
 
   const hide = {
-    transition: { duration: 2 },
+    transition: { duration: 0.8 },
     x: -500,
     scale: 1,
     height: 0,
@@ -77,7 +72,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   };
 
   const showW = {
-    transition: { duration: 1 },
+    transition: { duration: 1, delay: 0.2 },
     height: "auto",
   };
 
@@ -92,40 +87,38 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     <section
       ref={refAbout}
       id="about"
-      className="flex-1 pt-6 md:pt-10 md:pb-60 pb-60 relative overflow-hidden md:mx-auto mx-6 h-full "
+      className="flex-1 pt-6 md:pt-10 md:mb-[30rem] pb-60 relative overflow-hidden md:mx-auto mx-6 h-full "
     >
-      <SlideUp offset="-300px 0px -300px 0px">
-        <h1 className='text-center text-2xl md:pb-10 pb-8'>
-          Sobre Mi
-          <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
-        </h1>
-
-      </SlideUp>
+      <div className="block md:hidden">
+        <SlideUp offset=" -300px 0px -300px 0px">
+          <h1 className="text-center text-2xl md:pb-10 pb-8">
+            Sobre Mi
+            <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
+          </h1>
+        </SlideUp>
+      </div>
 
       <SlideUp offset="-300px 0px -300px 0px ">
         {/* SUBMENÚ WEB & SECTION WEB*/}
-        <div className="md:flex hidden justify-center">
+        <div
+          className="md:flex hidden w-1/2 mx-auto justify-around
+          py-4 mb-4
+          shadow-lg shadow-neutral-400 dark:shadow-black"
+        >
           {menuOrder.map((sm, i) => (
             <Link
               key={i}
               to="about"
               smooth={true}
-              offset={10}
+              offset={-100}
               duration={1000}
               spy={true}
             >
-              <button
-                className="w-auto "
-                key={i}
-                onClick={() => handleClick(sm, "web")}
-              >
-                <h4 className={`py-2 w-36 mx-2
-                   shadow-md shadow-neutral-400 dark:shadow-black
-                   hover:bg-white hover:text-LM dark:hover:bg-BGD  dark:hover:text-black transform transition-transform duration-300"
-                   ${sm === currentMenuWeb
-                    ? "-translate-y-2 tracking-wide font-medium text-LM"
-                    : ""
-                  }`}
+              <button key={i} onClick={() => handleClick(sm, "web")}>
+                <h4
+                  className={`                 
+                    hover:text-LM tracking-wide dark:hover:text-black transform transition-transform duration-300"
+                   ${sm === currentMenuWeb ? " font-medium text-LM" : ""}`}
                 >
                   {sm}
                 </h4>
@@ -134,8 +127,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
           ))}
           <div className="my-auto pl-2" onClick={handleArrowClick}>
             <Image
-              className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 dark:invert ${currentMenuWeb === "CV" && "rotate-90"
-                } transform transition-transform duration-300 opacity-40 hover:opacity-20 `}
+              className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 dark:invert ${
+                currentMenuWeb === "CV" && "rotate-90"
+              } transform transition-transform duration-300 opacity-40 hover:opacity-20 `}
               width="30"
               height="30"
               src={img.flecha}
@@ -169,11 +163,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             >
               <button
                 onClick={() => handleClick(section, "mobile")}
-                className={`pl-10 mb-6 py-6 flex flex-col md:hidden bg-neutral-200 ${50 - index * 10
-                  } w-full cursor-pointer tracking-widest font-medium text-sm shadow-md shadow-neutral-400 dark:shadow-black ${currentMenuMobile === section
-                    ? "dark:bg-neutral-400 dark:text-black"
-                    : "dark:bg-neutral-600"
-                  }`}
+                className={`
+                flex flex-col md:hidden w-full cursor-pointer 
+                pl-10 mb-6 py-6               
+                leading-snug tracking-widest text-xl text-neutral-400
+                shadow-md shadow-neutral-400 dark:shadow-black
+                ${
+                  currentMenuMobile === section
+                    ? "text-white font-semibold dark:text-LM bg-LM dark:bg-white/5"
+                    : "bg-neutral-100 dark:bg-white/20"
+                }`}
               >
                 {section}
                 <div className="absolute top-5 right-6">

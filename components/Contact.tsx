@@ -71,12 +71,16 @@ export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
 
   return (
     <section ref={refContact} id='contact' className='flex-1 pt-10 md:pt-10 pb-60'>
-      <SlideUp offset='-300px 0px -300px 0px'>
-        <h1 className='text-center text-2xl md:pb-10 pb-8'>
-          Contactame
-          <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
-        </h1>
-      </SlideUp>
+
+      <div className="block md:hidden">
+        <SlideUp offset='-300px 0px -300px 0px'>
+          <h1 className='text-center text-2xl md:pb-10 pb-8'>
+            Contactame
+            <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
+          </h1>
+        </SlideUp>
+      </div>
+
       <SlideUp offset='-300px 0px -300px 0px'>
         <form ref={form} onSubmit={handleSubmit}>
           <div className='md:w-1/3 mx-6 md:mx-auto

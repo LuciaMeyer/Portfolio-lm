@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 export const FrontEnd = () => {
   return (
     <>
+      <span className='mx-auto my-6 font-thin'>Front-End</span>
       <div className="flex flex-row justify-around md:justify-center md:space-x-16 items-end">
-        {/* REACT */}
         <div className="flex flex-col relative w-12 justify-center">
-          <Image width={200} height={200} src={img.react} alt="img" priority />
+          <Image width={200} height={200} src={img.react} alt="img" priority className='filter grayscale' />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -28,7 +28,7 @@ export const FrontEnd = () => {
 
         {/* REDUX */}
         <div className="flex flex-col relative w-12  ">
-          <Image width={200} height={200} src={img.redux} alt="img" priority />
+          <Image width={200} height={200} src={img.redux} alt="img" priority className='filter grayscale' />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -48,7 +48,7 @@ export const FrontEnd = () => {
 
         {/* NEXT */}
         <div className="flex flex-col relative w-12  items-end">
-          <Image width={200} height={200} src={img.next} alt="img" priority />
+          <Image width={200} height={200} src={img.next} alt="img" priority className='filter grayscale' />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}

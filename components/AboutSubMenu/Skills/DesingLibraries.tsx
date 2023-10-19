@@ -5,10 +5,20 @@ import { motion } from "framer-motion";
 export const DesingLibraries = () => {
   return (
     <>
+      <span className="mx-auto my-6 font-thin">
+        Frameworks y Preprocesadores CSS
+      </span>
       <div className="flex flex-row justify-around md:justify-center md:space-x-16 items-end">
         {/* Tailwind */}
         <div className="flex flex-col relative w-12  justify-center">
-          <Image width={200} height={200} src={img.tail} alt="img" priority />
+          <Image
+            width={200}
+            height={200}
+            src={img.tail}
+            alt="img"
+            priority
+            className="filter grayscale"
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -25,7 +35,14 @@ export const DesingLibraries = () => {
 
         {/* Material-UI */}
         <div className="flex flex-col relative w-12  ">
-          <Image width={200} height={200} src={img.mu} alt="img" priority />
+          <Image
+            width={200}
+            height={200}
+            src={img.mu}
+            alt="img"
+            priority
+            className="filter grayscale"
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -42,7 +59,14 @@ export const DesingLibraries = () => {
 
         {/* Bootstrap */}
         <div className="flex flex-col relative w-12   items-end">
-          <Image width={200} height={200} src={img.boo} alt="img" priority />
+          <Image
+            width={200}
+            height={200}
+            src={img.boo}
+            alt="img"
+            priority
+            className="filter grayscale"
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -70,10 +94,17 @@ export const DesingLibraries = () => {
         </span>
       </div>
 
-      <div className="flex flex-row justify-around md:justify-center md:space-x-16 items-end">
+      <div className="mt-6 flex flex-row justify-around md:justify-center md:space-x-16 items-end">
         {/* Less */}
         <div className="flex flex-col relative w-12   items-end">
-          <Image width={200} height={200} src={img.less} alt="img" priority />
+          <Image
+            width={200}
+            height={200}
+            src={img.less}
+            alt="img"
+            priority
+            className="filter grayscale"
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -90,7 +121,14 @@ export const DesingLibraries = () => {
 
         {/* Sass */}
         <div className="flex flex-col relative w-12   items-end">
-          <Image width={200} height={200} src={img.sass} alt="img" priority />
+          <Image
+            width={200}
+            height={200}
+            src={img.sass}
+            alt="img"
+            priority
+            className="filter grayscale"
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -113,6 +151,16 @@ export const DesingLibraries = () => {
           Sass
         </span>
       </div>
+      <p className="mt-20 text-sm">
+        Los Frameworks de CSS son conjuntos de reglas y estilos predefinidos que
+        facilitan la creación de diseños web coherentes y receptivos, ofreciendo
+        componentes y estructuras listas para usar. Los
+        Preprocesadores CSS son herramientas que extienden las capacidades de
+        CSS permitiendo el uso de variables, anidamiento y mixins, simplificando
+        la escritura y mantenimiento del código CSS, mejorando la modularidad y
+        reutilización de estilos en el desarrollo web. Ambas tecnologías son
+        valiosas UI.
+      </p>
     </>
   );
 };

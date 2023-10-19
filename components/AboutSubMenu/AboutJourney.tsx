@@ -132,8 +132,9 @@ export const AboutJourney = () => {
                   ' ya que estoy convencida de que el conocimiento se construye colectivamente. '
                 }
               </span>
+              <br/>
               <button
-                className='mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
+                className='mt-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
               >
                   DESCARGAR CV
               </button>

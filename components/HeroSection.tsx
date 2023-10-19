@@ -27,7 +27,7 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
       <section
         ref={refHero}
         id="home"
-        className="flex-1 pt-24 md:pt-64 md:mb-60 pb-60"
+        className="flex-1 pt-24 md:pt-64 md:mb-[30rem] mb-60"
       >
         <div className="flex flex-col md:w-1/2 h-full md:flex-row items-center md:justify-between md:mx-auto mx-6 md:items-center content-center">
           <motion.div
@@ -39,7 +39,7 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
               Lucía Meyer
             </h1>
 
-            <motion.h1
+            <motion.h3
               className="leading-snug tracking-wide font-bold md:text-4xl text-4xl text-LM"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -65,7 +65,7 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
                     .start();
                 }}
               />
-            </motion.h1>
+            </motion.h3>
 
             <hr className="w-8 h-px md:my-10 my-6 bg-stone-300  dark:bg-stone-400 border-0" />
             <p className="relative md:mr-20 -z-10 md:pb-10 pb-5 md:text-lg text-xl">

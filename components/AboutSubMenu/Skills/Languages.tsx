@@ -7,6 +7,7 @@ export const Languages = () => {
 
   return (
     <>
+      <span className='mx-auto my-6 font-thin'>Lenguajes de Programación</span>
       <div className='flex flex-row justify-around md:justify-center md:space-x-16 items-center'>
         {/* JAVASCRIPT */}
         <div className='flex flex-col relative w-12 justify-center'>

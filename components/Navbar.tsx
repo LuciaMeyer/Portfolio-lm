@@ -107,14 +107,14 @@ export const Navbar = () => {
             <div className="md:hidden flex mt-12 text-sm items-center">
               <button
                 onClick={handleMenuResposiveParticles}
-                className="mr-2 border-solid border py-1 px-2 w-32 border-TX/30 dark:border-stone-300/30"
+                className="mr-2 border-solid border py-1 px-2 w-36 border-TX/30 dark:border-stone-300/30 font-medium"
               >
                 {`${!showParticles ? "MOSTRAR FONDO" : "OCULTAR FONDO"}`}
               </button>
               <span className="text-LM">|</span>
               <button
                 onClick={() => handleMenuResposiveTheme(theme)}
-                className="mr-2 ml-2 border-solid border py-1 px-2 w-32 border-TX/30 dark:border-stone-300/30"
+                className="mr-2 ml-2 border-solid border py-1 px-2 w-36 border-TX/30 dark:border-stone-300/30 font-medium"
               >
                 {`${theme === "dark" ? "MODO CLARO" : "MODO OSCURO"}`}
               </button>
@@ -123,7 +123,7 @@ export const Navbar = () => {
               return (
                 <Link
                   key={idx}
-                  className={"hover:text-LM font-thin text-lg tracking-wider"}
+                  className={"hover:text-LM md:font-thin text-lg tracking-wider font-medium"}
                   to={item.page}
                   activeClass="active"
                   spy={true}
@@ -137,11 +137,11 @@ export const Navbar = () => {
               );
             })}
           </div>
-        </motion.div>
-
+        </motion.div>       
         <div className="flex items-center justify-between backdrop-blur-md ">
           {/* LOGO */}
-          <div className="flex md:mx-auto md:pl-48 ml-4 cursor-pointer ">
+          {/* md:mx-auto md:pl-48  */}
+          <div className="flex md:ml-8 ml-4 cursor-pointer ">
             {isMobile && (section === "home" || section === "") ? (
               <div className="h-16"></div>
             ) : (
@@ -172,7 +172,19 @@ export const Navbar = () => {
               </Link>
             )}
           </div>
-
+          {/* SECCIONES */}
+          <div className="md:block hidden ml-32 leading-snug tracking-wide md:text-3xl text-4xl text-neutral-300 dark:text-neutral-600">
+            {section === 'about'
+            ? <span>Sobre Mi</span>
+            : section === 'projects' 
+            ? <span>Proyectos</span>
+            : section === 'resources'
+            ? <span>Recursos</span>
+            : section === 'contact'
+            ? <span>Contacto</span>
+            : <></>
+            }
+          </div>
           {/* ÍCONOS MENÚ  */}
           <motion.div
             className="relative cursor-pointer md:px-6 pr-2 "
