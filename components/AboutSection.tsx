@@ -23,13 +23,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   const [currentMenuWeb, setCurrentMenuWeb] = useState("CONOCEME");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
 
-  const menuOrder = ["CONOCEME", "RECORRIDO", "HABILIDADES", "MOTIVACIÓN"];
+  const menuOrder = ["Conoceme", "Recorrido", "Habilidades", "Motivación"];
 
   const sections: SectionContent = {
-    CONOCEME: <AboutKnowMe />,
-    RECORRIDO: <AboutJourney />,
-    HABILIDADES: <AboutSkills />,
-    MOTIVACIÓN: <AboutMotivation />,
+    Conoceme: <AboutKnowMe />,
+    Recorrido: <AboutJourney />,
+    Habilidades: <AboutSkills />,
+    Motivación: <AboutMotivation />,
   };
 
   const handleClick = (section: string, platform: string) => {
@@ -64,7 +64,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   };
 
   const hide = {
-    transition: { duration: 0.8 },
+    transition: { duration: 0.5 },
     x: -500,
     scale: 1,
     height: 0,
@@ -117,7 +117,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
               <button key={i} onClick={() => handleClick(sm, "web")}>
                 <h4
                   className={`                 
-                    hover:text-LM tracking-wide dark:hover:text-black transform transition-transform duration-300"
+                    hover:text-LM tracking-wide text-lg dark:hover:text-black transform transition-transform duration-300"
                    ${sm === currentMenuWeb ? " font-medium text-LM" : ""}`}
                 >
                   {sm}
@@ -166,7 +166,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
                 className={`
                 flex flex-col md:hidden w-full cursor-pointer 
                 pl-10 mb-6 py-6               
-                leading-snug tracking-widest text-xl text-neutral-400
+                leading-snug tracking-widest text-lg text-neutral-400
                 shadow-md shadow-neutral-400 dark:shadow-black
                 ${
                   currentMenuMobile === section
