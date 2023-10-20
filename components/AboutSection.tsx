@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { img } from "../public/images";
-import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe";
+import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe/AboutKnowMe";
 import { AboutJourney } from "./AboutSubMenu/AboutJourney";
 import { AboutSkills } from "./AboutSubMenu/AboutSkills";
 import { AboutMotivation } from "./AboutSubMenu/AboutMotivation";
