@@ -154,10 +154,10 @@ export const Navbar = () => {
                 <div>
                   <Image
                     className="md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300"
-                    src={img.LM}
+                    src={img.LMb}
                     alt="LM"
-                    width={38}
-                    height={38}
+                    width={35}
+                    height={35}
                     priority
                   />
                 </div>
@@ -165,7 +165,7 @@ export const Navbar = () => {
             )}
           </div>
           {/* SECCIONES */}
-          <div className="md:block hidden ml-32 leading-snug tracking-wide md:text-3xl text-4xl text-neutral-300 dark:text-neutral-600">
+          <div className="md:block font-bold hidden ml-32 leading-snug tracking-wide md:text-3xl text-4xl text-neutral-300 dark:text-neutral-600">
             {section === 'about'
               ? <span>Sobre Mi</span>
               : section === 'projects'

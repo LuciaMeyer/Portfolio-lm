@@ -2,7 +2,8 @@ export const img = {
 
     //Navbar
     LM: 'https://res.cloudinary.com/dw272kava/image/upload/v1687448931/Navbar/LM_ttel6q.png',
-    LMg: 'https://res.cloudinary.com/dw272kava/image/upload/v1695124023/Navbar/logo_LM_gris_phhbku.png',
+    LMg: 'https://res.cloudinary.com/dw272kava/image/upload/v1697814089/Navbar/logo_LM_gris_c2wari.png',
+    LMb: 'https://res.cloudinary.com/dw272kava/image/upload/v1697813817/Navbar/logo_LM_bold_lzquke.png',
 
   
     // HeroSection

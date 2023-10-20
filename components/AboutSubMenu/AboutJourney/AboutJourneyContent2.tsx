@@ -53,7 +53,7 @@ export const AboutJourneyContent2 = ({ handleShowDiv }: any) => {
           <div className="md:mt-6 mt-4 flex items-center justify-between">
             <button
               onClick={handleShowDiv}
-              className="my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
+              className="my-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
             >
               VOLVER
             </button>

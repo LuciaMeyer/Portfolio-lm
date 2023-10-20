@@ -22,7 +22,7 @@ interface AboutSectionProps {
 export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   const [currentMenuWeb, setCurrentMenuWeb] = useState("Conoceme");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
-  const [ same, setSame ] = useState(false)
+  const [same, setSame] = useState(false)
 
   const menuOrder = ["Conoceme", "Recorrido", "Habilidades", "Motivación"];
 
@@ -91,16 +91,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     <section
       ref={refAbout}
       id="about"
-      className="flex-1 pt-6 md:pt-10 md:mb-[30rem] pb-60 relative overflow-hidden md:mx-auto mx-6 h-full "
+      className="flex-1 pt-4 md:pt-10 md:mb-[30rem] pb-60 relative overflow-hidden md:mx-auto mx-6 h-full "
     >
-      <div className="block md:hidden">
-        <SlideUp offset=" -300px 0px -300px 0px">
-          <h1 className="text-center text-2xl md:pb-10 pb-8">
+      <SlideUp offset="-300px 0px -300px 0px">
+        <div className="md:hidden flex flex-row items-center my-auto md:pb-10 pb-8">
+          <h2 className="text-center text-3xl font-bold text-LM">
             Sobre Mi
-            <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
-          </h1>
-        </SlideUp>
-      </div>
+          </h2>
+        </div>
+      </SlideUp>
 
       <SlideUp offset="-300px 0px -300px 0px ">
         {/* SUBMENÚ WEB & SECTION WEB*/}
@@ -131,9 +130,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
           ))}
           <div className="my-auto pl-2" onClick={handleArrowClick}>
             <Image
-              className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 dark:invert ${
-                currentMenuWeb === "CV" && "rotate-90"
-              } transform transition-transform duration-300 opacity-40 hover:opacity-20 `}
+              className={`ml-2 w-auto h-7 hover:scale-90 cursor-pointer -rotate-90 dark:invert ${currentMenuWeb === "CV" && "rotate-90"
+                } transform transition-transform duration-300 opacity-40 hover:opacity-20 `}
               width="30"
               height="30"
               src={img.flecha}
@@ -168,18 +166,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
               <button
                 onClick={() => handleClick(section, "mobile")}
                 className={`
-                flex flex-col md:hidden w-full cursor-pointer 
-                pl-10 mb-6 py-6               
-                tracking-widest text-lg text-neutral-400
-                shadow-md shadow-neutral-400 dark:shadow-black
-                ${
-                  currentMenuMobile === section
-                    ? "text-white dark:font-normal dark:text-BGD bg-LM dark:BGDi "
-                    : "bg-neutral-100 dark:bg-BDGi"
-                }`}
+                flex flex-col md:hidden w-full cursor-pointer
+                pl-4 mb-6 py-6 mx-auto    
+                tracking-widest text-neutral-500 
+                shadow-md shadow-neutral-400 font-light dark:shadow-black
+                ${currentMenuMobile === section
+                    ? "text-white bg-LM dark:BGDi "
+                    : "bg-neutral-100 dark:bg-BDGi dark:text-stone-300/70"
+                  }`}
+                  style={{fontSize:'1.1rem'}}
               >
                 {section}
-                <div className="absolute top-5 right-6">
+                <div className="absolute top-5 right-4">
                   {currentMenuMobile === section ? (
                     <IoIosArrowUp size={22} />
                   ) : (

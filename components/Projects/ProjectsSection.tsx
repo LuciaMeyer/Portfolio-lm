@@ -78,20 +78,17 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
     <section
       ref={refProjects}
       id="projects"
-      className="flex-1 pt-6 md:pt-10 md:mb-[30rem] pb-60"
+      className="flex-1 pt-4 md:pt-10 md:mb-[30rem] pb-60 mx-6 md:mx-auto"
     >
-      <div className="block md:hidden">
-        <div className="md:pb-10 pb-8">
-          <SlideUp offset="-300px 0px -300px 0px">
-            <h1 className="text-center text-2xl">
-              Proyectos
-              <hr className="w-6 h-1 mx-auto my-4 bg-LM border-0 rounded"></hr>
-            </h1>
-          </SlideUp>
+      <SlideUp offset="-300px 0px -300px 0px">
+        <div className="md:hidden flex flex-row items-center my-auto md:pb-10 pb-9">
+          <h2 className="text-center text-3xl font-bold text-LM">
+            Proyectos
+          </h2>
         </div>
-      </div>
+      </SlideUp>
 
-      <div className="relative flex flex-col md:grid md:grid-cols-2 md:gap-4 pb-20 mx-10 md:mx-auto md:w-2/3">
+      <div className="relative flex flex-col md:grid md:grid-cols-2 md:gap-4 pb-20 md:w-2/3 md:mx-auto">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>

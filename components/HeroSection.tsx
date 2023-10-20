@@ -27,7 +27,8 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
       <section
         ref={refHero}
         id="home"
-        className="flex-1 pt-24 md:pt-64 md:mb-[30rem] mb-60"
+        className="flex-1 my-auto md:pt-40 pt-20 pb-40"
+        // md:pt-64 md:mb-[30rem] mb-60 pt-24
       >
         <div className="flex flex-col md:w-1/2 h-full md:flex-row items-center md:justify-between md:mx-auto mx-6 md:items-center content-center">
           <motion.div

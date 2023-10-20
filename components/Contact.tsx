@@ -4,9 +4,9 @@ import SlideUp from './SlideUp';
 import swal from 'sweetalert';
 import emailjs from '@emailjs/browser';
 
-const SERVICE_ID=process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_SERVICE_ID;
-const PUBLIC_KEY=process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY;
-const TEMPLATE_ID=process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_TEMPLATE_ID;
+const SERVICE_ID = process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_SERVICE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_TEMPLATE_ID;
 
 interface InputData {
   name: string;
@@ -18,7 +18,7 @@ interface ContactSectionProps {
   refContact: React.RefObject<HTMLElement>;
 }
 
-export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
+export const Contact: React.FC<ContactSectionProps> = ({ refContact }) => {
 
   const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState<InputData>({
@@ -57,7 +57,7 @@ export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
     swal({
       text: 'Gracias por tu mensaje!',
       icon: 'success',
-      
+
     });
     console.log(input);
     setInput({
@@ -70,23 +70,22 @@ export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
   const disabled = !input.name || !input.email || !input.message;
 
   return (
-    <section ref={refContact} id='contact' className='flex-1 pt-10 md:pt-10 pb-60'>
+    <section ref={refContact} id='contact' className='flex-1 md:pt-10 pb-60 mx-6 md:mx-auto'>
 
-      <div className="block md:hidden">
-        <SlideUp offset='-300px 0px -300px 0px'>
-          <h1 className='text-center text-2xl md:pb-10 pb-8'>
-            Contactame
-            <hr className='w-6 h-1 mx-auto my-4 bg-LM border-0 rounded'></hr>
-          </h1>
-        </SlideUp>
-      </div>
+      <SlideUp offset="-300px 0px -300px 0px">
+        <div className="md:hidden flex flex-row items-center my-auto md:pb-10 pb-8">
+          <h2 className="text-center text-3xl font-bold text-LM">
+            Contacto
+          </h2>
+        </div>
+      </SlideUp>
 
       <SlideUp offset='-300px 0px -300px 0px'>
         <form ref={form} onSubmit={handleSubmit}>
-          <div className='md:w-1/3 mx-6 md:mx-auto
-          flex flex-col
+          <div className='md:w-1/3
+          flex flex-col 
           space-y-10 md:pb-20 md:pt-10 md:pr-10 md:pl-10 pb-16 pt-10
-          md:text-left 
+          md:text-left md:mx-auto
           bg-white dark:bg-BGDc shadow-2xl relative z-10'>
             <div className='mt-8 ml-6 mr-6 relative space-y-8'>
               <div className='relative'>
@@ -124,8 +123,8 @@ export const Contact: React.FC<ContactSectionProps>  = ({ refContact }) => {
                   disabled={disabled}
                   className={`cursor-pointer w-20 h-9 tracking-[0.08rem] text-[.7rem] text-center border-solid border transition duration-200 ease
                   ${disabled
-                    ? 'hover:text-TX/60 dark:hover:bg-neutral-800 hover:bg-stone-300/20 text-black border-TX/50 dark:border-stone-300/30 dark:text-stone-300/50 '
-                    : 'hover:text-white hover:bg-LM border-LM text-LM'
+                      ? 'hover:text-TX/60 dark:hover:bg-neutral-800 hover:bg-stone-300/20 text-black border-TX/50 dark:border-stone-300/30 dark:text-stone-300/50 '
+                      : 'hover:text-white hover:bg-LM border-LM text-LM'
                     }`}
                 >
                   ENVIAR

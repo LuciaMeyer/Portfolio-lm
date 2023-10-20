@@ -27,22 +27,22 @@ export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
         </span>
       </p>
 
-      <p className="">
-        Podés conocer alguno de
-        <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300 dark:hover:bg-neutral-700 hover:bg-neutral-200">
-          <Link
-            to={"projects"}
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={1000}
-          >
-            MIS PROYECTOS
-          </Link>
-        </button>
-        <br />
-        Para saber cuáles son las
+      <p>
+        › Podés conocer alguno de{' '}
+        <Link
+          to={"projects"}
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          className='cursor-pointer border-b-LM border-b-2 text-LM font-medium'
+        >
+          mis proyectos
+        </Link>.
+      </p>
+      <p>
+        › Si querés saber cuáles son las
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
           {" herramientas "}
         </span>
@@ -55,28 +55,27 @@ export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
           {" me motiva, "}
         </span>
         seguí explorando esta sección.
-        <br />
-        Tenés dudas o te gustariía que trabajemos en equipo?
-        <button className="mx-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300 dark:hover:bg-neutral-700 hover:bg-neutral-200">
-          <Link
-            to={"contact"}
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={1000}
-          >
-            ESCRIBIME
-          </Link>
-        </button>
+      </p>
+      <p>
+        › Tenés dudas o te gustariía que trabajemos en equipo?{' '}
+        <Link
+          to={"contact"}
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          className='cursor-pointer border-b-LM border-b-2 text-LM font-medium'
+        >
+          escribime
+        </Link>.
       </p>
       {!isMobile && (
         <div className="md:mt-6 mt-4 flex items-center justify-between">
           <button
             onClick={handleShowDiv}
-            className="my-2 px-2 cursor-pointer text-black text-[.7rem] font-semibold placeholder:tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
+            className="my-2 px-2 cursor-pointer text-black text-[.7rem] placeholder:tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
           >
-            {/* border-solid border border-TX/50 dark:border-stone-300/30  */}
             VOLVER
           </button>
           <button onClick={handleShowDiv}>

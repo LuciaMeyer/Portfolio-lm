@@ -4,10 +4,15 @@ import { motion } from 'framer-motion';
 
 export const Languages = () => {
   return (
-    <>
-      <span className='mx-auto my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
+      <span className='flex justify-center my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>
         Lenguajes de Programación
       </span>
+
       <div className='flex flex-row justify-around md:justify-around items-center'>
         {/* JAVASCRIPT */}
         <div className='flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300'>
@@ -125,6 +130,6 @@ export const Languages = () => {
         informático y realizar tareas específicas mediante un programa
         informático.
       </p>
-    </>
+    </motion.div>
   );
 };

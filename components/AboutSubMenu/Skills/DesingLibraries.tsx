@@ -4,8 +4,12 @@ import { motion } from 'framer-motion';
 
 export const DesingLibraries = () => {
   return (
-    <>
-      <span className='mx-auto my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
+      <span className='flex justify-center my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>
         Librerías y Preprocesadores CSS
       </span>
       <div className='flex flex-row justify-around md:justify-center md:space-x-16 items-end'>
@@ -155,6 +159,6 @@ export const DesingLibraries = () => {
 
       Los Frameworks de CSS proporcionan reglas y estilos predefinidos para crear diseños web coherentes. Los Preprocesadores CSS extienden CSS con variables y anidamiento, simplificando la escritura del código CSS. Ambas tecnologías son valiosas en la UI (interfaz de usuario)
       </p>
-    </>
+    </motion.div>
   );
 };

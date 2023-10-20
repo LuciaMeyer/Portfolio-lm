@@ -4,8 +4,12 @@ import { motion } from 'framer-motion';
 
 export const BackEnd = () => {
   return (
-    <>
-      <span className='mx-auto my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>Back-End</span>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
+      <span className='flex justify-center my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>Back-End</span>
       <div className='flex flex-row justify-around md:justify-around items-center'>
         {/* JAVASCRIPT */}
         <div className='flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300'>
@@ -123,6 +127,6 @@ export const BackEnd = () => {
         el Front-End y otros servicios externos. Estas tecnologías son
         esenciales para crear aplicaciones robustas y funcionales.
       </p>
-    </>
+    </motion.div>
   );
 };

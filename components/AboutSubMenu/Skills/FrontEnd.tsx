@@ -4,8 +4,13 @@ import { motion } from 'framer-motion';
 
 export const FrontEnd = () => {
   return (
-    <>
-      <span className='mx-auto my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>Front-End</span>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+
+    >
+      <span className='flex justify-center my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>Front-End</span>
       <div className='flex flex-row justify-around md:justify-center md:space-x-16 items-end'>
         <div className='flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300'>
           <Image
@@ -93,6 +98,6 @@ export const FrontEnd = () => {
         permitiendo a los desarrolladores crear interfaces de usuario
         interactivas y funcionales.
       </p>
-    </>
+    </motion.div>
   );
 };
