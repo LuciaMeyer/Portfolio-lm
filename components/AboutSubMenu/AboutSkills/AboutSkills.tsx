@@ -4,8 +4,11 @@ import { FrontEnd } from "./Skills/FrontEnd";
 import { DesingLibraries } from "./Skills/DesingLibraries";
 import { useState } from "react";
 import Image from "next/image";
-import { img } from "../../public/images";
+import { img } from "../../../public/images";
 import { BackEnd } from "./Skills/BackEnd";
+import { DataBase } from "./Skills/DataBase";
+import { VersionControl } from "./Skills/VersionControl";
+
 
 interface SectionContent {
   [key: string]: JSX.Element;
@@ -21,13 +24,15 @@ export const AboutSkills = () => {
   // 'OTRAS HERRAMIENTAS',
   // 'METODOLOGÍAS'
 
-  const menuOrder = ["LENGUAJES", "FRONTEND", "DESING_LIBRARIES", 'BACKEND'];
+  const menuOrder = ["LENGUAJES", "FRONTEND", "DESING_LIBRARIES", 'BACKEND', 'DATABASE', 'VERSION_CONTROL'];
 
   const sections: SectionContent = {
     LENGUAJES: <Languages />,
     FRONTEND: <FrontEnd />,
     DESING_LIBRARIES: <DesingLibraries />,
-    BACKEND: <BackEnd/>,
+    BACKEND: <BackEnd />,
+    DATABASE: <DataBase />,
+    VERSION_CONTROL: <VersionControl/>
   };
 
   const handleArrowNext = () => {
@@ -64,7 +69,7 @@ export const AboutSkills = () => {
                     className={`rotate-90 ${
                       currentTab === 0
                         ? "opacity-30 scale-90 dark:invert"
-                        : "mr-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
+                        : "mr-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-60 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -77,7 +82,7 @@ export const AboutSkills = () => {
                     className={`-rotate-90 ${
                       currentTab === menuOrder.length - 1
                         ? "opacity-30 scale-90 dark:invert"
-                        : "ml-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
+                        : "ml-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-60 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -95,14 +100,16 @@ export const AboutSkills = () => {
             )
         )}
         <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
-          <Image
-            width={600}
-            height={600}
-            src={img.auxfondo3}
-            alt="Img"
-            priority
-            className="object-cover"
-          />
+          <div>
+            <Image
+              width={600}
+              height={600}
+              src={img.auxfondo3}
+              alt="Img"
+              priority
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </>

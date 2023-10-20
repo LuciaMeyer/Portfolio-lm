@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { img } from '../../../public/images';
+import { img } from '../../../../public/images';
 import { motion } from 'framer-motion';
 
 export const DesingLibraries = () => {
@@ -157,7 +157,7 @@ export const DesingLibraries = () => {
       </div>
       <p className='mt-10'>
 
-      Los Frameworks de CSS proporcionan reglas y estilos predefinidos para crear diseños web coherentes. Los Preprocesadores CSS extienden CSS con variables y anidamiento, simplificando la escritura del código CSS. Ambas tecnologías son valiosas en la UI (interfaz de usuario)
+      Las Librerías CSS proporcionan reglas y estilos predefinidos para ayudan a los desarrolladores a crear diseños atractivos y funcionales. Los Preprocesadores ofrecen variables, anidamiento, funciones y modularidad para simplificar el desarrollo, generando CSS optimizado.
       </p>
     </motion.div>
   );

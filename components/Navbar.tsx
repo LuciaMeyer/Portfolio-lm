@@ -140,28 +140,35 @@ export const Navbar = () => {
           {/* LOGO */}
           <div className="flex md:ml-8 ml-4 cursor-pointer ">
             {isMobile && (section === "home" || section === "") ? (
-              <div className="h-16"></div>
+              <div className="h-14"></div>
             ) : (
-              <Link
-                to="home"
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                duration={1000}
-                onClick={hanldeLogoClick}
-                className='md:h-auto h-16'
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className='md:h-auto h-14'
               >
-                <div>
-                  <Image
-                    className="md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300"
-                    src={img.LMb}
-                    alt="LM"
-                    width={35}
-                    height={35}
-                    priority
-                  />
-                </div>
-              </Link>
+                <Link
+                  to="home"
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  onClick={hanldeLogoClick}
+                  className='md:h-auto h-16'
+                >
+                  <div>
+                    <Image
+                      className="md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300"
+                      src={img.LMb}
+                      alt="LM"
+                      width={35}
+                      height={35}
+                      priority
+                    />
+                  </div>
+                </Link>
+              </motion.div>
             )}
           </div>
           {/* SECCIONES */}

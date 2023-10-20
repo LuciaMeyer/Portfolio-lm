@@ -121,10 +121,10 @@ export const Contact: React.FC<ContactSectionProps> = ({ refContact }) => {
                 <button
                   type='submit'
                   disabled={disabled}
-                  className={`cursor-pointer w-20 h-9 tracking-[0.08rem] text-[.7rem] text-center border-solid border transition duration-200 ease
+                  className={`cursor-pointer w-20 h-9 tracking-[0.08rem] text-[.7rem] text-center transition duration-200 ease
                   ${disabled
-                      ? 'hover:text-TX/60 dark:hover:bg-neutral-800 hover:bg-stone-300/20 text-black border-TX/50 dark:border-stone-300/30 dark:text-stone-300/50 '
-                      : 'hover:text-white hover:bg-LM border-LM text-LM'
+                      ? 'hover:text-TX/60 dark:hover:bg-neutral-800 hover:bg-stone-300/20 text-TXT border-solid border border-neutral-400 dark:border-stone-300/30 dark:text-stone-300/50 '
+                      : 'hover:text-white hover:bg-LM border-solid border border-LM text-LM'
                     }`}
                 >
                   ENVIAR

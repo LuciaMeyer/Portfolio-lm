@@ -60,6 +60,9 @@ export const img = {
     node: 'https://res.cloudinary.com/dw272kava/image/upload/v1697740950/AboutSkills/node_w286v8.png',
     ex:'https://res.cloudinary.com/dw272kava/image/upload/v1697741298/AboutSkills/ex_ubp3nq.png',
     dk:'https://res.cloudinary.com/dw272kava/image/upload/v1697741902/AboutSkills/dk_lilqqj.png',
+    pg:'https://res.cloudinary.com/dw272kava/image/upload/v1697826870/AboutSkills/pg_kicwnj.png',
+    sq:'https://res.cloudinary.com/dw272kava/image/upload/v1697827177/AboutSkills/sq_nmgzli.png',
+    git:'https://res.cloudinary.com/dw272kava/image/upload/v1697827503/AboutSkills/git_dwptfo.png',
 
 
   };

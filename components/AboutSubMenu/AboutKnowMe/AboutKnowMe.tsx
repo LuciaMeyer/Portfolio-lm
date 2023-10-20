@@ -52,14 +52,16 @@ export const AboutKnowMe = () => {
           <></>
         )}
         <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
-          <Image
-            width={600}
-            height={600}
-            src={img.aux1}
-            alt="Img"
-            priority
-            className="object-cover"
-          />
+          <div>
+            <Image
+              width={600}
+              height={600}  
+              src={img.aux1}
+              alt="Img"
+              priority
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </>

@@ -80,7 +80,7 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
               smooth={true}
               offset={-100}
               duration={1000}
-              className="cursor-pointer text-black text-[.7rem] tracking-wider border-solid border pb-2.5 pt-2 px-4 border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
+              className="cursor-pointer bg-white dark:bg-BGD text-black text-[.7rem] tracking-wider border-solid border pb-2.5 pt-2 px-4 border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300/90 dark:hover:bg-neutral-700 hover:bg-neutral-200"
             >
               SABER MÁS
             </Link>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { img } from "../public/images";
 import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe/AboutKnowMe";
 import { AboutJourney } from "./AboutSubMenu/AboutJourney/AboutJourney";
-import { AboutSkills } from "./AboutSubMenu/AboutSkills";
+import { AboutSkills } from "./AboutSubMenu/AboutSkills/AboutSkills";
 import { AboutMotivation } from "./AboutSubMenu/AboutMotivation";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import SlideUp from "./SlideUp";
@@ -141,7 +141,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
           </div>
         </div>
 
-        <div className="md:block hidden justify-center mx-auto h-96">
+        <div className="md:block hidden justify-center mx-auto">
           {menuOrder.map((section, index) => (
             <motion.div
               key={index}

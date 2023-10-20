@@ -94,11 +94,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
                 {!isMobile ? (
-                  <Atropos className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:space-x-12 pb-8 align-center">
+                  <Atropos className="flex flex-col md:space-x-12 align-center hover:scale-90 transform transition-transform duration-300 ">
                     <ProjectsContent project={project} />
                   </Atropos>
                 ) : (
-                  <div className="relative flex flex-col animate-slideUpCubiBezier animation-delay-2 pb-8 align-center">
+                  <div className="relative flex flex-col pb-8 align-center">
                     <ProjectsContent project={project} />
                   </div>
                 )}
@@ -109,7 +109,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         <div className="relative flex flex-col">
           <button
             onClick={handleShowDiv}
-            className="cursor-pointer text-black w-28 h-10 text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30  dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200 "
+            className="cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300/90 text-[.7rem] tracking-wider 
+            w-36 h-9 px-4 
+            border-solid border border-TX/50 dark:border-stone-300/30
+            transition duration-200 ease d dark:hover:bg-neutral-700 hover:bg-neutral-200"
           >
             MÁS PROYECTOS
           </button>

@@ -129,7 +129,7 @@ export const Icons: React.FC<IconsProps> = () => {
       <hr className="md:flex hidden fixed bottom-6 left-0.5 h-[1.5px] w-28 rotate-90 bg-stone-400 dark:bg-TX" />
 
       <div
-        className={`w-10 fixed md:bottom-16 bottom-12 md:right-12 right-4  
+        className={`md:w-10 w-12 fixed md:bottom-16 bottom-12 md:right-12 right-4  
          transform transition-transform duration-300 md:hover:scale-75
           ${section === "contact" && "rotate-180"}
           ${!!endPage ? "rotate-180" : "rotate-0"}

@@ -28,7 +28,7 @@ export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
       </p>
 
       <p>
-        › Podés conocer alguno de{' '}
+        Podés conocer alguno de{' '}
         <Link
           to={"projects"}
           activeClass="active"
@@ -42,7 +42,7 @@ export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
         </Link>.
       </p>
       <p>
-        › Si querés saber cuáles son las
+        Si querés saber cuáles son las
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
           {" herramientas "}
         </span>
@@ -57,7 +57,7 @@ export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
         seguí explorando esta sección.
       </p>
       <p>
-        › Tenés dudas o te gustariía que trabajemos en equipo?{' '}
+        Tenés dudas o te gustariía que trabajemos en equipo?{' '}
         <Link
           to={"contact"}
           activeClass="active"
