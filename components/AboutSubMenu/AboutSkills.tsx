@@ -64,7 +64,7 @@ export const AboutSkills = () => {
                     className={`rotate-90 ${
                       currentTab === 0
                         ? "opacity-30 scale-90 dark:invert"
-                        : "mr-2 w-auto md:h-6 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
+                        : "mr-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -77,7 +77,7 @@ export const AboutSkills = () => {
                     className={`-rotate-90 ${
                       currentTab === menuOrder.length - 1
                         ? "opacity-30 scale-90 dark:invert"
-                        : "ml-2 w-auto md:h-6 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
+                        : "ml-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-40 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -94,7 +94,7 @@ export const AboutSkills = () => {
               </div>
             )
         )}
-        <div className="md:flex hidden mt-8 ml-7 md:w-1/2 h-96">
+        <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
           <Image
             width={600}
             height={600}

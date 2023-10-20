@@ -2,16 +2,23 @@ import Image from 'next/image';
 import { img } from '../../../public/images';
 import { motion } from 'framer-motion';
 
-
 export const Languages = () => {
-
   return (
     <>
-      <span className='mx-auto my-6 md:mt-6 md:mb-10 font-thin'>Lenguajes de Programación</span>
+      <span className='mx-auto my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM'>
+        Lenguajes de Programación
+      </span>
       <div className='flex flex-row justify-around md:justify-around items-center'>
         {/* JAVASCRIPT */}
         <div className='flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.js} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+          <Image
+            width={200}
+            height={200}
+            src={img.js}
+            alt='img'
+            priority
+            className='opacity-50 dark:invert-0 invert'
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -24,14 +31,21 @@ export const Languages = () => {
               </span>
             </span>
           </motion.div>
-          <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
+          <span className='flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium '>
             JavaScipt
           </span>
         </div>
 
         {/* TYPESCRIPT */}
         <div className='flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.ts} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+          <Image
+            width={200}
+            height={200}
+            src={img.ts}
+            alt='img'
+            priority
+            className='opacity-50 dark:invert-0 invert'
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -44,14 +58,21 @@ export const Languages = () => {
               </span>
             </span>
           </motion.div>
-          <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
+          <span className='flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium '>
             TypeScript
           </span>
         </div>
 
         {/* HTML */}
         <div className='flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.html} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+          <Image
+            width={200}
+            height={200}
+            src={img.html}
+            alt='img'
+            priority
+            className='opacity-50 dark:invert-0 invert'
+          />
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -65,14 +86,21 @@ export const Languages = () => {
               </span>
             </span>
           </motion.div>
-          <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
+          <span className='flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium '>
             HTML
           </span>
         </div>
 
         {/* CSS */}
         <div className='flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300'>
-          <Image width={200} height={200} src={img.css} alt='img' priority className='opacity-50 dark:invert-0 invert' />
+          <Image
+            width={200}
+            height={200}
+            src={img.css}
+            alt='img'
+            priority
+            className='opacity-50 dark:invert-0 invert'
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -85,13 +113,17 @@ export const Languages = () => {
               </span>
             </span>
           </motion.div>
-          <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
+          <span className='flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium '>
             CSS
           </span>
         </div>
       </div>
-      <p className='mt-20 text-sm'>
-        Un lenguaje de programación es una herramienta formal y estructurada que permite a los programadores escribir conjuntos de instrucciones, denominados algoritmos, para controlar el comportamiento de un sistema informático. Estas instrucciones pueden ser utilizadas para obtener diferentes tipos de datos o realizar tareas específicas. En conjunto, estas instrucciones escritas en un lenguaje de programación conforman un programa informático.
+      <p className='mt-10'>
+        Un lenguaje de programación es una herramienta formal y estructurada que
+        permite a los programadores escribir conjuntos de instrucciones,
+        denominados algoritmos, para controlar el comportamiento de un sistema
+        informático y realizar tareas específicas mediante un programa
+        informático.
       </p>
     </>
   );

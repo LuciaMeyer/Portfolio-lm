@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { screenContext } from "@/context/screenContext";
 
-export const AboutKnowMeMobile1 = ({ handleShowDiv }: any) => {
+export const AboutKnowMeContent1 = ({ handleShowDiv }: any) => {
   const isMobile = useContext(screenContext);
   return (
     <div className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 ">

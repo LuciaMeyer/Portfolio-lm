@@ -2,10 +2,9 @@
 import Image from "next/image";
 import { img } from "../../../public/images";
 import { useState, useEffect, useContext } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-scroll/modules";
-import { AboutKnowMeMobile1 } from "./AboutKnowMeMobile1";
-import { AboutKnowMeMobile2 } from "./AboutKnowMeMobile2";
+import { AboutKnowMeContent1 } from "./AboutKnowMeContent1";
+import { AboutKnowMeContent2 } from "./AboutKnowMeContent2";
 import { screenContext } from "@/context/screenContext";
 
 export const AboutKnowMe = () => {
@@ -41,18 +40,18 @@ export const AboutKnowMe = () => {
         flex flex-col md:flex-row mx-auto "
       >
         {!isMobile && !showDiv ? (
-          <AboutKnowMeMobile1 handleShowDiv={handleShowDiv} />
+          <AboutKnowMeContent1 handleShowDiv={handleShowDiv} />
         ) : !isMobile && showDiv ? (
-          <AboutKnowMeMobile2 handleShowDiv={handleShowDiv} />
+          <AboutKnowMeContent2 handleShowDiv={handleShowDiv} />
         ) : isMobile ? (
           <>
-            <AboutKnowMeMobile1 handleShowDiv={handleShowDiv} />
-            <AboutKnowMeMobile2 handleShowDiv={handleShowDiv} />
+            <AboutKnowMeContent1 handleShowDiv={handleShowDiv} />
+            <AboutKnowMeContent2 handleShowDiv={handleShowDiv} />
           </>
         ) : (
           <></>
         )}
-        <div className="md:flex hidden mt-8 ml-7 md:w-1/2 h-96">
+        <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
           <Image
             width={600}
             height={600}

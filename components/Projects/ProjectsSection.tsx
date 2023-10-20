@@ -2,7 +2,7 @@
 import { useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import SlideUp from "./SlideUp";
+import SlideUp from "../SlideUp";
 import videgames from "@/public/videogames.gif";
 import letsgo from "@/public/letsgo.gif";
 import gpt from "@/public/gpt.gif";

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { img } from "../public/images";
 import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe/AboutKnowMe";
-import { AboutJourney } from "./AboutSubMenu/AboutJourney";
+import { AboutJourney } from "./AboutSubMenu/AboutJourney/AboutJourney";
 import { AboutSkills } from "./AboutSubMenu/AboutSkills";
 import { AboutMotivation } from "./AboutSubMenu/AboutMotivation";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -22,6 +22,7 @@ interface AboutSectionProps {
 export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   const [currentMenuWeb, setCurrentMenuWeb] = useState("Conoceme");
   const [currentMenuMobile, setCurrentMenuMobile] = useState("");
+  const [ same, setSame ] = useState(false)
 
   const menuOrder = ["Conoceme", "Recorrido", "Habilidades", "Motivación"];
 
@@ -40,8 +41,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
       }, 500);
     } else {
       if (section === currentMenuMobile) {
+        console.log('iguales')
+        setSame(true)
         setCurrentMenuMobile("");
       } else {
+        setSame(false)
         setCurrentMenuMobile("");
         setTimeout(() => {
           setCurrentMenuMobile(section);
@@ -64,7 +68,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
   };
 
   const hide = {
-    transition: { duration: 0.5 },
+    transition: same ? { duration: 1 } : { duration: 2 },
     x: -500,
     scale: 1,
     height: 0,
@@ -102,7 +106,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
         {/* SUBMENÚ WEB & SECTION WEB*/}
         <div
           className="md:flex hidden w-1/2 mx-auto justify-around
-          py-4 mb-4
+          py-4 mb-4 dark:bg-BGD bg-white
           shadow-lg shadow-neutral-400 dark:shadow-black"
         >
           {menuOrder.map((sm, i) => (
@@ -157,7 +161,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
             <Link
               to="about"
               smooth={true}
-              offset={index * 110}
+              offset={index * 130}
               duration={2000}
               spy={true}
             >

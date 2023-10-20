@@ -141,7 +141,7 @@ export const AboutMotivation = () => {
             </div>
           </motion.div>
         }
-        <div className="md:flex hidden mt-8 ml-7 md:w-1/2 h-96">
+        <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
           <Image
             width={600}
             height={600}

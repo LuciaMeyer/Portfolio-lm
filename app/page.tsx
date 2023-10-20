@@ -2,7 +2,7 @@
 import { AboutSection } from '@/components/AboutSection';
 import { Contact } from '@/components/Contact';
 import { HeroSection } from '@/components/HeroSection';
-import { ProjectsSection } from '@/components/ProjectsSection';
+import { ProjectsSection } from '@/components/Projects/ProjectsSection';
 import { Resurces } from '@/components/Resurces';
 import React, { useContext, useEffect } from 'react';
 import { sectionContext } from '../context/sectionContext';
