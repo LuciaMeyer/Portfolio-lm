@@ -159,9 +159,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
         {menuOrder.map((section, index) => (
           <div className="relative" key={index}>
             <Link
-              to="about"
+              to={`${section === currentMenuMobile ? '' : 'about'}`}
               smooth={true}
-              offset={index * 130}
+              offset={index * 135}
               duration={2000}
               spy={true}
             >
