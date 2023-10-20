@@ -10,7 +10,7 @@ export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 "
+      className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto"
     >
       <p className={`${isMobile && 'mt-6'}`}>
         Entrar en este sector me impulsó a estar en

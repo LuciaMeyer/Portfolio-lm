@@ -2,7 +2,7 @@ import Image from "next/image";
 import { img } from "../../../../public/images";
 import { motion } from "framer-motion";
 
-export const BackEnd = () => {
+export const DesignTools = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,14 +10,14 @@ export const BackEnd = () => {
       transition={{ duration: 1.5 }}
     >
       <span className="flex justify-center my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM">
-        Back-End
+        Herramientas de Diseño
       </span>
       <div className="flex flex-row justify-around md:justify-around items-center">
         <div className="flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300">
           <Image
             width={200}
             height={200}
-            src={img.node}
+            src={img.fg}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -30,12 +30,12 @@ export const BackEnd = () => {
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
               <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                NodeJS
+                Figma
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            NodeJS
+            Figma
           </span>
         </div>
 
@@ -43,7 +43,7 @@ export const BackEnd = () => {
           <Image
             width={200}
             height={200}
-            src={img.ex}
+            src={img.ai}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -56,25 +56,24 @@ export const BackEnd = () => {
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
               <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Express
+                Illustrator
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Express
+            Illustrator
           </span>
         </div>
 
-        <div className="flex flex-col relative w-16 hover:scale-110 transform transition-transform duration-300">
+        <div className="flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300">
           <Image
             width={200}
             height={200}
-            src={img.next}
+            src={img.ps}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
           />
-
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
@@ -83,12 +82,12 @@ export const BackEnd = () => {
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
               <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                NextJS
+                Photoshop
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            NextJS
+            Photoshop
           </span>
         </div>
 
@@ -96,7 +95,7 @@ export const BackEnd = () => {
           <Image
             width={200}
             height={200}
-            src={img.dk}
+            src={img.pr}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -109,20 +108,21 @@ export const BackEnd = () => {
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
               <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-[0.3rem] dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Docker
+                Premiere
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Docker
+            Premiere
           </span>
         </div>
       </div>
       <p className="mt-10">
-        Estas tecnologías son esenciales para administrar y supervisar el
-        funcionamiento de un sistema o aplicación de software desde el lado del
-        servidor, facilitando la gestión de datos y la comunicación entre el
-        Front-End y servicios externos.
+        Estas herramientas son vitales en diseño y producción de contenido multimedia.
+        Figma es una aplicación en la nube para diseñar interfaces y prototipos.
+        Ai se enfoca en gráficos vectoriales y logotipos. Ps es
+        una herramienta poderosa para edición de imágenes y diseño gráfico.
+        Pr es un software de edición de video profesional. 
       </p>
     </motion.div>
   );

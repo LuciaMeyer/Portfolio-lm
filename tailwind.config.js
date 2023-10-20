@@ -27,7 +27,7 @@ module.exports = {
         TX:'#262626',
         LMc:'#F9EBD2',
       },
-      screens: { sm: '480px', md: '860px', lg: '976px', xl: '1440pd' },
+      screens: { sm: '480px', md: '860px', int: { 'min': '860px', 'max': '1200px' }, lg: '976px', xl: '1440pd' },
       // md: '768px',
       animation: {
         fadeIn: 'fadeIn 1.5s',

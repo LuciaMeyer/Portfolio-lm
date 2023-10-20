@@ -38,7 +38,7 @@ export const AboutJourney = () => {
 
   return (
     <>
-      <div className="flex md:hidden justify-center">
+      <div className="flex int:flex md:hidden justify-center">
         <Image
           width={400}
           height={400}
@@ -65,7 +65,7 @@ export const AboutJourney = () => {
         ) : (
           <></>
         )}
-        <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
+        <div className="md:flex int:hidden hidden mt-8 ml-7 md:w-1/2">
           <Image
             width={600}
             height={600}

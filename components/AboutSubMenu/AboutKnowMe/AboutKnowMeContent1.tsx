@@ -1,10 +1,16 @@
 import React, { useContext } from "react";
 import { screenContext } from "@/context/screenContext";
+import { motion } from "framer-motion";
+
 
 export const AboutKnowMeContent1 = ({ handleShowDiv }: any) => {
   const isMobile = useContext(screenContext);
   return (
-    <div className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}    
+      className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto">
       <p className="">
         Hola! Soy{" "}
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -51,6 +57,6 @@ export const AboutKnowMeContent1 = ({ handleShowDiv }: any) => {
           </button>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };

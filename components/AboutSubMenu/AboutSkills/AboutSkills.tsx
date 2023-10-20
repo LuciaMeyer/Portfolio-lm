@@ -8,7 +8,8 @@ import { img } from "../../../public/images";
 import { BackEnd } from "./Skills/BackEnd";
 import { DataBase } from "./Skills/DataBase";
 import { VersionControl } from "./Skills/VersionControl";
-
+import { DesignTools } from "./Skills/DesignTools";
+import { Tools } from "./Skills/Tools";
 
 interface SectionContent {
   [key: string]: JSX.Element;
@@ -24,7 +25,16 @@ export const AboutSkills = () => {
   // 'OTRAS HERRAMIENTAS',
   // 'METODOLOGÍAS'
 
-  const menuOrder = ["LENGUAJES", "FRONTEND", "DESING_LIBRARIES", 'BACKEND', 'DATABASE', 'VERSION_CONTROL'];
+  const menuOrder = [
+    "LENGUAJES",
+    "FRONTEND",
+    "DESING_LIBRARIES",
+    "BACKEND",
+    "DATABASE",
+    "VERSION_CONTROL",
+    'DESIGN_TOOLS',
+    'TOOLS'
+  ];
 
   const sections: SectionContent = {
     LENGUAJES: <Languages />,
@@ -32,7 +42,9 @@ export const AboutSkills = () => {
     DESING_LIBRARIES: <DesingLibraries />,
     BACKEND: <BackEnd />,
     DATABASE: <DataBase />,
-    VERSION_CONTROL: <VersionControl/>
+    VERSION_CONTROL: <VersionControl />,
+    DESIGN_TOOLS: <DesignTools />,
+    TOOLS: <Tools />
   };
 
   const handleArrowNext = () => {
@@ -49,27 +61,35 @@ export const AboutSkills = () => {
 
   return (
     <>
-      <div className="flex md:hidden justify-center">
-        <Image width={400} height={400} src={img.auxfondo3} alt="img" priority />
+      <div className="flex int:flex md:hidden justify-center">
+        <Image
+          width={400}
+          height={400}
+          src={img.auxfondo3}
+          alt="img"
+          priority
+        />
       </div>
       <div
         className="
         bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
-        md:w-1/2 mt-2 md:mt-auto
+        md:w-1/2 mt-2 md:mt-auto int:w-auto int:justify-center
         flex flex-col md:flex-row mx-auto "
       >
         {menuOrder.map(
           (menuItem, index) =>
             index === currentTab && (
-              <div key={menuItem} className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 ">
-
+              <div
+                key={menuItem}
+                className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 "
+              >
                 <div className="flex justify-center items-center">
                   <Image
-                    className={`rotate-90 ${
+                    className={`rotate-90 mr-2 w-auto md:h-8 h-10 dark:invert ${
                       currentTab === 0
-                        ? "opacity-30 scale-90 dark:invert"
-                        : "mr-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-60 hover:opacity-30"
+                        ? "opacity-30 dark:invert"
+                        : "hover:scale-90 cursor-pointer transform transition-transform duration-300 opacity-60 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -78,11 +98,14 @@ export const AboutSkills = () => {
                     priority
                     onClick={handleArrowPrev}
                   />
+                  <span className="text-sm dark:text-stone-400 mx-2">
+                    {currentTab + 1} / {menuOrder.length}
+                  </span>
                   <Image
-                    className={`-rotate-90 ${
+                    className={`-rotate-90 ml-2 w-auto md:h-8 h-10 dark:invert ${
                       currentTab === menuOrder.length - 1
-                        ? "opacity-30 scale-90 dark:invert"
-                        : "ml-2 w-auto md:h-8 h-10 hover:scale-90 cursor-pointer dark:invert transform transition-transform duration-300 opacity-60 hover:opacity-30"
+                        ? "opacity-30 dark:invert"
+                        : "hover:scale-90 cursor-pointer transform transition-transform duration-300 opacity-60 hover:opacity-30"
                     }`}
                     width="30"
                     height="30"
@@ -99,7 +122,7 @@ export const AboutSkills = () => {
               </div>
             )
         )}
-        <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
+        <div className="md:flex int:hidden hidden mt-8 ml-7 md:w-1/2">
           <div>
             <Image
               width={600}

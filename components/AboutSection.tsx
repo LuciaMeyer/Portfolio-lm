@@ -41,7 +41,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
       }, 500);
     } else {
       if (section === currentMenuMobile) {
-        console.log('iguales')
         setSame(true)
         setCurrentMenuMobile("");
       } else {

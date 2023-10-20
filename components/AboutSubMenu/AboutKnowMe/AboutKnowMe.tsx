@@ -29,7 +29,7 @@ export const AboutKnowMe = () => {
 
   return (
     <>
-      <div className="flex md:hidden justify-center">
+      <div className="flex md:hidden int:flex justify-center">
         <Image width={400} height={400} src={img.auxlu} alt="img" priority />
       </div>
       <div
@@ -51,7 +51,7 @@ export const AboutKnowMe = () => {
         ) : (
           <></>
         )}
-        <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
+        <div className="md:flex int:hidden hidden mt-8 ml-7 md:w-1/2">
           <div>
             <Image
               width={600}

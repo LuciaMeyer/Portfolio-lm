@@ -63,6 +63,13 @@ export const img = {
     pg:'https://res.cloudinary.com/dw272kava/image/upload/v1697826870/AboutSkills/pg_kicwnj.png',
     sq:'https://res.cloudinary.com/dw272kava/image/upload/v1697827177/AboutSkills/sq_nmgzli.png',
     git:'https://res.cloudinary.com/dw272kava/image/upload/v1697827503/AboutSkills/git_dwptfo.png',
+    fg:'https://res.cloudinary.com/dw272kava/image/upload/v1697836808/AboutSkills/fg_ky73ks.png',
+    ai:'https://res.cloudinary.com/dw272kava/image/upload/v1697836576/AboutSkills/ai_fcjmji.png',
+    ps:'https://res.cloudinary.com/dw272kava/image/upload/v1697836576/AboutSkills/ps_n9d9fc.png',
+    pr:'https://res.cloudinary.com/dw272kava/image/upload/v1697836576/AboutSkills/pr_joekja.png',
+    im:'https://res.cloudinary.com/dw272kava/image/upload/v1697838591/AboutSkills/im_rbnqdz.png',
+    psm:'https://res.cloudinary.com/dw272kava/image/upload/v1697838591/AboutSkills/psm_erg53c.png',
+    vs:'https://res.cloudinary.com/dw272kava/image/upload/v1697838591/AboutSkills/vs_cgg0f3.png',
 
 
   };
