@@ -13,7 +13,7 @@ export const SoftSkillsPart2 = ({ handleShowDiv }: any) => {
       className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto"
     >
       <p>
-        ...una persona con
+        una persona con
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
           {" disciplina, escucha activa, empatía, capacidad de liderazgo, adaptabilidad y facilidad para trabajar en equipo."}
         </span>

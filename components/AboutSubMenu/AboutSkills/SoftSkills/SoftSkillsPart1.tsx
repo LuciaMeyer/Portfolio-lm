@@ -28,7 +28,7 @@ export const SoftSkillsPart1 = ({ handleShowDiv }: any) => {
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
           {" selecciones de voley "}
         </span>
-        a nivel local, provincial y en varias ligas nacionales. Más adelante,
+        locales, provinciales y en varias ligas nacionales. Más adelante,
         durante 9 años, asumí el rol de
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
           {" entrenadora, "}
@@ -44,7 +44,8 @@ export const SoftSkillsPart1 = ({ handleShowDiv }: any) => {
           {" años de experiencia en el deporte, "}
         </span>
         ya que me
-        formaron como... 
+        formaron como
+        {!isMobile ? <span>...</span> : ' '}
       </p>
       {!isMobile && (
         <div className="md:mt-6 mt-4 flex items-center justify-between">
