@@ -63,7 +63,7 @@ export const Icons: React.FC<IconsProps> = () => {
     bg-white dark:bg-BGD md:bg-transparent"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 2.5 }}
+      transition={{ duration: 1, delay: 2 }}
     >
       <div className="flex flex-col md:fixed md:left-12 md:bottom-24 bottom-12">
         <div className="md:w-6 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center">

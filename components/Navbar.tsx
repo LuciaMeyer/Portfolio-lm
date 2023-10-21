@@ -121,7 +121,9 @@ export const Navbar = () => {
               return (
                 <Link
                   key={idx}
-                  className={"hover:text-LM md:font-thin text-lg tracking-wider font-medium"}
+                  className={
+                    "hover:text-LM md:font-thin text-lg tracking-wider font-medium"
+                  }
                   to={item.page}
                   activeClass="active"
                   spy={true}
@@ -143,10 +145,10 @@ export const Navbar = () => {
               <div className="h-14"></div>
             ) : (
               <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                className='md:h-auto h-14'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={isMobile ? {duration: 1} : {duration: 1, delay: 2 }}
+                className="md:h-auto h-14"
               >
                 <Link
                   to="home"
@@ -155,7 +157,7 @@ export const Navbar = () => {
                   smooth={true}
                   duration={1000}
                   onClick={hanldeLogoClick}
-                  className='md:h-auto h-16'
+                  className="md:h-auto h-16"
                 >
                   <div>
                     <Image
@@ -173,23 +175,24 @@ export const Navbar = () => {
           </div>
           {/* SECCIONES */}
           <div className="md:block font-bold hidden ml-32 leading-snug tracking-wide md:text-3xl text-4xl text-neutral-300 dark:text-neutral-600">
-            {section === 'about'
-              ? <span>Sobre Mi</span>
-              : section === 'projects'
-                ? <span>Proyectos</span>
-                : section === 'resources'
-                  ? <span>Recursos</span>
-                  : section === 'contact'
-                    ? <span>Contacto</span>
-                    : <></>
-            }
+            {section === "about" ? (
+              <span>Sobre Mi</span>
+            ) : section === "projects" ? (
+              <span>Proyectos</span>
+            ) : section === "resources" ? (
+              <span>Recursos</span>
+            ) : section === "contact" ? (
+              <span>Contacto</span>
+            ) : (
+              <></>
+            )}
           </div>
           {/* ÍCONOS MENÚ  */}
           <motion.div
             className="relative cursor-pointer md:px-6 pr-2 "
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2 }}
           >
             <div className="flex items-center justify-between transition-all">
               {/* MENÚ HAMBURGESA */}
@@ -199,21 +202,24 @@ export const Navbar = () => {
               >
                 <div className="relative mr-4 flex items-center justify-center rounded-full transition-transform duration-500 hover:scale-90 ">
                   <div
-                    className={`flex flex-col justify-between w-[25px] h-[14px] transform transition-all duration-300 ${navbar ? "rotate-[45deg] origin-center" : ""
-                      }`}
+                    className={`flex flex-col justify-between w-[25px] h-[14px] transform transition-all duration-300 ${
+                      navbar ? "rotate-[45deg] origin-center" : ""
+                    }`}
                   >
                     <div
-                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${navbar
-                        ? "rotate-90 h-[1px] translate-y-[9px] origin-top delay-75"
-                        : ""
-                        }`}
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${
+                        navbar
+                          ? "rotate-90 h-[1px] translate-y-[9px] origin-top delay-75"
+                          : ""
+                      }`}
                     ></div>
 
                     <div className="dark:bg-stone-300 bg-TX h-[0.8px] rounded"></div>
 
                     <div
-                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${navbar ? "h-[0px]" : ""
-                        }`}
+                      className={`dark:bg-stone-300 bg-TX h-[0.8px] rounded transform transition-all duration-300 ${
+                        navbar ? "h-[0px]" : ""
+                      }`}
                     ></div>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ export const AboutSkills = () => {
   const [showSection, setShowSection] = useState("tech");
 
   const handleChange = (section: string) => {
-    setShowSection(section);
+  setShowSection(section);
   };
 
   return (

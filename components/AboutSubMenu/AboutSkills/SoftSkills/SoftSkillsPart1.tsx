@@ -15,7 +15,7 @@ export const SoftSkillsPart1 = ({ handleShowDiv }: any) => {
       <p>
         Para describir
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" mis habilidades, "}
+          {" estas habilidades, "}
         </span>
         me gusta contar que soy una
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">

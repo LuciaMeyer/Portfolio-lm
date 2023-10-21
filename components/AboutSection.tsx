@@ -4,12 +4,12 @@ import Image from "next/image";
 import { img } from "../public/images";
 import { AboutKnowMe } from "./AboutSubMenu/AboutKnowMe/AboutKnowMe";
 import { AboutJourney } from "./AboutSubMenu/AboutJourney/AboutJourney";
-import { AboutSkills } from "./AboutSubMenu/AboutSkills/AboutSkillsSection";
 import { AboutMotivation } from "./AboutSubMenu/AboutMotivation";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import SlideUp from "./SlideUp";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { AboutSkills } from "./AboutSubMenu/AboutSkills/AboutSkillsSection";
 
 interface SectionContent {
   [key: string]: JSX.Element;
@@ -90,7 +90,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     <section
       ref={refAbout}
       id="about"
-      className="flex-1 pt-4 md:pt-10 md:mb-[30rem] pb-60 relative overflow-hidden md:mx-auto mx-6 h-full "
+      className="flex-1 pt-4 md:pt-10 md:pb-60 relative overflow-hidden md:mx-auto mx-6 h-[50rem] "
     >
       <SlideUp offset="-300px 0px -300px 0px">
         <div className="md:hidden flex flex-row items-center my-auto md:pb-10 pb-8">
