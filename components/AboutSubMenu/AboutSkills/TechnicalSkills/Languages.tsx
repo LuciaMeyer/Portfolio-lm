@@ -2,7 +2,7 @@ import Image from "next/image";
 import { img } from "../../../../public/images";
 import { motion } from "framer-motion";
 
-export const DesignTools = () => {
+export const Languages = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,14 +10,15 @@ export const DesignTools = () => {
       transition={{ duration: 1.5 }}
     >
       <span className="flex justify-center my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM">
-        Herramientas de Diseño
+        Lenguajes de Programación
       </span>
+
       <div className="flex flex-row justify-around md:justify-around items-center">
         <div className="flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300">
           <Image
             width={200}
             height={200}
-            src={img.fg}
+            src={img.js}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -28,14 +29,14 @@ export const DesignTools = () => {
             className="absolute border border-transparent rounded-full w-14 h-14"
           >
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
-              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5.5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Figma
+                JavaScript
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Figma
+            JavaScipt
           </span>
         </div>
 
@@ -43,7 +44,7 @@ export const DesignTools = () => {
           <Image
             width={200}
             height={200}
-            src={img.ai}
+            src={img.ts}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -54,14 +55,14 @@ export const DesignTools = () => {
             className="absolute z-10 border border-transparent rounded-full w-14 h-14"
           >
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
-              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5.5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Illustrator
+                TypeScript
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Illustrator
+            TypeScript
           </span>
         </div>
 
@@ -69,25 +70,26 @@ export const DesignTools = () => {
           <Image
             width={200}
             height={200}
-            src={img.ps}
+            src={img.html}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
           />
+
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1, transition: { duration: 1 } }}
             className="absolute z-10 border border-transparent rounded-full w-14 h-14 opacity-0 hover:opacity-100"
           >
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
-              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5.5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Photoshop
+                HTML
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Photoshop
+            HTML
           </span>
         </div>
 
@@ -95,7 +97,7 @@ export const DesignTools = () => {
           <Image
             width={200}
             height={200}
-            src={img.pr}
+            src={img.css}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -107,22 +109,21 @@ export const DesignTools = () => {
           >
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
               <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
-              <span className="flex justify-center mt-[0.3rem] dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Premiere
+              <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
+                CSS
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Premiere
+            CSS
           </span>
         </div>
       </div>
       <p className="mt-10">
-        Estas herramientas son vitales en diseño y producción de contenido multimedia.
-        Figma es una aplicación en la nube para diseñar interfaces y prototipos.
-        Ai se enfoca en gráficos vectoriales y logotipos. Ps es
-        una herramienta poderosa para edición de imágenes y diseño gráfico.
-        Pr es un software de edición de video profesional. 
+        Un Lenguaje de Programación es una herramienta formal y estructurada que
+        permite a los programadores escribir conjuntos de instrucciones,
+        denominados algoritmos, para controlar el comportamiento de un sistema
+        informático y realizar tareas específicas.
       </p>
     </motion.div>
   );

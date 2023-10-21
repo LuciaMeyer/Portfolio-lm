@@ -2,47 +2,49 @@ import React, { useContext } from "react";
 import { screenContext } from "@/context/screenContext";
 import { motion } from "framer-motion";
 
-
-export const AboutKnowMeContent1 = ({ handleShowDiv }: any) => {
+export const SoftSkillsPart1 = ({ handleShowDiv }: any) => {
   const isMobile = useContext(screenContext);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}    
-      className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto">
-      <p className="">
-        Hola! Soy{" "}
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {"Lu, "}
-        </span>
-        creativa e inquieta desde siempre. En mi camino exploré diferentes áreas
-        como
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" arquitectura, diseño, comunicación y marketing."}
-        </span>{" "}
-      </p>
-
+      transition={{ duration: 1.5 }}
+      className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto"
+    >
       <p>
-        En el último tiempo, descubrí mi pasión por la
+        Para describir
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" Tecnología de la Información "}
+          {" mis habilidades, "}
         </span>
-        y me gradué de como
+        me gusta contar que soy una
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" Full Stack Developer."}
+          {" deportista apasionada "}
+        </span>
+        desde los 8 años. 
+      </p>
+      <p>
+        Tuve la oportunidad de jugar en
+        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+          {" selecciones de voley "}
+        </span>
+        a nivel local, provincial y en varias ligas nacionales. Más adelante,
+        durante 9 años, asumí el rol de
+        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+          {" entrenadora, "}
+        </span>
+        lo que me permitió descubrir cuánto disfruto
+        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+          {" enseñar y transmitir esta pasión."}
         </span>
       </p>
-
-      <p className="">
-        Mi mayor interés dentro del
+      <p>
+        Agradezco todos esos
         <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" mundo IT "}
-        </span>{" "}
-        es la posibilidad de crear frente a grandes necesidades,
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" soluciones simples e innovadoras. "}
-        </span>{" "}
+          {" años de experiencia en el deporte, "}
+        </span>
+        ya que me
+        formaron como... 
       </p>
       {!isMobile && (
         <div className="md:mt-6 mt-4 flex items-center justify-between">

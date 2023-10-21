@@ -110,9 +110,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           <button
             onClick={handleShowDiv}
             className="cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300/90 text-[.7rem] tracking-wider 
-            w-36 h-9 px-4 
+            w-36 h-10 px-4 
             border-solid border border-TX/50 dark:border-stone-300/30
-            transition duration-200 ease d dark:hover:bg-neutral-700 hover:bg-neutral-200"
+            transition duration-200 ease d hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM"
           >
             MÁS PROYECTOS
           </button>

@@ -1,26 +1,14 @@
 "use client";
+import React, { useContext, useState } from "react";
 import Image from "next/image";
-import { img } from "../../../public/images";
-import { useState, useContext } from "react";
-import { AboutKnowMePart1 } from "./AboutKnowMePart1";
-import { AboutKnowMePart2 } from "./AboutKnowMePart2";
+import { img } from "../../../../public/images";
 import { screenContext } from "@/context/screenContext";
+import { SoftSkillsPart1 } from './SoftSkillsPart1';
+import { SoftSkillsPart2 } from "./SoftSkillsPart2";
 
-export const AboutKnowMe = () => {
+export const SoftSkills = () => {
   const [showDiv, setShowDiv] = useState(false);
   const isMobile = useContext(screenContext);
-
-  // const images = [img.aux1, img.aux2, img.aux3];
-
-  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 4000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
 
   const handleShowDiv = () => {
     setShowDiv(!showDiv);
@@ -39,13 +27,13 @@ export const AboutKnowMe = () => {
         flex flex-col md:flex-row mx-auto "
       >
         {!isMobile && !showDiv ? (
-          <AboutKnowMePart1 handleShowDiv={handleShowDiv} />
+          <SoftSkillsPart1 handleShowDiv={handleShowDiv} />
         ) : !isMobile && showDiv ? (
-          <AboutKnowMePart2 handleShowDiv={handleShowDiv} />
+          <SoftSkillsPart2 handleShowDiv={handleShowDiv} />
         ) : isMobile ? (
           <>
-            <AboutKnowMePart1 handleShowDiv={handleShowDiv} />
-            <AboutKnowMePart2 handleShowDiv={handleShowDiv} />
+            <SoftSkillsPart1 handleShowDiv={handleShowDiv} />
+            <SoftSkillsPart2 handleShowDiv={handleShowDiv} />
           </>
         ) : (
           <></>
@@ -54,8 +42,8 @@ export const AboutKnowMe = () => {
           <div>
             <Image
               width={600}
-              height={600}  
-              src={img.aux1}
+              height={600}
+              src={img.auxfondo3}
               alt="Img"
               priority
               className="object-cover"

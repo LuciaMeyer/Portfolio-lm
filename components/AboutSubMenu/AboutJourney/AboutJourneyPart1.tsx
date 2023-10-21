@@ -3,7 +3,7 @@ import { screenContext } from '@/context/screenContext';
 import { motion } from "framer-motion";
 
 
-export const AboutJourneyContent1 = ({handleShowDiv}:any) => {
+export const AboutJourneyPart1 = ({handleShowDiv}:any) => {
   const isMobile = useContext(screenContext);
 
   return (

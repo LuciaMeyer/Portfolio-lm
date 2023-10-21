@@ -1,29 +1,23 @@
 "use client";
-import { Languages } from "./Skills/Languages";
-import { FrontEnd } from "./Skills/FrontEnd";
-import { DesingLibraries } from "./Skills/DesingLibraries";
 import { useState } from "react";
 import Image from "next/image";
-import { img } from "../../../public/images";
-import { BackEnd } from "./Skills/BackEnd";
-import { DataBase } from "./Skills/DataBase";
-import { VersionControl } from "./Skills/VersionControl";
-import { DesignTools } from "./Skills/DesignTools";
-import { Tools } from "./Skills/Tools";
+import { Languages } from "./Languages";
+import { FrontEnd } from "./FrontEnd";
+import { DesingLibraries } from "./DesingLibraries";
+import { BackEnd } from "./BackEnd";
+import { DataBase } from "./DataBase";
+import { VersionControl } from "./VersionControl";
+import { DesignTools } from "./DesignTools";
+import { Tools } from "./Tools";
+import { Methodologies } from "./Methodologies";
+import { img } from "../../../../public/images";
 
 interface SectionContent {
   [key: string]: JSX.Element;
 }
 
-export const AboutSkills = () => {
+export const TechnicalSkills = () => {
   const [currentTab, setCurrentTab] = useState(0);
-
-  // 'BACKEND',
-  // 'DATABASE',
-  // 'CONTROL DE VERSIONES',
-  // 'DISEÑO',
-  // 'OTRAS HERRAMIENTAS',
-  // 'METODOLOGÍAS'
 
   const menuOrder = [
     "LENGUAJES",
@@ -32,8 +26,9 @@ export const AboutSkills = () => {
     "BACKEND",
     "DATABASE",
     "VERSION_CONTROL",
-    'DESIGN_TOOLS',
-    'TOOLS'
+    "DESIGN_TOOLS",
+    "TOOLS",
+    "METHODOLOGIES",
   ];
 
   const sections: SectionContent = {
@@ -44,7 +39,8 @@ export const AboutSkills = () => {
     DATABASE: <DataBase />,
     VERSION_CONTROL: <VersionControl />,
     DESIGN_TOOLS: <DesignTools />,
-    TOOLS: <Tools />
+    TOOLS: <Tools />,
+    METHODOLOGIES: <Methodologies />,
   };
 
   const handleArrowNext = () => {
@@ -61,7 +57,7 @@ export const AboutSkills = () => {
 
   return (
     <>
-      <div className="flex int:flex md:hidden justify-center">
+      {/* <div className="flex int:flex md:hidden justify-center">
         <Image
           width={400}
           height={400}
@@ -69,7 +65,7 @@ export const AboutSkills = () => {
           alt="img"
           priority
         />
-      </div>
+      </div> */}
       <div
         className="
         bg-white dark:bg-BGD
@@ -82,7 +78,7 @@ export const AboutSkills = () => {
             index === currentTab && (
               <div
                 key={menuItem}
-                className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 "
+                className="space-y-6 md:mt-8 md:mr-7"
               >
                 <div className="flex justify-center items-center">
                   <Image
@@ -122,7 +118,7 @@ export const AboutSkills = () => {
               </div>
             )
         )}
-        <div className="md:flex int:hidden hidden mt-8 ml-7 md:w-1/2">
+        {/* <div className="md:flex int:hidden hidden mt-8 ml-7 md:w-1/2">
           <div>
             <Image
               width={600}
@@ -133,7 +129,7 @@ export const AboutSkills = () => {
               className="object-cover"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

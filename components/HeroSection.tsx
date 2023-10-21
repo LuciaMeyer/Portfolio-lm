@@ -9,18 +9,14 @@ import { sectionContext } from "@/context/sectionContext";
 
 interface HeroSectionProps {
   refHero: React.RefObject<HTMLElement>;
-};
+}
 
-
-
-export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
-
-  const { setSection } = useContext(sectionContext)
+export const HeroSection: React.FC<HeroSectionProps> = ({ refHero }) => {
+  const { setSection } = useContext(sectionContext);
 
   useEffect(() => {
-    setSection('home')
-  }, [])
-
+    setSection("home");
+  }, []);
 
   return (
     <>
@@ -71,7 +67,8 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
             <hr className="w-8 h-px md:my-10 my-6 bg-stone-300  dark:bg-stone-400 border-0" />
             <p className="relative md:mr-20 -z-10 md:pb-10 pb-5 md:text-lg text-xl">
               Creo aplicaciones web y mobile. Combino desarrollo eficiente,
-              diseño creativo y estrategias de marketing para lograr los mejores resultados.
+              diseño creativo y estrategias de marketing para lograr los mejores
+              resultados.
             </p>
             <Link
               to="about"
@@ -80,7 +77,9 @@ export const HeroSection:React.FC<HeroSectionProps> = ({ refHero }) => {
               smooth={true}
               offset={-100}
               duration={1000}
-              className="cursor-pointer bg-white dark:bg-BGD text-black text-[.7rem] tracking-wider border-solid border pb-2.5 pt-2 px-4 border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300/90 dark:hover:bg-neutral-700 hover:bg-neutral-200"
+              className="cursor-pointer bg-white dark:bg-BGD text-black text-[.7rem] tracking-wider border-solid border pb-2.5 pt-2 px-4 border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300/90
+              hover:text-LM hover:border-LM
+            dark:hover:text-LM dark:hover:border-LM"
             >
               SABER MÁS
             </Link>

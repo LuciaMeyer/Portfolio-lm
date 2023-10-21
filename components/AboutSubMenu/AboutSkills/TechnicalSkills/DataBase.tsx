@@ -29,7 +29,7 @@ export const DataBase = () => {
             className="absolute border border-transparent rounded-full w-14 h-14"
           >
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
-              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5.5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
                 PostgreSQL
               </span>
@@ -55,7 +55,7 @@ export const DataBase = () => {
             className="absolute z-10 border border-transparent rounded-full w-14 h-14"
           >
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
-              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5.5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
                 Sequelize
               </span>

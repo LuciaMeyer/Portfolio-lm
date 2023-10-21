@@ -2,7 +2,7 @@ import Image from "next/image";
 import { img } from "../../../../public/images";
 import { motion } from "framer-motion";
 
-export const Tools = () => {
+export const DesignTools = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,14 +10,40 @@ export const Tools = () => {
       transition={{ duration: 1.5 }}
     >
       <span className="flex justify-center my-6 md:mt-6 md:mb-10 tracking-wider font-medium dark:font-base dark:text-LM">
-        Otras Herramientas
+        Herramientas de Diseño
       </span>
-      <div className="flex flex-row justify-around md:justify-center md:space-x-16 items-end">
+      <div className="flex flex-row justify-around md:justify-around items-center">
         <div className="flex flex-col relative w-12 justify-center hover:scale-110 transform transition-transform duration-300">
           <Image
             width={200}
             height={200}
-            src={img.vs}
+            src={img.fg}
+            alt="img"
+            priority
+            className="opacity-50 dark:invert-0 invert"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1, transition: { duration: 1 } }}
+            className="absolute border border-transparent rounded-full w-14 h-14"
+          >
+            <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
+                Figma
+              </span>
+            </span>
+          </motion.div>
+          <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
+            Figma
+          </span>
+        </div>
+
+        <div className="flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300">
+          <Image
+            width={200}
+            height={200}
+            src={img.ai}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -28,14 +54,14 @@ export const Tools = () => {
             className="absolute z-10 border border-transparent rounded-full w-14 h-14"
           >
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
-              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5.5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Visual Studio Code
+                Illustrator
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Visual Studio Code
+            Illustrator
           </span>
         </div>
 
@@ -43,33 +69,7 @@ export const Tools = () => {
           <Image
             width={200}
             height={200}
-            src={img.psm}
-            alt="img"
-            priority
-            className="opacity-50 dark:invert-0 invert"
-          />
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1, transition: { duration: 1 } }}
-            className="absolute z-10 border border-transparent rounded-full w-14 h-14"
-          >
-            <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
-              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
-              <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Postman
-              </span>
-            </span>
-          </motion.div>
-          <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Postman
-          </span>
-        </div>
-
-        <div className="flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300">
-          <Image
-            width={200}
-            height={200}
-            src={img.im}
+            src={img.ps}
             alt="img"
             priority
             className="opacity-50 dark:invert-0 invert"
@@ -82,18 +82,47 @@ export const Tools = () => {
             <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
               <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
               <span className="flex justify-center mt-2 dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
-                Insomnia REST
+                Photoshop
               </span>
             </span>
           </motion.div>
           <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
-            Insomnia REST
+            Photoshop
+          </span>
+        </div>
+
+        <div className="flex flex-col relative w-12 hover:scale-110 transform transition-transform duration-300">
+          <Image
+            width={200}
+            height={200}
+            src={img.pr}
+            alt="img"
+            priority
+            className="opacity-50 dark:invert-0 invert"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1, transition: { duration: 1 } }}
+            className="absolute z-10 border border-transparent rounded-full w-14 h-14"
+          >
+            <span className="md:block hidden absolute -top-7 left-[-10px] w-20 h-7 bg-LM rounded-full shadow-md shadow-black">
+              <span className="block w-3 h-3 bg-LM transform rotate-45 absolute bottom-[-5px] left-[30%] translate-x-[-50%] "></span>
+              <span className="flex justify-center mt-[0.3rem] dark:text-TX text-black text-xs tracking-widest text-center font-medium ">
+                Premiere
+              </span>
+            </span>
+          </motion.div>
+          <span className="flex justify-center mt-2 md:hidden text-xs tracking-widest text-center font-medium ">
+            Premiere
           </span>
         </div>
       </div>
       <p className="mt-10">
-        VS Code es un editor de código fuente altamente personalizable y
-        compatible con una amplia variedad de lenguajes de programación. Postman e Insomnia son dos herramientas, también conocidas como clientes REST, con características diferentes que permiten y facilitan la interacción y el diseño de API basadas en HTTP.
+        Estas herramientas son vitales en diseño y producción de contenido multimedia.
+        Figma es una aplicación en la nube para diseñar interfaces y prototipos.
+        Ai se enfoca en gráficos vectoriales y logotipos. Ps es
+        una herramienta poderosa para edición de imágenes y diseño gráfico.
+        Pr es un software de edición de video profesional. 
       </p>
     </motion.div>
   );

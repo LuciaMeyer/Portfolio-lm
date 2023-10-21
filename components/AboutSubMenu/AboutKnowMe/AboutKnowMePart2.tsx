@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll/modules";
 import { screenContext } from "@/context/screenContext";
 
-export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
+export const AboutKnowMePart2 = ({ handleShowDiv }: any) => {
   const isMobile = useContext(screenContext);
   return (
     <motion.div
@@ -57,7 +57,7 @@ export const AboutKnowMeContent2 = ({ handleShowDiv }: any) => {
         seguí explorando esta sección.
       </p>
       <p>
-        Tenés dudas o te gustariía que trabajemos en equipo?{' '}
+        Tenés dudas o te gustaría que trabajemos en equipo?{' '}
         <Link
           to={"contact"}
           activeClass="active"

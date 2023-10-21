@@ -4,8 +4,8 @@ import Image from "next/image";
 import { img } from "../../../public/images";
 import { motion } from "framer-motion";
 import { screenContext } from "@/context/screenContext";
-import { AboutJourneyContent1 } from "./AboutJourneyContent1";
-import { AboutJourneyContent2 } from "./AboutJourneyContent2";
+import { AboutJourneyPart1 } from "./AboutJourneyPart1";
+import { AboutJourneyPart2 } from "./AboutJourneyPart2";
 
 export const AboutJourney = () => {
   // const images = [img.aux1, img.aux2, img.aux3];
@@ -54,13 +54,13 @@ export const AboutJourney = () => {
         flex flex-col md:flex-row mx-auto"
       >
         {!isMobile && !showDiv ? (
-          <AboutJourneyContent1 handleShowDiv={handleShowDiv} />
+          <AboutJourneyPart1 handleShowDiv={handleShowDiv} />
         ) : !isMobile && showDiv ? (
-          <AboutJourneyContent2 handleShowDiv={handleShowDiv} />
+          <AboutJourneyPart2 handleShowDiv={handleShowDiv} />
         ) : isMobile ? (
           <>
-            <AboutJourneyContent1 handleShowDiv={handleShowDiv} />
-            <AboutJourneyContent2 handleShowDiv={handleShowDiv} />
+            <AboutJourneyPart1 handleShowDiv={handleShowDiv} />
+            <AboutJourneyPart2 handleShowDiv={handleShowDiv} />
           </>
         ) : (
           <></>

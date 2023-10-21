@@ -70,6 +70,8 @@ export const img = {
     im:'https://res.cloudinary.com/dw272kava/image/upload/v1697838591/AboutSkills/im_rbnqdz.png',
     psm:'https://res.cloudinary.com/dw272kava/image/upload/v1697838591/AboutSkills/psm_erg53c.png',
     vs:'https://res.cloudinary.com/dw272kava/image/upload/v1697838591/AboutSkills/vs_cgg0f3.png',
+    sc:'https://res.cloudinary.com/dw272kava/image/upload/v1697901765/AboutSkills/sc_ivfvdg.png',
+    kn:'https://res.cloudinary.com/dw272kava/image/upload/v1697902609/AboutSkills/kn_y0vol7.png',
 
 
   };

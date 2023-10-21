@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 
 
-export const AboutJourneyContent2 = ({ handleShowDiv }: any) => {
+export const AboutJourneyPart2 = ({ handleShowDiv }: any) => {
   const isMobile = useContext(screenContext);
 
   return (
@@ -15,7 +15,7 @@ export const AboutJourneyContent2 = ({ handleShowDiv }: any) => {
     className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto"
   >
     <p className={`${isMobile && 'mt-6'}`}>
-      más adelante, como
+      Más adelante, como
       <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
         {" freelance,  "}
       </span>
@@ -44,7 +44,9 @@ export const AboutJourneyContent2 = ({ handleShowDiv }: any) => {
         }
       </span>
       <br />
-      <button className="mt-2 px-2 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300 dark:hover:bg-neutral-700 hover:bg-neutral-200">
+      <button className="mt-4 py-1 px-4 cursor-pointer text-black text-[.7rem] tracking-wider border-solid border border-TX/50 dark:border-stone-300/30 transition duration-200 ease dark:text-stone-300
+      hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM"
+      >
         DESCARGAR CV
       </button>
       {!isMobile && (
