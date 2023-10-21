@@ -90,7 +90,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ refAbout }) => {
     <section
       ref={refAbout}
       id="about"
-      className="flex-1 pt-4 md:pt-10 md:pb-60 relative overflow-hidden md:mx-auto mx-6 h-full md:h-[50rem] "
+      className="flex-1 pt-4 md:pt-10 pb-60 relative overflow-hidden md:mx-auto mx-6 h-full md:h-[50rem] "
     >
       <SlideUp offset="-300px 0px -300px 0px">
         <div className="md:hidden flex flex-row items-center my-auto md:pb-10 pb-8">
