@@ -1,7 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const ProjectsContent = ({ project }: any) => {
+interface Project {
+  name: string;
+  description: string;
+  image: any;
+  github: string;
+  link: string;
+}
+
+export const ProjectsContent: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <>
       <Link href={project.link}>

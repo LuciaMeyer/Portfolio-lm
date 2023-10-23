@@ -2,8 +2,11 @@ import React, { useContext } from 'react';
 import { screenContext } from '@/context/screenContext';
 import { motion } from 'framer-motion';
 
+interface AboutKnowMePart1Props {
+  handleShowDiv: () => void;
+}
 
-export const AboutKnowMePart1 = ({ handleShowDiv }: any) => {
+export const AboutKnowMePart1:React.FC<AboutKnowMePart1Props> = ({ handleShowDiv }) => {
   const isMobile = useContext(screenContext);
   return (
     <motion.div

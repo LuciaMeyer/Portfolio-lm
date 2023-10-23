@@ -3,7 +3,11 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll/modules';
 import { screenContext } from '@/context/screenContext';
 
-export const AboutKnowMePart2 = ({ handleShowDiv }: any) => {
+interface AboutKnowMePart2Props {
+  handleShowDiv: () => void;
+}
+
+export const AboutKnowMePart2:React.FC<AboutKnowMePart2Props> = ({ handleShowDiv }) => {
   const isMobile = useContext(screenContext);
   return (
     <motion.div

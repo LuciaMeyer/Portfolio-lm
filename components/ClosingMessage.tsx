@@ -1,9 +1,6 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect';
 
-interface EndSectionProps {
-  refEnd: React.RefObject<HTMLDivElement>;
-}
 export const ClosingMessage: any = ({ refEnd }:any) => {
   return (
     <div

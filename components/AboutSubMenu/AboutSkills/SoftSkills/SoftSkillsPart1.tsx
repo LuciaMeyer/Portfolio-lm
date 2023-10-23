@@ -2,7 +2,11 @@ import React, { useContext } from 'react';
 import { screenContext } from '@/context/screenContext';
 import { motion } from 'framer-motion';
 
-export const SoftSkillsPart1 = ({ handleShowDiv }: any) => {
+interface SoftSkillsPart1Props {
+  handleShowDiv: () => void;
+};
+
+export const SoftSkillsPart1:React.FC<SoftSkillsPart1Props> = ({ handleShowDiv }) => {
   const isMobile = useContext(screenContext);
 
   return (
