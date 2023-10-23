@@ -1,9 +1,7 @@
-"use client";
-import Image from "next/image";
-import { img } from "../../public/images";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-scroll/modules";
+'use client';
+import Image from 'next/image';
+import { img } from '@/public/images';
+import { useState, useEffect } from 'react';
 
 export const AboutMotivation = () => {
   const [showDiv, setShowDiv] = useState(false);
@@ -32,32 +30,32 @@ export const AboutMotivation = () => {
 
   return (
     <>
-      <div className="flex md:hidden justify-center">
+      <div className='flex md:hidden justify-center'>
         <Image
           width={400}
           height={400}
           src={img.auxfondo2}
-          alt="img"
+          alt='img'
           priority
         />
       </div>
       <div
-        className="bg-white dark:bg-BGD
+        className='bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
          md:w-1/2 mt-2 md:mt-auto
-        flex flex-col md:flex-row mx-auto "
+        flex flex-col md:flex-row mx-auto '
       >
-        <div className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto">
+        <div className='space-y-6 md:mt-8 md:mr-7 int:mr-0 md:w-1/2 int:w-auto'>
           <p>falta texto</p>
         </div>
-        <div className="md:flex hidden mt-8 ml-7 md:w-1/2">
+        <div className='md:flex hidden mt-8 ml-7 md:w-1/2'>
           <Image
             width={600}
             height={600}
             src={img.auxfondo2}
-            alt="Img"
+            alt='Img'
             priority
-            className="object-cover"
+            className='object-cover'
           />
         </div>
       </div>

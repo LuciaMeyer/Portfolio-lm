@@ -1,6 +1,7 @@
 'use client';
 import { useState, ChangeEvent, useRef, FormEvent } from 'react';
-import SlideUp from './SlideUp';
+import { Link } from 'react-scroll';
+import { SlideUp } from '@/components';
 import swal from 'sweetalert';
 import emailjs from '@emailjs/browser';
 
@@ -72,15 +73,22 @@ export const Contact: React.FC<ContactSectionProps> = ({ refContact }) => {
   return (
     <section ref={refContact} id='contact' className='flex-1 md:pt-10 pb-60 mx-6 md:mx-auto'>
 
-      <SlideUp offset="-300px 0px -300px 0px">
-        <div className="md:hidden flex flex-row items-center my-auto md:pb-10 pb-8">
-          <h2 className="text-center text-3xl font-bold text-LM">
+      <SlideUp offset='-300px 0px -300px 0px'>
+        <Link
+          to='contact'
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          className='md:hidden flex flex-row items-center my-auto md:pb-10 pb-8'>
+          <h2 className='text-center text-3xl font-bold text-LM'>
             Contacto
           </h2>
-        </div>
+        </Link>
       </SlideUp>
 
       <SlideUp offset='-300px 0px -300px 0px'>
+        <span className='flex mb-8 justify-center'>
+          Tenés dudas o te gustaría que trabajemos en equipo? Escribime.</span>
         <form ref={form} onSubmit={handleSubmit}>
           <div className='md:w-1/3
           flex flex-col 

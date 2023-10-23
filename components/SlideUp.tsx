@@ -33,7 +33,7 @@ const useElementVisibility = (ref: React.RefObject<HTMLDivElement>, offset: stri
   return isVisible;
 }
 
-export default function SlideUp({ children, offset = '0px' }: Props) {
+export function SlideUp({ children, offset = '0px' }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useElementVisibility(ref, offset);
 

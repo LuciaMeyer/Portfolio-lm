@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-scroll/modules";
-import { screenContext } from "@/context/screenContext";
+import React, { useContext } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-scroll/modules';
+import { screenContext } from '@/context/screenContext';
 
 export const AboutKnowMePart2 = ({ handleShowDiv }: any) => {
   const isMobile = useContext(screenContext);
@@ -10,28 +10,28 @@ export const AboutKnowMePart2 = ({ handleShowDiv }: any) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="space-y-6 md:mt-8 md:mr-7 md:w-1/2 int:w-auto"
+      className='space-y-6 md:mt-8 md:mr-7 int:mr-0 md:w-1/2 int:w-auto'
     >
       <p className={`${isMobile && 'mt-6'}`}>
         Entrar en este sector me impulsó a estar en
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" constante proceso de aprendizaje. "}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
+          {' constante proceso de aprendizaje. '}
         </span>
         Actualmente, estoy sumando conocimientos sobre
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" UX/UI"}
-        </span>{" "}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
+          {' UX/UI'}
+        </span>{' '}
         y explorando los nuevos paradigmas y evolución que trae la
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" Inteligencia Artificial."}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
+          {' Inteligencia Artificial.'}
         </span>
       </p>
 
       <p>
         Podés conocer alguno de{' '}
         <Link
-          to={"projects"}
-          activeClass="active"
+          to={'projects'}
+          activeClass='active'
           spy={true}
           smooth={true}
           offset={-100}
@@ -43,24 +43,24 @@ export const AboutKnowMePart2 = ({ handleShowDiv }: any) => {
       </p>
       <p>
         Si querés saber cuáles son las
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" herramientas "}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
+          {' herramientas '}
         </span>
         que manejo,
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" mi recorrido "}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
+          {' mi recorrido '}
         </span>
         y qué es lo que
-        <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-          {" me motiva, "}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
+          {' me motiva, '}
         </span>
         seguí explorando esta sección.
       </p>
       <p>
         Tenés dudas o te gustaría que trabajemos en equipo?{' '}
         <Link
-          to={"contact"}
-          activeClass="active"
+          to={'contact'}
+          activeClass='active'
           spy={true}
           smooth={true}
           offset={-100}
@@ -71,15 +71,15 @@ export const AboutKnowMePart2 = ({ handleShowDiv }: any) => {
         </Link>.
       </p>
       {!isMobile && (
-        <div className="md:mt-6 mt-4 flex items-center justify-between">
+        <div className='md:mt-6 mt-4 flex items-center justify-between'>
           <button
             onClick={handleShowDiv}
-            className="my-2 px-2 cursor-pointer text-black text-[.7rem] placeholder:tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200"
+            className='my-2 px-2 cursor-pointer text-black text-[.7rem] placeholder:tracking-wider transition duration-200 ease dark:text-stone-400 dark:hover:bg-neutral-700 hover:bg-neutral-200'
           >
             VOLVER
           </button>
           <button onClick={handleShowDiv}>
-            <span className="text-sm dark:text-stone-400">2 / 2</span>
+            <span className='text-sm dark:text-stone-400'>2 / 2</span>
           </button>
         </div>
       )}

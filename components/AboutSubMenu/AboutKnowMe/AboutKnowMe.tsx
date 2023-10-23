@@ -1,10 +1,10 @@
-"use client";
-import Image from "next/image";
-import { img } from "../../../public/images";
-import { useState, useContext } from "react";
-import { AboutKnowMePart1 } from "./AboutKnowMePart1";
-import { AboutKnowMePart2 } from "./AboutKnowMePart2";
-import { screenContext } from "@/context/screenContext";
+'use client';
+import Image from 'next/image';
+import { img } from '../../../public/images';
+import { useState, useContext } from 'react';
+import { AboutKnowMePart1 } from '@/components';
+import { AboutKnowMePart2 } from '@/components';
+import { screenContext } from '@/context/screenContext';
 
 export const AboutKnowMe = () => {
   const [showDiv, setShowDiv] = useState(false);
@@ -28,15 +28,15 @@ export const AboutKnowMe = () => {
 
   return (
     <>
-      <div className="flex md:hidden int:flex justify-center">
-        <Image width={400} height={400} src={img.auxlu} alt="img" priority />
+      <div className='flex md:hidden int:flex justify-center'>
+        <Image width={400} height={400} src={img.auxlu} alt='img' priority />
       </div>
       <div
-        className="
+        className='
         bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
         md:w-1/2 mt-2 md:mt-auto
-        flex flex-col md:flex-row mx-auto "
+        flex flex-col md:flex-row mx-auto '
       >
         {!isMobile && !showDiv ? (
           <AboutKnowMePart1 handleShowDiv={handleShowDiv} />
@@ -50,15 +50,15 @@ export const AboutKnowMe = () => {
         ) : (
           <></>
         )}
-        <div className="md:flex int:hidden hidden mt-8 ml-7 md:w-1/2">
+        <div className='md:flex int:hidden hidden mt-8 ml-7 md:w-1/2'>
           <div>
             <Image
               width={600}
               height={600}  
               src={img.aux1}
-              alt="Img"
+              alt='Img'
               priority
-              className="object-cover"
+              className='object-cover'
             />
           </div>
         </div>

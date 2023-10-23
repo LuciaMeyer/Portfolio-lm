@@ -1,11 +1,11 @@
 'use client';
-import { AboutSection } from '@/components/AboutSection';
-import { Contact } from '@/components/Contact';
-import { HeroSection } from '@/components/HeroSection';
-import { ProjectsSection } from '@/components/Projects/ProjectsSection';
-import { Resurces } from '@/components/Resurces';
-import React, { useContext, useEffect } from 'react';
-import { sectionContext } from '../context/sectionContext';
+import { AboutSection } from '@/components';
+import { Contact } from '@/components';
+import { HeroSection } from '@/components';
+import { ProjectsSection } from '@/components';
+import { Resurces } from '@/components';
+import React, { useContext } from 'react';
+import { sectionContext } from '@/context/sectionContext';
 
 export default function Home() {
 
