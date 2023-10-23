@@ -1,17 +1,14 @@
 'use client';
-import { AboutSection } from '@/components';
-import { Contact } from '@/components';
-import { HeroSection } from '@/components';
-import { ProjectsSection } from '@/components';
-import { Resurces } from '@/components';
+import { AboutSection, Contact, HeroSection, ProjectsSection, Resurces, ClosingMessage } from '@/components';
 import React, { useContext } from 'react';
 import { sectionContext } from '@/context/sectionContext';
+
 
 export default function Home() {
 
   const objetcContext = useContext(sectionContext);
 
-  const { refHero, refAbout, refProjects, refResurces, refContact, useIsInViewport  } = objetcContext.sectionsRef;
+  const { refHero, refAbout, refProjects, refResurces, refContact, refEnd, useIsInViewport  } = objetcContext.sectionsRef;
   const setSection = objetcContext.setSection;
 
 
@@ -20,12 +17,14 @@ export default function Home() {
   const project = useIsInViewport(refProjects);
   const resurces = useIsInViewport(refResurces);
   const contact = useIsInViewport(refContact);
+  const end = useIsInViewport(refEnd)
 
   !!hero && setSection('home')
   !!about && setSection('about')
   !!project && setSection('projects')
   !!resurces && setSection('resources')
   !!contact && setSection('contact')
+  !!end && setSection('end')
 
   return (
     <main>
@@ -34,6 +33,7 @@ export default function Home() {
       <ProjectsSection refProjects={refProjects} />
       <Resurces refResurces={refResurces} />
       <Contact refContact={refContact} />
+      <ClosingMessage refEnd={refEnd} />
     </main>
   );
 }

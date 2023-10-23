@@ -1,12 +1,8 @@
 'use client';
-import { SlideUp } from '@/components';
+import { SlideUp, AboutKnowMe, AboutJourney, AboutMotivation, AboutSkills } from '@/components';
 import Image from 'next/image';
 import { useState } from 'react';
 import { img } from '../public/images';
-import { AboutKnowMe } from '@/components';
-import { AboutJourney } from '@/components';
-import { AboutMotivation } from '@/components';
-import { AboutSkills } from '@/components';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';

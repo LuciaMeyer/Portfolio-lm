@@ -43,6 +43,8 @@ export const SectionProvider = ({
   const refProjects = useRef<HTMLDivElement | null>(null);
   const refResurces = useRef<HTMLDivElement | null>(null);
   const refContact = useRef<HTMLDivElement | null>(null);
+  const refEnd = useRef<HTMLDivElement | null>(null);
+
 
   const sectionsRef = {
     refHero,
@@ -50,6 +52,7 @@ export const SectionProvider = ({
     refProjects,
     refResurces,
     refContact,
+    refEnd,
     useIsInViewport,
   };
 

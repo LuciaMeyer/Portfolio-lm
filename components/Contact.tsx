@@ -1,7 +1,7 @@
 'use client';
+import { SlideUp } from '@/components';
 import { useState, ChangeEvent, useRef, FormEvent } from 'react';
 import { Link } from 'react-scroll';
-import { SlideUp } from '@/components';
 import swal from 'sweetalert';
 import emailjs from '@emailjs/browser';
 

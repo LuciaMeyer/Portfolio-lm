@@ -1,7 +1,6 @@
 'use client';
+import { TechnicalSkills, SoftSkills } from '@/components';
 import { useState } from 'react';
-import { TechnicalSkills } from '@/components';
-import { SoftSkills } from '@/components';
 
 export const AboutSkills = () => {
   const [showSection, setShowSection] = useState('tech');

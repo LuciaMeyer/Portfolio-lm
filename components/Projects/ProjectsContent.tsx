@@ -19,7 +19,7 @@ export const ProjectsContent = ({ project }: any) => {
       >
         {project.name}
       </h1>
-      <button className='absolute md:bottom-4 bottom-11 text-2xl left-4 w-7 h-7 bg-transparent rounded-full border border-neutral-400  flex items-center justify-center text-neutral-400 hover:bg-neutral-600 hover:text-gray-800 hover:border-transparent transition duration-300 ease-in-out'>
+      <button className='absolute md:bottom-4 bottom-11 text-2xl left-4 w-7 h-7 bg-transparent rounded-full border border-neutral-400 flex items-center justify-center text-neutral-400 hover:bg-neutral-600 hover:text-gray-800 hover:border-transparent transition duration-300 ease-in-out'>
         +
       </button>
     </>

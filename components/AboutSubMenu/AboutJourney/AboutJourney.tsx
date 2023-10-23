@@ -1,10 +1,9 @@
 'use client';
+import { AboutJourneyPart1, AboutJourneyPart2 } from '@/components';
 import { useContext, useState } from 'react';
 import Image from 'next/image';
-import { img } from '../../../public/images';
+import { img } from '@/public/images';
 import { screenContext } from '@/context/screenContext';
-import { AboutJourneyPart1 } from '@/components';
-import { AboutJourneyPart2 } from '@/components';
 
 export const AboutJourney = () => {
   // const images = [img.aux1, img.aux2, img.aux3];

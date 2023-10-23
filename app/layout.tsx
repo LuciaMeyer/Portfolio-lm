@@ -1,16 +1,14 @@
 'use client';
+import { Navbar, Footer, SplashScreen } from '@/components';
 import { useEffect, useState } from 'react';
 import { ScreenProvider } from '@/context/screenContext';
 import { SectionProvider } from '@/context/sectionContext';
 import { motion } from 'framer-motion';
 import { Jost } from '@next/font/google';
 import { ThemeProvider } from 'next-themes';
-import { Navbar } from '@/components';
-import { Footer } from '@/components';
-import { SplashScreen } from '@/components';
-import '../styles/globals.css';
+import { usePathname } from 'next/navigation';
 import 'atropos/css';
-
+import '../styles/globals.css';
 
 const JostFont = Jost({
   subsets: ['latin'],
@@ -25,8 +23,10 @@ export default function RootLayout({
 }) {
   const [showSplash, setShowSplash] = useState(true);
   const [opacity, setOpacity] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
+    console.log(pathname)
     setTimeout(() => {
       setOpacity(false);
     }, 2000);
@@ -50,15 +50,28 @@ export default function RootLayout({
         <ScreenProvider>
           <SectionProvider>
             <ThemeProvider enableSystem={true} attribute='class'>
-              {showSplash ? (
-                <motion.div initial={{ opacity: 1 }} animate={!opacity && hide}>
-                  <SplashScreen />
-                </motion.div>
+              {pathname === '/' ? (
+                <>
+                  {showSplash ? (
+                    <motion.div
+                      initial={{ opacity: 1 }}
+                      animate={!opacity && hide}
+                    >
+                      <SplashScreen />
+                    </motion.div>
+                  ) : (
+                    <>
+                      <Navbar />
+                      {children}
+                      <Footer />
+                    </>
+                  )}
+                </>
               ) : (
                 <>
-                  <Navbar />
+                  <Navbar/>
                   {children}
-                  <Footer />
+                  <Footer/>
                 </>
               )}
             </ThemeProvider>

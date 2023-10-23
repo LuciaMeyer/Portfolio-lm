@@ -1,4 +1,5 @@
 'use client';
+import { ParticlesComponents, Icons } from '@/components';
 import Image from 'next/image';
 import { useContext, useState } from 'react';
 import { Link } from 'react-scroll/modules';
@@ -6,11 +7,11 @@ import { useTheme } from 'next-themes';
 import { img } from '@/public/images';
 import { CiDark } from 'react-icons/ci';
 import { CiBrightnessDown } from 'react-icons/ci';
-import { ParticlesComponents } from '@/components';
 import { motion } from 'framer-motion';
-import { Icons } from '@/components';
 import { screenContext } from '@/context/screenContext';
 import { sectionContext } from '@/context/sectionContext';
+import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface NavItem {
   label: string;
@@ -44,6 +45,11 @@ const NAV_ITEMS: Array<NavItem> = [
     page: 'contact',
     title: 'Contacto',
   },
+  {
+    label: '',
+    page: 'end',
+    title: '',
+  },
 ];
 
 export const Navbar = () => {
@@ -54,6 +60,8 @@ export const Navbar = () => {
   const objetcContext = useContext(sectionContext);
   const section = objetcContext.section;
   const setSection = objetcContext.setSection;
+  const pathname = usePathname();
+  const router = useRouter()
 
   const handleMenuClick = (page: string) => {
     setNavbar(!navbar);
@@ -121,51 +129,52 @@ export const Navbar = () => {
                 {`${theme === 'dark' ? 'MODO CLARO' : 'MODO OSCURO'}`}
               </button>
             </div>
-            {NAV_ITEMS.map((item, idx) => {
-              return (
-                <Link
-                  key={idx}
-                  className={
-                    'hover:text-LM md:font-thin text-lg tracking-wider font-medium'
-                  }
-                  to={item.page}
-                  activeClass='active'
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={1000}
-                  onClick={() => handleMenuClick(item.page)}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+            {pathname === '/' && (
+              <>
+                {NAV_ITEMS.map((item, idx) => (
+                  <Link
+                    key={idx}
+                    className={
+                      'hover:text-LM md:font-thin text-lg tracking-wider font-medium'
+                    }
+                    to={item.page}
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={1000}
+                    onClick={() => handleMenuClick(item.page)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </>
+            )}
           </div>
         </motion.div>
         <div className='flex items-center justify-between backdrop-blur-md '>
           {/* LOGO */}
-          <div className='flex md:ml-8 ml-4 cursor-pointer '>
-            {isMobile && (section === 'home' || section === '') ? (
-              <div className='h-14'></div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={
-                  isMobile ? { duration: 1 } : { duration: 1, delay: 2 }
-                }
-                className='md:h-auto h-14'
-              >
-                <Link
-                  to='home'
-                  activeClass='active'
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                  onClick={hanldeLogoClick}
-                  className='md:h-auto h-16'
+          {pathname === '/' ? (
+            <>
+              {isMobile && (section === 'home' || section === '') ? (
+                <div className='h-14'></div>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={
+                    isMobile ? { duration: 1 } : { duration: 1, delay: 2 }
+                  }
+                  className='flex md:ml-8 ml-4 cursor-pointer md:h-auto h-14'
                 >
-                  <div>
+                  <Link
+                    to='home'
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                    onClick={hanldeLogoClick}
+                  >
                     <Image
                       className='md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300'
                       src={img.LMb}
@@ -174,15 +183,30 @@ export const Navbar = () => {
                       height={35}
                       priority
                     />
-                  </div>
-                </Link>
-              </motion.div>
-            )}
-          </div>
+                  </Link>
+                </motion.div>
+              )}
+            </>
+          ) : (
+            <div className='md:h-auto h-14' onClick={()=>{router.push('/')}}>
+              <div className='flex md:ml-8 ml-4 cursor-pointer'>
+                <Image
+                  className='md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300'
+                  src={img.LMb}
+                  alt='LM'
+                  width={35}
+                  height={35}
+                  priority
+                />
+              </div>
+            </div>
+          )}
+
           {/* SECCIONES */}
           {NAV_ITEMS.map((item, idx) =>
             section === 'home' ? null : section === item.page ? (
               <Link
+                key={idx}
                 to={section}
                 smooth={true}
                 duration={1000}

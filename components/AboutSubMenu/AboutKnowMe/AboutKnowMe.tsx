@@ -1,9 +1,8 @@
 'use client';
+import { AboutKnowMePart1, AboutKnowMePart2 } from '@/components';
 import Image from 'next/image';
-import { img } from '../../../public/images';
+import { img } from '@/public/images';
 import { useState, useContext } from 'react';
-import { AboutKnowMePart1 } from '@/components';
-import { AboutKnowMePart2 } from '@/components';
 import { screenContext } from '@/context/screenContext';
 
 export const AboutKnowMe = () => {

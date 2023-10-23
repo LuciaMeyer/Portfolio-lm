@@ -1,11 +1,10 @@
-'use client';
 import Image from 'next/image';
 import { img } from '@/public/images';
 import { Link } from 'react-scroll/modules';
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import { sectionContext } from '@/context/sectionContext';
+import { usePathname } from 'next/navigation';
 
 interface IconsProps {
   section: string;
@@ -16,30 +15,7 @@ export const Icons: React.FC<IconsProps> = () => {
   const objetcContext = useContext(sectionContext);
   const section = objetcContext.section;
   const setSection = objetcContext.setSection;
-  const [endPage, setEndPage] = useState(false);
-  const scrollY = typeof window !== 'undefined' ? window.scrollY : 0;
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleScroll = () => {
-        const pageHeight = document.documentElement.scrollHeight;
-        const windowHeight = window.innerHeight;
-        const threshold = 100;
-        if (scrollY + windowHeight >= pageHeight - threshold) {
-          console.log('final de la página');
-          setEndPage(true);
-        } else setEndPage(false);
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    !!endPage && setSection('');
-  }, [endPage]);
+  const pathname = usePathname();
 
   const handleClick = (current: string) => {
     const sections = [
@@ -49,6 +25,7 @@ export const Icons: React.FC<IconsProps> = () => {
       'resources',
       'contact',
       'home',
+      'end'
     ];
     const index = sections.indexOf(current);
     setSection(sections[index + 1] || 'home');
@@ -122,39 +99,40 @@ export const Icons: React.FC<IconsProps> = () => {
           </a>
         </div>
       </div>
-
       <hr className='md:flex hidden fixed bottom-6 left-0.5 h-[1.5px] w-28 rotate-90 bg-stone-400 dark:bg-TX' />
-
-      <div
-        className={`md:w-10 w-12 fixed md:bottom-16 bottom-12 md:right-12 right-4  
-         transform transition-transform duration-300 md:hover:scale-75
-          ${section === 'contact' && 'rotate-180'}
-          ${!!endPage ? 'rotate-180' : 'rotate-0'}
-          `}
-      >
-        <Link
-          to={
-            section === 'home'
-              ? 'about'
-              : section === 'about'
-              ? 'projects'
-              : section === 'projects'
-              ? 'resources'
-              : section === 'resources'
-              ? 'contact'
-              : 'home'
-          }
-          activeClass='active'
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={1000}
-          onClick={() => handleClick(section)}
-          className='cursor-pointer'
+      {pathname === '/'&&
+        <div
+          className={`md:w-10 w-12 fixed md:bottom-16 bottom-12 md:right-12 right-4  
+          transform transition-transform duration-300 md:hover:scale-75
+          ${section === 'end' ? 'rotate-180' : 'rotate-0'}
+            `}
         >
-          <Image width='50' height='50' src={img.fl_am} alt='img' priority />
-        </Link>
-      </div>
+          <Link
+            to={
+              section === 'home'
+                ? 'about'
+                : section === 'about'
+                ? 'projects'
+                : section === 'projects'
+                ? 'resources'
+                : section === 'resources'
+                ? 'contact'
+                : section === 'contact'
+                ? 'end'             
+                : 'home'
+            }
+            activeClass='active'
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={1000}
+            onClick={() => handleClick(section)}
+            className='cursor-pointer'
+          >
+            <Image width='50' height='50' src={img.fl_am} alt='img' priority />
+          </Link>
+        </div>
+      }
     </motion.div>
   );
 };

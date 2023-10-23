@@ -1,10 +1,9 @@
 'use client';
+import { SoftSkillsPart1, SoftSkillsPart2 } from '@/components';
 import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import { img } from '@/public/images';
 import { screenContext } from '@/context/screenContext';
-import { SoftSkillsPart1 } from '@/components';
-import { SoftSkillsPart2 } from '@/components';
 
 export const SoftSkills = () => {
   const [showDiv, setShowDiv] = useState(false);

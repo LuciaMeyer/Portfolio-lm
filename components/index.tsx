@@ -33,6 +33,7 @@ export { ProjectsContent } from './Projects/ProjectsContent';
 //
 
 export { AboutSection } from './AboutSection';
+export { ClosingMessage } from './ClosingMessage';
 export { Contact } from './Contact';
 export { Footer } from './Footer';
 export { HeroSection } from './HeroSection';

@@ -1,15 +1,7 @@
 'use client';
 import { useState } from 'react';
+import { BackEnd, DataBase, DesignTools, DesingLibraries, FrontEnd, Languages, Methodologies, Tools, VersionControl } from '@/components';
 import Image from 'next/image';
-import { BackEnd } from '@/components';
-import { DataBase } from '@/components';
-import { DesignTools } from '@/components';
-import { DesingLibraries } from '@/components';
-import { FrontEnd } from '@/components';
-import { Languages } from '@/components';
-import { Methodologies } from '@/components';
-import { Tools } from '@/components';
-import { VersionControl } from '@/components';
 import { img } from '@/public/images';
 
 interface SectionContent {
