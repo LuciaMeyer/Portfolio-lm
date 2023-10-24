@@ -1,5 +1,5 @@
 import React from 'react'
-import letsgo from '@/public/letsgo.gif';
+import videgames from '@/public/videogames.gif';
 import Image from 'next/image';
 import Link from 'next/link';
 import Atropos from 'atropos/react';
@@ -7,34 +7,34 @@ import { useContext } from 'react';
 import { screenContext } from '@/context/screenContext';
 
 
-export const LestGO = () => {
+export const Videogames = () => {
 
     const isMobile = useContext(screenContext);
 
     return (
         <section id='lestgo' className='flex flex-col md:w-2/3 md:mx-auto mx-6 md:mb-40 mb-20'>
             <div className='md:hidden int:flex int:flex-col flex flex-col mb-6'>
-                <span className='font-semibold text-LM text-2xl tracking-wide'>E-COMERCE</span>
-                <span className='text-xl tracking-wide'>let's GO</span>
+                <span className='font-semibold text-LM text-2xl tracking-wide'>VIDEOGAMES</span>
+                <span className='text-xl tracking-wide'>Single Page Application</span>
             </div>
             <div className='flex flex-col int:flex-col md:flex-row'>
                 {isMobile ?
                     <>
                         <div className='md:mr-7 md:ml-0 mx-auto'>
                             <Image
-                                src={letsgo}
+                                src={videgames}
                                 alt='lestgo'
                                 width={600}
                                 height={600}
                             />
                         </div>
-                        <span className='text-sm tracking-wide'>&nbsp;realizado: 22/08/2022 - 22/09/2022</span>
+                        <span className='text-sm tracking-wide'>&nbsp;realizado: 15/07/2022 - 16/08/2022</span>
                     </>
                     :
                     <Atropos className='hover:scale-90 transform transition-transform duration-300 '>
                         <div className='md:mr-7 md:ml-0 mx-auto'>
                             <Image
-                                src={letsgo}
+                                src={videgames}
                                 alt='lestgo'
                                 width={600}
                                 height={600}
@@ -44,11 +44,11 @@ export const LestGO = () => {
                 }
                 <div className='space-y-6 md:w-1/2 int:w-auto my-auto'>
                     <div className='md:flex int:hidden hidden items-center '>
-                        <span className='font-semibold text-LM text-2xl tracking-wide'>E-COMERCE - </span>
-                        <span className='text-xl tracking-wide'>&nbsp;let's GO</span>
+                        <span className='font-semibold text-LM text-2xl tracking-wide'>VIDEOGAMES - </span>
+                        <span className='text-xl tracking-wide'>&nbsp;Single Page Application</span>
                     </div>
                     <p className='text-justify text-lg'>
-                        Este proyecto lo desarrollé junto a un grupo de compañeros dentro del cursado de la carrera Full Stack Developer. Fue la entrega final con la cual nos graduamos. Es un e-commerce de alquiler temporal de bicicletas, accesorios y pack de aventuras según calendario y stock disponible.
+                        Esta SPA la desarrollé como parte del cursado de la carrera de Full Stack Developer, en la etapa de Proyecto Individual. Es una aplicación web que consume datos de una API externa y consultas a una base de datos propia.
                     </p>
                     <div className='flex '>
                         <Link
@@ -88,7 +88,7 @@ export const LestGO = () => {
                 </div>
             </div>
 
-            <span className='md:block hidden text-sm tracking-wide'>&nbsp;realizado: 22/08/2022 - 22/09/2022</span><br />
+            <span className='md:block hidden text-sm tracking-wide'>&nbsp;realizado: 15/07/2022 - 16/08/2022</span><br />
             <div className='space-y-4 mt-10'>
                 <span className='text-xl tracking-wide font-semibold text-LM'>✔ Detalle</span>
                 <p>
@@ -114,7 +114,7 @@ export const LestGO = () => {
                     › Notificaciones y mailing ⇢ Socketio EmailJS<br />
                     › Almacenamiento multimedia ⇢ Cloudinary<br />
                     › Persistencia de datos ⇢ LocalStorage<br />
-                    › Diseño responsive ⇢ CCSModules - MaterialUI Figma<br />
+                    › Diseño responsive ⇢ CCSModules #MaterialUI Figma<br />
                     › Pasarela de pagos ⇢ MercadoPago<br />
                     › Reviews a través de posteo de experiencias<br />
                     › Filtros y ordenamientos combinados<br />

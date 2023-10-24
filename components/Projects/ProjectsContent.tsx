@@ -9,7 +9,7 @@ interface Project {
 export const ProjectsContent: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <>
-      <Link href='/projects'>
+      <Link href='/projects' target='_blank'>
         <Image
           src={project.image}
           alt=''
