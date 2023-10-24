@@ -3,16 +3,13 @@ import Image from 'next/image';
 
 interface Project {
   name: string;
-  description: string;
   image: any;
-  github: string;
-  link: string;
 }
 
 export const ProjectsContent: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <>
-      <Link href={project.link}>
+      <Link href='/projects'>
         <Image
           src={project.image}
           alt=''

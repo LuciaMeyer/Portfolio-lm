@@ -35,7 +35,7 @@ export const AboutKnowMe = () => {
         bg-white dark:bg-BGD
         text-justify md:text-justify text-lg
         md:w-1/2 mt-2 md:mt-auto
-        flex flex-col md:flex-row mx-auto '
+        flex flex-col md:flex-row mx-auto'
       >
         {!isMobile && !showDiv ? (
           <AboutKnowMePart1 handleShowDiv={handleShowDiv} />

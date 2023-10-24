@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll/modules';
+import { Link as LinkR} from 'react-scroll/modules';
 import { screenContext } from '@/context/screenContext';
+import Link from 'next/link'
+
 
 interface AboutKnowMePart2Props {
   handleShowDiv: () => void;
@@ -21,9 +23,11 @@ export const AboutKnowMePart2:React.FC<AboutKnowMePart2Props> = ({ handleShowDiv
         <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
           {' constante proceso de aprendizaje. '}
         </span>
-        Actualmente, estoy sumando conocimientos sobre
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
-          {' UX/UI'}
+        Actualmente, estoy sumando conocimientos sobre{' '}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM border-b-stone-700 dark:border-b-LM border-b-[1.8px]'>
+          <Link href='https://rockcontent.com/es/blog/ui-ux/' target='_blank'>
+            {'UX/UI'}
+          </Link>
         </span>{' '}
         y explorando los nuevos paradigmas y evolución que trae la
         <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
@@ -33,7 +37,7 @@ export const AboutKnowMePart2:React.FC<AboutKnowMePart2Props> = ({ handleShowDiv
 
       <p>
         Podés conocer alguno de{' '}
-        <Link
+        <LinkR
           to={'projects'}
           activeClass='active'
           spy={true}
@@ -43,7 +47,7 @@ export const AboutKnowMePart2:React.FC<AboutKnowMePart2Props> = ({ handleShowDiv
           className='cursor-pointer border-b-LM border-b-2 text-LM font-medium'
         >
           mis proyectos
-        </Link>.
+        </LinkR>.
       </p>
       <p>
         Si querés saber cuáles son las
@@ -62,7 +66,7 @@ export const AboutKnowMePart2:React.FC<AboutKnowMePart2Props> = ({ handleShowDiv
       </p>
       <p>
         Tenés dudas o te gustaría que trabajemos en equipo?{' '}
-        <Link
+        <LinkR
           to={'contact'}
           activeClass='active'
           spy={true}
@@ -72,7 +76,7 @@ export const AboutKnowMePart2:React.FC<AboutKnowMePart2Props> = ({ handleShowDiv
           className='cursor-pointer border-b-LM border-b-2 text-LM font-medium'
         >
           escribime
-        </Link>.
+        </LinkR>.
       </p>
       {!isMobile && (
         <div className='md:mt-6 mt-4 flex items-center justify-between'>

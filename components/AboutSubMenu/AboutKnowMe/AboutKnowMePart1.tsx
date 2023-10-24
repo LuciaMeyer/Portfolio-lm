@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import { screenContext } from '@/context/screenContext';
 import { motion } from 'framer-motion';
+import Link from 'next/link'
 
 interface AboutKnowMePart1Props {
   handleShowDiv: () => void;
 }
 
-export const AboutKnowMePart1:React.FC<AboutKnowMePart1Props> = ({ handleShowDiv }) => {
+export const AboutKnowMePart1: React.FC<AboutKnowMePart1Props> = ({ handleShowDiv }) => {
   const isMobile = useContext(screenContext);
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}    
+      transition={{ duration: 1.5 }}
       className='space-y-6 md:mt-8 md:mr-7 int:mr-0 md:w-1/2 int:w-auto'>
       <p >
         Hola! Soy{' '}
@@ -31,11 +32,13 @@ export const AboutKnowMePart1:React.FC<AboutKnowMePart1Props> = ({ handleShowDiv
         <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
           {' Tecnología de la Información '}
         </span>
-        y me gradué de como
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM'>
-          {' Full Stack Developer '}
+        y me gradué de como{' '}
+        <span className='font-semibold dark:font-light text-stone-700 dark:text-LM border-b-stone-700 dark:border-b-LM border-b-[1.8px]'>
+          <Link href='https://bit.ly/3s5TTBj' target='_blank'>
+            {'Full Stack Developer'}
+          </Link>
         </span>
-        en el Bootcamp de Henry.
+        {' '}en el Bootcamp de Henry.
       </p>
 
       <p >
