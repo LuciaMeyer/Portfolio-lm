@@ -18,7 +18,7 @@ export const LetsGO = () => {
         <span className="font-semibold text-LM text-2xl tracking-wide">
           E-COMERCE
         </span>
-        <span className="text-xl tracking-wide">let's GO</span>
+        <span className="text-xl tracking-wide">lets GO</span>
       </div>
       <div className="flex flex-col int:flex-col md:flex-row">
         {isMobile ? (
@@ -42,7 +42,7 @@ export const LetsGO = () => {
             <span className="font-semibold text-LM text-2xl tracking-wide">
               E-COMERCE -{" "}
             </span>
-            <span className="text-xl tracking-wide">&nbsp;let's GO</span>
+            <span className="text-xl tracking-wide">&nbsp;lets GO</span>
           </div>
           <p className="text-justify text-lg">
             Este proyecto lo desarrollé junto a un grupo de compañeros dentro
