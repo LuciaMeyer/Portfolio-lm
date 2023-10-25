@@ -26,7 +26,6 @@ export default function RootLayout({
   const pathname = usePathname();
 
   useEffect(() => {
-    console.log(pathname)
     setTimeout(() => {
       setOpacity(false);
     }, 2000);
@@ -34,6 +33,7 @@ export default function RootLayout({
       setShowSplash(false);
     }, 2500);
   }, []);
+
 
   const hide = {
     transition: { duration: 0.5 },

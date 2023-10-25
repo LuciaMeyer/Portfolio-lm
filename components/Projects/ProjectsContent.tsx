@@ -1,15 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+
+
 interface Project {
   name: string;
   image: any;
+  url: string;
 }
 
 export const ProjectsContent: React.FC<{ project: Project }> = ({ project }) => {
+
+
   return (
     <>
-      <Link href='/projects' target='_blank'>
+      <Link href={project.url}>
         <Image
           src={project.image}
           alt=''
