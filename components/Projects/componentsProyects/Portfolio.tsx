@@ -4,27 +4,13 @@ import Link from "next/link";
 import Atropos from "atropos/react";
 import { useContext } from "react";
 import { screenContext } from "@/context/screenContext";
-import { useRef, useEffect } from 'react';
 
 export const Portfolio = () => {
   const isMobile = useContext(screenContext);
-  const refPortfolio = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const fragment = window.location.hash;
-    if (refPortfolio.current && fragment === '#portfolio') {
-      const offset = -1000;
-      const top = refPortfolio.current.offsetTop + offset;
-      window.scrollTo({
-        top,
-        behavior: 'smooth',
-      });
-    }
-  }, []);
 
   return (
     <section
-      ref={refPortfolio}
       id="portfolio"
       className="flex flex-col md:w-2/3 md:mx-auto mx-6 md:mb-40 mb-20"
     >

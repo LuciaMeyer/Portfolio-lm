@@ -18,22 +18,22 @@ const projects = [
   {
     name: 'E-COMMERCE',
     image: letsgo,
-    url: '/projects#lestgo'
+    url: '/letsgo'
   },
   {
     name: 'VIDEOGAMES',
     image: videgames,
-    url:'/projects#videogames'
+    url:'/videogames'
   },
   {
     name: 'API GPT OPEN AI',
     image: gpt,
-    url:'/projects#gpt'
+    url:'/gpt'
   },
   {
     name: 'PORTFOLIO',
     image: portfolio,
-    url:'/projects#portfolio'
+    url:'/portfolio'
   },
 ];
 
@@ -80,7 +80,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           );
         })}
         <Link
-          href='/projects'
+          href='/letsgo'
           // target='_blank'
           className='flex items-center justify-center
             cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300/90 text-[.7rem] tracking-wider 

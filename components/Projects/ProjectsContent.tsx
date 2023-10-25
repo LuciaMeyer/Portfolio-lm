@@ -14,10 +14,10 @@ export const ProjectsContent: React.FC<{ project: Project }> = ({ project }) => 
 
   return (
     <>
-      <Link href={project.url}>
+      <Link href={project.url} target='_blank'>
         <Image
           src={project.image}
-          alt=''
+          alt='projects'
           width={1000}
           height={1000}
           data-atropos-offset='-3'

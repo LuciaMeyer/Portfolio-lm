@@ -2,30 +2,16 @@ import letsgo from "@/public/letsgo.gif";
 import Image from "next/image";
 import Link from "next/link";
 import Atropos from "atropos/react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { screenContext } from "@/context/screenContext";
-import { useRef, useEffect } from 'react';
 
-export const LestGO = () => {
+export const LetsGO = () => {
   const isMobile = useContext(screenContext);
-  const refLetsgo = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const fragment = window.location.hash;
-    if (refLetsgo.current && fragment === '#lestgo') {
-      const offset = -400;
-      const top = refLetsgo.current.offsetTop + offset;
-      window.scrollTo({
-        top,
-        behavior: 'smooth',
-      });
-    }
-  }, []);
 
   return (
     <section
-      ref={refLetsgo}
-      id="lestgo"
+      id="letsgo"
       className="flex flex-col md:w-2/3 md:mx-auto mx-6 md:mb-40 mb-20"
     >
       <div className="md:hidden int:flex int:flex-col flex flex-col mb-6">
@@ -38,7 +24,7 @@ export const LestGO = () => {
         {isMobile ? (
           <>
             <div className="md:mr-7 md:ml-0 mx-auto">
-              <Image src={letsgo} alt="lestgo" width={600} height={600} />
+              <Image src={letsgo} alt="letsgo" width={600} height={600} />
             </div>
             <span className="md:block hidden md:text-sm text-xs tracking-wide">
               realizado: 22/08/2022 - 22/09/2022
@@ -47,7 +33,7 @@ export const LestGO = () => {
         ) : (
           <Atropos className="hover:scale-90 transform transition-transform duration-300 ">
             <div className="md:mr-7 md:ml-0 mx-auto">
-              <Image src={letsgo} alt="lestgo" width={600} height={600} />
+              <Image src={letsgo} alt="letsgo" width={600} height={600} />
             </div>
           </Atropos>
         )}

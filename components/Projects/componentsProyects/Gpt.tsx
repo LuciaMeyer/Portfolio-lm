@@ -4,28 +4,13 @@ import Link from "next/link";
 import Atropos from "atropos/react";
 import { useContext } from "react";
 import { screenContext } from "@/context/screenContext";
-import { useRef, useEffect } from 'react';
 
 export const Gpt = () => {
   const isMobile = useContext(screenContext);
-  const refGpt = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const fragment = window.location.hash;
-    if (refGpt.current && fragment === '#gpt') {
-      const offset = -700;
-      const top = refGpt.current.offsetTop + offset;
-      window.scrollTo({
-        top,
-        behavior: 'smooth',
-      });
-    }
-  }, []);
 
   return (
     <section
-      ref={refGpt}
-      id="gpt"
+      id='gpt'
       className="flex flex-col md:w-2/3 md:mx-auto mx-6 md:mb-40 mb-20"
     >
       <div className="md:hidden int:flex int:flex-col flex flex-col mb-6">
