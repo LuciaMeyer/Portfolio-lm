@@ -1,5 +1,5 @@
 'use client';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { SlideUp, ProjectsContent } from '@/components';
 import videgames from '@/public/videogames.gif';
 import letsgo from '@/public/letsgo.gif';
@@ -9,6 +9,7 @@ import Atropos from 'atropos/react';
 import { screenContext } from '@/context/screenContext';
 import { Link as LinkR } from 'react-scroll';
 import Link from 'next/link';
+import { sectionContext } from '@/context/sectionContext';
 
 interface ProjectsSectionProps {
   refProjects: React.RefObject<HTMLElement>;
@@ -41,7 +42,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   refProjects,
 }) => {
   const isMobile = useContext(screenContext);
+  const { section, setSection } = useContext(sectionContext)
 
+  useEffect(() => {
+    if (refProjects.current && section === 'PROX') {
+      const yOffset = -7 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+      const top = refProjects.current.getBoundingClientRect().top + yOffset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      setSection('projects');
+    }
+  }, [section, refProjects]);
 
   return (
     <section

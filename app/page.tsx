@@ -7,7 +7,6 @@ import { sectionContext } from '@/context/sectionContext';
 export default function Home() {
 
   const objetcContext = useContext(sectionContext);
-
   const { refHero, refAbout, refProjects, refResurces, refContact, refEnd, useIsInViewport  } = objetcContext.sectionsRef;
   const setSection = objetcContext.setSection;
 

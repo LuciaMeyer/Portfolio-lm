@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import { img } from '@/public/images';
-import { Link } from 'react-scroll/modules';
-import { motion } from 'framer-motion';
-import { useContext } from 'react';
-import { sectionContext } from '@/context/sectionContext';
-import { usePathname } from 'next/navigation';
+import Image from "next/image";
+import { img } from "@/public/images";
+import { Link as LinKR } from "react-scroll/modules";
+import { motion } from "framer-motion";
+import { useContext } from "react";
+import { sectionContext } from "@/context/sectionContext";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface IconsProps {
   section: string;
@@ -19,120 +20,154 @@ export const Icons: React.FC<IconsProps> = () => {
 
   const handleClick = (current: string) => {
     const sections = [
-      'home',
-      'about',
-      'projects',
-      'resources',
-      'contact',
-      'home',
-      'end'
+      "home",
+      "about",
+      "projects",
+      "resources",
+      "contact",
+      "home",
+      "end",
     ];
     const index = sections.indexOf(current);
-    setSection(sections[index + 1] || 'home');
+    setSection(sections[index + 1] || "home");
   };
 
   return (
     <motion.div
-      className='z-50 fixed bottom-0 flex w-full justify-center
-    bg-white dark:bg-BGD md:bg-transparent'
+      className="z-50 fixed bottom-0 flex w-full justify-center
+    bg-white dark:bg-BGD md:bg-transparent"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 2 }}
     >
-      <div className='flex flex-col md:fixed md:left-12 md:bottom-24 bottom-12'>
-        <div className='md:w-6 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center'>
+      <div className="flex flex-col md:fixed md:left-12 md:bottom-24 bottom-12">
+        <div className="md:w-6 w-36 mx-auto dark:opacity-60 md:block flex flex-row my-2 md:my-0 items-center">
           <a
-            href='https://www.linkedin.com/in/lucia-meyer-65633a143/'
-            rel='noreferrer'
-            target='_blank'
+            href="https://www.linkedin.com/in/lucia-meyer-65633a143/"
+            rel="noreferrer"
+            target="_blank"
           >
             <Image
-              width='50'
-              height='50'
-              className='md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
+              width="50"
+              height="50"
+              className="md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
               src={img.in}
-              alt='img'
+              alt="img"
               priority
             />
           </a>
           <a
-            href='https://github.com/LuciaMeyer'
-            rel='noreferrer'
-            target='_blank'
+            href="https://github.com/LuciaMeyer"
+            rel="noreferrer"
+            target="_blank"
           >
             <Image
-              width='50'
-              height='50'
-              className='md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
+              width="50"
+              height="50"
+              className="md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
               src={img.gh}
-              alt='img'
+              alt="img"
               priority
             />
           </a>
           <a
-            href='mailto:luciameyer1603@gmail.com'
-            rel='noreferrer'
-            target='_blank'
+            href="mailto:luciameyer1603@gmail.com"
+            rel="noreferrer"
+            target="_blank"
           >
             <Image
-              width='50'
-              height='50'
-              className='md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
+              width="50"
+              height="50"
+              className="md:mb-4 md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
               src={img.mail}
-              alt='img'
+              alt="img"
               priority
             />
           </a>
           <a
-            href='https://www.instagram.com/luciameyer_/'
-            rel='noreferrer'
-            target='_blank'
+            href="https://www.instagram.com/luciameyer_/"
+            rel="noreferrer"
+            target="_blank"
           >
             <Image
-              width='50'
-              height='50'
-              className='md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75'
+              width="50"
+              height="50"
+              className="md:px-0 px-2 opacity-40 dark:invert dark:opacity-100 transform transition-transform duration-300 hover:scale-75"
               src={img.ig}
-              alt='img'
+              alt="img"
               priority
             />
           </a>
         </div>
       </div>
-      <hr className='md:flex hidden fixed bottom-6 left-0.5 h-[1.5px] w-28 rotate-90 bg-stone-400 dark:bg-TX' />
-      {pathname === '/'&&
+      <hr className="md:flex hidden fixed bottom-6 left-0.5 h-[1.5px] w-28 rotate-90 bg-stone-400 dark:bg-TX" />
+      {pathname === "/" ? (
         <div
           className={`md:w-10 w-12 fixed md:bottom-16 bottom-12 md:right-12 right-4  
           transform transition-transform duration-300 md:hover:scale-75
-          ${section === 'end' ? 'rotate-180' : 'rotate-0'}
+          ${section === "end" ? "rotate-180" : "rotate-0"}
             `}
         >
-          <Link
+          <LinKR
             to={
-              section === 'home'
-                ? 'about'
-                : section === 'about'
-                ? 'projects'
-                : section === 'projects'
-                ? 'resources'
-                : section === 'resources'
-                ? 'contact'
-                : section === 'contact'
-                ? 'end'             
-                : 'home'
+              section === "home"
+                ? "about"
+                : section === "about"
+                ? "projects"
+                : section === "projects"
+                ? "resources"
+                : section === "resources"
+                ? "contact"
+                : section === "contact"
+                ? "end"
+                : "home"
             }
-            activeClass='active'
+            activeClass="active"
             spy={true}
             smooth={true}
             offset={-100}
             duration={1000}
             onClick={() => handleClick(section)}
-            className='cursor-pointer'
+            className="cursor-pointer"
           >
-            <Image width='50' height='50' src={img.fl_am} alt='img' priority />
-          </Link>
+            <Image width="50" height="50" src={img.fl_am} alt="img" priority />
+          </LinKR>
         </div>
-      }
+      ) : (
+        <div className="fixed md:bottom-16 bottom-12 md:right-12 right-4">
+          <div
+            className={`md:w-20 w-12 -rotate-90
+            transform transition-transform duration-300 
+            ${pathname === "/portfolio" ? "scale-y-[-1] " : "md:hover:scale-75"}`}
+          >
+            <Link
+              href={
+                pathname === "/letsgo"
+                  ? "/videogames"
+                  : pathname === "/videogames"
+                  ? "/gpt"
+                  : pathname === "/gpt"
+                  ? "/portfolio"
+                  : pathname === "/portfolio"
+                  ? "/letsgo"
+                  : "/letsgo"
+              }
+              className="cursor-pointer"
+            >
+              <Image
+                width="50"
+                height="50"
+                src={img.fl_am}
+                alt="img"
+                priority
+              />
+            </Link>
+          </div>
+          <div className="md:block hidden fixed bottom-6 right-14">
+            <span>siguiente</span>
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 };

@@ -1,4 +1,3 @@
-
 // Carpeta AboutSubMenu
 export { AboutJourney} from './AboutSubMenu/AboutJourney/AboutJourney';
 export { AboutJourneyPart1 } from './AboutSubMenu/AboutJourney/AboutJourneyPart1';
@@ -30,6 +29,12 @@ export { AboutMotivation} from './AboutSubMenu/AboutMotivation';
 // Carpeta Projects
 export { ProjectsSection } from './Projects/ProjectsSection';
 export { ProjectsContent } from './Projects/ProjectsContent';
+
+// carpeta componentsProyects
+export { Gpt } from './Projects/componentsProyects/Gpt';
+export { LetsGO } from './Projects/componentsProyects/LestGO';
+export { Videogames} from './Projects/componentsProyects/Videogames';
+export { Portfolio} from './Projects/componentsProyects/Portfolio';
 //
 
 export { AboutSection } from './AboutSection';

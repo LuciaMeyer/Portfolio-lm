@@ -1,87 +1,108 @@
-import videgames from '@/public/videogames.gif';
-import Image from 'next/image';
-import Link from 'next/link';
-import Atropos from 'atropos/react';
-import { useContext } from 'react';
-import { screenContext } from '@/context/screenContext';
+import videgames from "@/public/videogames.gif";
+import Image from "next/image";
+import Link from "next/link";
+import Atropos from "atropos/react";
+import { useContext } from "react";
+import { screenContext } from "@/context/screenContext";
 
 export const Videogames = () => {
   const isMobile = useContext(screenContext);
 
   return (
     <section
-      id='videogames'
-      className='flex flex-col md:w-2/3 md:mx-auto mx-6 md:mb-40 mb-20'
+      id="videgames"
+      className="flex flex-col md:w-3/5 md:mx-auto mx-6 md:mb-40 mb-20 mt-10"
     >
-      <div className='md:hidden int:flex int:flex-col flex flex-col mb-6'>
-        <span className='font-semibold text-LM text-2xl tracking-wide'>
+      {/* TÚTULO MOBILE */}
+      <div className="md:hidden int:flex int:flex-col flex flex-col mb-9 bg-white dark:bg-BGD">
+        <h2 className="md:hidden int:flex int:flex-col flex flex-col text-2xl font-bold text-LM">
           VIDEOGAMES
+        </h2>
+        <span className="text-lg tracking-wide">Single Page Application</span>
+        <span className="text-xs tracking-wide dark:text-neutral-500 text-neutral-400">
+          realizado: 15/07/2022 - 16/08/2022
         </span>
-        <span className='text-xl tracking-wide'>Single Page Application</span>
       </div>
-      <div className='flex flex-col int:flex-col md:flex-row'>
+
+      {/* IMG  + TÍTULO WEB*/}
+      <div className="flex flex-col int:flex-col md:flex-row">
         {isMobile ? (
           <>
-            <div className='md:mr-7 md:ml-0 mx-auto'>
-              <Image src={videgames} alt='videgames' width={600} height={600} />
+            <div className="md:mr-7 md:ml-0 mx-auto mb-9">
+              <Image src={videgames} alt="videgames" width={600} height={600} />
             </div>
-            <span className='md:block hidden md:text-sm text-xs tracking-wide'>
-              realizado: 15/07/2022 - 16/08/2022
-            </span>
           </>
         ) : (
-          <Atropos className='hover:scale-90 transform transition-transform duration-300 '>
-            <div className='md:mr-7 md:ml-0 mx-auto'>
-              <Image src={videgames} alt='videgames' width={600} height={600} />
+          <Atropos className="hover:scale-90 transform transition-transform duration-300 ">
+            <div className="md:mr-7 md:ml-0 mx-auto">
+              <Image src={videgames} alt="videgames" width={600} height={600} />
             </div>
           </Atropos>
         )}
-        <div className='space-y-6 md:w-1/2 int:w-auto my-auto'>
-          <div className='md:flex int:hidden hidden items-center '>
-            <span className='font-semibold text-LM text-2xl tracking-wide'>
-              VIDEOGAMES -{' '}
+
+        {/* TÍTULO WEB */}
+        <div className="md:w-1/2 int:w-auto flex flex-col justify-between bg-white dark:bg-BGD">
+          <div className="md:flex int:hidden hidden items-center ">
+            <span className="font-semibold text-LM text-2xl tracking-wide">
+              VIDEOGAMES -{" "}
             </span>
-            <span className='text-xl tracking-wide'>
+            <span className="text-xl tracking-wide">
               &nbsp;Single Page Application
             </span>
           </div>
-          <p className='text-justify text-lg'>
-            Esta SPA la desarrollé como parte del cursado de la carrera de Full
-            Stack Developer, en la etapa de Proyecto Individual. Es una
-            aplicación web que consume datos de una API externa y consultas a
-            una base de datos propia.
+          <p className="text-justify text-lg">
+            Esta
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" SPA "}
+            </span>
+            la desarrollé como parte del cursado de la carrera de
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" Full Stack Developer "}
+            </span>
+            en la etapa de
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" Proyecto Individual. "}
+            </span>
+            Es una aplicación web que consume datos de una
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" API externa "}
+            </span>
+            y consultas a una
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" base de datos propia. "}
+            </span>
           </p>
-          <div className='flex md:justify-normal justify-center'>
+          <div className="flex md:justify-normal justify-around md:mt-0 mt-12">
             <Link
-              href='https://pf-let.vercel.app/'
-              target='_blank'
-              className='mr-4 flex items-center justify-center
-                            cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
-                            w-24 h-9 px-4 
-                            border-solid border border-TX/50 dark:border-stone-300/50
-                            transition duration-200 ease d hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM'
+              href="https://pf-let.vercel.app/"
+              target="_blank"
+              className="mr-4 flex items-center justify-center
+              cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
+              w-24 h-9 px-4 
+              border-solid border border-TX/50 dark:border-stone-300/50
+              transition duration-200 ease d hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM"
             >
               WEB
             </Link>
             <Link
-              href='https://lnkd.in/dW2fpFeW'
-              target='_blank'
-              className='mr-4 flex items-center justify-center
-                            cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
-                            w-24 h-9 px-4 
-                            border-solid border border-TX/50 dark:border-stone-300/50
-                            transition duration-200 ease d hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM'
+              href="https://lnkd.in/dW2fpFeW"
+              target="_blank"
+              className="mr-4 flex items-center justify-center
+              cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
+              w-24 h-9 px-4 
+              border-solid border border-TX/50 dark:border-stone-300/50
+              transition duration-200 ease d hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM"
             >
               CÓDIGO
             </Link>
             <Link
-              href='https://bit.ly/3WLbIAm'
-              target='_blank'
-              className='flex items-center justify-center
-                            cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
-                            w-24 h-9 px-4 
-                            border-solid border border-TX/50 dark:border-stone-300/50
-                            transition duration-200 ease d hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM'
+              href="https://bit.ly/3WLbIAm"
+              target="_blank"
+              className="flex items-center justify-center
+              cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
+              w-24 h-9 px-4 
+              border-solid border border-TX/50 dark:border-stone-300/50
+              transition duration-200 ease d hover:text-LM hover:border-LM dark:hover:text-LM dark:hover:border-LM"
             >
               VIDEO
             </Link>
@@ -89,20 +110,19 @@ export const Videogames = () => {
         </div>
       </div>
 
-      <div className='space-y-4 mt-10'>
-        <span className='md:block hidden md:text-sm text-xs tracking-wide'>
-          realizado: 15/07/2022 - 16/08/2022
-        </span>
-        <br />
-        <span className='text-xl tracking-wide font-semibold text-LM'>
-          ✔ Detalle
+      <span className="md:block hidden md:text-sm text-xs tracking-wide mt-2 dark:text-neutral-500 text-neutral-400">
+        realizado: 15/07/2022 - 16/08/2022
+      </span>
+
+      <div className="md:w-1/2 int:w-auto space-y-7 mt-10 text-justify bg-white dark:bg-BGD">
+        <span className="text-xl tracking-wide font-semibold text-LM">
+          Detalle
         </span>
         <p>
           En este desarrollo debíamos poner en práctica todo lo aprendido en el
-          cursado, construyendo un proyecto del mundo real con metodologías y
-          herramientas ágiles, bajo un enfoque de aprendizaje colaborativo. En
-          esta etapa, era dónde debíamos conectar todos los conocimientos y
-          poner a prueba las habilidades de trabajo en equipo.
+          curso, construyendo un proyecto del mundo real con metodologías y
+          herramientas ágiles, bajo un enfoque de aprendizaje colaborativo y
+          poniendo a prueba las habilidades de trabajo en equipo.
         </p>
         <p>
           Quisimos aportar valor agregado al proyecto, a través de fomentar la
@@ -112,31 +132,32 @@ export const Videogames = () => {
           usuario.
         </p>
         <p>
-          Mis tareas dentro del equipo se centraron principalmente en el
-          Front-End, aunque también participé en la reestructuración del
-          Back-End a medida que avanzaba el proyecto. Contribuí en la creación
-          de la marca (diseño integral utilizando Figma) y el maquetado del
-          sitio, además de colaborar en la organización general del equipo de
-          trabajo mediante metodología Scrum.
-        </p>
-        <p>
-          <span className='text-xl tracking-wide font-semibold text-LM'>
-            ✔ Tecnologías
+          <span className="text-xl tracking-wide font-semibold text-LM">
+            Tecnologías
           </span>
         </p>
         <p>
-          › Lenguaje: JavaScript
-          <br />
-          › Front: React | Redux
-          <br />
-          › Back: Node.js | Express
-          <br />
-          › Base de datos: PostgreSQL | Sequelize
+          › Lenguaje:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            {" JavaScript "}
+          </span>
+          <br />› Front:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            {" React - Redux "}
+          </span>
+          <br />› Back:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            {" Node.js - Express "}
+          </span>
+          <br />› Base de datos:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            {" PostgreSQL - Sequelize "}
+          </span>
           <br />
         </p>
         <p>
-          <span className='text-xl tracking-wide font-semibold text-LM'>
-            ✔ Incluye
+          <span className="text-xl tracking-wide font-semibold text-LM">
+            Incluye
           </span>
         </p>
         <p>
@@ -148,7 +169,7 @@ export const Videogames = () => {
           <br />
           › Persistencia de datos ⇢ LocalStorage
           <br />
-          › Diseño responsive ⇢ CCSModules #MaterialUI Figma
+          › Diseño responsive ⇢ CCSModules - MaterialUI Figma
           <br />
           › Pasarela de pagos ⇢ MercadoPago
           <br />
@@ -162,13 +183,17 @@ export const Videogames = () => {
           <br />
         </p>
         <p>
-          <span className='text-xl tracking-wide font-semibold text-LM'>
-            ✔ Integrantes
+          <span className="text-xl tracking-wide font-semibold text-LM">
+            Integrantes
           </span>
         </p>
         <p>
-          › Nicolás Balbi › Soledad Dato › Máximo Tovar › Felipe Jure › Juan
-          Martin Silva › Leandro Pappalardo › Meyer Lucía
+          › Nicolás Balbi <br />
+          › Soledad Dato <br />
+          › Máximo Tovar <br />
+          › Felipe Jure <br />
+          › Juan Martin Silva <br />
+          › Leandro Pappalardo <br />› Meyer Lucía
         </p>
       </div>
     </section>

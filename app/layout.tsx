@@ -16,11 +16,8 @@ const JostFont = Jost({
   style: ['normal', 'italic'],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  
   const [showSplash, setShowSplash] = useState(true);
   const [opacity, setOpacity] = useState(true);
   const pathname = usePathname();

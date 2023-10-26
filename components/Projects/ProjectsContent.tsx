@@ -14,7 +14,7 @@ export const ProjectsContent: React.FC<{ project: Project }> = ({ project }) => 
 
   return (
     <>
-      <Link href={project.url} target='_blank'>
+      <Link href={project.url}>
         <Image
           src={project.image}
           alt='projects'
