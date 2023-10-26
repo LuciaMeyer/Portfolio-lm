@@ -2,14 +2,19 @@ import letsgo from "@/public/letsgo.gif";
 import Image from "next/image";
 import Link from "next/link";
 import Atropos from "atropos/react";
+import { motion } from "framer-motion";
 import { useContext } from "react";
 import { screenContext } from "@/context/screenContext";
+import { img } from "@/public/images";
 
 export const LetsGO = () => {
   const isMobile = useContext(screenContext);
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
       id="letsgo"
       className="flex flex-col md:w-3/5 md:mx-auto mx-6 md:mb-40 mb-20 mt-10"
     >
@@ -25,7 +30,23 @@ export const LetsGO = () => {
       </div>
 
       {/* IMG  + TÍTULO WEB*/}
-      <div className="flex flex-col int:flex-col md:flex-row">
+      <div className="relative flex flex-col int:flex-col md:flex-row">
+        <Image
+          src={img.num1}
+          alt="letsgo"
+          width={200}
+          height={200}
+          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          h-32 w-32 left-auto -right-7"
+        />
+        <Image
+          src={img.num1}
+          alt="letsgo"
+          width={200}
+          height={200}
+          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          h-32 w-32 left-auto -right-7"
+        />
         {isMobile ? (
           <>
             <div className="md:mr-7 md:ml-0 mx-auto mb-9">
@@ -152,26 +173,50 @@ export const LetsGO = () => {
             Incluye
           </span>
         </p>
-        <p>
-          › Autenticación ⇢ Auth0
-          <br />
-          › Notificaciones y mailing ⇢ Socketio EmailJS
-          <br />
-          › Almacenamiento multimedia ⇢ Cloudinary
-          <br />
-          › Persistencia de datos ⇢ LocalStorage
-          <br />
-          › Diseño responsive ⇢ CCSModules - MaterialUI Figma
-          <br />
-          › Pasarela de pagos ⇢ MercadoPago
-          <br />
-          › Reviews a través de posteo de experiencias
-          <br />
-          › Filtros y ordenamientos combinados
-          <br />
-          › Bot de ayuda al usuario
-          <br />
-          › Dashboard de administrador completo
+        <p className="text-start">
+          › Autenticación:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            Auth0
+          </span>
+          <br />› Notificaciones y mailing:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            Socketio EmailJS
+          </span>
+          <br />› Almacenamiento multimedia:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            Cloudinary6
+          </span>
+          <br />› Persistencia de datos:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            LocalStorage
+          </span>
+          <br />› Diseño responsive:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            CCSModules - MaterialUI Figma
+          </span>
+          <br />› Pasarela de pagos:{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            MercadoPago
+          </span>
+          <br />› Reviews a través de{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            Posteo de Experiencias
+          </span>
+          <br />›{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            Filtros y ordenamientos{" "}
+          </span>
+          combinados
+          <br />›{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            Bot{" "}
+          </span>
+          de ayuda al usuario
+          <br />›{" "}
+          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+            Dashboard de administrador{" "}
+          </span>
+          completo
           <br />
         </p>
         <p>
@@ -188,7 +233,6 @@ export const LetsGO = () => {
           › Leandro Pappalardo <br />› Meyer Lucía
         </p>
       </div>
-
-    </section>
+    </motion.section>
   );
 };

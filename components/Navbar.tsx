@@ -2,7 +2,7 @@
 import { ParticlesComponents, Icons } from "@/components";
 import Image from "next/image";
 import { useContext, useState } from "react";
-import { Link } from "react-scroll/modules";
+import { Link as LinkR } from "react-scroll/modules";
 import { useTheme } from "next-themes";
 import { img } from "@/public/images";
 import { CiDark } from "react-icons/ci";
@@ -12,6 +12,7 @@ import { screenContext } from "@/context/screenContext";
 import { sectionContext } from "@/context/sectionContext";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import Link from 'next/link'
 
 interface NavItem {
   label: string;
@@ -132,7 +133,7 @@ export const Navbar = () => {
             {pathname === "/" && (
               <>
                 {NAV_ITEMS.map((item, idx) => (
-                  <Link
+                  <LinkR
                     key={idx}
                     className={
                       "hover:text-LM md:font-thin text-lg tracking-wider font-medium"
@@ -146,7 +147,7 @@ export const Navbar = () => {
                     onClick={() => handleMenuClick(item.page)}
                   >
                     {item.label}
-                  </Link>
+                  </LinkR>
                 ))}
               </>
             )}
@@ -167,7 +168,7 @@ export const Navbar = () => {
                   }
                   className="flex md:ml-8 ml-4 cursor-pointer md:h-auto h-14"
                 >
-                  <Link
+                  <LinkR
                     to="home"
                     activeClass="active"
                     spy={true}
@@ -183,7 +184,7 @@ export const Navbar = () => {
                       height={35}
                       priority
                     />
-                  </Link>
+                  </LinkR>
                 </motion.div>
               )}
             </>
@@ -195,27 +196,29 @@ export const Navbar = () => {
                 isMobile ? { duration: 1 } : { duration: 1, delay: 2 }
               }
               className="md:h-auto h-14"
-              onClick={() => {
-                router.push("/");
-              }}
+              // onClick={() => {
+              //   router.push("/");
+              // }}
             >
-              <div className="flex md:ml-8 ml-4 cursor-pointer">
-                <Image
-                  className="md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300"
-                  src={img.LMb}
-                  alt="LM"
-                  width={35}
-                  height={35}
-                  priority
-                />
-              </div>
+              <Link href='/'>
+                <div className="flex md:ml-8 ml-4 cursor-pointer">
+                  <Image
+                    className="md:my-4 md:mt-4 mt-2 md:w-full hover:scale-90 transform transition-all duration-300"
+                    src={img.LMb}
+                    alt="LM"
+                    width={35}
+                    height={35}
+                    priority
+                  />
+                </div>
+              </Link>
             </motion.div>
           )}
 
           {/* SECCIONES */}
           {NAV_ITEMS.map((item, idx) =>
             section === "home" ? null : section === item.page ? (
-              <Link
+              <LinkR
                 key={idx}
                 to={section}
                 smooth={true}
@@ -224,7 +227,7 @@ export const Navbar = () => {
                 className="md:block hidden cursor-pointer font-bold ml-32 leading-snug tracking-wide md:text-3xl text-4xl text-neutral-300 dark:text-neutral-600"
               >
                 <span key={idx}>{item.title}</span>
-              </Link>
+              </LinkR>
             ) : null
           )}
           {/* ÍCONOS MENÚ  */}

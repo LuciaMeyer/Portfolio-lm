@@ -2,15 +2,19 @@ import portfolio from "@/public/portfolio.gif";
 import Image from "next/image";
 import Link from "next/link";
 import Atropos from "atropos/react";
+import { motion } from "framer-motion";
 import { useContext } from "react";
 import { screenContext } from "@/context/screenContext";
+import { img } from "@/public/images";
 
 export const Portfolio = () => {
   const isMobile = useContext(screenContext);
 
-
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
       id="portfolio"
       className="flex flex-col md:w-3/5 md:mx-auto mx-6 md:mb-40 mb-20 mt-10"
     >
@@ -27,6 +31,22 @@ export const Portfolio = () => {
 
       {/* IMG  + TÍTULO WEB*/}
       <div className="flex flex-col int:flex-col md:flex-row">
+        <Image
+          src={img.num4}
+          alt="letsgo"
+          width={200}
+          height={200}
+          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          h-32 w-32 left-auto -right-7"
+        />
+        <Image
+          src={img.num4}
+          alt="letsgo"
+          width={200}
+          height={200}
+          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          h-32 w-32 left-auto -right-7"
+        />
         {isMobile ? (
           <>
             <div className="md:mr-7 md:ml-0 mx-auto mb-9">
@@ -178,7 +198,6 @@ export const Portfolio = () => {
           › Leandro Pappalardo <br />› Meyer Lucía
         </p>
       </div>
-
-    </section>
+    </motion.section>
   );
 };

@@ -29,6 +29,10 @@ export const img = {
     p2: 'https://res.cloudinary.com/dw272kava/image/upload/v1693673801/Projects/P2_siexwl.png',
     p3: 'https://res.cloudinary.com/dw272kava/image/upload/v1693673800/Projects/P3_rzf876.png',
     p4: 'https://res.cloudinary.com/dw272kava/image/upload/v1693673800/Projects/P4_ylvgdo.png',
+    num1: 'https://res.cloudinary.com/dw272kava/image/upload/v1698342135/Projects/num1_tt5zsx.png',
+    num2: 'https://res.cloudinary.com/dw272kava/image/upload/v1698342135/Projects/num2_pzlmdj.png',
+    num3: 'https://res.cloudinary.com/dw272kava/image/upload/v1698342135/Projects/num3_sxx3yt.png',
+    num4:'https://res.cloudinary.com/dw272kava/image/upload/v1698342135/Projects/num4_mjopjn.png',
   
     // Icons
     in: 'https://res.cloudinary.com/dw272kava/image/upload/v1694629215/iconos/in_sjjrsl.png',

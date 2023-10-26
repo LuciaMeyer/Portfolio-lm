@@ -38,10 +38,7 @@ const projects = [
   },
 ];
 
-export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
-  refProjects,
-}) => {
-  const isMobile = useContext(screenContext);
+export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ refProjects}) => {const isMobile = useContext(screenContext);
   const { section, setSection } = useContext(sectionContext)
 
   useEffect(() => {
