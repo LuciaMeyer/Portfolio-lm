@@ -34,17 +34,19 @@ export const LetsGO = () => {
         <Image
           src={img.num1}
           alt="letsgo"
-          width={200}
-          height={200}
-          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          width={150}
+          height={150}
+          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-[0.15]
+          int:hidden
           h-32 w-32 left-auto -right-7"
         />
         <Image
           src={img.num1}
           alt="letsgo"
-          width={200}
-          height={200}
-          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          width={150}
+          height={150}
+          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-[0.15]
+          int:hidden
           h-32 w-32 left-auto -right-7"
         />
         {isMobile ? (
@@ -54,8 +56,8 @@ export const LetsGO = () => {
             </div>
           </>
         ) : (
-          <Atropos className="hover:scale-90 transform transition-transform duration-300 ">
-            <div className="md:mr-7 md:ml-0 mx-auto">
+          <Atropos className="hover:scale-90 transform transition-transform duration-300 int:mb-9">
+            <div className="md:mr-7 md:ml-0 mx-auto flex justify-center">
               <Image src={letsgo} alt="letsgo" width={600} height={600} />
             </div>
           </Atropos>
@@ -70,18 +72,13 @@ export const LetsGO = () => {
             <span className="text-xl tracking-wide">&nbsp;lets GO</span>
           </div>
           <p className="text-justify text-lg">
-            Desarrollé este proyecto junto a un grupo de compañeros en del
-            cursado de la carrera
+            Desarrollé este proyecto junto a un grupo de compañeros de la carrera, fue la entrega final con la cual nos graduamos de
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Full Stack Developer. "}
             </span>
-            Fue la entrega final con la cual nos
-            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" graduamos. "}
-            </span>
             Es un
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" ecommerce de alquiler temporal de bicicletas, "}
+              {" e-commerce de alquiler temporal de bicicletas, "}
             </span>
             accesorios y pack de aventuras según calendario y stock disponible.
           </p>

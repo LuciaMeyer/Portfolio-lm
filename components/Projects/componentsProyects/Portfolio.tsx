@@ -3,12 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Atropos from "atropos/react";
 import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { screenContext } from "@/context/screenContext";
 import { img } from "@/public/images";
 
 export const Portfolio = () => {
   const isMobile = useContext(screenContext);
+  useEffect(()=>{
+    window.scroll(0,0)
+  }, []);
 
   return (
     <motion.section
@@ -30,21 +33,23 @@ export const Portfolio = () => {
       </div>
 
       {/* IMG  + TÍTULO WEB*/}
-      <div className="flex flex-col int:flex-col md:flex-row">
+      <div className="relative flex flex-col int:flex-col md:flex-row">
         <Image
           src={img.num4}
           alt="letsgo"
-          width={200}
-          height={200}
-          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          width={150}
+          height={150}
+          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-[0.15]
+          int:hidden
           h-32 w-32 left-auto -right-7"
         />
         <Image
           src={img.num4}
           alt="letsgo"
-          width={200}
-          height={200}
-          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          width={150}
+          height={150}
+          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-[0.15]
+          int:hidden
           h-32 w-32 left-auto -right-7"
         />
         {isMobile ? (
@@ -54,7 +59,7 @@ export const Portfolio = () => {
             </div>
           </>
         ) : (
-          <Atropos className="hover:scale-90 transform transition-transform duration-300 ">
+          <Atropos className="hover:scale-90 transform transition-transform duration-300 int:mb-9">
             <div className="md:mr-7 md:ml-0 mx-auto">
               <Image src={portfolio} alt="portfolio" width={600} height={600} />
             </div>

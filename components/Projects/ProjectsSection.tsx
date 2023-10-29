@@ -88,7 +88,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ refProjects}) 
         })}
         <Link
           href='/letsgo'
-          // target='_blank'
+          target='_blank'
           className='flex items-center justify-center
             cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300/90 text-[.7rem] tracking-wider 
             w-36 h-10 px-4 

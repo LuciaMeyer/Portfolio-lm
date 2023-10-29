@@ -3,12 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Atropos from "atropos/react";
 import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { screenContext } from "@/context/screenContext";
 import { img } from "@/public/images";
 
 export const Videogames = () => {
   const isMobile = useContext(screenContext);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <motion.section
@@ -23,30 +26,32 @@ export const Videogames = () => {
         <h2 className="md:hidden int:flex int:flex-col flex flex-col text-2xl font-bold text-LM">
           VIDEOGAMES
         </h2>
-        <span className="text-lg tracking-wide">Single Page Application</span>
+        <span className="text-lg tracking-wide">SPA</span>
         <span className="text-xs tracking-wide dark:text-neutral-500 text-neutral-400">
           realizado: 15/07/2022 - 16/08/2022
         </span>
       </div>
 
       {/* IMG  + TÍTULO WEB*/}
-      <div className="flex flex-col int:flex-col md:flex-row">
+      <div className="relative flex flex-col int:flex-col md:flex-row">
         <Image
           src={img.num2}
           alt="letsgo"
-          width={200}
-          height={200}
-          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          width={150}
+          height={150}
+          className="absolute z-50 invert -top-14 md:-left-28 md:h-auto md:w-auto opacity-[0.15]
+          int:hidden
           h-32 w-32 left-auto -right-7"
         />
         <Image
           src={img.num2}
           alt="letsgo"
-          width={200}
-          height={200}
-          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-40
+          width={150}
+          height={150}
+          className="absolute -top-14 md:-left-28 md:h-auto md:w-auto opacity-[0.15]
+          int:hidden
           h-32 w-32 left-auto -right-7"
-        />---
+        />
         {isMobile ? (
           <>
             <div className="md:mr-7 md:ml-0 mx-auto mb-9">
@@ -54,7 +59,7 @@ export const Videogames = () => {
             </div>
           </>
         ) : (
-          <Atropos className="hover:scale-90 transform transition-transform duration-300 ">
+          <Atropos className="hover:scale-90 transform transition-transform duration-300 int:mb-9">
             <div className="md:mr-7 md:ml-0 mx-auto">
               <Image src={videgames} alt="videgames" width={600} height={600} />
             </div>
@@ -67,14 +72,12 @@ export const Videogames = () => {
             <span className="font-semibold text-LM text-2xl tracking-wide">
               VIDEOGAMES -{" "}
             </span>
-            <span className="text-xl tracking-wide">
-              &nbsp;Single Page Application
-            </span>
+            <span className="text-xl tracking-wide">&nbsp;SPA</span>
           </div>
           <p className="text-justify text-lg">
             Esta
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" SPA "}
+              {" Single Page Application "}
             </span>
             la desarrollé como parte del cursado de la carrera de
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -95,7 +98,7 @@ export const Videogames = () => {
           </p>
           <div className="flex md:justify-normal justify-around md:mt-0 mt-12">
             <Link
-              href="https://pf-let.vercel.app/"
+              href="https://cliente-videogames.onrender.com/"
               target="_blank"
               className="mr-4 flex items-center justify-center
               cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
@@ -106,7 +109,7 @@ export const Videogames = () => {
               WEB
             </Link>
             <Link
-              href="https://lnkd.in/dW2fpFeW"
+              href="https://github.com/LuciaMeyer/Videogames_app"
               target="_blank"
               className="mr-4 flex items-center justify-center
               cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
@@ -117,7 +120,7 @@ export const Videogames = () => {
               CÓDIGO
             </Link>
             <Link
-              href="https://bit.ly/3WLbIAm"
+              href="https://www.youtube.com/watch?v=eN4L032QNhw"
               target="_blank"
               className="flex items-center justify-center
               cursor-pointer bg-white dark:bg-BGD text-black dark:text-stone-300 text-[.7rem] tracking-[0.2rem] 
@@ -139,19 +142,8 @@ export const Videogames = () => {
         <span className="text-xl tracking-wide font-semibold text-LM">
           Detalle
         </span>
-        <p>
-          En este desarrollo debíamos poner en práctica todo lo aprendido en el
-          curso, construyendo un proyecto del mundo real con metodologías y
-          herramientas ágiles, bajo un enfoque de aprendizaje colaborativo y
-          poniendo a prueba las habilidades de trabajo en equipo.
-        </p>
-        <p>
-          Quisimos aportar valor agregado al proyecto, a través de fomentar la
-          movilidad sustentable para el cuidado del medio ambiente y la salud.
-          Sumamos estos objetivos a la premisa de lograr un funcionamiento del
-          sitio intuitivo y rápido, para garantizar una buena experiencia de
-          usuario.
-        </p>
+        <p>DESARROLLAR</p>
+        <p>DESARROLLAR</p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
             Tecnologías
@@ -164,7 +156,7 @@ export const Videogames = () => {
           </span>
           <br />› Front:{" "}
           <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            {" React - Redux "}
+            {" React - Redux - CSS puro"}
           </span>
           <br />› Back:{" "}
           <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -178,44 +170,31 @@ export const Videogames = () => {
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
-            Incluye
+            Features
           </span>
         </p>
         <p>
-          › Autenticación ⇢ Auth0
+          › Paginado
           <br />
-          › Notificaciones y mailing ⇢ Socketio EmailJS
+          › Filtros acumulativos
           <br />
-          › Almacenamiento multimedia ⇢ Cloudinary
+          › Ordenamientos ascendentes y descendentes
           <br />
-          › Persistencia de datos ⇢ LocalStorage
+          › Sección con información detallada
           <br />
-          › Diseño responsive ⇢ CCSModules - MaterialUI Figma
+          › Búsqueda por nombre
           <br />
-          › Pasarela de pagos ⇢ MercadoPago
+          › Formulario controlado para la creación de nuevos videojuegos
           <br />
-          › Reviews a través de posteo de experiencias
-          <br />
-          › Filtros y ordenamientos combinados
-          <br />
-          › Bot de ayuda al usuario
-          <br />
-          › Dashboard de administrador completo
+          › Funcionalidad para modificar o eliminar los creados
           <br />
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
-            Integrantes
+            Desarrollado por
           </span>
         </p>
-        <p>
-          › Nicolás Balbi <br />
-          › Soledad Dato <br />
-          › Máximo Tovar <br />
-          › Felipe Jure <br />
-          › Juan Martin Silva <br />
-          › Leandro Pappalardo <br />› Meyer Lucía
-        </p>
+        <p>› Meyer Lucía</p>
       </div>
     </motion.section>
   );
