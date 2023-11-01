@@ -148,7 +148,7 @@ export const Videogames = () => {
           {" Fundamentos - Front End - Back End - Base de Datos, "}
           </span>
           era necesario aplicar lo aprendido en un Proyecto Individual creado
-          desde cero. Los objetivos eran consolidar y los conceptos, adoptar
+          desde cero. Los objetivos eran consolidar los conceptos, adoptar
           mejores prácticas y familiarizarse con el flujo de trabajo de GIT.
         </p>
         <p>
