@@ -142,8 +142,22 @@ export const Videogames = () => {
         <span className="text-xl tracking-wide font-semibold text-LM">
           Detalle
         </span>
-        <p>DESARROLLAR</p>
-        <p>DESARROLLAR</p>
+        <p>
+          Después de completar los 4 módulos del Bootcamp:
+          <span className="font-normal dark:font-light italic">
+          {" Fundamentos - Front End - Back End - Base de Datos, "}
+          </span>
+          era necesario aplicar lo aprendido en un Proyecto Individual creado
+          desde cero. Los objetivos eran consolidar y los conceptos, adoptar
+          mejores prácticas y familiarizarse con el flujo de trabajo de GIT.
+        </p>
+        <p>
+          La idea principal consistía en desarrollar una aplicación que mostrara
+          un listado de 100 videojuegos presentados en "cards", organizados
+          mediante paginación, y con información esencial de cada uno. Para
+          acceder a los datos debíamos conectarnos a la API externa RAWG, y
+          cumplir con varias features mencionadas debajo.
+        </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
             Tecnologías
