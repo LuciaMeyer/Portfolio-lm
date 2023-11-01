@@ -153,7 +153,7 @@ export const Videogames = () => {
         </p>
         <p>
           La idea principal consistía en desarrollar una aplicación que mostrara
-          un listado de 100 videojuegos presentados en "cards", organizados
+          un listado de 100 videojuegos presentados en &quot;cards&quot;, organizados
           mediante paginación, y con información esencial de cada uno. Para
           acceder a los datos debíamos conectarnos a la API externa RAWG, y
           cumplir con varias features mencionadas debajo.
