@@ -159,7 +159,7 @@ export const Gpt = () => {
           Detalle
         </span>
         <p>
-        Todas las Inteligencias Artificiales, y en especial el modelo GPT, despiertan mucho interés en nosotros. Por eso en un principio, realizamos el curso de DeepLearning.AI: "Prompt Engineering for Developers". Luego, estudiamos la API del modelo y por último decidimos probar su potencia en un proyecto de comercio electrónico que habíamos desarrollado recientemente.
+        Todas las Inteligencias Artificiales, y en especial el modelo GPT, despiertan mucho interés en nosotros. Por eso en un principio, realizamos el curso de DeepLearning.AI: &quot;Prompt Engineering for Developers&quot;. Luego, estudiamos la API del modelo y por último decidimos probar su potencia en un proyecto de comercio electrónico que habíamos desarrollado recientemente.
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
