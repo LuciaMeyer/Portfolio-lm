@@ -93,13 +93,13 @@ export const Gpt = () => {
             <span className="text-xl tracking-wide">&nbsp;Práctica</span>
           </div>
           <p className="text-justify text-lg">
-            En esta práctica, decidimos estudiar el código de la
+            En esta práctica decidimos estudiar el código de la
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" API del modelo de lenguaje GPT, "}
             </span>
             proporcionado por
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" AOpenAI, "}
+              {" OpenAI, "}
             </span>
             y aplicarlo a un proyecto de ecommerce existente. El desafío
             consistió en implementar
@@ -110,7 +110,7 @@ export const Gpt = () => {
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" mejorar la gestión de la información "}
             </span>
-            que afecta a la toma de decisiones de negocio.
+            y la toma de decisiones de negocio.
           </p>
           <div className="flex md:justify-normal justify-around md:mt-0 mt-12">
             <Link
@@ -159,7 +159,12 @@ export const Gpt = () => {
           Detalle
         </span>
         <p>
-        Todas las Inteligencias Artificiales, y en especial el modelo GPT, despiertan mucho interés en nosotros. Por eso en un principio, realizamos el curso de DeepLearning.AI: &quot;Prompt Engineering for Developers&quot;. Luego, estudiamos la API del modelo y por último decidimos probar su potencia en un proyecto de comercio electrónico que habíamos desarrollado recientemente.
+          Todas las Inteligencias Artificiales, y en especial el modelo GPT,
+          despiertan mucho interés en nosotros. Por eso en un principio, hicimos
+          el curso de DeepLearning.AI: &quot;Prompt Engineering for
+          Developers&quot;. Luego, estudiamos la API del modelo y por último
+          decidimos probar su potencia en un proyecto que habíamos desarrollado
+          recientemente.
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
@@ -172,9 +177,13 @@ export const Gpt = () => {
           <br />
           2) Definir y confeccionar los prompts estratégicos para cada caso.
           <br />
-          3) Elegir la temperatura según la necesidad de respuesta, teniendo en cuenta que al usar valores bajos, las respuestas son más precisas pero menos creativas, y al usar valores altos, las respuestas son variadas pero imprecisas.
+          3) Elegir la temperatura según la necesidad de respuesta. Teniendo en
+          cuenta que al usar valores bajos, las respuestas son más precisas pero
+          menos creativas, y al usar valores altos, las respuestas son variadas
+          pero imprecisas.
           <br />
-          4) Considerar el tipo de estructura de datos que devuelve la API en cada solicitud para poder manipularla de forma correcta.
+          4) Considerar el tipo de estructura de datos que devuelve la API en
+          cada solicitud para poder manipularla de forma correcta.
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
@@ -182,29 +191,38 @@ export const Gpt = () => {
           </span>
         </p>
         <p>
-          El proyecto permite que el usuario interactúe con el sitio de dos
-          formas: realizando un posteo luego de haber experimentado el servicio y
-          enviando un mensaje de contacto a la empresa a través de un
-          formulario. Esta información la procesamos desde nuestro BackEnd con
-          GPT para y le pedimos implementar 4 funcionalidades que luego reflejamos en el panel del administrador.
+          El sitio permite que el usuario interactúe de dos
+          formas:
+          <br/>
+          - Realizando un posteo luego de haber experimentado el servicio.
+          <br/>
+          - Enviando un mensaje de contacto a la empresa a través de un
+          formulario de contacto.
+          <br/>
+          Esta información la procesamos desde nuestro BackEnd con
+          GPT y le pedimos implementar 4 funcionalidades que luego
+          reflejamos en el panel del administrador.
         </p>
-        ⇢ RESUMEN del texto en 3 palabras, para facilitar la visibilidad e identificar rápidamente la idea principal.
-        <br />
-        ⇢ Identificar el IDIOMA y traducir en caso de ser necesario.
-        <br />
-        ⇢ Evaluar el SENTIMIENTO del texto, y en el caso de ser negativo, tener un llamado a la acción por parte de los administradores.
-        <br />
-        ⇢ Reconocer si un mensaje necesita o no una RESPUESTA y agilizar la misma.
-        <br />
-        ⇢ Corrección de GRAMÁTICA y ORTOGRAFÍA.
+        <p>
+          ⇢ RESUMEN del texto en 3 palabras, para facilitar la visibilidad e
+          identificar rápidamente la idea principal.
+          <br />
+          ⇢ Identificar el IDIOMA y TRADUCIRLO en caso de ser necesario.
+          <br />
+          ⇢ Evaluar el SENTIMIENTO del texto, y en el caso de ser negativo,
+          tener un llamado a la acción por parte de los administradores.
+          <br />
+          ⇢ Reconocer si un mensaje necesita o no una RESPUESTA y agilizar la
+          misma.
+          <br />⇢ Corrección de GRAMÁTICA y ORTOGRAFÍA.
+        </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
             Integrantes
           </span>
         </p>
         <p>
-          › Felipe Jure <br />
-          › Meyer Lucía
+          › Felipe Jure <br />› Meyer Lucía
         </p>
       </div>
     </motion.section>
