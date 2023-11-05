@@ -52,13 +52,32 @@ export const LetsGO = () => {
         {isMobile ? (
           <>
             <div className="md:mr-7 md:ml-0 mx-auto mb-9">
-              <Image src={letsgo} alt="letsgo" width={600} height={600} />
+              {/* <Image src={letsgo} alt="letsgo" width={600} height={600} /> */}
+              <video
+                width="560"
+                height="315"
+                autoPlay
+                loop
+                controls
+                className="border border-neutral-300 dark:border-neutral-700"
+              >
+                <source src={img.vidletsgo} type="video/mp4" />
+              </video>
             </div>
           </>
         ) : (
           <Atropos className="hover:scale-90 transform transition-transform duration-300 int:mb-9">
             <div className="md:mr-7 md:ml-0 mx-auto flex justify-center">
-              <Image src={letsgo} alt="letsgo" width={600} height={600} />
+              <video
+                width="560"
+                height="315"
+                autoPlay
+                loop
+                controls
+                className="border border-neutral-300 dark:border-neutral-700"
+              >
+                <source src={img.vidletsgo} type="video/mp4" />
+              </video>
             </div>
           </Atropos>
         )}
@@ -72,7 +91,8 @@ export const LetsGO = () => {
             <span className="text-xl tracking-wide">&nbsp;lets GO</span>
           </div>
           <p className="text-justify text-lg">
-            Desarrollé este proyecto junto a un grupo de compañeros de la carrera, fue la entrega final con la cual nos graduamos de
+            Desarrollé este proyecto junto a un grupo de compañeros de la
+            carrera, fue la entrega final con la cual nos graduamos de
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Full Stack Developer. "}
             </span>

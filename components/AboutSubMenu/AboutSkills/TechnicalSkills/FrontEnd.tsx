@@ -92,8 +92,8 @@ export const FrontEnd = () => {
         </div>
       </div>
       <p className='mt-20'>
-        Los Frameworks Front-End son herramientas y recursos utilizados en el
-        desarrollo de aplicaciones web y móviles para el lado del cliente,
+        Son herramientas y recursos utilizados en el
+        desarrollo de aplicaciones web y mobile para el lado del cliente,
         permitiendo a los desarrolladores crear interfaces de usuario
         interactivas y funcionales.
       </p>

@@ -9,9 +9,9 @@ import { img } from "@/public/images";
 
 export const Gpt = () => {
   const isMobile = useContext(screenContext);
-  useEffect(()=>{
-    window.scroll(0,0)
-  },[])
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <motion.section
@@ -55,13 +55,31 @@ export const Gpt = () => {
         {isMobile ? (
           <>
             <div className="md:mr-7 md:ml-0 mx-auto mb-9">
-              <Image src={gpt} alt="gpt" width={600} height={600} />
+              <video
+                width="560"
+                height="315"
+                autoPlay
+                loop
+                controls
+                className="border border-neutral-300 dark:border-neutral-700"
+              >
+                <source src={img.vidgpt} type="video/mp4" />
+              </video>
             </div>
           </>
         ) : (
           <Atropos className="hover:scale-90 transform transition-transform duration-300 int:mb-9">
             <div className="md:mr-7 md:ml-0 mx-auto">
-              <Image src={gpt} alt="gpt" width={600} height={600} />
+              <video
+                width="560"
+                height="315"
+                autoPlay
+                loop
+                controls
+                className="border border-neutral-300 dark:border-neutral-700"
+              >
+                <source src={img.vidgpt} type="video/mp4" />
+              </video>
             </div>
           </Atropos>
         )}
@@ -75,20 +93,24 @@ export const Gpt = () => {
             <span className="text-xl tracking-wide">&nbsp;Práctica</span>
           </div>
           <p className="text-justify text-lg">
-            Desarrollé este proyecto junto a un grupo de compañeros en del
-            cursado de la carrera
+            En esta práctica, decidimos estudiar el código de la
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" Full Stack Developer. "}
+              {" API del modelo de lenguaje GPT, "}
             </span>
-            Fue la entrega final con la cual nos
+            proporcionado por
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" graduamos. "}
+              {" AOpenAI, "}
             </span>
-            Es un
+            y aplicarlo a un proyecto de ecommerce existente. El desafío
+            consistió en implementar
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" ecommerce de alquiler temporal de bicicletas, "}
+              {" nuevas funciones "}
             </span>
-            accesorios y pack de aventuras según calendario y stock disponible.
+            en el panel de administración con el propósito de
+            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
+              {" mejorar la gestión de la información "}
+            </span>
+            que afecta a la toma de decisiones de negocio.
           </p>
           <div className="flex md:justify-normal justify-around md:mt-0 mt-12">
             <Link
@@ -137,81 +159,52 @@ export const Gpt = () => {
           Detalle
         </span>
         <p>
-          En este desarrollo debíamos poner en práctica todo lo aprendido en el
-          curso, construyendo un proyecto del mundo real con metodologías y
-          herramientas ágiles, bajo un enfoque de aprendizaje colaborativo y
-          poniendo a prueba las habilidades de trabajo en equipo.
-        </p>
-        <p>
-          Quisimos aportar valor agregado al proyecto, a través de fomentar la
-          movilidad sustentable para el cuidado del medio ambiente y la salud.
-          Sumamos estos objetivos a la premisa de lograr un funcionamiento del
-          sitio intuitivo y rápido, para garantizar una buena experiencia de
-          usuario.
+        Todas las Inteligencias Artificiales, y en especial el modelo GPT, despiertan mucho interés en nosotros. Por eso en un principio, realizamos el curso de DeepLearning.AI: "Prompt Engineering for Developers". Luego, estudiamos la API del modelo y por último decidimos probar su potencia en un proyecto de comercio electrónico que habíamos desarrollado recientemente.
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
-            Tecnologías
+            Primeros pasos
           </span>
         </p>
         <p>
-          › Lenguaje:{" "}
-          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            {" JavaScript "}
-          </span>
-          <br />› Front:{" "}
-          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            {" React - Redux "}
-          </span>
-          <br />› Back:{" "}
-          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            {" Node.js - Express "}
-          </span>
-          <br />› Base de datos:{" "}
-          <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            {" PostgreSQL - Sequelize "}
-          </span>
+          1) Identificar, según el alcance de la IA, las funcionalidades que
+          mejor se adapten al proyecto.
           <br />
+          2) Definir y confeccionar los prompts estratégicos para cada caso.
+          <br />
+          3) Elegir la temperatura según la necesidad de respuesta, teniendo en cuenta que al usar valores bajos, las respuestas son más precisas pero menos creativas, y al usar valores altos, las respuestas son variadas pero imprecisas.
+          <br />
+          4) Considerar el tipo de estructura de datos que devuelve la API en cada solicitud para poder manipularla de forma correcta.
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
-            Incluye
+            Features incorporadas
           </span>
         </p>
         <p>
-          › Autenticación ⇢ Auth0
-          <br />
-          › Notificaciones y mailing ⇢ Socketio EmailJS
-          <br />
-          › Almacenamiento multimedia ⇢ Cloudinary
-          <br />
-          › Persistencia de datos ⇢ LocalStorage
-          <br />
-          › Diseño responsive ⇢ CCSModules - MaterialUI Figma
-          <br />
-          › Pasarela de pagos ⇢ MercadoPago
-          <br />
-          › Reviews a través de posteo de experiencias
-          <br />
-          › Filtros y ordenamientos combinados
-          <br />
-          › Bot de ayuda al usuario
-          <br />
-          › Dashboard de administrador completo
-          <br />
+          El proyecto permite que el usuario interactúe con el sitio de dos
+          formas: realizando un posteo luego de haber experimentado el servicio y
+          enviando un mensaje de contacto a la empresa a través de un
+          formulario. Esta información la procesamos desde nuestro BackEnd con
+          GPT para y le pedimos implementar 4 funcionalidades que luego reflejamos en el panel del administrador.
         </p>
+        ⇢ RESUMEN del texto en 3 palabras, para facilitar la visibilidad e identificar rápidamente la idea principal.
+        <br />
+        ⇢ Identificar el IDIOMA y traducir en caso de ser necesario.
+        <br />
+        ⇢ Evaluar el SENTIMIENTO del texto, y en el caso de ser negativo, tener un llamado a la acción por parte de los administradores.
+        <br />
+        ⇢ Reconocer si un mensaje necesita o no una RESPUESTA y agilizar la misma.
+        <br />
+        ⇢ Corrección de GRAMÁTICA y ORTOGRAFÍA.
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
             Integrantes
           </span>
         </p>
         <p>
-          › Nicolás Balbi <br />
-          › Soledad Dato <br />
-          › Máximo Tovar <br />
           › Felipe Jure <br />
-          › Juan Martin Silva <br />
-          › Leandro Pappalardo <br />› Meyer Lucía
+          › Meyer Lucía
         </p>
       </div>
     </motion.section>

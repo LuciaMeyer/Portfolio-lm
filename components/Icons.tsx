@@ -134,11 +134,12 @@ export const Icons: React.FC<IconsProps> = () => {
           </LinKR>
         </div>
       ) : (
+        <>
         <div className="fixed md:bottom-16 bottom-12 md:right-12 right-4">
           <div
             className={`md:w-20 w-12 -rotate-90
             transform transition-transform duration-300 
-            ${pathname === "/portfolio" ? "scale-y-[-1] " : "md:hover:scale-75"}`}
+            ${pathname === "/portfolio" ? "opacity-0" : "md:hover:opacity-50"}`}
           >
             <Link
               href={
@@ -164,9 +165,42 @@ export const Icons: React.FC<IconsProps> = () => {
             </Link>
           </div>
           <div className="md:block hidden fixed bottom-6 right-14">
-            <span>siguiente</span>
+            <span>{pathname === "/portfolio" ? '' : 'siguiente'}</span>
           </div>
         </div>
+
+        <div className="fixed md:bottom-[2.15rem] bottom-24 md:right-28 right-4">
+          <div
+            className={`md:w-20 w-12 rotate-90
+            transform transition-transform duration-300 
+            ${pathname === "/letsgo" ? "opacity-0" : "md:hover:opacity-50"}`}
+          >
+            <Link
+              href={
+                pathname === "/videogames"
+                  ? "/letsgo"
+                  : pathname === "/gpt"
+                  ? "/videogames"
+                  : pathname === "/portfolio"
+                  ? "/gpt"
+                  : "/letsgo"
+              }
+              className="cursor-pointer"
+            >
+              <Image
+                width="50"
+                height="50"
+                src={img.fl_am}
+                alt="img"
+                priority
+              />
+            </Link>
+          </div>
+          <div className="md:block hidden fixed bottom-6 right-32">
+            <span>{pathname === "/letsgo" ? '' : 'anterior'}</span>
+          </div>
+        </div>
+        </>
       )}
     </motion.div>
   );

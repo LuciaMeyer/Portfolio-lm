@@ -33,6 +33,9 @@ export const img = {
     num2: 'https://res.cloudinary.com/dw272kava/image/upload/v1698342135/Projects/num2_pzlmdj.png',
     num3: 'https://res.cloudinary.com/dw272kava/image/upload/v1698342135/Projects/num3_sxx3yt.png',
     num4:'https://res.cloudinary.com/dw272kava/image/upload/v1698342135/Projects/num4_mjopjn.png',
+    vidletsgo:'https://res.cloudinary.com/dw272kava/video/upload/v1699146923/Projects/lets_GO_zj4zdj.mp4',
+    vidvideogames:'https://res.cloudinary.com/dw272kava/video/upload/v1699147580/Projects/videogames_qmybn2.mp4',
+    vidgpt:'https://res.cloudinary.com/dw272kava/video/upload/v1699148071/Projects/gpt_xbhjmc.mp4',
   
     // Icons
     in: 'https://res.cloudinary.com/dw272kava/image/upload/v1694629215/iconos/in_sjjrsl.png',

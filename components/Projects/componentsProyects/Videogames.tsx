@@ -55,13 +55,31 @@ export const Videogames = () => {
         {isMobile ? (
           <>
             <div className="md:mr-7 md:ml-0 mx-auto mb-9">
-              <Image src={videgames} alt="videgames" width={600} height={600} />
+              <video
+                width="560"
+                height="315"
+                autoPlay
+                loop
+                controls
+                className="border border-neutral-300 dark:border-neutral-700"
+              >
+                <source src={img.vidvideogames} type="video/mp4" />
+              </video>
             </div>
           </>
         ) : (
           <Atropos className="hover:scale-90 transform transition-transform duration-300 int:mb-9">
             <div className="md:mr-7 md:ml-0 mx-auto">
-              <Image src={videgames} alt="videgames" width={600} height={600} />
+              <video
+                width="560"
+                height="315"
+                autoPlay
+                loop
+                controls
+                className="border border-neutral-300 dark:border-neutral-700"
+              >
+                <source src={img.vidvideogames} type="video/mp4" />
+              </video>
             </div>
           </Atropos>
         )}
@@ -145,7 +163,7 @@ export const Videogames = () => {
         <p>
           Después de completar los 4 módulos del Bootcamp:
           <span className="font-normal dark:font-light italic">
-          {" Fundamentos - Front End - Back End - Base de Datos, "}
+            {" Fundamentos - Front End - Back End - Base de Datos, "}
           </span>
           era necesario aplicar lo aprendido en un Proyecto Individual creado
           desde cero. Los objetivos eran consolidar los conceptos, adoptar
@@ -153,10 +171,10 @@ export const Videogames = () => {
         </p>
         <p>
           La idea principal consistía en desarrollar una aplicación que mostrara
-          un listado de 100 videojuegos presentados en &quot;cards&quot;, organizados
-          mediante paginación, y con información esencial de cada uno. Para
-          acceder a los datos debíamos conectarnos a la API externa RAWG, y
-          cumplir con varias features mencionadas debajo.
+          un listado de 100 videojuegos presentados en &quot;cards&quot;,
+          organizados mediante paginación, y con información esencial de cada
+          uno. Para acceder a los datos debíamos conectarnos a la API externa
+          RAWG, y cumplir con varias features mencionadas debajo.
         </p>
         <p>
           <span className="text-xl tracking-wide font-semibold text-LM">
