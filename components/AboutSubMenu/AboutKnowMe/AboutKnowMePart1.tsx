@@ -21,18 +21,18 @@ export const AboutKnowMePart1: React.FC<AboutKnowMePart1Props> = ({ handleShowDi
           {'Lu, '}
         </span>
         creativa e inquieta desde siempre. En mi camino exploré diferentes áreas
-        como
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
+        como arquitectura, diseño, comunicación y marketing.
+        {/* <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
           {' arquitectura, diseño, comunicación y marketing.'}
-        </span>{' '}
+        </span>{' '} */}
       </p>
 
       <p>
-        En el último tiempo, descubrí mi pasión por la
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
+        En el último tiempo, descubrí mi pasión por la Tecnología de la Información
+        {/* <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
           {' Tecnología de la Información '}
-        </span>
-        y me gradué de como{' '}
+        </span> */}
+        y me gradué de{' '}
         <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300 border-b-stone-700 dark:border-b-stone-400 border-b-[0.2px]'>
           <Link href='https://bit.ly/3s5TTBj' target='_blank'>
             {'Full Stack Developer.'}
@@ -41,15 +41,16 @@ export const AboutKnowMePart1: React.FC<AboutKnowMePart1Props> = ({ handleShowDi
       </p>
 
       <p >
-        Mi mayor interés dentro del
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
+        Mi mayor interés dentro de este mundo
+        {/* <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
           {' mundo IT '}
-        </span>{' '}
-        es la posibilidad de crear frente a grandes necesidades,
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
+        </span>{' '} */}
+        es la posibilidad de crear frente a grandes necesidades, soluciones simples e innovadoras.
+        {/* <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
           {' soluciones simples e innovadoras. '}
-        </span>{' '}
+        </span>{' '} */}
       </p>
+      <br/>
       {!isMobile && (
         <div className='md:mt-6 mt-4 flex items-center justify-between'>
           <button onClick={handleShowDiv}>

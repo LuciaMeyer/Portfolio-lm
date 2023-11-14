@@ -33,18 +33,18 @@ export const AboutKnowMePart2:React.FC<AboutKnowMePart2Props> = ({ handleShowDiv
         </LinkR>.
       </p>
       <p>
-        Si querés saber cuáles son las
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
+        Si querés saber cuáles son las herramientas
+        {/* <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
           {' herramientas '}
-        </span>
-        que manejo,
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
+        </span> */}
+        que manejo, mi recorrido
+        {/* <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
           {' mi recorrido '}
-        </span>
-        y qué es lo que
-        <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
+        </span> */}
+        y qué es lo que me motiva,
+        {/* <span className='font-semibold dark:font-light text-stone-700 dark:text-stone-300'>
           {' me motiva, '}
-        </span>
+        </span> */}
         seguí explorando esta sección.
       </p>
       <p>
