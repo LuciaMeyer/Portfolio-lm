@@ -91,10 +91,9 @@ export const LetsGO = () => {
             <span className="text-xl tracking-wide">&nbsp;lets GO</span>
           </div>
           <p className="text-justify text-lg">
-            Desarrollé este proyecto junto a un grupo de compañeros de la
-            carrera, fue la entrega final con la cual nos graduamos de
+            Desarrollé este proyecto junto a un grupo de colegas, fue la entrega final con la cual nos graduamos de
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" Full Stack Developer. "}
+              {" Full Stack. "}
             </span>
             Es un
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -149,8 +148,7 @@ export const LetsGO = () => {
           Detalle
         </span>
         <p>
-          En este desarrollo debíamos poner en práctica todo lo aprendido en el
-          curso, construyendo un proyecto del mundo real con metodologías y
+          En este desarrollo debíamos construir un proyecto del mundo real con metodologías y
           herramientas ágiles, bajo un enfoque de aprendizaje colaborativo y
           poniendo a prueba las habilidades de trabajo en equipo.
         </p>
@@ -201,7 +199,7 @@ export const LetsGO = () => {
           </span>
           <br />› Almacenamiento multimedia:{" "}
           <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            Cloudinary6
+            Cloudinary
           </span>
           <br />› Persistencia de datos:{" "}
           <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -209,7 +207,7 @@ export const LetsGO = () => {
           </span>
           <br />› Diseño responsive:{" "}
           <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            CCSModules - MaterialUI Figma
+            CCSModules - MaterialUI - Figma
           </span>
           <br />› Pasarela de pagos:{" "}
           <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
@@ -231,9 +229,9 @@ export const LetsGO = () => {
           de ayuda al usuario
           <br />›{" "}
           <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-            Dashboard de administrador{" "}
+            Dashboard{" "}
           </span>
-          completo
+          de administrador
           <br />
         </p>
         <p>

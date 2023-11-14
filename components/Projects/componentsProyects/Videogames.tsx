@@ -97,11 +97,7 @@ export const Videogames = () => {
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Single Page Application "}
             </span>
-            la desarrollé como parte del cursado de la carrera de
-            <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
-              {" Full Stack Developer "}
-            </span>
-            en la etapa de
+            la desarrollé como parte del cursado de la carrera en la etapa de
             <span className="font-semibold dark:font-light text-stone-700 dark:text-LM">
               {" Proyecto Individual. "}
             </span>
@@ -161,10 +157,7 @@ export const Videogames = () => {
           Detalle
         </span>
         <p>
-          Después de completar los 4 módulos del Bootcamp:
-          <span className="font-normal dark:font-light italic">
-            {" Fundamentos - Front End - Back End - Base de Datos, "}
-          </span>
+          Después de completar los 4 módulos del Bootcamp,
           era necesario aplicar lo aprendido en un Proyecto Individual creado
           desde cero. Los objetivos eran consolidar los conceptos, adoptar
           mejores prácticas y familiarizarse con el flujo de trabajo de GIT.
@@ -172,8 +165,7 @@ export const Videogames = () => {
         <p>
           La idea principal consistía en desarrollar una aplicación que mostrara
           un listado de 100 videojuegos presentados en &quot;cards&quot;,
-          organizados mediante paginación, y con información esencial de cada
-          uno. Para acceder a los datos debíamos conectarnos a la API externa
+          organizados mediante paginación. Para acceder a los datos debíamos conectarnos a la API externa
           RAWG, y cumplir con varias features mencionadas debajo.
         </p>
         <p>
