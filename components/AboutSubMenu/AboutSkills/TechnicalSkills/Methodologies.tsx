@@ -66,13 +66,10 @@ export const Methodologies = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
-        Scrum y Kanban son metodologías ágiles utilizadas en la gestión de
-        proyectos. Scrum se centra en entregas iterativas en sprints, con roles
-        definidos como el Scrum Master y el Product Owner. Kanban se enfoca en
-        la visualización del flujo de trabajo y la gestión de tareas de forma
-        continua, sin roles fijos. Ambos enfatizan la colaboración y la
-        adaptación.
+      <p className='mt-20 dark:text-stone-400/80'>
+        Son utilizadas para la gestión de proyectos, enfatizan la colaboración y la
+        adaptación. Scrum se centra en la flexibilidad y la entrega incremental dividida en Sprints, con roles definidos. Kanban se enfoca en la visualización del flujo de trabajo y la gestión de tareas de forma
+        continua, sin roles fijos.
       </p>
     </motion.div>
   );

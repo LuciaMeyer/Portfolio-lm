@@ -118,8 +118,8 @@ export const BackEnd = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
-        Estas tecnologías son esenciales para administrar y supervisar el
+      <p className='mt-20 dark:text-stone-400/80'>
+        Son tecnologías esenciales para administrar y supervisar el
         funcionamiento de un sistema o aplicación de software desde el lado del
         servidor, facilitando la gestión de datos y la comunicación entre el
         Front-End y servicios externos.

@@ -91,7 +91,7 @@ export const FrontEnd = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
+      <p className='mt-20 dark:text-stone-400/80'>
         Son herramientas y recursos utilizados en el
         desarrollo de aplicaciones web y mobile para el lado del cliente,
         permitiendo a los desarrolladores crear interfaces de usuario

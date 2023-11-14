@@ -66,12 +66,10 @@ export const VersionControl = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
-        Git es un sistema de control de versiones distribuido que permite
-        rastrear cambios en archivos y colaborar en proyectos de software.
+      <p className='mt-20 dark:text-stone-400/80'>
+        Git es un sistema distribuido que se usa para el seguimiento de cambios en el código fuente y permite la colaboración en proyectos.
         GitHub es una plataforma en línea que utiliza Git para alojar, gestionar
-        y compartir repositorios de código, facilitando la colaboración y el
-        seguimiento de proyectos.
+        y compartir repositorios de código.
       </p>
     </motion.div>
   );

@@ -91,9 +91,8 @@ export const Tools = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
-        Visual Studio Code es un editor de código fuente altamente personalizable y
-        compatible con una amplia variedad de lenguajes de programación. Postman e Insomnia son dos herramientas, también conocidas como clientes REST, con características diferentes que permiten y facilitan la interacción y el diseño de API basadas en HTTP.
+      <p className='mt-20 dark:text-stone-400/80'>
+        Visual Studio Code es un editor de código fuente. Postman e Insomnia, también conocidas como clientes REST, permiten y facilitan la interacción y el diseño de API basadas en HTTP.
       </p>
     </motion.div>
   );

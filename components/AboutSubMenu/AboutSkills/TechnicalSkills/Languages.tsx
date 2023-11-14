@@ -119,9 +119,9 @@ export const Languages = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
+      <p className='mt-20 dark:text-stone-400/80'>
         Un Lenguaje de Programación es una herramienta formal y estructurada que
-        permite a los programadores escribir conjuntos de instrucciones,
+        permite escribir conjuntos de instrucciones,
         denominados algoritmos, para controlar el comportamiento de un sistema
         informático y realizar tareas específicas.
       </p>

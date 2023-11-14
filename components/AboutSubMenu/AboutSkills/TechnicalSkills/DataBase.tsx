@@ -66,10 +66,9 @@ export const DataBase = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
+      <p className='mt-20 dark:text-stone-400/80'>
         PostgreSQL es un sistema de gestión de bases de datos relacional de
-        código abierto que se destaca por su robustez y capacidad para gestionar
-        datos estructurados y no estructurados. Sequelize es un ORM para NodeJS
+        código abierto. Sequelize es un ORM para NodeJS
         que simplifica la interacción y permite trabajar utilizando JavaScript
         en lugar de SQL.
       </p>

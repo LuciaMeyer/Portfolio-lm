@@ -150,8 +150,8 @@ export const DesingLibraries = () => {
           Sass
         </span>
       </div>
-      <p className='mt-20'>
-        Las Librerías CSS proporcionan reglas y estilos predefinidos para ayudan
+      <p className='mt-20 dark:text-stone-400/80'>
+        Las Librerías CSS proporcionan reglas y estilos predefinidos que ayudan
         a los desarrolladores a crear diseños atractivos y funcionales. Los
         Preprocesadores ofrecen variables, anidamiento, funciones y modularidad
         para simplificar el desarrollo, generando CSS optimizado.

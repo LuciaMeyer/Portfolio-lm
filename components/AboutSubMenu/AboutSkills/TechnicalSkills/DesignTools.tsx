@@ -117,12 +117,10 @@ export const DesignTools = () => {
           </span>
         </div>
       </div>
-      <p className='mt-20'>
-        Estas herramientas son vitales en diseño y producción de contenido multimedia.
+      <p className='mt-20 dark:text-stone-400/80'>
+        Son vitales en diseño y producción de contenido multimedia.
         Figma es una aplicación en la nube para diseñar interfaces y prototipos.
-        Ai se enfoca en gráficos vectoriales y logotipos. Ps es
-        una herramienta poderosa para edición de imágenes y diseño gráfico.
-        Pr es un software de edición de video profesional. 
+        Illustrator, Potoshop y Premiere provienen del paquete Adobe, permiten trabajar con vectores, imágenes y edición de videos.
       </p>
     </motion.div>
   );
